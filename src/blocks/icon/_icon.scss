@@ -1,0 +1,50 @@
+.icon {
+  color: inherit;
+
+  &::before {
+    content: '';
+    background-color: currentColor;
+    display: block;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  &--type {
+    &-attach::before {
+      mask-image: url('../../images/icons.svg#attach');
+    }
+    &-close::before {
+      mask-image: url('../../images/icons.svg#close');
+    }
+    &-email::before {
+      mask-image: url('../../images/icons.svg#email');
+    }
+    &-error::before {
+      mask-image: url('../../images/icons.svg#error');
+    }
+    &-location::before {
+      mask-image: url('../../images/icons.svg#location');
+    }
+    &-menu::before {
+      mask-image: url('../../images/icons.svg#menu');
+    }
+    &-phone::before {
+      mask-image: url('../../images/icons.svg#phone');
+    }
+    &-rutube::before {
+      mask-image: url('../../images/icons.svg#rutube');
+    }
+    &-telegram::before {
+      mask-image: url('../../images/icons.svg#telegram');
+    }
+    &-user::before {
+      mask-image: url('../../images/icons.svg#user');
+    }
+    &-vkontakte::before {
+      mask-image: url('../../images/icons.svg#vkontakte');
+    }
+  }
+}

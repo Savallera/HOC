@@ -4,6 +4,7 @@ import path from '../config/path.js';
 // Плагины
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
+import concat from 'gulp-concat';
 import babel from 'gulp-babel';
 import webpack from 'webpack-stream';
 
@@ -18,11 +19,12 @@ export default () => {
         })),
       })
     )
-    .pipe(babel())
-    .pipe(
-      webpack({
-        mode: 'development',
-      })
-    )
+    .pipe(concat('index.js'))
+    // .pipe(babel())
+    // .pipe(
+    //   webpack({
+    //     mode: 'development',
+    //   })
+    // )
     .pipe(gulp.dest(path.scripts.dest));
 };

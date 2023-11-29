@@ -1,1 +1,52 @@
-.footer {}
+@import '../../styles/mixins';
+
+.footer {
+  margin-block-start: 66px;
+
+  &__wrap {
+    @extend %section-inline-size;
+    color: var(--accent-text-color);
+
+    margin-block-start: -24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(10px, 2vi, 20px);
+
+    @include media(lg) {
+      grid-template-columns: 1.115fr 0.5fr 0.5fr;
+    }
+  }
+
+  &__nav {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+
+    @include media(lg) {
+      grid-column: unset;
+      grid-row: unset;
+    }
+  }
+
+  &__nav-list {
+    margin: 0;
+    list-style-type: disc;
+    padding: clamp(1.75em, 5vb, 3.125em) 4.5vi clamp(1.5em, 4.5vb, 2.5em);
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    text-underline-position: under;
+    line-height: 245%;
+    font-variation-settings: 'wght' 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--main-text-color);
+    }
+  }
+}

@@ -5,12 +5,12 @@
 }
 
 body {
-  min-inline-size: 320px;
+  min-inline-size: 360px;
   margin: 0;
   font-family: var(--main-font-family, sans-serif);
   font-size: 16px;
   color: var(--main-text-color);
-  background-color: var(--main-bg-color, #f0f0f0);
+  background-color: var(--main-bg-color, #f7f7f7);
   scroll-behavior: smooth;
 }
 
@@ -30,6 +30,7 @@ body {
 //   list-style: none;
 // }
 
+menu,
 picture {
   margin: 0;
   padding: 0;
@@ -41,4 +42,23 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+input,
+textarea {
+  inline-size: 100%;
+  font-family: inherit;
+  color: inherit;
 }

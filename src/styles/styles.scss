@@ -1,4 +1,14 @@
 @import './vendor/globals';
 @import './vendor/variables';
+
+@import '../blocks/page/page';
+@import '../blocks/bg-gradient/bg-gradient';
+@import '../blocks/icon/icon';
+@import '../blocks/button/button';
+@import '../blocks/icon-button/icon-button';
+@import '../blocks/field/field';
+
+@import '../blocks/address/address';
 @import '../blocks/header/header';
 @import '../blocks/footer/footer';
+@import '../blocks/feedback-modal/feedback-modal';

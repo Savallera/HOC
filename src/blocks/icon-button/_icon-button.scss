@@ -1,0 +1,22 @@
+.icon-button {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0.375em;
+  inline-size: 2.5em;
+  block-size: 2.5em;
+  border-radius: 10px;
+  transition: background 0.3s;
+
+  &:hover {
+    background: var(--hover-color);
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid var(--main-text-color);
+  }
+}

@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import path from '../config/path.js';
+import browserSync from 'browser-sync';
 
 // Плагины
 import plumber from 'gulp-plumber';
@@ -45,5 +46,6 @@ export default () => {
       // .pipe(csso())
       // .pipe(size({ title: "После сжатия" }))
       .pipe(gulp.dest(path.scss.dest))
+      .pipe(browserSync.stream())
   );
 };

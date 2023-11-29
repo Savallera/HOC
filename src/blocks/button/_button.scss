@@ -1,0 +1,36 @@
+.button {
+  background-color: transparent;
+  border: none;
+  font-variation-settings: 'wght' 500;
+  transition: background 0.3s;
+
+  // &:hover {}
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid var(--main-text-color);
+  }
+
+  &--theme {
+    &-gradient {
+      font-size: clamp(18px, 2.5vi, 25px);
+      border-radius: 10px;
+      min-inline-size: min(22rem, 100%);
+      padding: clamp(8px, 1.5vi, 15px) clamp(15px, 3vi, 30px);
+      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      color: var(--accent-text-color);
+      // &:hover {}
+    }
+    &-outline-light {
+      border-radius: 20px;
+      padding: 6px 14px;
+      border: 2px solid currentColor;
+      color: var(--accent-text-color);
+
+      &:hover {
+        background-color: var(--hover-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.page {
+  min-block-size: 100vh;
+  min-block-size: 100dvb;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    flex: auto;
+  }
+
+  &__section {
+    @extend %section-inline-size;
+  }
+}

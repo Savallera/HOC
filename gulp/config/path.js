@@ -21,7 +21,7 @@ export default {
   },
 
   scripts: {
-    src: pathSrc + '/scripts/*.js',
+    src: [pathSrc + '/scripts/*.js', pathSrc + '/blocks/**/*.js'],
     watch: [
       pathSrc + '/scripts/*.js',
       pathSrc + '/scripts/**/*.js',

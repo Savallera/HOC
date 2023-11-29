@@ -1,0 +1,61 @@
+.feedback-modal {
+  position: fixed;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  min-block-size: 100vh;
+  min-block-size: 100dvb;
+  overflow-y: auto;
+
+  display: grid;
+  place-items: center;
+  padding-block: 3em;
+
+  backdrop-filter: blur(18px);
+  background-color: rgba(0, 0, 0, 0.4);
+  @extend %hidden-block;
+
+  &--opened {
+    @extend %visibility-block;
+  }
+
+  &__container {
+    position: relative;
+    inline-size: min(90vi, 75em);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: clamp(15px, 4vi, 40px);
+  }
+
+  &__close-button {
+    position: absolute;
+    inset: 0.5em 0.5em auto auto;
+    border-radius: 50%;
+    color: var(--main-text-low-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--accent-color);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-block: 0 clamp(18px, 4vi, 40px);
+    font-size: clamp(18px, 2.5vi, 25px);
+    font-variation-settings: 'wght' 800;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    gap: clamp(2px, 2vi, 20px);
+    flex-direction: column;
+  }
+
+  // &__field {}
+
+  &__button {
+    align-self: center;
+  }
+}

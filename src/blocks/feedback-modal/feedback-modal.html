@@ -1,0 +1,148 @@
+<div class="feedback-modal">
+  <div class="feedback-modal__container">
+    <button
+      type="reset"
+      class="icon-button icon icon--type-close feedback-modal__close-button"
+      aria-label="Закрыть"
+    ></button>
+    <form class="feedback-modal__form" name="feedback-modal" action="">
+      <p class="feedback-modal__title">
+        Регистрируйся здесь и развивай студСМИ с нами!
+      </p>
+      <div class="field">
+        <label class="field__label visually-hidden">Имя</label>
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите имя"
+            autocomplete="first-name"
+            name="first-name"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label visually-hidden">Фамилия</label>
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите фамилию"
+            autocomplete="family-name"
+            name="family-name"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label visually-hidden">Отчество</label>
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите отчество"
+            autocomplete="middle-name"
+            name="middle-name"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label visually-hidden">Телефон</label>
+        <div class="field__inner">
+          <input
+            type="tel"
+            class="field__input"
+            placeholder="Введите телефон"
+            autocomplete="tel"
+            name="tel"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label visually-hidden">E-mail</label>
+        <div class="field__inner">
+          <input
+            type="email"
+            class="field__input"
+            placeholder="Введите e-mail"
+            autocomplete="email"
+            name="email"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label visually-hidden">Ваше обращение</label>
+        <div class="field__inner">
+          <textarea
+            class="field__input"
+            name="message"
+            rows="5"
+            placeholder="Введите текст обращения"
+          ></textarea>
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field field--content-file">
+        <label for="feedback-field-file" class="field__label"
+          ><span
+            class="icon icon--type-attach field__label-icon"
+            aria-hidden="true"
+          ></span
+          >Прикрепите или загрузите файл
+          <input
+            type="file"
+            class="visually-hidden"
+            name="file"
+            id="feedback-field-file"
+        /></label>
+      </div>
+      <div class="field field--content-checkbox">
+        <label for="feedback-field-privacy" class="field__label">
+          <input
+            type="checkbox"
+            class="field__checkbox"
+            name="privacy"
+            id="feedback-field-privacy"
+          />
+          Я даю согласие на обработку персональных данных, и соглашаюсь с
+          политикой конфиденциальности
+        </label>
+        <span class="field__error-text">Вывод ошибки</span>
+      </div>
+      <button
+        type="submit"
+        class="button button--theme-gradient feedback-modal__button"
+      >
+        <span class="button__text">Отправить заявку</span>
+      </button>
+    </form>
+  </div>
+</div>

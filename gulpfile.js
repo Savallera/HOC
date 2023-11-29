@@ -25,7 +25,7 @@ const server = () => {
 
 function watcher() {
   gulp.watch(path.html.watch, html).on('all', browserSync.reload);
-  gulp.watch(path.scss.watch, scss).on('all', browserSync.reload);
+  gulp.watch(path.scss.watch, scss);
   gulp.watch(path.scripts.watch, scripts).on('all', browserSync.reload);
   gulp.watch(path.images.watch, images).on('all', browserSync.reload);
   gulp.watch(path.favicon.watch, favicon).on('all', browserSync.reload);
