@@ -1,6 +1,12 @@
-### Сборка для разработки сайтов
+# Проект НОС наука образование студенчество
 ## Gulp + Webpack
-Обновлено ноя.2023г.
+Базовая верстка <br/>
+Разбивка на компоненты
+Адаптивная верстка
+
+Ссылка на макет https://www.figma.com/file/eKBcAMx6aUx9iqctZq5ixW/СтудСМИ?type=design&node-id=901%3A47606&mode=design&t=yErMMPFBkic6oC6q-1
+
+Ссылка на GH-pages https://savallera.github.io/HOC/
 
 Команды
 
@@ -21,9 +27,3 @@ npm init
 Форматирование
 
 `npm run fixAll`
-
----
-
-**Пакеты для установки**
-
-npm i -D @babel/core @babel/preset-env babel gh-pages browser-sync del gulp gulp-autoprefixer gulp-avif gulp-babel gulp-concat gulp-cssimport gulp-file-include gulp-fonter gulp-imagemin gulp-newer gulp-notify gulp-plumber gulp-sass gulp-svg-sprite gulp-ttf2woff2 gulp-uglify gulp-webp sass webpack-stream webpack
