@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-inline-size: 320px;
+  margin: 0;
+  font-family: var(--main-font-family, sans-serif);
+  font-size: 16px;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color, #f0f0f0);
+  scroll-behavior: smooth;
+}
+
+picture {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+a {
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+:root {
+  --main-color: #0086ff;
+  --main-text-color: #3b3b3b;
+  --main-bg-color: #f0f0f0;
+  --accent-color: #ef485f;
+  --main-font-family: "Autumn Sweater", sans-serif;
+  --main-gap: clamp(20px, 4vi, 40px);
+}

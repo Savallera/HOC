@@ -1,0 +1,57 @@
+{
+  "name": "gulp-template",
+  "version": "1.0.0",
+  "description": "for web development",
+  "main": "gulpfile.js",
+  "type": "module",
+  "author": "Savallera",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "check": "prettier --check ./**/*.{html,js,css}",
+    "format": "prettier --write ./**/*.{html,js,css}",
+    "lint": "stylelint **/*.css",
+    "lintfix": "stylelint --fix **/*.css",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix",
+    "start": "gulp",
+    "deploy": "gh-pages -d dist"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "dependencies": {
+    "prettier": "^3.0.3",
+    "stylelint": "^15.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "babel": "^6.23.0",
+    "browser-sync": "^2.29.3",
+    "del": "^7.1.0",
+    "gh-pages": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-avif": "^1.1.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssimport": "^7.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-imagemin": "^9.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^5.0.0",
+    "sass": "^1.69.5",
+    "webpack": "^5.89.0",
+    "webpack-stream": "^7.0.0"
+  }
+}
