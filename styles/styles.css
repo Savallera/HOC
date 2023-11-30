@@ -100,48 +100,48 @@ textarea {
   block-size: 100%;
 }
 .icon--type-attach::before {
-  -webkit-mask-image: url("../../images/icons.svg#attach");
-          mask-image: url("../../images/icons.svg#attach");
+  -webkit-mask-image: url("../images/icons.svg#attach");
+          mask-image: url("../images/icons.svg#attach");
 }
 .icon--type-close::before {
-  -webkit-mask-image: url("../../images/icons.svg#close");
-          mask-image: url("../../images/icons.svg#close");
+  -webkit-mask-image: url("../images/icons.svg#close");
+          mask-image: url("../images/icons.svg#close");
 }
 .icon--type-email::before {
-  -webkit-mask-image: url("../../images/icons.svg#email");
-          mask-image: url("../../images/icons.svg#email");
+  -webkit-mask-image: url("../images/icons.svg#email");
+          mask-image: url("../images/icons.svg#email");
 }
 .icon--type-error::before {
-  -webkit-mask-image: url("../../images/icons.svg#error");
-          mask-image: url("../../images/icons.svg#error");
+  -webkit-mask-image: url("../images/icons.svg#error");
+          mask-image: url("../images/icons.svg#error");
 }
 .icon--type-location::before {
-  -webkit-mask-image: url("../../images/icons.svg#location");
-          mask-image: url("../../images/icons.svg#location");
+  -webkit-mask-image: url("../images/icons.svg#location");
+          mask-image: url("../images/icons.svg#location");
 }
 .icon--type-menu::before {
-  -webkit-mask-image: url("../../images/icons.svg#menu");
-          mask-image: url("../../images/icons.svg#menu");
+  -webkit-mask-image: url("../images/icons.svg#menu");
+          mask-image: url("../images/icons.svg#menu");
 }
 .icon--type-phone::before {
-  -webkit-mask-image: url("../../images/icons.svg#phone");
-          mask-image: url("../../images/icons.svg#phone");
+  -webkit-mask-image: url("../images/icons.svg#phone");
+          mask-image: url("../images/icons.svg#phone");
 }
 .icon--type-rutube::before {
-  -webkit-mask-image: url("../../images/icons.svg#rutube");
-          mask-image: url("../../images/icons.svg#rutube");
+  -webkit-mask-image: url("../images/icons.svg#rutube");
+          mask-image: url("../images/icons.svg#rutube");
 }
 .icon--type-telegram::before {
-  -webkit-mask-image: url("../../images/icons.svg#telegram");
-          mask-image: url("../../images/icons.svg#telegram");
+  -webkit-mask-image: url("../images/icons.svg#telegram");
+          mask-image: url("../images/icons.svg#telegram");
 }
 .icon--type-user::before {
-  -webkit-mask-image: url("../../images/icons.svg#user");
-          mask-image: url("../../images/icons.svg#user");
+  -webkit-mask-image: url("../images/icons.svg#user");
+          mask-image: url("../images/icons.svg#user");
 }
 .icon--type-vkontakte::before {
-  -webkit-mask-image: url("../../images/icons.svg#vkontakte");
-          mask-image: url("../../images/icons.svg#vkontakte");
+  -webkit-mask-image: url("../images/icons.svg#vkontakte");
+          mask-image: url("../images/icons.svg#vkontakte");
 }
 
 .button {
@@ -500,12 +500,18 @@ textarea {
   color: var(--accent-text-color);
 }
 .header__menu-list {
-  -webkit-margin-end: 15px;
-          margin-inline-end: 15px;
+  max-inline-size: calc(100% - 200px);
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 15px;
+}
+.header__menu-list li {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 .header__menu-link {
   display: -webkit-box;
@@ -520,7 +526,7 @@ textarea {
   min-block-size: clamp(40px, 8vi, 80px);
   text-align: center;
   text-decoration: none;
-  padding-inline: 17px;
+  padding-inline: 20px;
   font-variation-settings: "wght" 500;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
@@ -535,19 +541,28 @@ textarea {
   outline: 2px solid var(--main-text-color);
 }
 .header__join-button {
+  display: none;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  margin-inline: auto 20px;
+  margin-inline: 15px 20px;
+}
+@media only screen and (width >= 576px) {
+  .header__join-button {
+    display: unset;
+  }
 }
 .header__drop-down-menu {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 100;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
 }
 .header__drop-down-menu-btn {
   -ms-flex-item-align: center;
@@ -745,5 +760,6 @@ textarea {
 .page__section, .header__wrap, .footer__wrap {
   margin-inline: auto;
   padding-inline: var(--section-padding);
-  inline-size: var(--section-inline-size);
+  inline-size: 100%;
+  max-inline-size: var(--section-inline-size);
 }
