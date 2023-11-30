@@ -22,7 +22,6 @@
 
   &__menu {
     flex: auto;
-
     display: flex;
     justify-content: space-between;
     color: var(--accent-text-color);
@@ -30,9 +29,14 @@
 
   &__menu-list {
     @extend %reset-list;
-    margin-inline-end: 15px;
+    max-inline-size: calc(100% - 200px);
+    flex: auto;
     display: flex;
-    gap: 15px;
+
+    // Чтобы работал скрипт меню.
+    li {
+      flex: none;
+    }
   }
 
   &__menu-link {
@@ -42,7 +46,7 @@
     min-block-size: clamp(40px, 8vi, 80px);
     text-align: center;
     text-decoration: none;
-    padding-inline: 17px;
+    padding-inline: 20px;
     font-variation-settings: 'wght' 500;
     transition: background 0.3s;
 
@@ -58,14 +62,21 @@
   }
 
   &__join-button {
+    display: none;
     align-self: center;
     flex: none;
-    margin-inline: auto 20px;
+    margin-inline: 15px 20px;
+
+    @include media(sm) {
+      display: unset;
+    }
   }
 
   &__drop-down-menu {
     position: relative;
     display: flex;
+    z-index: 100;
+    margin-inline-start: auto;
 
     &:hover .header__drop-down-menu-container {
       @extend %visibility-block;

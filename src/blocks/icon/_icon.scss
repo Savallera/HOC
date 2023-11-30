@@ -14,37 +14,37 @@
 
   &--type {
     &-attach::before {
-      mask-image: url('../../images/icons.svg#attach');
+      mask-image: url('../images/icons.svg#attach');
     }
     &-close::before {
-      mask-image: url('../../images/icons.svg#close');
+      mask-image: url('../images/icons.svg#close');
     }
     &-email::before {
-      mask-image: url('../../images/icons.svg#email');
+      mask-image: url('../images/icons.svg#email');
     }
     &-error::before {
-      mask-image: url('../../images/icons.svg#error');
+      mask-image: url('../images/icons.svg#error');
     }
     &-location::before {
-      mask-image: url('../../images/icons.svg#location');
+      mask-image: url('../images/icons.svg#location');
     }
     &-menu::before {
-      mask-image: url('../../images/icons.svg#menu');
+      mask-image: url('../images/icons.svg#menu');
     }
     &-phone::before {
-      mask-image: url('../../images/icons.svg#phone');
+      mask-image: url('../images/icons.svg#phone');
     }
     &-rutube::before {
-      mask-image: url('../../images/icons.svg#rutube');
+      mask-image: url('../images/icons.svg#rutube');
     }
     &-telegram::before {
-      mask-image: url('../../images/icons.svg#telegram');
+      mask-image: url('../images/icons.svg#telegram');
     }
     &-user::before {
-      mask-image: url('../../images/icons.svg#user');
+      mask-image: url('../images/icons.svg#user');
     }
     &-vkontakte::before {
-      mask-image: url('../../images/icons.svg#vkontakte');
+      mask-image: url('../images/icons.svg#vkontakte');
     }
   }
 }
