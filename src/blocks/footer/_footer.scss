@@ -13,7 +13,7 @@
     gap: clamp(10px, 2vi, 20px);
 
     @include media(lg) {
-      grid-template-columns: 1.115fr 0.5fr 0.5fr;
+      grid-template-columns: 1.15fr 0.5fr 0.5fr;
     }
   }
 
@@ -28,15 +28,36 @@
   }
 
   &__nav-list {
-    margin: 0;
-    list-style-type: disc;
-    padding: clamp(1.75em, 5vb, 3.125em) 4.5vi clamp(1.5em, 4.5vb, 2.5em);
+    margin: 0 0 0 clamp(0.9375em, 4.375vi, 4.375em);
+    list-style: none;
+    padding: clamp(1.25em, 5vi, 3.125em) 0 clamp(1em, 4.5vi, 2.5em);
+    columns: 2;
+
+    li {
+      display: flex;
+      align-items: start;
+      gap: 0.5em;
+
+      &::before {
+        content: '';
+        margin-block: clamp(10px, 1.76vi, 1.1em);
+        border-radius: 50%;
+        background-color: currentColor;
+        inline-size: 4px;
+        block-size: 4px;
+      }
+    }
+
+    @include media(lg) {
+      columns: unset;
+    }
   }
 
   &__nav-link {
     text-decoration: none;
+    font-size: clamp(10px, 1.6vi, 16px);
     text-underline-position: under;
-    line-height: 245%;
+    padding-block: 0.675em;
     font-variation-settings: 'wght' 500;
 
     &:hover {

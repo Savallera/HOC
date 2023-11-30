@@ -41,6 +41,12 @@ function checkMenuSize() {
       .classList.add('header__menu-link');
     numOfVisibleItems += 1;
   }
+
+  // Update the button accordingly
+  mobileMenu.setAttribute('count', numberOfItems - numOfVisibleItems);
+  if (numOfVisibleItems === numberOfItems)
+    mobileMenu.classList.add('visually-hidden');
+  else mobileMenu.classList.remove('visually-hidden');
 }
 
 window.addEventListener('resize', () => {
@@ -48,6 +54,4 @@ window.addEventListener('resize', () => {
 });
 window.addEventListener('DOMContentLoaded', () => {
   checkMenuSize();
-
-  console.log(requiredSpace, availableSpace);
 });

@@ -1,8 +1,8 @@
 .address {
   &__logo {
     display: block;
-    padding: clamp(10px, 1.5vb, 15px) clamp(10px, 2vi, 20px)
-      clamp(2px, 0.5vb, 5px);
+    padding: clamp(10px, 1.5vi, 15px) clamp(10px, 2vi, 20px)
+      clamp(2px, 0.5vi, 5px);
     border-radius: 20px 20px 0 0;
     background-color: #fff;
 
@@ -28,7 +28,7 @@
   }
 
   &__content {
-    padding-block: 25px 15px;
+    padding-block: clamp(15px, 2.5vi, 25px) clamp(8px, 1.5vi, 15px);
     padding-inline: clamp(10px, 2vi, 20px);
     border-radius: 0 0 20px 20px;
     background-color: #00000026;
@@ -37,15 +37,15 @@
   &__links {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-block-end: 4.5vb;
+    gap: clamp(10px, 2vi, 20px);
+    margin-block-end: 4.5vi;
   }
 
   &__link {
     display: flex;
     align-items: start;
     gap: clamp(8px, 1.5vi, 15px);
-    font-size: clamp(0.875em, 1.6vi, 1em);
+    font-size: clamp(10px, 1.6vi, 16px);
     text-decoration: none;
     font-variation-settings: 'wght' 700;
     transition: color 0.3s;
@@ -77,8 +77,8 @@
 
   &__social-link-icon {
     display: block;
-    inline-size: clamp(2em, 2.5vi, 2.5em);
-    block-size: clamp(2em, 2.5vi, 2.5em);
+    inline-size: clamp(1.5em, 2.5vi, 2.5em);
+    block-size: clamp(1.5em, 2.5vi, 2.5em);
 
     &::before {
       transition: background 0.3s;

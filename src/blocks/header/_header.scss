@@ -94,8 +94,12 @@
 
   &__drop-down-menu-container {
     position: absolute;
-    inset: 100% 0 auto auto;
+    inset: 100% -3em auto auto;
     @extend %hidden-block;
+
+    @include media(xs) {
+      inset: 100% 0 auto auto;
+    }
   }
 
   &__drop-down-menu-list {
