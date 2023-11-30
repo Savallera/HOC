@@ -11,4 +11,11 @@ const closeFeedbackModal = function () {
 };
 
 headerJoinButton.addEventListener('click', openFeedbackModal);
-feebackModalCloseButton.addEventListener('click', closeFeedbackModal);
+feebackModal.addEventListener('click', (evt) => {
+  if (
+    evt.target.classList.contains('feedback-modal') ||
+    evt.target.classList.contains('feedback-modal__close-button')
+  ) {
+    closeFeedbackModal();
+  }
+});

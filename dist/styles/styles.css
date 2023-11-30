@@ -672,6 +672,7 @@ textarea {
 .feedback-modal {
   position: fixed;
   inset: 0;
+  z-index: 200;
   inline-size: 100%;
   block-size: 100%;
   min-block-size: 100vh;
