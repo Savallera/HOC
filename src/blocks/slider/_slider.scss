@@ -1,0 +1,21 @@
+// корректировка базовых стилей для библы splide
+.splide {
+  &__pagination {
+    position: static;
+    padding-block: clamp(5px, 2vi, 20px) clamp(10px, 3vi, 30px);
+
+    &__page {
+      inline-size: clamp(6px, 1.6vi, 16px);
+      block-size: clamp(6px, 1.6vi, 16px);
+      margin: clamp(3px, 0.8vi, 8px);
+      background-color: var(--main-text-low-color);
+
+      &.is-active {
+        background: var(--main-color) var(--main-color-gradient) no-repeat
+          center;
+        pointer-events: none;
+        transform: unset;
+      }
+    }
+  }
+}

@@ -29,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
+    "@splidejs/splide": "^4.1.4",
     "babel": "^6.23.0",
     "browser-sync": "^2.29.3",
     "del": "^7.1.0",

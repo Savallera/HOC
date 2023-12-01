@@ -1,14 +1,34 @@
+// Libraries
+@import '../../node_modules/@splidejs/splide/dist/css/splide.min.css';
+
+// globals
+@import './mixins';
+@import './extends';
 @import './vendor/globals';
 @import './vendor/variables';
 
+// layout
 @import '../blocks/page/page';
-@import '../blocks/bg-gradient/bg-gradient';
+@import '../blocks/header/header';
+@import '../blocks/footer/footer';
+
+// UI
 @import '../blocks/icon/icon';
 @import '../blocks/button/button';
 @import '../blocks/icon-button/icon-button';
 @import '../blocks/field/field';
+@import '../blocks/card-link/card-link';
 
+// Blocks
+@import '../blocks/slider/slider';
+@import '../blocks/bg-gradient/bg-gradient';
 @import '../blocks/address/address';
-@import '../blocks/header/header';
-@import '../blocks/footer/footer';
+
+// Cards
+@import '../blocks/card-banner/card-banner';
+
+// Sections
+@import '../blocks/top-banner/top-banner';
+
+// Modals
 @import '../blocks/feedback-modal/feedback-modal';
