@@ -555,7 +555,7 @@ textarea {
     display: unset;
   }
 }
-.header__drop-down-menu {
+.header__mobile-menu {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -564,7 +564,7 @@ textarea {
   -webkit-margin-start: auto;
           margin-inline-start: auto;
 }
-.header__drop-down-menu-btn {
+.header__mobile-menu-btn {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -574,16 +574,16 @@ textarea {
   max-inline-size: clamp(2.5em, 3.8vi, 3.375em);
   block-size: clamp(2.5em, 3.8vi, 3.375em);
 }
-.header__drop-down-menu-container {
+.header__mobile-menu-container {
   position: absolute;
   inset: 100% -3em auto auto;
 }
 @media only screen and (width >= 480px) {
-  .header__drop-down-menu-container {
+  .header__mobile-menu-container {
     inset: 100% 0 auto auto;
   }
 }
-.header__drop-down-menu-list {
+.header__mobile-menu-list {
   margin: 10px 0 0;
   padding: 0;
   list-style: none;
@@ -595,20 +595,20 @@ textarea {
   overflow: hidden;
   color: var(--main-text-color);
 }
-.header__drop-down-menu-link {
+.header__mobile-menu-link {
   display: block;
   text-decoration: none;
   padding: 9px 20px;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
 }
-.header__drop-down-menu-link:hover {
+.header__mobile-menu-link:hover {
   background-color: var(--hover-color);
 }
-.header__drop-down-menu-link:focus {
+.header__mobile-menu-link:focus {
   outline: none;
 }
-.header__drop-down-menu-link:focus-visible {
+.header__mobile-menu-link:focus-visible {
   outline: 2px solid var(--main-text-color);
 }
 .header__user-link {
@@ -765,7 +765,7 @@ textarea {
   list-style: none;
 }
 
-.field__error-text, .field__error-icon, .header__drop-down-menu-container, .feedback-modal {
+.field__error-text, .field__error-icon, .header__mobile-menu-container, .feedback-modal {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -777,7 +777,7 @@ textarea {
   transition: visibility 0s 0.35s, opacity 0.35s;
 }
 
-.field--state-error .field__error-text, .field--state-error .field__error-icon, .header__drop-down-menu:hover .header__drop-down-menu-container, .feedback-modal--opened {
+.field--state-error .field__error-text, .field--state-error .field__error-icon, .header__mobile-menu:hover .header__drop-down-menu-container, .feedback-modal--opened {
   visibility: visible;
   opacity: 1;
   pointer-events: all;

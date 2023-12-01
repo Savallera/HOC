@@ -72,7 +72,7 @@
     }
   }
 
-  &__drop-down-menu {
+  &__mobile-menu {
     position: relative;
     display: flex;
     z-index: 100;
@@ -83,7 +83,7 @@
     }
   }
 
-  &__drop-down-menu-btn {
+  &__mobile-menu-btn {
     align-self: center;
     display: block;
     inline-size: clamp(2.5em, 3.8vi, 3.375em);
@@ -92,7 +92,7 @@
     block-size: clamp(2.5em, 3.8vi, 3.375em);
   }
 
-  &__drop-down-menu-container {
+  &__mobile-menu-container {
     position: absolute;
     inset: 100% -3em auto auto;
     @extend %hidden-block;
@@ -102,7 +102,7 @@
     }
   }
 
-  &__drop-down-menu-list {
+  &__mobile-menu-list {
     margin: 10px 0 0;
     padding: 0;
     list-style: none;
@@ -114,7 +114,7 @@
     color: var(--main-text-color);
   }
 
-  &__drop-down-menu-link {
+  &__mobile-menu-link {
     display: block;
     text-decoration: none;
     padding: 9px 20px;

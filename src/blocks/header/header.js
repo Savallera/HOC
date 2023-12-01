@@ -1,7 +1,7 @@
 // Header menu for mobile
 const menuList = document.querySelector('.header__menu-list');
-const mobileMenu = document.querySelector('.header__drop-down-menu');
-const mobileMenuList = document.querySelector('.header__drop-down-menu-list');
+const mobileMenu = document.querySelector('.header__mobile-menu');
+const mobileMenuList = document.querySelector('.header__mobile-menu-list');
 
 let numberOfItems = 0;
 let totalSpace = 0;
@@ -27,7 +27,7 @@ function checkMenuSize() {
       .classList.remove('header__menu-link');
     mobileMenuList.firstElementChild
       .querySelector('a')
-      .classList.add('header__drop-down-menu-link');
+      .classList.add('header__mobile-menu-link');
     numOfVisibleItems -= 1;
     checkMenuSize();
     // There is more than enough space
@@ -35,7 +35,7 @@ function checkMenuSize() {
     menuList.append(mobileMenuList.children[0]);
     menuList.lastElementChild
       .querySelector('a')
-      .classList.remove('header__drop-down-menu-link');
+      .classList.remove('header__mobile-menu-link');
     menuList.lastElementChild
       .querySelector('a')
       .classList.add('header__menu-link');
