@@ -6,13 +6,28 @@ window.addEventListener('DOMContentLoaded', () => {
         rewind: true,
         autoplay: true,
         arrows: false,
-        // pagination: false,
-        // padding: 15,
-        // perPage: 1,
-        // perMove: 1,
-        // gap: '1.25em',
       });
       topBannerSlider.mount();
+    }
+
+    if (document.querySelector('#events-slider')) {
+      let eventsSlider = new Splide('#events-slider', {
+        type: 'fade',
+        rewind: true,
+        autoplay: true,
+        arrows: false,
+      });
+      eventsSlider.mount();
+    }
+
+    if (document.querySelector('#article-slider')) {
+      let articleSlider = new Splide('#article-slider', {
+        type: 'fade',
+        rewind: true,
+        autoplay: true,
+        arrows: false,
+      });
+      articleSlider.mount();
     }
   }
 });
