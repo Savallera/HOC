@@ -17,7 +17,7 @@
   transition: visibility 0s 0.35s, opacity 0.35s;
 }
 
-.feedback-modal--opened, .field--state-error .field__error-icon, .field--state-error .field__error-text, .header__mobile-menu:hover .header__drop-down-menu-container {
+.feedback-modal--opened, .field--state-error .field__error-icon, .field--state-error .field__error-text, .header__mobile-menu:hover .header__mobile-menu-container {
   visibility: visible;
   opacity: 1;
   pointer-events: all;
@@ -909,7 +909,7 @@ textarea {
   transition: visibility 0s 0.35s, opacity 0.35s;
 }
 
-.header__mobile-menu:hover .header__drop-down-menu-container, .field--state-error .field__error-text, .field--state-error .field__error-icon, .feedback-modal--opened {
+.header__mobile-menu:hover .header__mobile-menu-container, .field--state-error .field__error-text, .field--state-error .field__error-icon, .feedback-modal--opened {
   visibility: visible;
   opacity: 1;
   pointer-events: all;

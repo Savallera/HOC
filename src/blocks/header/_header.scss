@@ -82,7 +82,7 @@
     z-index: 100;
     margin-inline-start: auto;
 
-    &:hover .header__drop-down-menu-container {
+    &:hover .header__mobile-menu-container {
       @extend %visibility-block;
     }
   }
