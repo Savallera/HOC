@@ -106,11 +106,12 @@
 </header>
 
       <main class="page__content">
-        <section class="splide" id="top-banner-slider">
+        <!-- Главный слайдер на главной странице -->
+<section class="splide" id="top-banner-slider">
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">
-        <a href="#" class="card-link">
+        <a href="#" class="card-link" rel="noopener ugs">
           <article
             class="card-banner card-banner--place-top-banner"
             style="
@@ -127,7 +128,7 @@
         </a>
       </li>
       <li class="splide__slide">
-        <a href="#" class="card-link">
+        <a href="#" class="card-link" rel="noopener ugs">
           <article
             class="card-banner card-banner--place-top-banner"
             style="
@@ -144,9 +145,9 @@
         </a>
       </li>
       <li class="splide__slide">
-        <a href="#" class="card-link">
+        <a href="#" class="card-link" rel="noopener ugs">
           <article
-            class="card-banner"
+            class="card-banner card-banner--place-top-banner"
             style="
               background-image: url(https://www.cheltv.ru/wp-content/uploads/2021/01/studenti.jpeg);
             "
@@ -161,7 +162,7 @@
         </a>
       </li>
       <li class="splide__slide">
-        <a href="#" class="card-link">
+        <a href="#" class="card-link" rel="noopener ugs">
           <article
             class="card-banner card-banner--place-top-banner"
             style="
@@ -181,38 +182,219 @@
   </div>
 </section>
 
-        <section class="page__section">
-  <div class="splide" id="events-slider">
+        <!-- Секция с новостями на главной -->
+<section class="news page__section page__section--wide-on-tablets">
+  <div class="splide news__slider" id="news-slider">
     <div class="splide__track">
-      <ul class="splide__list">
+      <ul class="splide__list news__list">
         <li class="splide__slide">
-          <a href="#" class="card-link">
-            <article
-              class="card-banner"
-              style="
-                background-image: url(https://www.barcelonacheckin.com/img/stored_images/barcelona/articles_images/Group-of-Male-and-Female-College-Students.jpg);
-              "
-            >
-              <div class="card-banner__main-content">
-                <h2 class="card-banner__title">Студмедиа ПсковГУ</h2>
-                <p class="card-banner__text">Популярное</p>
+          <a href="#" class="card-link" rel="noopener ugs">
+            <article class="card">
+              <img
+                class="card__image"
+                src="https://s3-alpha-sig.figma.com/img/1210/a89f/bfa8c840b8f9d3794e04e0352a954bad?Expires=1702252800&Signature=a07i-YI-MUEPa-s4fIFWz1wDtYIi4-hEQNyA~I8KJzmXM2Yx6GgZBPk0f8i3kWobVkKw31sN7rS7k05KwdiQRAOIFdlT3A5quRmzBJmEipVELE4x0bXr9sXXY8vhKb2L7XGkAUICnbBNt-Y2l7BA8gnxL6C51ZLEfrEmSvfBIQJaF73D7~N9JnHyHfNwpAdbgUT6MHyqyVDFEFSaF8JE0XapF~0UfELE00lTIH~3LgtZE8vpXaGbRD~EH2Xhytcq8HpzPnT1fnBxvt~Rny6pwoiybQaU5TlJm83UlGJy-No-My3c6cLh0gQcMA8ZaiOBc~LIvAe0ROrFWItv1OU1Mg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt="Описание изображения"
+                loading="lazy"
+              />
+              <div class="card__main-content">
+                <h2 class="card__title">Фестиваль национальных блюд</h2>
+                <div class="card__controls">
+                  <p class="card__text text-gradient">Популярное</p>
+                  <p class="card__views" aria-label="Количество просмотров">
+                    <span
+                      class="card__views-icon icon icon--type-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="card__views-value">123</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="card__like-button icon-button icon icon--type-like"
+                    aria-label="Нравится"
+                  ></button>
+                </div>
               </div>
             </article>
           </a>
         </li>
         <li class="splide__slide">
-          <a href="#" class="card-link">
-            <article
-              class="card-banner"
-              style="
-                background-image: url(https://calendata.ru/wp-content/uploads/2021/05/656.jpg);
-              "
-            >
-              <div class="card-banner__main-content">
-                <h2 class="card-banner__title">Фестиваль национальных блюд</h2>
-                <p class="card-banner__text card-banner__text--pseudo-link">
-                  Подробнее
-                </p>
+          <a href="#" class="card-link" rel="noopener ugs">
+            <article class="card">
+              <img
+                class="card__image"
+                src="https://s3-alpha-sig.figma.com/img/1210/a89f/bfa8c840b8f9d3794e04e0352a954bad?Expires=1702252800&Signature=a07i-YI-MUEPa-s4fIFWz1wDtYIi4-hEQNyA~I8KJzmXM2Yx6GgZBPk0f8i3kWobVkKw31sN7rS7k05KwdiQRAOIFdlT3A5quRmzBJmEipVELE4x0bXr9sXXY8vhKb2L7XGkAUICnbBNt-Y2l7BA8gnxL6C51ZLEfrEmSvfBIQJaF73D7~N9JnHyHfNwpAdbgUT6MHyqyVDFEFSaF8JE0XapF~0UfELE00lTIH~3LgtZE8vpXaGbRD~EH2Xhytcq8HpzPnT1fnBxvt~Rny6pwoiybQaU5TlJm83UlGJy-No-My3c6cLh0gQcMA8ZaiOBc~LIvAe0ROrFWItv1OU1Mg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt="Описание изображения"
+                loading="lazy"
+              />
+              <div class="card__main-content">
+                <h2 class="card__title">Студент мечтает о трёх вещах!</h2>
+                <div class="card__controls">
+                  <p class="card__text text-gradient">Популярное</p>
+                  <p class="card__views" aria-label="Количество просмотров">
+                    <span
+                      class="card__views-icon icon icon--type-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="card__views-value">123</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="card__like-button icon-button icon icon--type-like"
+                    aria-label="Нравится"
+                  ></button>
+                </div>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#" class="card-link" rel="noopener ugs">
+            <article class="card card--size-md">
+              <img
+                class="card__image"
+                src="https://www.figma.com/file/eKBcAMx6aUx9iqctZq5ixW/image/05aeb49e1a00ef406ea6411d88faf44f42866267"
+                alt="Описание изображения"
+                loading="lazy"
+              />
+              <div class="card__main-content">
+                <h2 class="card__title">
+                  Первый день Школы «Forest Active School»
+                </h2>
+                <div class="card__controls">
+                  <p class="card__text text-gradient">Популярное</p>
+                  <p class="card__views" aria-label="Количество просмотров">
+                    <span
+                      class="card__views-icon icon icon--type-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="card__views-value">123</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="card__like-button icon-button icon icon--type-like"
+                    aria-label="Нравится"
+                  ></button>
+                </div>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#" class="card-link" rel="noopener ugs">
+            <article class="card">
+              <img
+                class="card__image card__image--hidden-on-desktop"
+                src="https://www.barcelonacheckin.com/img/stored_images/barcelona/articles_images/Group-of-Male-and-Female-College-Students.jpg"
+                alt="Описание изображения"
+                loading="lazy"
+              />
+              <div class="card__main-content">
+                <h2 class="card__title">Фестиваль национальных блюд</h2>
+                <div class="card__controls">
+                  <p class="card__text text-gradient">Популярное</p>
+                  <p class="card__views" aria-label="Количество просмотров">
+                    <span
+                      class="card__views-icon icon icon--type-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="card__views-value">123</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="card__like-button icon-button icon icon--type-like"
+                    aria-label="Нравится"
+                  ></button>
+                </div>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#" class="card-link" rel="noopener ugs">
+            <article class="card">
+              <img
+                class="card__image card__image--hidden-on-desktop"
+                src="https://www.barcelonacheckin.com/img/stored_images/barcelona/articles_images/Group-of-Male-and-Female-College-Students.jpg"
+                alt="Описание изображения"
+                loading="lazy"
+              />
+              <div class="card__main-content">
+                <h2 class="card__title">Фестиваль национальных блюд</h2>
+                <div class="card__controls">
+                  <p class="card__text text-gradient">Популярное</p>
+                  <p class="card__views" aria-label="Количество просмотров">
+                    <span
+                      class="card__views-icon icon icon--type-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="card__views-value">123</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="card__like-button icon-button icon icon--type-like"
+                    aria-label="Нравится"
+                  ></button>
+                </div>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#" class="card-link" rel="noopener ugs">
+            <article class="card">
+              <img
+                class="card__image card__image--hidden-on-desktop"
+                src="https://www.barcelonacheckin.com/img/stored_images/barcelona/articles_images/Group-of-Male-and-Female-College-Students.jpg"
+                alt="Описание изображения"
+                loading="lazy"
+              />
+              <div class="card__main-content">
+                <h2 class="card__title">Фестиваль национальных блюд</h2>
+                <div class="card__controls">
+                  <p class="card__text text-gradient">Популярное</p>
+                  <p class="card__views" aria-label="Количество просмотров">
+                    <span
+                      class="card__views-icon icon icon--type-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="card__views-value">123</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="card__like-button icon-button icon icon--type-like"
+                    aria-label="Нравится"
+                  ></button>
+                </div>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#" class="card-link" rel="noopener ugs">
+            <article class="card">
+              <img
+                class="card__image card__image--hidden-on-desktop"
+                src="https://www.barcelonacheckin.com/img/stored_images/barcelona/articles_images/Group-of-Male-and-Female-College-Students.jpg"
+                alt="Описание изображения"
+                loading="lazy"
+              />
+              <div class="card__main-content">
+                <h2 class="card__title">Фестиваль национальных блюд</h2>
+                <div class="card__controls">
+                  <p class="card__text text-gradient">Популярное</p>
+                  <p class="card__views" aria-label="Количество просмотров">
+                    <span
+                      class="card__views-icon icon icon--type-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="card__views-value">123</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="card__like-button icon-button icon icon--type-like"
+                    aria-label="Нравится"
+                  ></button>
+                </div>
               </div>
             </article>
           </a>
@@ -220,38 +402,106 @@
       </ul>
     </div>
   </div>
+  <button type="button" class="button button--theme-gradient page__button">
+    <span class="button__text">Смотреть все новости</span>
+  </button>
 </section>
 
-<section class="page__section">
-  <div class="splide" id="article-slider">
+        <!-- Секция с событиями на главной -->
+<section class="events page__section">
+  <div class="page__title-block">
+    <h2 class="page__title">События</h2>
+    <a href="#" class="page__link text-gradient">Все события</a>
+  </div>
+  <div class="splide" id="events-slider">
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide">
-          <a href="#" class="card-link">
+          <a href="#" class="card-link" rel="noopener ugs">
             <article
               class="card-banner"
               style="
-                background-image: url(https://www.barcelonacheckin.com/img/stored_images/barcelona/articles_images/Group-of-Male-and-Female-College-Students.jpg);
+                background-image: url(https://s3-alpha-sig.figma.com/img/dd30/acd2/dd690151430b0b3afa73085c8e7bb416?Expires=1702252800&Signature=N3kKrd80lPdrPIzJdNAHftTvqYoUDihNwSrW-6NHfBGIHnisZ04SbAI8LjeX7aG-XMssTfS~B61dz4tderXE7poAqU995nBuMvL3MdqdnbvJKBbqIRbB3-BVV4G7cA0cRCyh9eckhZ-XwMNOFa4K-C-eRVikGOk1b8Ru96vCc9-gQihpog4WE0bzsv9ntJTPCBCgjmukrO0YO~JNDZwzc42Z1p7anLo-YSmWzGHHIRphPutngzM6NUmdB5IIJ~xzaikYZafXfpmmN1Dxj~PoW7Y2JfGEAT586qLQyaURcMCcqb5j1jkWPC2I19QK7F1Hl1-QOZkZ9OBgyNTAOYhtYA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
               "
             >
-              <div
-                class="card-banner__main-content card-banner__main-content--with-controls"
-              >
-                <h2 class="card-banner__title">Студмедиа ПсковГУ</h2>
-                <p class="card-banner__text">Популярное</p>
-                <div class="card-banner__controls">
-                  <p
-                    class="card-banner__views"
-                    aria-label="Количество просмотров"
-                  >
-                    <span class="card-banner__views-icon icon--type-eye"></span>
-                    <span class="card-banner__views-value">123</span>
+              <div class="card-banner__main-content">
+                <h2 class="card-banner__title">Школа экономики и управления</h2>
+                <address class="card-banner__address">
+                  <p class="card-banner__text">
+                    <span
+                      class="card-banner__text-icon icon icon--type-calendar"
+                      aria-hidden="true"
+                    ></span>
+                    29 сентября 2023
                   </p>
-                  <button
-                    type="button"
-                    class="icon-button icon icon--type-like"
-                  ></button>
-                </div>
+                  <p class="card-banner__text">
+                    <span
+                      class="card-banner__text-icon icon icon--type-location"
+                      aria-hidden="true"
+                    ></span>
+                    г. Сочи, ул. Просвещения, 139
+                  </p>
+                </address>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#" class="card-link" rel="noopener ugs">
+            <article
+              class="card-banner"
+              style="
+                background-image: url(https://s3-alpha-sig.figma.com/img/dd30/acd2/dd690151430b0b3afa73085c8e7bb416?Expires=1702252800&Signature=N3kKrd80lPdrPIzJdNAHftTvqYoUDihNwSrW-6NHfBGIHnisZ04SbAI8LjeX7aG-XMssTfS~B61dz4tderXE7poAqU995nBuMvL3MdqdnbvJKBbqIRbB3-BVV4G7cA0cRCyh9eckhZ-XwMNOFa4K-C-eRVikGOk1b8Ru96vCc9-gQihpog4WE0bzsv9ntJTPCBCgjmukrO0YO~JNDZwzc42Z1p7anLo-YSmWzGHHIRphPutngzM6NUmdB5IIJ~xzaikYZafXfpmmN1Dxj~PoW7Y2JfGEAT586qLQyaURcMCcqb5j1jkWPC2I19QK7F1Hl1-QOZkZ9OBgyNTAOYhtYA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+              "
+            >
+              <div class="card-banner__main-content">
+                <h2 class="card-banner__title">Школа экономики и управления</h2>
+                <address class="card-banner__address">
+                  <p class="card-banner__text">
+                    <span
+                      class="card-banner__text-icon icon icon--type-calendar"
+                      aria-hidden="true"
+                    ></span>
+                    29 сентября 2023
+                  </p>
+                  <p class="card-banner__text">
+                    <span
+                      class="card-banner__text-icon icon icon--type-location"
+                      aria-hidden="true"
+                    ></span>
+                    г. Сочи, ул. Просвещения, 139
+                  </p>
+                </address>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#" class="card-link" rel="noopener ugs">
+            <article
+              class="card-banner"
+              style="
+                background-image: url(https://s3-alpha-sig.figma.com/img/dd30/acd2/dd690151430b0b3afa73085c8e7bb416?Expires=1702252800&Signature=N3kKrd80lPdrPIzJdNAHftTvqYoUDihNwSrW-6NHfBGIHnisZ04SbAI8LjeX7aG-XMssTfS~B61dz4tderXE7poAqU995nBuMvL3MdqdnbvJKBbqIRbB3-BVV4G7cA0cRCyh9eckhZ-XwMNOFa4K-C-eRVikGOk1b8Ru96vCc9-gQihpog4WE0bzsv9ntJTPCBCgjmukrO0YO~JNDZwzc42Z1p7anLo-YSmWzGHHIRphPutngzM6NUmdB5IIJ~xzaikYZafXfpmmN1Dxj~PoW7Y2JfGEAT586qLQyaURcMCcqb5j1jkWPC2I19QK7F1Hl1-QOZkZ9OBgyNTAOYhtYA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+              "
+            >
+              <div class="card-banner__main-content">
+                <h2 class="card-banner__title">Школа экономики и управления</h2>
+                <address class="card-banner__address">
+                  <p class="card-banner__text">
+                    <span
+                      class="card-banner__text-icon icon icon--type-calendar"
+                      aria-hidden="true"
+                    ></span>
+                    29 сентября 2023
+                  </p>
+                  <p class="card-banner__text">
+                    <span
+                      class="card-banner__text-icon icon icon--type-location"
+                      aria-hidden="true"
+                    ></span>
+                    г. Сочи, ул. Просвещения, 139
+                  </p>
+                </address>
               </div>
             </article>
           </a>

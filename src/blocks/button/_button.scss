@@ -17,10 +17,17 @@
       font-size: clamp(18px, 2.5vi, 25px);
       border-radius: 10px;
       min-inline-size: min(22rem, 100%);
+      outline: 2px solid transparent;
       padding: clamp(8px, 1.5vi, 15px) clamp(15px, 3vi, 30px);
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color-gradient) no-repeat center;
       color: var(--accent-text-color);
-      // &:hover {}
+
+      &:hover {
+        color: var(--accent-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        outline-color: var(--main-color);
+      }
     }
     &-outline-light {
       border-radius: 20px;

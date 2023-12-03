@@ -10,5 +10,51 @@
 
   &__section {
     @extend %section-inline-size;
+    margin-block: clamp(1.5625em, 10vi, 6.25em);
+
+    display: flex;
+    gap: clamp(2em, 4vi, 2.5em);
+    flex-direction: column;
+
+    &.page__section--wide-on-tablets {
+      @include media(lg, max) {
+        padding-inline: unset;
+      }
+    }
+  }
+
+  &__title-block {
+    inline-size: 100%;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__title {
+    margin: 0;
+    flex: auto;
+    font-weight: 800;
+    font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem); // 40 - 20
+  }
+
+  &__link {
+    flex: none;
+    font-weight: 600;
+    font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem); // 25 - 12
+
+    &:hover {
+      border-block-end: 2px solid;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid;
+    }
+  }
+
+  &__button {
+    align-self: center;
   }
 }

@@ -1,0 +1,107 @@
+.card {
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  &--size-md {
+    .card__main-content {
+      padding: clamp(0.675em, 1.125vi, 1.125em) clamp(0.75em, 1.25vi, 1.25em);
+    }
+
+    .card__title {
+      font-size: clamp(1rem, 0.8393rem + 0.8036vw, 1.5625rem); // 25 - 16
+    }
+
+    .card__text {
+      font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem); // 20 - 12
+    }
+  }
+
+  &__image {
+    @extend %alt-text-on-after;
+    background-color: var(--main-text-low-color);
+    inline-size: 100%;
+    aspect-ratio: 6/3.2;
+    object-fit: cover;
+    object-position: center;
+
+    @include media(lg) {
+      &--hidden-on-desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__main-content {
+    flex: auto;
+
+    padding: 0.675em 0.75em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__controls {
+    margin-block-start: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.375em;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 800;
+
+    @include clamp(3, 1.2);
+
+    // &--fs-big {
+    //   font-size: clamp(1rem, 0.2143rem + 3.9286vw, 3.75rem); // 16 - 60
+    // }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 0.8125em; // 13
+    font-weight: 500;
+  }
+
+  &__views {
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.375em;
+    color: var(--main-text-low-color);
+  }
+
+  &__views-icon {
+    inline-size: 1.5em;
+    block-size: 1.5em;
+    color: currentColor;
+  }
+
+  &__views-value {
+    font-weight: 500;
+    font-size: 0.975em;
+  }
+
+  &__like-button {
+    inline-size: 1.5em;
+    block-size: 1.5em;
+    padding: 0;
+    color: var(--main-text-low-color);
+
+    &:hover {
+      color: var(--accent-color);
+      background-color: transparent;
+    }
+
+    &--actived {
+      color: var(--accent-color);
+    }
+  }
+}

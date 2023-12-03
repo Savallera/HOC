@@ -1,6 +1,4 @@
 .card-banner {
-  // margin-top: clamp(40px, 8vi, 80px); // минус высота хедера
-
   max-block-size: 100vh;
   max-block-size: 100dvb;
   display: grid;
@@ -29,22 +27,36 @@
     margin-block-start: auto;
     color: var(--accent-text-color);
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: clamp(5px, 1.5vi, 15px);
     padding-block: clamp(10px, 2.5vi, 25px);
 
     &--with-controls {
+      grid-template-columns: 1fr auto;
     }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75em, 2vi, 1.25em);
+    grid-area: 1/2/3/3;
+
+    align-self: end;
   }
 
   &__title {
     margin: 0;
+    font-weight: 800;
+    max-width: min(20em, 100%);
     font-size: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem); // 16 - 40
   }
 
   &__text {
     margin: 0;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
     font-size: clamp(0.75rem, 0.5179rem + 1.1607vw, 1.5625rem); // 12 - 25
 
     &--pseudo-link {
@@ -54,6 +66,62 @@
       &:hover {
         color: var(--accent-color);
       }
+    }
+  }
+
+  &__text-icon {
+    inline-size: 1em;
+    block-size: 1em;
+  }
+
+  &__address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    font-weight: 500;
+  }
+
+  &__views {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  &__views-icon {
+    inline-size: clamp(1.5em, 3.6vi, 2em);
+    block-size: clamp(1.5em, 3.6vi, 2em);
+    color: currentColor;
+  }
+
+  &__views-value {
+    font-weight: 500;
+    font-size: clamp(0.9375em, 2vi, 1.25em);
+  }
+
+  &__like-button {
+    inline-size: clamp(1.5em, 3.6vi, 2em);
+    block-size: clamp(1.5em, 3.6vi, 2em);
+    padding: 0;
+
+    &:hover {
+      color: var(--accent-color);
+      background-color: transparent;
+    }
+
+    &--overlay {
+      position: absolute;
+      inset: 0 0 auto auto;
+      margin-inline-end: clamp(0.5em, 1.6vi, 1em);
+      margin-block-start: clamp(0.5em, 1.6vi, 1em);
+      inline-size: clamp(1.25em, 4.28vi, 2.675em);
+      block-size: clamp(1.25em, 4.28vi, 2.675em);
+    }
+
+    &--actived {
+      color: var(--accent-color);
     }
   }
 

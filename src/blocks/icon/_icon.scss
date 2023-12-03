@@ -16,6 +16,9 @@
     &-attach::before {
       mask-image: url('../images/icons.svg#attach');
     }
+    &-calendar::before {
+      mask-image: url('../images/icons.svg#calendar');
+    }
     &-close::before {
       mask-image: url('../images/icons.svg#close');
     }
@@ -24,6 +27,12 @@
     }
     &-error::before {
       mask-image: url('../images/icons.svg#error');
+    }
+    &-eye::before {
+      mask-image: url('../images/icons.svg#eye');
+    }
+    &-like::before {
+      mask-image: url('../images/icons.svg#like');
     }
     &-location::before {
       mask-image: url('../images/icons.svg#location');

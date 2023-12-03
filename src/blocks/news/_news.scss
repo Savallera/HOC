@@ -1,0 +1,29 @@
+.news {
+  &__slider.is-initialized:not(.is-active) .splide__list {
+    display: grid;
+  }
+
+  &__list {
+    gap: clamp(0.75em, 2vi, 1.25em);
+
+    @include media(lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-auto-flow: column;
+
+      li {
+        &:nth-child(9n + 1) {
+          grid-row: span 2;
+        }
+
+        &:nth-child(9n + 2) {
+          grid-row: span 2;
+        }
+
+        &:nth-child(9n + 3) {
+          grid-column: span 2;
+          grid-row: span 4;
+        }
+      }
+    }
+  }
+}
