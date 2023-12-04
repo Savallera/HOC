@@ -1,12 +1,16 @@
 .news {
-  &__slider.is-initialized:not(.is-active) .splide__list {
-    display: grid;
+  &__slider {
+    &.is-initialized:not(.is-active) .splide__list {
+      display: grid;
+    }
+    @include media(lg, max) {
+      margin-inline: calc(var(--section-padding) * -1);
+    }
   }
 
   &__list {
-    gap: clamp(0.75em, 2vi, 1.25em);
-
     @include media(lg) {
+      gap: clamp(0.75em, 2vi, 1.25em);
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-auto-flow: column;
 

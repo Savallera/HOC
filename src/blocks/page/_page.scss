@@ -13,15 +13,16 @@
     margin-block: clamp(1.5625em, 10vi, 6.25em);
 
     display: flex;
-    gap: clamp(2em, 4vi, 2.5em);
+    gap: clamp(0.675em, 4vi, 2.5em);
     flex-direction: column;
-
-    &.page__section--wide-on-tablets {
-      @include media(lg, max) {
-        padding-inline: unset;
-      }
-    }
   }
+
+  // &__columns {
+  //   @extend %reset-list;
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+  //   gap: clamp(0.5em, 2vi, 1.25em);
+  // }
 
   &__title-block {
     inline-size: 100%;
@@ -38,8 +39,10 @@
 
   &__link {
     flex: none;
-    font-weight: 600;
     font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem); // 25 - 12
+    font-weight: 600;
+    text-decoration: unset;
+    border-block-end: 1px solid;
 
     &:hover {
       border-block-end: 2px solid;
@@ -55,6 +58,8 @@
   }
 
   &__button {
-    align-self: center;
+    @include media(sm) {
+      align-self: center;
+    }
   }
 }

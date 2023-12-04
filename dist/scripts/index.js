@@ -141,8 +141,10 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'slide',
         autoplay: false,
         arrows: false,
+        pagination: false,
         gap: '.9375em',
-        padding: 'clamp(1.5em, 6.4vi, 4em)',
+        perPage: 1.1,
+        padding: 'var(--section-padding)',
         mediaQuery: 'min',
         breakpoints: {
           1024: {
@@ -162,6 +164,26 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
       });
       eventsSlider.mount();
+    }
+
+    // Слайдер тестов на главной странице
+    if (document.querySelector('#tests-slider')) {
+      let testsSlider = new Splide('#tests-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        perPage: 1.2,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      testsSlider.mount();
     }
 
     // if (document.querySelector('#article-slider')) {
