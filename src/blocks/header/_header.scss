@@ -33,7 +33,6 @@
 
   &__menu-list {
     @extend %reset-list;
-    max-inline-size: calc(100% - 200px);
     flex: auto;
     display: flex;
 

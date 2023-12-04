@@ -237,7 +237,6 @@ textarea {
   color: var(--accent-text-color);
 }
 .header__menu-list {
-  max-inline-size: calc(100% - 200px);
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
