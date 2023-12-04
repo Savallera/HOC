@@ -22,12 +22,7 @@
       background: var(--main-color-gradient) no-repeat center;
       color: var(--accent-text-color);
 
-      &:hover {
-        color: var(--accent-color);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        outline-color: var(--main-color);
-      }
+      // &:hover {}
     }
     &-outline-light {
       border-radius: 20px;

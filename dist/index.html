@@ -407,6 +407,25 @@
   </button>
 </section>
 
+        <section class="page__section section-banner">
+  <div
+    class="section-banner__inner section-banner__bg-image"
+    style="
+      background-image: url(https://s3-alpha-sig.figma.com/img/faa9/d329/313c6f3bfc92a3a3a9fb43714d6d1ac0?Expires=1702857600&Signature=WYl7cOrbL-PZrVsWPtLgPk3KvVT6kn1NG5qO~vLEi4qRqzzdL5AL0nN7Q2iFri5~m5BWI3LXlNynDdA9m81nS0hPTxVh59phrmUP5vIcS5W~teyEHp1laVcMzJGcOS2es5OliF4r4GgXsmVdDoGMxYuzFheE6n1PVOuWwYEf83CPNcQRvQRkwr~RO1OiQYYkBq6Th5Jt-f5~mT0v4Vp0pQOHNkePNkaJ-e2KMPAQQb6viAWfUZXJBCEvplPsrp3XnqBzGeDblaazcqVZSO~CeSyz9azVxbMz7SijF52gCaXfCoHC6K4BSkVgXHxgnCzVcShT~OL4R6qpKfgv34QliQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    "
+  >
+    <h2 class="page__title section-banner__title">
+      Название конкурса и про что он
+    </h2>
+    <button
+      type="button"
+      class="section-banner__button button button--theme-gradient"
+    >
+      <span class="button__text">Принять участие</span>
+    </button>
+  </div>
+</section>
+
         <!-- Секция с событиями на главной -->
 <section class="events page__section">
   <div class="page__title-block">
@@ -710,17 +729,15 @@
   </div>
 </footer>
 
-      <div class="feedback-modal">
-  <div class="feedback-modal__container">
+      <div class="modal modal--content-join">
+  <div class="modal__container">
     <button
       type="reset"
-      class="icon-button icon icon--type-close feedback-modal__close-button"
+      class="icon-button icon icon--type-close modal__close-button"
       aria-label="Закрыть"
     ></button>
-    <form class="feedback-modal__form" name="feedback-modal" action="">
-      <p class="feedback-modal__title">
-        Регистрируйся здесь и развивай студСМИ с нами!
-      </p>
+    <form class="modal__form" name="join-modal" action="">
+      <p class="modal__title">Регистрируйся здесь и развивай студСМИ с нами!</p>
       <div class="field">
         <label class="field__label visually-hidden">Имя</label>
         <div class="field__inner">
@@ -849,15 +866,114 @@
         </label>
         <span class="field__error-text">Вывод ошибки</span>
       </div>
-      <button
-        type="submit"
-        class="button button--theme-gradient feedback-modal__button"
-      >
+      <button type="submit" class="button button--theme-gradient form__button">
         <span class="button__text">Отправить заявку</span>
       </button>
     </form>
   </div>
 </div>
+
+      <div class="modal modal--content-contest">
+  <div class="modal__container">
+    <button
+      type="reset"
+      class="icon-button icon icon--type-close modal__close-button"
+      aria-label="Закрыть"
+    ></button>
+    <form class="modal__form" name="join-modal" action="">
+      <p class="modal__title">Название конкурса и про что он</p>
+      <div class="field">
+        <label class="field__label visually-hidden">Имя</label>
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите имя"
+            autocomplete="first-name"
+            name="first-name"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label visually-hidden">Фамилия</label>
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите фамилию"
+            autocomplete="family-name"
+            name="family-name"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label visually-hidden">Отчество</label>
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите отчество"
+            autocomplete="middle-name"
+            name="middle-name"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label visually-hidden">Телефон</label>
+        <div class="field__inner">
+          <input
+            type="tel"
+            class="field__input"
+            placeholder="Введите телефон"
+            autocomplete="tel"
+            name="tel"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label visually-hidden">E-mail</label>
+        <div class="field__inner">
+          <input
+            type="email"
+            class="field__input"
+            placeholder="Введите e-mail"
+            autocomplete="email"
+            name="email"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <button type="submit" class="button button--theme-gradient form__button">
+        <span class="button__text">Принять участие</span>
+      </button>
+    </form>
+  </div>
+</div>
+
     </div>
     <script src="./scripts/index.js" defer></script>
   </body>

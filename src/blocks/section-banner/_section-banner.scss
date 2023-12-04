@@ -1,0 +1,47 @@
+.section-banner {
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding: clamp(0.75em, 4vi, 2.5em); // 13 - 20
+    inline-size: 100%;
+    // aspect-ratio: 9/3.5;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: clamp(0.5rem, 4vi, 2.5rem);
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      display: block;
+      inline-size: 100%;
+      block-size: 100%;
+      background-color: #0000004d;
+    }
+
+    @include media(md) {
+      aspect-ratio: 12.18/3.57;
+    }
+  }
+
+  &__bg-image {
+    background-color: var(--main-text-color);
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__title {
+    flex: unset;
+    align-self: center;
+    max-inline-size: min(13em, 100%);
+    color: var(--accent-text-color);
+    text-transform: uppercase;
+  }
+}

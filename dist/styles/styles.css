@@ -32,7 +32,7 @@
   background-image: linear-gradient(to bottom, var(--g200) 0%, var(--g100) 50%, var(--g200) 100%);
 }
 
-.feedback-modal, .field__error-icon, .field__error-text, .header__mobile-menu-container {
+.modal, .field__error-icon, .field__error-text, .header__mobile-menu-container {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -44,7 +44,7 @@
   transition: visibility 0s 0.35s, opacity 0.35s;
 }
 
-.feedback-modal--opened, .field--state-error .field__error-icon, .field--state-error .field__error-text, .header__mobile-menu:hover .header__mobile-menu-container {
+.modal--opened, .field--state-error .field__error-icon, .field--state-error .field__error-text, .header__mobile-menu:hover .header__mobile-menu-container {
   visibility: visible;
   opacity: 1;
   pointer-events: all;
@@ -534,12 +534,6 @@ textarea {
   background: var(--main-color-gradient) no-repeat center;
   color: var(--accent-text-color);
 }
-.button--theme-gradient:hover {
-  color: var(--accent-color);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  outline-color: var(--main-color);
-}
 .button--theme-outline-light {
   border-radius: 20px;
   padding: 6px 14px;
@@ -894,7 +888,7 @@ textarea {
   border-radius: 20px;
   overflow: hidden;
 }
-.card-banner::after {
+.card-banner::before {
   content: "";
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -1171,7 +1165,62 @@ textarea {
   }
 }
 
-.feedback-modal {
+.section-banner__inner {
+  position: relative;
+  z-index: 1;
+  padding: clamp(0.75em, 4vi, 2.5em);
+  inline-size: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: clamp(0.5rem, 4vi, 2.5rem);
+}
+.section-banner__inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: rgba(0, 0, 0, 0.3019607843);
+}
+@media only screen and (width >= 768px) {
+  .section-banner__inner {
+    aspect-ratio: 12.18/3.57;
+  }
+}
+.section-banner__bg-image {
+  background-color: var(--main-text-color);
+  background-size: cover;
+  background-position: center;
+}
+.section-banner__title {
+  -webkit-box-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-inline-size: min(13em, 100%);
+  color: var(--accent-text-color);
+  text-transform: uppercase;
+}
+
+.modal {
   position: fixed;
   inset: 0;
   z-index: 200;
@@ -1188,31 +1237,31 @@ textarea {
           backdrop-filter: blur(18px);
   background-color: rgba(0, 0, 0, 0.4);
 }
-.feedback-modal__container {
+.modal__container {
   position: relative;
   inline-size: min(90vi, 75em);
   background-color: #fff;
   border-radius: 10px;
   padding: clamp(15px, 4vi, 40px);
 }
-.feedback-modal__close-button {
+.modal__close-button {
   position: absolute;
   inset: 0.5em 0.5em auto auto;
   border-radius: 50%;
   color: var(--main-text-low-color);
 }
-.feedback-modal__close-button:hover {
+.modal__close-button:hover {
   background-color: transparent;
   color: var(--accent-color);
 }
-.feedback-modal__title {
+.modal__title {
   margin: 0;
   padding-block: 0 clamp(18px, 4vi, 40px);
   font-size: clamp(18px, 2.5vi, 25px);
   font-variation-settings: "wght" 800;
   text-align: center;
 }
-.feedback-modal__form {
+.modal__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1222,7 +1271,7 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.feedback-modal__button {
+.modal__button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1261,7 +1310,7 @@ textarea {
   background-image: linear-gradient(to bottom, var(--g200) 0%, var(--g100) 50%, var(--g200) 100%);
 }
 
-.header__mobile-menu-container, .field__error-text, .field__error-icon, .feedback-modal {
+.header__mobile-menu-container, .field__error-text, .field__error-icon, .modal {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -1273,7 +1322,7 @@ textarea {
   transition: visibility 0s 0.35s, opacity 0.35s;
 }
 
-.header__mobile-menu:hover .header__mobile-menu-container, .field--state-error .field__error-text, .field--state-error .field__error-icon, .feedback-modal--opened {
+.header__mobile-menu:hover .header__mobile-menu-container, .field--state-error .field__error-text, .field--state-error .field__error-icon, .modal--opened {
   visibility: visible;
   opacity: 1;
   pointer-events: all;

@@ -1,14 +1,12 @@
-<div class="feedback-modal">
-  <div class="feedback-modal__container">
+<div class="modal modal--content-join">
+  <div class="modal__container">
     <button
       type="reset"
-      class="icon-button icon icon--type-close feedback-modal__close-button"
+      class="icon-button icon icon--type-close modal__close-button"
       aria-label="Закрыть"
     ></button>
-    <form class="feedback-modal__form" name="feedback-modal" action="">
-      <p class="feedback-modal__title">
-        Регистрируйся здесь и развивай студСМИ с нами!
-      </p>
+    <form class="modal__form" name="join-modal" action="">
+      <p class="modal__title">Регистрируйся здесь и развивай студСМИ с нами!</p>
       <div class="field">
         <label class="field__label visually-hidden">Имя</label>
         <div class="field__inner">
@@ -137,10 +135,7 @@
         </label>
         <span class="field__error-text">Вывод ошибки</span>
       </div>
-      <button
-        type="submit"
-        class="button button--theme-gradient feedback-modal__button"
-      >
+      <button type="submit" class="button button--theme-gradient form__button">
         <span class="button__text">Отправить заявку</span>
       </button>
     </form>
