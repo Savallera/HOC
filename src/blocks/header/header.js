@@ -31,7 +31,6 @@ function checkMenuSize() {
     numOfVisibleItems -= 1;
     checkMenuSize();
 
-    console.log("Доступно", availableSpace, "Необходимое", requiredSpace);
     // There is more than enough space
   } else if (availableSpace > breakWidths[numOfVisibleItems]) {
     menuList.append(mobileMenuList.children[0]);
