@@ -1078,6 +1078,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: clamp(0.75em, 2.4vi, 1.5em);
 }
 .card__controls {
   -webkit-margin-before: auto;
@@ -1103,6 +1104,8 @@ textarea {
 }
 .card__text {
   margin: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-size: 0.8125em;
   font-weight: 500;
 }
@@ -1241,6 +1244,13 @@ textarea {
     grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
     gap: clamp(0.5em, 2vi, 1.25em);
   }
+}
+
+.survey {
+  border-radius: 10px;
+}
+.survey__title {
+  color: var(--accent-text-color);
 }
 
 .modal {
