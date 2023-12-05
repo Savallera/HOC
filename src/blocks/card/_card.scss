@@ -29,12 +29,14 @@
     aspect-ratio: 6/3.2;
     object-fit: cover;
     object-position: center;
+  }
 
-    @include media(lg) {
-      &--hidden-on-desktop {
-        display: none;
-      }
-    }
+  &__iframe {
+    background-color: var(--main-text-low-color);
+    inline-size: 100%;
+    aspect-ratio: 6/3.2;
+    object-fit: cover;
+    object-position: center;
   }
 
   &__main-content {

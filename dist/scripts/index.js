@@ -98,9 +98,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
-    // Слайдер новостей на главной странице
-    if (document.querySelector('#news-slider')) {
-      let newsSlider = new Splide('#news-slider', {
+    if (document.querySelector('#media-podcast-slider')) {
+      let mediaPodcastSlider = new Splide('#media-podcast-slider', {
         type: 'slide',
         autoplay: false,
         arrows: false,
@@ -115,7 +114,26 @@ window.addEventListener('DOMContentLoaded', () => {
           },
         },
       });
-      newsSlider.mount();
+      mediaPodcastSlider.mount();
+    }
+
+    if (document.querySelector('#media-video-slider')) {
+      let mediaVideoSlider = new Splide('#media-video-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        perPage: 1.1,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      mediaVideoSlider.mount();
     }
   }
 });
@@ -159,6 +177,30 @@ contestModal.addEventListener('click', (evt) => {
     evt.target.classList.contains('modal__close-button')
   ) {
     closeContestModal();
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
+    // Слайдер новостей на главной странице
+    if (document.querySelector('#news-slider')) {
+      let newsSlider = new Splide('#news-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        perPage: 1.1,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      newsSlider.mount();
+    }
   }
 });
 
@@ -208,21 +250,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
-    // Главный баннер на главной странице
-    if (document.querySelector('#top-banner-slider')) {
-      let topBannerSlider = new Splide('#top-banner-slider', {
-        type: 'fade',
-        rewind: true,
-        autoplay: true,
-        arrows: false,
-      });
-      topBannerSlider.mount();
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  if (Splide) {
     // Слайдер тестов на главной странице
     if (document.querySelector('#tests-slider')) {
       let testsSlider = new Splide('#tests-slider', {
@@ -241,6 +268,21 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       testsSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
+    // Главный баннер на главной странице
+    if (document.querySelector('#top-banner-slider')) {
+      let topBannerSlider = new Splide('#top-banner-slider', {
+        type: 'fade',
+        rewind: true,
+        autoplay: true,
+        arrows: false,
+      });
+      topBannerSlider.mount();
     }
   }
 });
