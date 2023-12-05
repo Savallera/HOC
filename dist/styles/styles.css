@@ -1379,6 +1379,22 @@ textarea {
   }
 }
 
+.broadcasts__slider.is-initialized:not(.is-active) .splide__list {
+  display: -ms-grid;
+  display: grid;
+}
+@media only screen and (width < 768px) {
+  .broadcasts__slider {
+    margin-inline: calc(var(--section-padding) * -1);
+  }
+}
+@media only screen and (width >= 768px) {
+  .broadcasts__columns {
+    grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+    gap: clamp(0.5em, 2vi, 1.25em);
+  }
+}
+
 .modal {
   position: fixed;
   inset: 0;

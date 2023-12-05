@@ -24,6 +24,30 @@ var n,t;n=this,t=function(){"use strict";var v="(prefers-reduced-motion: reduce)
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
+    // Слайдер трансляций на главной странице
+    if (document.querySelector('#broadcasts-slider')) {
+      let broadcastsSlider = new Splide('#broadcasts-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        perPage: 1.2,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      broadcastsSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
     // Слайдер с событиями на главной странице
     if (document.querySelector('#events-slider')) {
       let eventsSlider = new Splide('#events-slider', {
@@ -96,48 +120,6 @@ window.addEventListener('DOMContentLoaded', () => {
   checkMenuSize();
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  if (Splide) {
-    if (document.querySelector('#media-podcast-slider')) {
-      let mediaPodcastSlider = new Splide('#media-podcast-slider', {
-        type: 'slide',
-        autoplay: false,
-        arrows: false,
-        pagination: false,
-        gap: '.9375em',
-        perPage: 1.1,
-        padding: 'var(--section-padding)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            destroy: 'completely',
-          },
-        },
-      });
-      mediaPodcastSlider.mount();
-    }
-
-    if (document.querySelector('#media-video-slider')) {
-      let mediaVideoSlider = new Splide('#media-video-slider', {
-        type: 'slide',
-        autoplay: false,
-        arrows: false,
-        pagination: false,
-        gap: '.9375em',
-        perPage: 1.1,
-        padding: 'var(--section-padding)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            destroy: 'completely',
-          },
-        },
-      });
-      mediaVideoSlider.mount();
-    }
-  }
-});
-
 // Форма присоединиться к проекту
 const headerJoinButton = document.querySelector('.header__join-button');
 const joinModal = document.querySelector('.modal--content-join');
@@ -200,6 +182,48 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       newsSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
+    if (document.querySelector('#media-podcast-slider')) {
+      let mediaPodcastSlider = new Splide('#media-podcast-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        perPage: 1.1,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      mediaPodcastSlider.mount();
+    }
+
+    if (document.querySelector('#media-video-slider')) {
+      let mediaVideoSlider = new Splide('#media-video-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        perPage: 1.1,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      mediaVideoSlider.mount();
     }
   }
 });
