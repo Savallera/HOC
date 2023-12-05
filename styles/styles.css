@@ -1226,7 +1226,7 @@ textarea {
   }
 }
 
-.section-banner__inner {
+.contests__inner {
   position: relative;
   z-index: 1;
   padding: clamp(0.75em, 4vw, 2.5em);
@@ -1249,7 +1249,7 @@ textarea {
           justify-content: end;
   gap: var(--gap-section);
 }
-.section-banner__inner::after {
+.contests__inner::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1260,16 +1260,16 @@ textarea {
   background-color: rgba(0, 0, 0, 0.3019607843);
 }
 @media only screen and (width >= 768px) {
-  .section-banner__inner {
+  .contests__inner {
     aspect-ratio: 12.18/3.57;
   }
 }
-.section-banner__bg-image {
+.contests__bg-image {
   background-color: var(--main-text-color);
   background-size: cover;
   background-position: center;
 }
-.section-banner__title {
+.contests__title {
   -webkit-box-flex: unset;
       -ms-flex: unset;
           flex: unset;
