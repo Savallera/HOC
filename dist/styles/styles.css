@@ -644,6 +644,7 @@ textarea {
 }
 
 .button {
+  text-decoration: unset;
   background-color: transparent;
   border: none;
   font-variation-settings: "wght" 500;
