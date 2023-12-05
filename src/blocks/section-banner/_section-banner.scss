@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    gap: clamp(0.5rem, 4vi, 2.5rem);
+    gap: var(--gap-section);
 
     &::after {
       content: '';

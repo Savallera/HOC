@@ -8,7 +8,7 @@
     margin-block-start: -1.5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(0.625em, 2vi, 1.25em);
+    gap: var(--gap-grid);
 
     @include media(lg) {
       grid-template-columns: 1.15fr 0.5fr 0.5fr;
@@ -55,7 +55,7 @@
     text-decoration: none;
     font-size: clamp(0.625em, 1.6vi, 1em);
     text-underline-position: under;
-    padding-block: 0.675em;
+    padding-block: 0.675rem;
     font-variation-settings: 'wght' 500;
 
     &:hover {
@@ -108,14 +108,14 @@
   &__address-links {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.625em, 2vi, 1.25em);
+    gap: var(--gap-grid);
     margin-block-end: 4.5vi;
   }
 
   &__address-link {
     display: flex;
     align-items: start;
-    gap: clamp(0.5em, 1.5vi, 0.9375em);
+    gap: clamp(0.5rem, 1.5vi, 0.9375rem);
     font-size: clamp(0.625em, 1.6vi, 1em);
     text-decoration: none;
     font-variation-settings: 'wght' 700;

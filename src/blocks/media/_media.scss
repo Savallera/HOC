@@ -2,7 +2,7 @@
   &__columns {
     @include media(md) {
       display: grid;
-      gap: clamp(0.75em, 2vi, 1.25em);
+      gap: var(--gap-grid);
     }
     @include media(lg) {
       grid-template-columns: 0.25fr 1fr;
@@ -11,7 +11,7 @@
 
   &__column {
     display: flex;
-    gap: clamp(0.675em, 4vi, 2.5em);
+    gap: var(--gap-section);
     flex-direction: column;
   }
 
@@ -27,7 +27,7 @@
     }
     @include media(md, max) {
       margin-inline: calc(var(--section-padding) * -1);
-      margin-block-end: clamp(0.75em, 2vi, 1.25em);
+      margin-block-end: var(--gap-grid);
     }
     @include media(md) {
       height: 100%;
@@ -43,7 +43,7 @@
   &__podcast-slider-list {
     @include media(md) {
       display: grid;
-      gap: clamp(0.75em, 2vi, 1.25em);
+      gap: var(--gap-grid);
       grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
     }
 
@@ -59,7 +59,7 @@
     }
     @include media(md, max) {
       margin-inline: calc(var(--section-padding) * -1);
-      margin-block-end: clamp(0.75em, 2vi, 1.25em);
+      margin-block-end: var(--gap-grid);
     }
     @include media(md) {
       height: 100%;
@@ -74,7 +74,7 @@
 
   &__video-slider-list {
     @include media(md) {
-      gap: clamp(0.75em, 2vi, 1.25em);
+      gap: var(--gap-grid);
       grid-template-columns: 1fr 1fr;
     }
   }

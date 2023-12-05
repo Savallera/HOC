@@ -1,17 +1,20 @@
 :root {
-  --main-color: #685DC3;
-  --accent-color: #D03EC3;
-  --main-color-gradient: linear-gradient(to left, #D03EC3, #685DC3);
+  --main-color: #685dc3;
+  --accent-color: #d03ec3;
+  --main-color-gradient: linear-gradient(to left, #d03ec3, #685dc3);
 
-  --main-text-color: #272B37;
-  --main-text-low-color: #C0C0C0;
+  --main-text-color: #272b37;
+  --main-text-low-color: #c0c0c0;
   --accent-text-color: #fff;
 
-  --main-bg-color: #F7F7F7;
+  --main-bg-color: #f7f7f7;
   --hover-color: #00000026;
 
   --main-font-family: 'Montserrat', sans-serif;
   --section-padding: clamp(1.25rem, 2.5vi, 1.5625rem); // 20 - 25
   --section-inline-size: clamp(20rem, 3.0357rem + 84.8214vw, 79.375rem); // 1220
   --section-inline-size-wide: clamp(20rem, 0rem + 100vw, 120rem); // 1920
+
+  --gap-grid: clamp(0.5em, 2vi, 1.25em); // 8 - 20
+  --gap-section: clamp(0.675em, 4vi, 2.5em); // 10 - 40
 }

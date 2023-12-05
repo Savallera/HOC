@@ -2,12 +2,12 @@
 .splide {
   &__pagination {
     position: static;
-    padding-block: clamp(5px, 2vi, 20px) clamp(10px, 3vi, 30px);
+    padding-block: clamp(0.3125em, 2vi, 1.25em) clamp(0.9375em, 3vi, 1.875em);
 
     &__page {
-      inline-size: clamp(6px, 1.6vi, 16px);
-      block-size: clamp(6px, 1.6vi, 16px);
-      margin: clamp(3px, 0.8vi, 8px);
+      inline-size: clamp(0.375em, 1.6vi, 1em);
+      block-size: clamp(0.375em, 1.6vi, 1em);
+      margin: clamp(0.1875em, 0.8vi, 0.5em);
       background-color: var(--main-text-low-color);
 
       &.is-active {

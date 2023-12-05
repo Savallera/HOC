@@ -1,3 +1,4 @@
+// Возможно объединить стиль в блоке page
 .broadcasts {
   &__slider {
     &.is-initialized:not(.is-active) .splide__list {
@@ -10,7 +11,7 @@
   &__columns {
     @include media(md) {
       grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-      gap: clamp(0.5em, 2vi, 1.25em);
+      gap: var(--gap-grid);
     }
   }
 }

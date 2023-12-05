@@ -1,13 +1,9 @@
 .header {
-  // position: fixed;
-  // inset: 0 0 auto 0;
-  // z-index: 10;
-
   &__wrap {
     @extend %section-inline-size;
 
     display: flex;
-    gap: 15px;
+    gap: 0.9375em;
   }
 
   &__logo {
@@ -46,10 +42,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-block-size: clamp(40px, 8vi, 80px);
+    min-block-size: clamp(2.5rem, 8vi, 5rem);
     text-align: center;
     text-decoration: none;
-    padding-inline: 20px;
+    padding-inline: 1.25em;
     font-variation-settings: 'wght' 500;
     transition: background 0.3s;
 
@@ -68,7 +64,7 @@
     display: none;
     align-self: center;
     flex: none;
-    margin-inline: 15px 20px;
+    margin-inline: 0.9375rem 1.25rem;
 
     @include media(sm) {
       display: unset;
@@ -106,10 +102,10 @@
   }
 
   &__mobile-menu-list {
-    margin: 10px 0 0;
+    margin: .625em 0 0;
     padding: 0;
     list-style: none;
-    inline-size: clamp(20rem, 19.0179rem + 4.9107vw, 23.4375rem);
+    inline-size: clamp(20em, 19.0179em + 4.9107vw, 23.4375em);
     background-color: #fff;
     box-shadow: 0 0 6px var(--hover-color);
     border-radius: 10px;
@@ -120,7 +116,7 @@
   &__mobile-menu-link {
     display: block;
     text-decoration: none;
-    padding: 9px 20px;
+    padding: 0.675rem 1.25rem;
     transition: background 0.3s;
 
     &:hover {

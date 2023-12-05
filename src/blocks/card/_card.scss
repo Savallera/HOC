@@ -14,11 +14,11 @@
     }
 
     .card__title {
-      font-size: clamp(1rem, 0.8393rem + 0.8036vw, 1.5625rem); // 25 - 16
+      font-size: clamp(1em, 0.8393em + 0.8036vw, 1.5625em); // 25 - 16
     }
 
     .card__text {
-      font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem); // 20 - 12
+      font-size: clamp(0.75em, 0.6071em + 0.7143vw, 1.25em); // 20 - 12
     }
   }
 
@@ -58,7 +58,7 @@
   &__title {
     margin: 0;
     font-size: 1em;
-    font-weight: 800;
+    font-variation-settings: 'wght' 800;
 
     @include clamp(3, 1.2);
 
@@ -71,7 +71,7 @@
     margin: 0;
     align-self: flex-start;
     font-size: 0.8125em; // 13
-    font-weight: 500;
+    font-variation-settings: 'wght' 500;
   }
 
   &__views {
@@ -89,7 +89,7 @@
   }
 
   &__views-value {
-    font-weight: 500;
+    font-variation-settings: 'wght' 500;
     font-size: 0.975em;
   }
 
