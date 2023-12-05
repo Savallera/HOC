@@ -42,7 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-block-size: clamp(2.5rem, 8vi, 5rem);
+    min-block-size: clamp(2.5rem, 8vw, 5rem);
     text-align: center;
     text-decoration: none;
     padding-inline: 1.25em;
@@ -74,10 +74,10 @@
   &__mobile-menu-btn {
     align-self: center;
     display: block;
-    inline-size: clamp(2.5em, 3.8vi, 3.375em);
-    min-inline-size: clamp(2.5em, 3.8vi, 3.375em);
-    max-inline-size: clamp(2.5em, 3.8vi, 3.375em);
-    block-size: clamp(2.5em, 3.8vi, 3.375em);
+    inline-size: clamp(2.5em, 3.8vw, 3.375em);
+    min-inline-size: clamp(2.5em, 3.8vw, 3.375em);
+    max-inline-size: clamp(2.5em, 3.8vw, 3.375em);
+    block-size: clamp(2.5em, 3.8vw, 3.375em);
   }
 
   &__mobile-menu-container {
@@ -151,9 +151,9 @@
 
   &__user-link {
     align-self: center;
-    block-size: clamp(2.5em, 3.8vi, 3.375em);
-    inline-size: clamp(2.5em, 3.8vi, 3.375em);
-    min-inline-size: clamp(2.5em, 3.8vi, 3.375em);
-    max-inline-size: clamp(2.5em, 3.8vi, 3.375em);
+    block-size: clamp(2.5em, 3.8vw, 3.375em);
+    inline-size: clamp(2.5em, 3.8vw, 3.375em);
+    min-inline-size: clamp(2.5em, 3.8vw, 3.375em);
+    max-inline-size: clamp(2.5em, 3.8vw, 3.375em);
   }
 }

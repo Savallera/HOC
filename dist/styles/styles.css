@@ -153,7 +153,7 @@ textarea {
           flex: auto;
 }
 .page__section {
-  margin-block: clamp(1.5625em, 10vi, 6.25em);
+  margin-block: clamp(1.5625em, 10vw, 6.25em);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,7 +183,7 @@ textarea {
 .page__description {
   margin: 0;
   max-inline-size: 40em;
-  font-size: clamp(1em, 2vi, 1.25em);
+  font-size: clamp(1em, 2vw, 1.25em);
 }
 .page__link {
   -webkit-box-flex: 0;
@@ -270,7 +270,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-block-size: clamp(2.5rem, 8vi, 5rem);
+  min-block-size: clamp(2.5rem, 8vw, 5rem);
   text-align: center;
   text-decoration: none;
   padding-inline: 1.25em;
@@ -301,10 +301,10 @@ textarea {
       -ms-grid-row-align: center;
       align-self: center;
   display: block;
-  inline-size: clamp(2.5em, 3.8vi, 3.375em);
-  min-inline-size: clamp(2.5em, 3.8vi, 3.375em);
-  max-inline-size: clamp(2.5em, 3.8vi, 3.375em);
-  block-size: clamp(2.5em, 3.8vi, 3.375em);
+  inline-size: clamp(2.5em, 3.8vw, 3.375em);
+  min-inline-size: clamp(2.5em, 3.8vw, 3.375em);
+  max-inline-size: clamp(2.5em, 3.8vw, 3.375em);
+  block-size: clamp(2.5em, 3.8vw, 3.375em);
 }
 .header__mobile-menu-container {
   position: absolute;
@@ -379,10 +379,10 @@ textarea {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  block-size: clamp(2.5em, 3.8vi, 3.375em);
-  inline-size: clamp(2.5em, 3.8vi, 3.375em);
-  min-inline-size: clamp(2.5em, 3.8vi, 3.375em);
-  max-inline-size: clamp(2.5em, 3.8vi, 3.375em);
+  block-size: clamp(2.5em, 3.8vw, 3.375em);
+  inline-size: clamp(2.5em, 3.8vw, 3.375em);
+  min-inline-size: clamp(2.5em, 3.8vw, 3.375em);
+  max-inline-size: clamp(2.5em, 3.8vw, 3.375em);
 }
 
 .footer {
@@ -418,9 +418,9 @@ textarea {
   }
 }
 .footer__nav-list {
-  margin: 0 0 0 clamp(0.9375em, 4.375vi, 4.375em);
+  margin: 0 0 0 clamp(0.9375em, 4.375vw, 4.375em);
   list-style: none;
-  padding: clamp(1.25em, 5vi, 3.125em) 0 clamp(1em, 4.5vi, 2.5em);
+  padding: clamp(1.25em, 5vw, 3.125em) 0 clamp(1em, 4.5vw, 2.5em);
   -webkit-columns: 2;
      -moz-columns: 2;
           columns: 2;
@@ -436,7 +436,7 @@ textarea {
 }
 .footer__nav-list li::before {
   content: "";
-  margin-block: clamp(0.625em, 1.76vi, 1.1em);
+  margin-block: clamp(0.625em, 1.76vw, 1.1em);
   border-radius: 50%;
   background-color: currentColor;
   inline-size: 4px;
@@ -451,7 +451,7 @@ textarea {
 }
 .footer__nav-link {
   text-decoration: none;
-  font-size: clamp(0.625em, 1.6vi, 1em);
+  font-size: clamp(0.625em, 1.6vw, 1em);
   text-underline-position: under;
   padding-block: 0.625em;
   font-variation-settings: "wght" 500;
@@ -467,7 +467,7 @@ textarea {
 }
 .footer__address-logo {
   display: block;
-  padding: clamp(0.625em, 1.5vi, 0.9375em) clamp(0.625em, 2vi, 1.25em) clamp(0.25em, 0.5vi, 0.3125em);
+  padding: clamp(0.625em, 1.5vw, 0.9375em) clamp(0.625em, 2vw, 1.25em) clamp(0.25em, 0.5vw, 0.3125em);
   border-radius: 20px 20px 0 0;
   background-color: #fff;
 }
@@ -480,8 +480,8 @@ textarea {
 .footer__address-logo-image {
   display: block;
   margin-inline: auto;
-  inline-size: clamp(7.25em, 22.8vi, 14.25em);
-  block-size: clamp(2.5em, 7.8vi, 4.875em);
+  inline-size: clamp(7.25em, 22.8vw, 14.25em);
+  block-size: clamp(2.5em, 7.8vw, 4.875em);
   -webkit-mask: url("../images/logo.svg") center/65% no-repeat;
           mask: url("../images/logo.svg") center/65% no-repeat;
   background-color: var(--main-color);
@@ -491,8 +491,8 @@ textarea {
           mask: url("../images/ministry-logo.svg") center/contain no-repeat;
 }
 .footer__address-content {
-  padding-block: clamp(0.9375em, 2.5vi, 1.5375em) clamp(0.5em, 1.5vi, 0.9375em);
-  padding-inline: clamp(0.625em, 2vi, 1.25em);
+  padding-block: clamp(0.9375em, 2.5vw, 1.5375em) clamp(0.5em, 1.5vw, 0.9375em);
+  padding-inline: clamp(0.625em, 2vw, 1.25em);
   border-radius: 0 0 20px 20px;
   background-color: rgba(0, 0, 0, 0.1490196078);
 }
@@ -505,8 +505,8 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: var(--gap-grid);
-  -webkit-margin-after: 4.5vi;
-          margin-block-end: 4.5vi;
+  -webkit-margin-after: 4.5vw;
+          margin-block-end: 4.5vw;
 }
 .footer__address-link {
   display: -webkit-box;
@@ -515,8 +515,8 @@ textarea {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  gap: clamp(0.5rem, 1.5vi, 0.9375rem);
-  font-size: clamp(0.625em, 1.6vi, 1em);
+  gap: clamp(0.5rem, 1.5vw, 0.9375rem);
+  font-size: clamp(0.625em, 1.6vw, 1em);
   text-decoration: none;
   font-variation-settings: "wght" 700;
   -webkit-transition: color 0.3s;
@@ -535,10 +535,10 @@ textarea {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  inline-size: clamp(1em, 1.5vi, 1.5em);
-  min-inline-size: clamp(1em, 1.5vi, 1.5em);
-  max-inline-size: clamp(1em, 1.5vi, 1.5em);
-  block-size: clamp(1em, 1.5vi, 1.5em);
+  inline-size: clamp(1em, 1.5vw, 1.5em);
+  min-inline-size: clamp(1em, 1.5vw, 1.5em);
+  max-inline-size: clamp(1em, 1.5vw, 1.5em);
+  block-size: clamp(1em, 1.5vw, 1.5em);
 }
 .footer__social {
   display: -webkit-box;
@@ -548,8 +548,8 @@ textarea {
 }
 .footer__social-link-icon {
   display: block;
-  inline-size: clamp(1.5em, 2.5vi, 2.5em);
-  block-size: clamp(1.5em, 2.5vi, 2.5em);
+  inline-size: clamp(1.5em, 2.5vw, 2.5em);
+  block-size: clamp(1.5em, 2.5vw, 2.5em);
 }
 .footer__social-link-icon::before {
   -webkit-transition: background 0.3s;
@@ -657,7 +657,7 @@ textarea {
   outline: 2px solid var(--main-text-color);
 }
 .button--theme-gradient {
-  font-size: clamp(0.75em, 2.5vi, 1.5625em);
+  font-size: clamp(0.75em, 2.5vw, 1.5625em);
   border-radius: 10px;
   min-inline-size: min(22rem, 100%);
   outline: 2px solid transparent;
@@ -692,8 +692,8 @@ textarea {
 }
 
 .field--state-error .field__input {
-  -webkit-padding-end: clamp(2rem, 4.8vi, 3rem);
-          padding-inline-end: clamp(2rem, 4.8vi, 3rem);
+  -webkit-padding-end: clamp(2rem, 4.8vw, 3rem);
+          padding-inline-end: clamp(2rem, 4.8vw, 3rem);
 }
 .field--state-error .field__error-text {
   grid-area: unset;
@@ -723,7 +723,7 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   color: var(--accent-text-color);
-  padding: 0.785rem clamp(0.875rem, 2vi, 1.25rem);
+  padding: 0.785rem clamp(0.875rem, 2vw, 1.25rem);
   background-color: var(--main-text-low-color);
   border-radius: 10px;
   -webkit-transition: background-color 0.3s;
@@ -738,9 +738,9 @@ textarea {
 }
 .field__label {
   line-height: 2;
-  font-size: clamp(0.75em, 2vi, 1.25em);
-  -webkit-padding-start: clamp(0.875rem, 2vi, 1.25rem);
-          padding-inline-start: clamp(0.875rem, 2vi, 1.25rem);
+  font-size: clamp(0.75em, 2vw, 1.25em);
+  -webkit-padding-start: clamp(0.875rem, 2vw, 1.25rem);
+          padding-inline-start: clamp(0.875rem, 2vw, 1.25rem);
   font-variation-settings: "wght" 400;
   color: var(--admin-text-low-color);
 }
@@ -758,9 +758,9 @@ textarea {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
-  padding: 0.785rem clamp(0.875rem, 2vi, 1.25rem);
+  padding: 0.785rem clamp(0.875rem, 2vw, 1.25rem);
   line-height: 1.3;
-  font-size: clamp(0.875em, 2vi, 1.25em);
+  font-size: clamp(0.875em, 2vw, 1.25em);
   font-variation-settings: "wght" 500;
   border: 1px solid var(--main-text-low-color);
   background-color: #fff;
@@ -822,9 +822,9 @@ textarea {
 }
 .field__error-text {
   display: block;
-  font-size: clamp(0.75em, 1.6vi, 1em);
-  -webkit-padding-start: clamp(0.875rem, 2vi, 1.25rem);
-          padding-inline-start: clamp(0.875rem, 2vi, 1.25rem);
+  font-size: clamp(0.75em, 1.6vw, 1em);
+  -webkit-padding-start: clamp(0.875rem, 2vw, 1.25rem);
+          padding-inline-start: clamp(0.875rem, 2vw, 1.25rem);
   font-variation-settings: "wght" 500;
   color: var(--accent-color);
   -ms-grid-row: 1;
@@ -835,8 +835,8 @@ textarea {
 }
 .field__error-icon {
   display: block;
-  inline-size: clamp(1.25em, 1.75vi, 1.75em);
-  block-size: clamp(1.25em, 1.75vi, 1.75em);
+  inline-size: clamp(1.25em, 1.75vw, 1.75em);
+  block-size: clamp(1.25em, 1.75vw, 1.75em);
   color: var(--accent-color);
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -847,8 +847,8 @@ textarea {
       align-self: center;
   -ms-grid-column-align: end;
       justify-self: end;
-  -webkit-margin-end: clamp(0.875em, 2vi, 1.25em);
-          margin-inline-end: clamp(0.875em, 2vi, 1.25em);
+  -webkit-margin-end: clamp(0.875em, 2vw, 1.25em);
+          margin-inline-end: clamp(0.875em, 2vw, 1.25em);
 }
 
 .card-link {
@@ -865,12 +865,12 @@ textarea {
 
 .splide__pagination {
   position: static;
-  padding-block: clamp(0.3125em, 2vi, 1.25em) clamp(0.9375em, 3vi, 1.875em);
+  padding-block: clamp(0.3125em, 2vw, 1.25em) clamp(0.9375em, 3vw, 1.875em);
 }
 .splide__pagination__page {
-  inline-size: clamp(0.375em, 1.6vi, 1em);
-  block-size: clamp(0.375em, 1.6vi, 1em);
-  margin: clamp(0.1875em, 0.8vi, 0.5em);
+  inline-size: clamp(0.375em, 1.6vw, 1em);
+  block-size: clamp(0.375em, 1.6vw, 1em);
+  margin: clamp(0.1875em, 0.8vw, 0.5em);
   background-color: var(--main-text-low-color);
 }
 .splide__pagination__page.is-active {
@@ -935,8 +935,8 @@ textarea {
   color: var(--accent-text-color);
   display: -ms-grid;
   display: grid;
-  gap: clamp(0.3125em, 1.5vi, 0.9375em);
-  padding-block: clamp(0.625em, 2.5vi, 1.5625em);
+  gap: clamp(0.3125em, 1.5vw, 0.9375em);
+  padding-block: clamp(0.625em, 2.5vw, 1.5625em);
 }
 .card-banner__main-content--with-controls {
   -ms-grid-columns: 1fr auto;
@@ -949,7 +949,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: clamp(0.75em, 2vi, 1.25em);
+  gap: clamp(0.75em, 2vw, 1.25em);
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
@@ -1009,17 +1009,17 @@ textarea {
   gap: 0.5em;
 }
 .card-banner__views-icon {
-  inline-size: clamp(1.5em, 3.6vi, 2em);
-  block-size: clamp(1.5em, 3.6vi, 2em);
+  inline-size: clamp(1.5em, 3.6vw, 2em);
+  block-size: clamp(1.5em, 3.6vw, 2em);
   color: currentColor;
 }
 .card-banner__views-value {
   font-variation-settings: "wght" 500;
-  font-size: clamp(0.9375em, 2vi, 1.25em);
+  font-size: clamp(0.9375em, 2vw, 1.25em);
 }
 .card-banner__like-button {
-  inline-size: clamp(1.5em, 3.6vi, 2em);
-  block-size: clamp(1.5em, 3.6vi, 2em);
+  inline-size: clamp(1.5em, 3.6vw, 2em);
+  block-size: clamp(1.5em, 3.6vw, 2em);
   padding: 0;
 }
 .card-banner__like-button:hover {
@@ -1029,12 +1029,12 @@ textarea {
 .card-banner__like-button--overlay {
   position: absolute;
   inset: 0 0 auto auto;
-  -webkit-margin-end: clamp(0.5em, 1.6vi, 1em);
-          margin-inline-end: clamp(0.5em, 1.6vi, 1em);
-  -webkit-margin-before: clamp(0.5em, 1.6vi, 1em);
-          margin-block-start: clamp(0.5em, 1.6vi, 1em);
-  inline-size: clamp(1.25em, 4.28vi, 2.675em);
-  block-size: clamp(1.25em, 4.28vi, 2.675em);
+  -webkit-margin-end: clamp(0.5em, 1.6vw, 1em);
+          margin-inline-end: clamp(0.5em, 1.6vw, 1em);
+  -webkit-margin-before: clamp(0.5em, 1.6vw, 1em);
+          margin-block-start: clamp(0.5em, 1.6vw, 1em);
+  inline-size: clamp(1.25em, 4.28vw, 2.675em);
+  block-size: clamp(1.25em, 4.28vw, 2.675em);
 }
 .card-banner__like-button--actived {
   color: var(--accent-color);
@@ -1043,8 +1043,8 @@ textarea {
   border-radius: 0;
 }
 .card-banner--place-top-banner .card-banner__main-content {
-  gap: clamp(0.3125em, 2.5vi, 1.5625em);
-  padding-block: clamp(0.9375em, 5vi, 3.125em);
+  gap: clamp(0.3125em, 2.5vw, 1.5625em);
+  padding-block: clamp(0.9375em, 5vw, 3.125em);
 }
 
 .card {
@@ -1062,7 +1062,7 @@ textarea {
           flex-direction: column;
 }
 .card--size-md .card__main-content {
-  padding: clamp(0.675em, 1.125vi, 1.125em) clamp(0.75em, 1.25vi, 1.25em);
+  padding: clamp(0.675em, 1.125vw, 1.125em) clamp(0.75em, 1.25vw, 1.25em);
 }
 .card--size-md .card__title {
   font-size: clamp(1em, 0.8393em + 0.8036vw, 1.5625em);
@@ -1100,7 +1100,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: clamp(0.75em, 2.4vi, 1.5em);
+  gap: clamp(0.75em, 2.4vw, 1.5em);
 }
 .card__controls {
   -webkit-margin-before: auto;
@@ -1226,10 +1226,10 @@ textarea {
   }
 }
 
-.contests__inner {
+.section-banner__inner {
   position: relative;
   z-index: 1;
-  padding: clamp(0.75em, 4vi, 2.5em);
+  padding: clamp(0.75em, 4vw, 2.5em);
   inline-size: 100%;
   border-radius: 10px;
   overflow: hidden;
@@ -1249,7 +1249,7 @@ textarea {
           justify-content: end;
   gap: var(--gap-section);
 }
-.contests__inner::after {
+.section-banner__inner::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1260,16 +1260,16 @@ textarea {
   background-color: rgba(0, 0, 0, 0.3019607843);
 }
 @media only screen and (width >= 768px) {
-  .contests__inner {
+  .section-banner__inner {
     aspect-ratio: 12.18/3.57;
   }
 }
-.contests__bg-image {
+.section-banner__bg-image {
   background-color: var(--main-text-color);
   background-size: cover;
   background-position: center;
 }
-.contests__title {
+.section-banner__title {
   -webkit-box-flex: unset;
       -ms-flex: unset;
           flex: unset;
@@ -1416,8 +1416,8 @@ textarea {
 .top-ten__cards {
   display: -ms-grid;
   display: grid;
-  gap: clamp(1.5em, 5vi, 3.125em);
-  grid-template-columns: repeat(auto-fill, minmax(min(16vi, 12.5em), 1fr));
+  gap: clamp(1.5em, 5vw, 3.125em);
+  grid-template-columns: repeat(auto-fill, minmax(min(16vw, 12.5em), 1fr));
 }
 .top-ten__card {
   border-radius: 10px;
@@ -1437,7 +1437,7 @@ textarea {
 
 .sign-up__banner {
   inline-size: 100%;
-  padding: clamp(0.75em, 4vi, 2.5em);
+  padding: clamp(0.75em, 4vw, 2.5em);
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -1465,7 +1465,7 @@ textarea {
 .sign-up__banner-title {
   margin: 0;
   font-variation-settings: "wght" 800;
-  font-size: clamp(1em, 2.5vi, 1.5625em);
+  font-size: clamp(1em, 2.5vw, 1.5625em);
 }
 
 .modal {
@@ -1487,10 +1487,10 @@ textarea {
 }
 .modal__container {
   position: relative;
-  inline-size: min(90vi, 75em);
+  inline-size: min(90vw, 75em);
   background-color: #fff;
   border-radius: 10px;
-  padding: clamp(0.9375em, 4vi, 2.5em);
+  padding: clamp(0.9375em, 4vw, 2.5em);
 }
 .modal__close-button {
   position: absolute;
@@ -1504,8 +1504,8 @@ textarea {
 }
 .modal__title {
   margin: 0;
-  padding-block: 0 clamp(1.125rem, 4vi, 2.5rem);
-  font-size: clamp(1.125em, 2.5vi, 1.5625em);
+  padding-block: 0 clamp(1.125rem, 4vw, 2.5rem);
+  font-size: clamp(1.125em, 2.5vw, 1.5625em);
   font-variation-settings: "wght" 800;
   text-align: center;
 }
@@ -1513,7 +1513,7 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: clamp(0.125em, 2vi, 1.25em);
+  gap: clamp(0.125em, 2vw, 1.25em);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

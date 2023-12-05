@@ -26,9 +26,9 @@
   }
 
   &__nav-list {
-    margin: 0 0 0 clamp(0.9375em, 4.375vi, 4.375em);
+    margin: 0 0 0 clamp(0.9375em, 4.375vw, 4.375em);
     list-style: none;
-    padding: clamp(1.25em, 5vi, 3.125em) 0 clamp(1em, 4.5vi, 2.5em);
+    padding: clamp(1.25em, 5vw, 3.125em) 0 clamp(1em, 4.5vw, 2.5em);
     columns: 2;
 
     li {
@@ -38,7 +38,7 @@
 
       &::before {
         content: '';
-        margin-block: clamp(0.625em, 1.76vi, 1.1em);
+        margin-block: clamp(0.625em, 1.76vw, 1.1em);
         border-radius: 50%;
         background-color: currentColor;
         inline-size: 4px;
@@ -53,7 +53,7 @@
 
   &__nav-link {
     text-decoration: none;
-    font-size: clamp(0.625em, 1.6vi, 1em);
+    font-size: clamp(0.625em, 1.6vw, 1em);
     text-underline-position: under;
     padding-block: 0.625em;
     font-variation-settings: 'wght' 500;
@@ -71,8 +71,8 @@
 
   &__address-logo {
     display: block;
-    padding: clamp(0.625em, 1.5vi, 0.9375em) clamp(0.625em, 2vi, 1.25em)
-      clamp(0.25em, 0.5vi, 0.3125em);
+    padding: clamp(0.625em, 1.5vw, 0.9375em) clamp(0.625em, 2vw, 1.25em)
+      clamp(0.25em, 0.5vw, 0.3125em);
     border-radius: 20px 20px 0 0;
     background-color: #fff;
 
@@ -87,8 +87,8 @@
   &__address-logo-image {
     display: block;
     margin-inline: auto;
-    inline-size: clamp(7.25em, 22.8vi, 14.25em);
-    block-size: clamp(2.5em, 7.8vi, 4.875em);
+    inline-size: clamp(7.25em, 22.8vw, 14.25em);
+    block-size: clamp(2.5em, 7.8vw, 4.875em);
     mask: url('../images/logo.svg') center / 65% no-repeat;
     background-color: var(--main-color);
 
@@ -98,9 +98,9 @@
   }
 
   &__address-content {
-    padding-block: clamp(0.9375em, 2.5vi, 1.5375em)
-      clamp(0.5em, 1.5vi, 0.9375em);
-    padding-inline: clamp(0.625em, 2vi, 1.25em);
+    padding-block: clamp(0.9375em, 2.5vw, 1.5375em)
+      clamp(0.5em, 1.5vw, 0.9375em);
+    padding-inline: clamp(0.625em, 2vw, 1.25em);
     border-radius: 0 0 20px 20px;
     background-color: #00000026;
   }
@@ -109,14 +109,14 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap-grid);
-    margin-block-end: 4.5vi;
+    margin-block-end: 4.5vw;
   }
 
   &__address-link {
     display: flex;
     align-items: start;
-    gap: clamp(0.5rem, 1.5vi, 0.9375rem);
-    font-size: clamp(0.625em, 1.6vi, 1em);
+    gap: clamp(0.5rem, 1.5vw, 0.9375rem);
+    font-size: clamp(0.625em, 1.6vw, 1em);
     text-decoration: none;
     font-variation-settings: 'wght' 700;
     transition: color 0.3s;
@@ -134,10 +134,10 @@
 
   &__address-link-icon {
     flex: none;
-    inline-size: clamp(1em, 1.5vi, 1.5em);
-    min-inline-size: clamp(1em, 1.5vi, 1.5em);
-    max-inline-size: clamp(1em, 1.5vi, 1.5em);
-    block-size: clamp(1em, 1.5vi, 1.5em);
+    inline-size: clamp(1em, 1.5vw, 1.5em);
+    min-inline-size: clamp(1em, 1.5vw, 1.5em);
+    max-inline-size: clamp(1em, 1.5vw, 1.5em);
+    block-size: clamp(1em, 1.5vw, 1.5em);
   }
 
   &__social {
@@ -148,8 +148,8 @@
 
   &__social-link-icon {
     display: block;
-    inline-size: clamp(1.5em, 2.5vi, 2.5em);
-    block-size: clamp(1.5em, 2.5vi, 2.5em);
+    inline-size: clamp(1.5em, 2.5vw, 2.5em);
+    block-size: clamp(1.5em, 2.5vw, 2.5em);
 
     &::before {
       transition: background 0.3s;

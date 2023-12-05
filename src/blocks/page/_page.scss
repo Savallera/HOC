@@ -10,7 +10,7 @@
 
   &__section {
     @extend %section-inline-size;
-    margin-block: clamp(1.5625em, 10vi, 6.25em);
+    margin-block: clamp(1.5625em, 10vw, 6.25em);
 
     display: flex;
     gap: var(--gap-section);
@@ -21,7 +21,7 @@
   //   @extend %reset-list;
   //   display: grid;
   //   grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-  //   gap: clamp(0.5em, 2vi, 1.25em);
+  //   gap: clamp(0.5em, 2vw, 1.25em);
   // }
 
   &__title-block {
@@ -40,7 +40,7 @@
   &__description {
     margin: 0;
     max-inline-size: 40em;
-    font-size: clamp(1em, 2vi, 1.25em);
+    font-size: clamp(1em, 2vw, 1.25em);
   }
 
   &__link {

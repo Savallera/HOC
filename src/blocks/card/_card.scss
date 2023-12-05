@@ -10,7 +10,7 @@
 
   &--size-md {
     .card__main-content {
-      padding: clamp(0.675em, 1.125vi, 1.125em) clamp(0.75em, 1.25vi, 1.25em);
+      padding: clamp(0.675em, 1.125vw, 1.125em) clamp(0.75em, 1.25vw, 1.25em);
     }
 
     .card__title {
@@ -45,7 +45,7 @@
     padding: 0.675em 0.75em;
     display: flex;
     flex-direction: column;
-    gap: clamp(0.75em, 2.4vi, 1.5em);
+    gap: clamp(0.75em, 2.4vw, 1.5em);
   }
 
   &__controls {
