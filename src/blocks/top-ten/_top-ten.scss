@@ -1,0 +1,24 @@
+.top-ten {
+  &__cards {
+    @extend %reset-list;
+    display: grid;
+    gap: clamp(1.5em, 5vi, 3.125em);
+    grid-template-columns: repeat(auto-fill, minmax(min(16vi, 12.5em), 1fr));
+  }
+
+  &__card {
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    inline-size: 100%;
+    overflow: hidden;
+  }
+
+  &__card-image {
+    @extend %alt-text-on-after;
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
