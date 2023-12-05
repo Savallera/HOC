@@ -14,11 +14,11 @@
 
   &--theme {
     &-gradient {
-      font-size: clamp(18px, 2.5vi, 25px);
+      font-size: clamp(0.75em, 2.5vi, 1.5625em);
       border-radius: 10px;
       min-inline-size: min(22rem, 100%);
       outline: 2px solid transparent;
-      padding: clamp(8px, 1.5vi, 15px) clamp(15px, 3vi, 30px);
+      padding: 0.9375rem 1.875rem;
       background: var(--main-color-gradient) no-repeat center;
       color: var(--accent-text-color);
 
