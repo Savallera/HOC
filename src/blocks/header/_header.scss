@@ -60,17 +60,6 @@
     }
   }
 
-  &__join-button {
-    display: none;
-    align-self: center;
-    flex: none;
-    margin-inline: 0.9375rem 1.25rem;
-
-    @include media(sm) {
-      display: unset;
-    }
-  }
-
   &__mobile-menu {
     position: relative;
     display: flex;
@@ -102,7 +91,7 @@
   }
 
   &__mobile-menu-list {
-    margin: .625em 0 0;
+    margin: 0.625em 0 0;
     padding: 0;
     list-style: none;
     inline-size: clamp(20em, 19.0179em + 4.9107vw, 23.4375em);
@@ -127,6 +116,36 @@
     }
     &:focus-visible {
       outline: 2px solid var(--main-text-color);
+    }
+  }
+
+  &__sign-up-link {
+    display: none;
+    align-self: center;
+    flex: none;
+    margin-inline: 0.9375rem 1.25rem;
+    text-decoration: unset;
+    padding: 0.375rem 0.75rem;
+    font-variation-settings: 'wght' 500;
+    color: var(--accent-text-color);
+    border: 2px solid currentColor;
+    border-radius: 20px;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: var(--hover-color);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--main-text-color);
+    }
+
+    @include media(sm) {
+      display: unset;
     }
   }
 

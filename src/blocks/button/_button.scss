@@ -24,15 +24,5 @@
 
       // &:hover {}
     }
-    &-outline-light {
-      border-radius: 20px;
-      padding: 0.375rem 0.75rem;
-      border: 2px solid currentColor;
-      color: var(--accent-text-color);
-
-      &:hover {
-        background-color: var(--hover-color);
-      }
-    }
   }
 }

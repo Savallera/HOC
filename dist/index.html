@@ -79,12 +79,7 @@
           </a>
         </li>
       </ul>
-      <button
-        type="button"
-        class="button button--theme-outline-light header__join-button"
-      >
-        <span class="button__text">Присоединиться к проекту</span>
-      </button>
+      <a class="header__sign-up-link" href="#sign-up-section">Присоединиться к проекту</a>
       <div class="header__mobile-menu">
         <button
           type="button"
@@ -392,19 +387,19 @@
 </section>
 
         <!-- Баннер конкурсов на главной -->
-<section class="page__section section-banner">
+<section class="page__section contests">
   <div
-    class="section-banner__inner section-banner__bg-image"
+    class="contests__inner contests__bg-image"
     style="
       background-image: url(https://s3-alpha-sig.figma.com/img/faa9/d329/313c6f3bfc92a3a3a9fb43714d6d1ac0?Expires=1702857600&Signature=WYl7cOrbL-PZrVsWPtLgPk3KvVT6kn1NG5qO~vLEi4qRqzzdL5AL0nN7Q2iFri5~m5BWI3LXlNynDdA9m81nS0hPTxVh59phrmUP5vIcS5W~teyEHp1laVcMzJGcOS2es5OliF4r4GgXsmVdDoGMxYuzFheE6n1PVOuWwYEf83CPNcQRvQRkwr~RO1OiQYYkBq6Th5Jt-f5~mT0v4Vp0pQOHNkePNkaJ-e2KMPAQQb6viAWfUZXJBCEvplPsrp3XnqBzGeDblaazcqVZSO~CeSyz9azVxbMz7SijF52gCaXfCoHC6K4BSkVgXHxgnCzVcShT~OL4R6qpKfgv34QliQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
     "
   >
-    <h2 class="page__title section-banner__title">
+    <h2 class="page__title contests__title">
       Название конкурса и про что он
     </h2>
     <button
       type="button"
-      class="section-banner__button button button--theme-gradient"
+      class="contests__button button button--theme-gradient"
     >
       <span class="button__text">Принять участие</span>
     </button>
@@ -627,7 +622,19 @@
   </div>
 </section>
 
-        
+        <!-- Секция с квизом на главной -->
+<section class="page__section bg-gradient survey">
+  <h2 class="survey__title">
+    Как вы относитесь к чему то там хорошему или плохому?!
+  </h2>
+  <p class="survey__subtitle">Опрос от название студСМИ или ФИО Автора</p>
+  <form class="survey__form">
+    <fieldset class="survey__fieldset">
+
+    </fieldset>
+  </form>
+</section>
+
         <!-- Секция с медиа на главной -->
 <section class="media page__section">
   <div class="media__columns">
@@ -1034,6 +1041,19 @@
   </ol>
 </section>
 
+        <!-- Секция с регистрацией на главной -->
+<section class="page__section sign-up" id="sign-up-section">
+  <h2 class="page__title">Хочешь создавать крутой контент с нами?</h2>
+  <div class="sign-up__banner">
+    <h3 class="sign-up__banner-title">
+      Регистрируйся здесь и развивай студСМИ с нами!
+    </h3>
+    <button type="button" class="sign-up__button page__button button button--theme-gradient">
+      <span class="button__text">Подробнее</span>
+    </button>
+  </div>
+</section>
+
       </main>
       <footer class="footer bg-gradient">
   <div class="footer__wrap">
@@ -1233,14 +1253,14 @@
   </div>
 </footer>
 
-      <div class="modal modal--content-join">
+      <div class="modal modal--content-sign-up">
   <div class="modal__container">
     <button
       type="reset"
       class="icon-button icon icon--type-close modal__close-button"
       aria-label="Закрыть"
     ></button>
-    <form class="modal__form" name="join-modal" action="">
+    <form class="modal__form" name="sign-up-modal" action="">
       <p class="modal__title">Регистрируйся здесь и развивай студСМИ с нами!</p>
       <div class="field">
         <label class="field__label visually-hidden">Имя</label>

@@ -1,0 +1,26 @@
+.sign-up {
+  &__banner {
+    inline-size: 100%;
+    padding: clamp(0.75em, 4vi, 2.5em); // 13 - 40
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-section);
+
+    @include media(md) {
+      aspect-ratio: 12.18/2.49;
+    }
+  }
+
+  &__banner-title {
+    margin: 0;
+    font-variation-settings: 'wght' 800;
+    font-size: clamp(1em, 2.5vi, 1.5625em); // 16 - 25
+  }
+}

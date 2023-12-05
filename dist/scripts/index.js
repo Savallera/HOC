@@ -46,6 +46,27 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Форма принять участие в конкурсе
+const contestButton = document.querySelector('.contests__button');
+const contestModal = document.querySelector('.modal--content-contest');
+const contestModalCloseButton = document.querySelector('.modal__close-button');
+const openContestModal = function () {
+  contestModal.classList.add('modal--opened');
+};
+const closeContestModal = function () {
+  contestModal.classList.remove('modal--opened');
+};
+
+contestButton.addEventListener('click', openContestModal);
+contestModal.addEventListener('click', (evt) => {
+  if (
+    evt.target.classList.contains('modal--content-contest') ||
+    evt.target.classList.contains('modal__close-button')
+  ) {
+    closeContestModal();
+  }
+});
+
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
     // Слайдер с событиями на главной странице
@@ -162,48 +183,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Форма присоединиться к проекту
-const headerJoinButton = document.querySelector('.header__join-button');
-const joinModal = document.querySelector('.modal--content-join');
-const joinModalCloseButton = document.querySelector('.modal__close-button');
-const openJoinModal = function () {
-  joinModal.classList.add('modal--opened');
-};
-const closeJoinModal = function () {
-  joinModal.classList.remove('modal--opened');
-};
-
-headerJoinButton.addEventListener('click', openJoinModal);
-joinModal.addEventListener('click', (evt) => {
-  if (
-    evt.target.classList.contains('modal--content-join') ||
-    evt.target.classList.contains('modal__close-button')
-  ) {
-    closeJoinModal();
-  }
-});
-
-// Форма принять участие в конкурсе
-const bannerContestButton = document.querySelector('.section-banner__button');
-const contestModal = document.querySelector('.modal--content-contest');
-const contestModalCloseButton = document.querySelector('.modal__close-button');
-const openContestModal = function () {
-  contestModal.classList.add('modal--opened');
-};
-const closeContestModal = function () {
-  contestModal.classList.remove('modal--opened');
-};
-
-bannerContestButton.addEventListener('click', openContestModal);
-contestModal.addEventListener('click', (evt) => {
-  if (
-    evt.target.classList.contains('modal--content-contest') ||
-    evt.target.classList.contains('modal__close-button')
-  ) {
-    closeContestModal();
-  }
-});
-
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
     // Слайдер новостей на главной странице
@@ -269,6 +248,27 @@ window.addEventListener('DOMContentLoaded', () => {
     //   });
     //   festivalSlider.mount();
     // }
+  }
+});
+
+// Форма присоединиться к проекту
+const signUpButton = document.querySelector('.sign-up__button');
+const signUpModal = document.querySelector('.modal--content-sign-up');
+const signUpModalCloseButton = document.querySelector('.modal__close-button');
+const openSignUpModal = function () {
+  signUpModal.classList.add('modal--opened');
+};
+const closeSignUpModal = function () {
+  signUpModal.classList.remove('modal--opened');
+};
+
+signUpButton.addEventListener('click', openSignUpModal);
+signUpModal.addEventListener('click', (evt) => {
+  if (
+    evt.target.classList.contains('modal--content-sign-up') ||
+    evt.target.classList.contains('modal__close-button')
+  ) {
+    closeSignUpModal();
   }
 });
 
