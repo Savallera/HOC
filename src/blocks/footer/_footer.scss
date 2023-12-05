@@ -1,14 +1,14 @@
 .footer {
-  margin-block-start: 66px;
+  margin-block-start: 4.125em;
 
   &__wrap {
     @extend %section-inline-size;
     color: var(--accent-text-color);
 
-    margin-block-start: -24px;
+    margin-block-start: -1.5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(10px, 2vi, 20px);
+    gap: clamp(0.625em, 2vi, 1.25em);
 
     @include media(lg) {
       grid-template-columns: 1.15fr 0.5fr 0.5fr;
@@ -38,7 +38,7 @@
 
       &::before {
         content: '';
-        margin-block: clamp(10px, 1.76vi, 1.1em);
+        margin-block: clamp(0.625em, 1.76vi, 1.1em);
         border-radius: 50%;
         background-color: currentColor;
         inline-size: 4px;
@@ -53,13 +53,112 @@
 
   &__nav-link {
     text-decoration: none;
-    font-size: clamp(10px, 1.6vi, 16px);
+    font-size: clamp(0.625em, 1.6vi, 1em);
     text-underline-position: under;
     padding-block: 0.675em;
     font-variation-settings: 'wght' 500;
 
     &:hover {
       text-decoration: underline;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--main-text-color);
+    }
+  }
+
+  &__address-logo {
+    display: block;
+    padding: clamp(0.625em, 1.5vi, 0.9375em) clamp(0.625em, 2vi, 1.25em)
+      clamp(0.25em, 0.5vi, 0.3125em);
+    border-radius: 20px 20px 0 0;
+    background-color: #fff;
+
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--main-text-color);
+    }
+  }
+
+  &__address-logo-image {
+    display: block;
+    margin-inline: auto;
+    inline-size: clamp(7.25em, 22.8vi, 14.25em);
+    block-size: clamp(2.5em, 7.8vi, 4.875em);
+    mask: url('../images/logo.svg') center / 65% no-repeat;
+    background-color: var(--main-color);
+
+    &--type-ministry {
+      mask: url('../images/ministry-logo.svg') center / contain no-repeat;
+    }
+  }
+
+  &__address-content {
+    padding-block: clamp(0.9375em, 2.5vi, 1.5375em)
+      clamp(0.5em, 1.5vi, 0.9375em);
+    padding-inline: clamp(0.625em, 2vi, 1.25em);
+    border-radius: 0 0 20px 20px;
+    background-color: #00000026;
+  }
+
+  &__address-links {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.625em, 2vi, 1.25em);
+    margin-block-end: 4.5vi;
+  }
+
+  &__address-link {
+    display: flex;
+    align-items: start;
+    gap: clamp(0.5em, 1.5vi, 0.9375em);
+    font-size: clamp(0.625em, 1.6vi, 1em);
+    text-decoration: none;
+    font-variation-settings: 'wght' 700;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--main-text-color);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--main-text-color);
+    }
+  }
+
+  &__address-link-icon {
+    flex: none;
+    inline-size: clamp(1em, 1.5vi, 1.5em);
+    min-inline-size: clamp(1em, 1.5vi, 1.5em);
+    max-inline-size: clamp(1em, 1.5vi, 1.5em);
+    block-size: clamp(1em, 1.5vi, 1.5em);
+  }
+
+  &__social {
+    @extend %reset-list;
+    display: flex;
+    gap: 0.3125em;
+  }
+
+  &__social-link-icon {
+    display: block;
+    inline-size: clamp(1.5em, 2.5vi, 2.5em);
+    block-size: clamp(1.5em, 2.5vi, 2.5em);
+
+    &::before {
+      transition: background 0.3s;
+    }
+    &:hover::before {
+      background-color: var(--main-text-color);
+    }
+    &:active {
+      transform: translateY(1px);
     }
     &:focus {
       outline: none;
