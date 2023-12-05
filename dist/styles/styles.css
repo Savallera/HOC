@@ -175,6 +175,11 @@ textarea {
   font-weight: 800;
   font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
 }
+.page__description {
+  margin: 0;
+  max-inline-size: 40em;
+  font-size: clamp(1em, 2vi, 1.25em);
+}
 .page__link {
   -webkit-box-flex: 0;
       -ms-flex: none;

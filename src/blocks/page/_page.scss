@@ -37,6 +37,12 @@
     font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem); // 40 - 20
   }
 
+  &__description {
+    margin: 0;
+    max-inline-size: 40em;
+    font-size: clamp(1em, 2vi, 1.25em);
+  }
+
   &__link {
     flex: none;
     font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem); // 25 - 12
