@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         gap: '.9375em',
-        perPage: 1.2,
+        perPage: 1.1,
         padding: 'var(--section-padding)',
         mediaQuery: 'min',
         breakpoints: {
@@ -120,6 +120,48 @@ window.addEventListener('DOMContentLoaded', () => {
   checkMenuSize();
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
+    if (document.querySelector('#media-podcast-slider')) {
+      let mediaPodcastSlider = new Splide('#media-podcast-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        perPage: 1.1,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      mediaPodcastSlider.mount();
+    }
+
+    if (document.querySelector('#media-video-slider')) {
+      let mediaVideoSlider = new Splide('#media-video-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        perPage: 1.1,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      mediaVideoSlider.mount();
+    }
+  }
+});
+
 // Форма присоединиться к проекту
 const headerJoinButton = document.querySelector('.header__join-button');
 const joinModal = document.querySelector('.modal--content-join');
@@ -182,48 +224,6 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       newsSlider.mount();
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  if (Splide) {
-    if (document.querySelector('#media-podcast-slider')) {
-      let mediaPodcastSlider = new Splide('#media-podcast-slider', {
-        type: 'slide',
-        autoplay: false,
-        arrows: false,
-        pagination: false,
-        gap: '.9375em',
-        perPage: 1.1,
-        padding: 'var(--section-padding)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            destroy: 'completely',
-          },
-        },
-      });
-      mediaPodcastSlider.mount();
-    }
-
-    if (document.querySelector('#media-video-slider')) {
-      let mediaVideoSlider = new Splide('#media-video-slider', {
-        type: 'slide',
-        autoplay: false,
-        arrows: false,
-        pagination: false,
-        gap: '.9375em',
-        perPage: 1.1,
-        padding: 'var(--section-padding)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            destroy: 'completely',
-          },
-        },
-      });
-      mediaVideoSlider.mount();
     }
   }
 });
