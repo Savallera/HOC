@@ -1,6 +1,6 @@
 .DS_Store
 .vscode
-.dist
+.idea
 
 node_modules
 
@@ -10,5 +10,5 @@ node_modules
 # package.json
 package-lock.json
 
-# dist
+dist
 # src/images
