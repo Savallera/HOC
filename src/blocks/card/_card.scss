@@ -1,3 +1,4 @@
+/* Базовая карточка */
 .card {
   inline-size: 100%;
   block-size: 100%;
@@ -8,27 +9,36 @@
   display: flex;
   flex-direction: column;
 
-  &--size-md {
-    .card__main-content {
-      padding: clamp(0.675em, 1.125vw, 1.125em) clamp(0.75em, 1.25vw, 1.25em);
-    }
-
-    .card__title {
-      font-size: clamp(1em, 0.8393em + 0.8036vw, 1.5625em); // 25 - 16
-    }
-
-    .card__text {
-      font-size: clamp(0.75em, 0.6071em + 0.7143vw, 1.25em); // 20 - 12
-    }
-  }
-
   &__image {
-    @extend %alt-text-on-after;
+    position: relative;
+    overflow: hidden;
     background-color: var(--main-text-low-color);
     inline-size: 100%;
     aspect-ratio: 6/3.2;
     object-fit: cover;
     object-position: center;
+
+    &:after {
+      content: attr(alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75em;
+      padding: 0.75em;
+      color: var(--main-text-color);
+
+      position: absolute;
+      inset: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      text-align: center;
+      background-image: linear-gradient(
+        to bottom,
+        #ccc 0%,
+        #eee 50%,
+        #ccc 100%
+      );
+    }
   }
 
   &__iframe {
@@ -106,6 +116,20 @@
 
     &--actived {
       color: var(--accent-color);
+    }
+  }
+
+  &--size-md {
+    .card__main-content {
+      padding: clamp(0.675em, 1.125vw, 1.125em) clamp(0.75em, 1.25vw, 1.25em);
+    }
+
+    .card__title {
+      font-size: clamp(1em, 0.8393em + 0.8036vw, 1.5625em); // 25 - 16
+    }
+
+    .card__text {
+      font-size: clamp(0.75em, 0.6071em + 0.7143vw, 1.25em); // 20 - 12
     }
   }
 }

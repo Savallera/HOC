@@ -1,3 +1,4 @@
+/* Модальное окно */
 .modal {
   position: fixed;
   inset: 0;
@@ -5,22 +6,23 @@
   inline-size: 100%;
   block-size: 100%;
   min-block-size: 100vh;
-  min-block-size: 100dvb;
   overflow-y: auto;
 
-  display: grid;
-  place-items: center;
+  display: flex;
   padding-block: 3em;
 
   backdrop-filter: blur(18px);
   background-color: rgba(0, 0, 0, 0.4);
-  @extend %hidden-block;
-
-  &--opened {
-    @extend %visibility-block;
-  }
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition:
+    visibility 0s 0.35s,
+    opacity 0.35s;
 
   &__container {
+    margin: auto;
     position: relative;
     inline-size: min(90vw, 75em);
     background-color: #fff;
@@ -31,7 +33,9 @@
   &__close-button {
     position: absolute;
     inset: 0.5em 0.5em auto auto;
-    border-radius: 50%;
+    inline-size: 1em;
+    block-size: 1em;
+    padding: 0;
     color: var(--main-text-low-color);
 
     &:hover {
@@ -56,5 +60,18 @@
 
   &__button {
     align-self: center;
+  }
+
+  &--opened {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    transition:
+      visibility 0s,
+      opacity 0.35s;
+  }
+
+  @supports (min-block-size: 100dvb) {
+    min-block-size: 100dvb;
   }
 }

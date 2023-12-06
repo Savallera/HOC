@@ -1,6 +1,9 @@
+/* Секция топ-10 студСМИ на главной */
 .top-ten {
   &__cards {
-    @extend %reset-list;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: grid;
     gap: clamp(1.5em, 5vw, 3.125em);
     grid-template-columns: repeat(auto-fill, minmax(min(16vw, 12.5em), 1fr));
@@ -14,11 +17,34 @@
   }
 
   &__card-image {
-    @extend %alt-text-on-after;
+    position: relative;
+    overflow: hidden;
+
     display: block;
     inline-size: 100%;
     block-size: 100%;
     object-fit: cover;
     object-position: center;
+    &:after {
+      content: attr(alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75em;
+      padding: 0.75em;
+      color: var(--main-text-color);
+
+      position: absolute;
+      inset: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      text-align: center;
+      background-image: linear-gradient(
+        to bottom,
+        #ccc 0%,
+        #eee 50%,
+        #ccc 100%
+      );
+    }
   }
 }

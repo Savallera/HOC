@@ -1,4 +1,4 @@
-// Возможно объединить стиль в блоке page
+// Секция с тестами. Возможно объединить стиль в блоке page
 .tests {
   &__slider {
     &.is-initialized:not(.is-active) .splide__list {

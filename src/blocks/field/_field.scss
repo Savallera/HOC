@@ -1,56 +1,5 @@
+/* Блок с полем */
 .field {
-  &--state-error {
-    .field__input {
-      padding-inline-end: clamp(2rem, 4.8vw, 3rem);
-    }
-    .field__error-text {
-      @extend %visibility-block;
-      grid-area: unset;
-    }
-    .field__error-icon {
-      @extend %visibility-block;
-    }
-  }
-
-  &--content {
-    &-checkbox {
-      .field__label {
-        padding-inline-start: 0;
-        cursor: pointer;
-      }
-
-      .field__checkbox {
-        margin-inline-end: 0.5em;
-      }
-
-      .field__error-text {
-        grid-area: 2/2/3/3;
-      }
-    }
-
-    &-file {
-      .field__label {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        color: var(--accent-text-color);
-        padding: 0.785rem clamp(0.875rem, 2vw, 1.25rem);
-        background-color: var(--main-text-low-color);
-        border-radius: 10px;
-        transition: background-color 0.3s;
-        cursor: pointer;
-
-        &:has(:focus-visible) {
-          outline: 1px solid var(--main-color);
-        }
-
-        &:hover {
-          background-color: var(--main-color);
-        }
-      }
-    }
-  }
-
   &__label {
     line-height: 2;
     font-size: clamp(0.75em, 2vw, 1.25em);
@@ -122,14 +71,22 @@
   }
 
   &__error-text {
-    @extend %cut-text;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     display: block;
     font-size: clamp(0.75em, 1.6vw, 1em);
     padding-inline-start: clamp(0.875rem, 2vw, 1.25rem);
     font-variation-settings: 'wght' 500;
     color: var(--accent-color);
 
-    @extend %hidden-block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition:
+      visibility 0s 0.35s,
+      opacity 0.35s;
     grid-area: 1/1/2/2;
   }
 
@@ -141,10 +98,16 @@
     grid-area: 1/1/2/2;
 
     align-self: center;
-    justify-self: end;
+    justify-self: flex-end;
     margin-inline-end: clamp(0.875em, 2vw, 1.25em);
 
-    @extend %hidden-block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition:
+      visibility 0s 0.35s,
+      opacity 0.35s;
   }
 
   &__search-icon {
@@ -154,11 +117,73 @@
     color: var(--accent-color);
     grid-area: 1/1/2/2;
     align-self: center;
-    justify-self: start;
+    justify-self: flex-start;
     margin-inline-start: clamp(0.875em, 2vw, 1.25em);
 
     & ~ .field__input {
       padding-inline-start: clamp(3rem, 6.8vw, 4.25rem);
+    }
+  }
+
+  &--state-error {
+    .field__input {
+      padding-inline-end: clamp(2rem, 4.8vw, 3rem);
+    }
+    .field__error-text {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+      transition:
+        visibility 0s,
+        opacity 0.35s;
+      grid-area: unset;
+    }
+    .field__error-icon {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+      transition:
+        visibility 0s,
+        opacity 0.35s;
+    }
+  }
+
+  &--content {
+    &-checkbox {
+      .field__label {
+        padding-inline-start: 0;
+        cursor: pointer;
+      }
+
+      .field__checkbox {
+        margin-inline-end: 0.5em;
+      }
+
+      .field__error-text {
+        grid-area: 2/2/3/3;
+      }
+    }
+
+    &-file {
+      .field__label {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: var(--accent-text-color);
+        padding: 0.785rem clamp(0.875rem, 2vw, 1.25rem);
+        background-color: var(--main-text-low-color);
+        border-radius: 10px;
+        transition: background-color 0.3s;
+        cursor: pointer;
+
+        &:has(:focus-visible) {
+          outline: 1px solid var(--main-color);
+        }
+
+        &:hover {
+          background-color: var(--main-color);
+        }
+      }
     }
   }
 }

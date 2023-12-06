@@ -1,6 +1,6 @@
+/* Лэйаут страниц */
 .page {
   min-block-size: 100vh;
-  min-block-size: 100dvb;
   display: flex;
   flex-direction: column;
 
@@ -9,20 +9,16 @@
   }
 
   &__section {
-    @extend %section-inline-size;
+    margin-inline: auto;
+    padding-inline: var(--section-padding);
+    inline-size: 100%;
+    max-inline-size: var(--section-inline-size);
     margin-block: clamp(1.5625em, 10vw, 6.25em);
 
     display: flex;
     gap: var(--gap-section);
     flex-direction: column;
   }
-
-  // &__columns {
-  //   @extend %reset-list;
-  //   display: grid;
-  //   grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-  //   gap: clamp(0.5em, 2vw, 1.25em);
-  // }
 
   &__title-block {
     inline-size: 100%;
@@ -67,5 +63,9 @@
     @include media(sm) {
       align-self: center;
     }
+  }
+
+  @supports (min-block-size: 100dvb) {
+    min-block-size: 100dvb;
   }
 }

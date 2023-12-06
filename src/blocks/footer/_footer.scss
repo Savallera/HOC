@@ -1,8 +1,12 @@
+/* Подвал страницы */
 .footer {
   margin-block-start: 4.125em;
 
   &__wrap {
-    @extend %section-inline-size;
+    margin-inline: auto;
+    padding-inline: var(--section-padding);
+    inline-size: 100%;
+    max-inline-size: var(--section-inline-size);
     color: var(--accent-text-color);
 
     margin-block-start: -1.5em;
@@ -33,7 +37,7 @@
 
     li {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       gap: 0.5em;
 
       &::before {
@@ -115,7 +119,7 @@
 
   &__address-link {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     gap: clamp(0.5rem, 1.5vw, 0.9375rem);
     font-size: clamp(0.625em, 1.6vw, 1em);
     text-decoration: none;
@@ -142,7 +146,9 @@
   }
 
   &__social {
-    @extend %reset-list;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
     gap: 0.3125em;
   }

@@ -1,4 +1,4 @@
-// Header menu for mobile
+// Меню в шапке
 const menuList = document.querySelector('.header__menu-list');
 const mobileMenu = document.querySelector('.header__mobile-menu');
 const mobileMenuList = document.querySelector('.header__mobile-menu-list');
@@ -14,12 +14,10 @@ Array.from(menuList.children).map((children) => {
 });
 
 function checkMenuSize() {
-  // Get instant state
   availableSpace = menuList.getBoundingClientRect().width;
   numOfVisibleItems = menuList.children.length;
   requiredSpace = breakWidths[numOfVisibleItems - 1];
 
-  // There is not enought space
   if (requiredSpace > availableSpace) {
     mobileMenuList.prepend(menuList.children[menuList.children.length - 1]);
     mobileMenuList.firstElementChild
@@ -30,8 +28,6 @@ function checkMenuSize() {
       .classList.add('header__mobile-menu-link');
     numOfVisibleItems -= 1;
     checkMenuSize();
-
-    // There is more than enough space
   } else if (availableSpace > breakWidths[numOfVisibleItems]) {
     menuList.append(mobileMenuList.children[0]);
     menuList.lastElementChild
@@ -43,7 +39,6 @@ function checkMenuSize() {
     numOfVisibleItems += 1;
   }
 
-  // Update the button accordingly
   mobileMenu.setAttribute('count', numberOfItems - numOfVisibleItems);
   if (numOfVisibleItems === numberOfItems)
     mobileMenu.classList.add('visually-hidden');

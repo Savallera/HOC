@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
+    // Слайдер с подкастами
     if (document.querySelector('#media-podcast-slider')) {
       let mediaPodcastSlider = new Splide('#media-podcast-slider', {
         type: 'slide',
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
       mediaPodcastSlider.mount();
     }
 
+    // Слайдер с видео
     if (document.querySelector('#media-video-slider')) {
       let mediaVideoSlider = new Splide('#media-video-slider', {
         type: 'slide',

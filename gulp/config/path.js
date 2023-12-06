@@ -11,7 +11,7 @@ export default {
   },
 
   styles: {
-    src: pathSrc + '/styles/*.scss',
+    src: pathSrc + '/styles/styles.scss',
     watch: [
       pathSrc + '/styles/*.scss',
       pathSrc + '/styles/**/*.scss',

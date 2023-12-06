@@ -20,12 +20,12 @@ export default () => {
         })),
       })
     )
-    .pipe(newer(path.images.dest))
-    .pipe(avif({ quality: 50 }))
+    // .pipe(newer(path.images.dest))
+    // .pipe(avif({ quality: 50 }))
 
-    .pipe(gulp.src(path.images.src))
-    .pipe(newer(path.images.dest))
-    .pipe(webp())
+    // .pipe(gulp.src(path.images.src))
+    // .pipe(newer(path.images.dest))
+    // .pipe(webp())
 
     .pipe(gulp.src(path.images.src))
     .pipe(newer(path.images.dest))

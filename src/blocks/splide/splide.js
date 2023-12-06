@@ -1,5 +1,6 @@
-window.addEventListener('DOMContentLoaded', () => {
-  if (Splide) {
+// Пока не используются
+// window.addEventListener('DOMContentLoaded', () => {
+  // if (Splide) {
     // if (document.querySelector('#article-slider')) {
     //   let articleSlider = new Splide('#article-slider', {
     //     type: 'fade',
@@ -39,5 +40,5 @@ window.addEventListener('DOMContentLoaded', () => {
     //   });
     //   festivalSlider.mount();
     // }
-  }
-});
+  // }
+// });

@@ -1,4 +1,4 @@
-// Возможно объединить стиль в блоке page
+/* Секция с трансляциями. Возможно объединить стиль в блоке page */
 .broadcasts {
   &__slider {
     &.is-initialized:not(.is-active) .splide__list {
