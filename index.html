@@ -24,7 +24,8 @@
 
   <body>
     <div class="page">
-      <header class="header bg-gradient">
+      <!-- Шапка страницы -->
+<header class="header bg-gradient">
   <div class="header__wrap">
     <a
       class="header__logo"
@@ -35,8 +36,8 @@
     <menu class="header__menu">
       <ul class="header__menu-list">
         <li>
-          <a href="#" class="header__menu-link" rel="noopener ugc"
-            >Студенческие медиацентр</a
+          <a href="./media-center.html" class="header__menu-link" rel="noopener ugc"
+            >Студенческий медиацентр</a
           >
         </li>
         <li>
@@ -206,42 +207,6 @@
     </div>
   </form>
 </section>
-
-<!-- Секция с поиском на страницах -->
-<!-- <section class="page__section search">
-  <form class="search__form" name="page-search" action="">
-    <div class="field">
-      <label for="page-search-field" class="field__label visually-hidden"
-        >Поиск </label
-      >
-      <div class="field__inner">
-        <span
-          class="field__search-icon icon icon--type-search"
-          aria-hidden="true"
-        ></span>
-        <input
-          type="search"
-          class="field__input"
-          placeholder="Поиск "
-          name="search"
-          id="page-search-field"
-        />
-        <span class="field__error-text">Вывод ошибки</span>
-        <span
-          class="field__error-icon icon icon--type-error"
-          aria-hidden="true"
-        ></span>
-      </div>
-    </div>
-    <fieldset>
-      <legend class="visually-hidden">Выберите тему</legend>
-      <label for="">
-        <input type="checkbox" name="page-search-theme" id="theme">
-        <span class="">Все</span>
-      </label>
-    </fieldset>
-  </form>
-</section> -->
 
         <!-- Секция с новостями на главной -->
 <section class="news page__section">
@@ -688,7 +653,52 @@
   </div>
 </section>
 
-        
+        <!-- Секция с квизом на главной -->
+<section class="page__section bg-gradient survey">
+  <h2 class="survey__title">
+    Как вы относитесь к чему то там хорошему или плохому?!
+  </h2>
+  <p class="survey__subtitle">Опрос от название студСМИ или ФИО Автора</p>
+  <form class="survey__form" name="survey-form">
+    <label class="survey__label" for="survey-raio-group-1">
+      <input
+        class="survey__radio visually-hidden"
+        type="radio"
+        name="survey-raio-group"
+        id="survey-raio-group-1"
+      />
+      <span class="survey__label-text">Ответ №1</span>
+    </label>
+    <label class="survey__label" for="survey-raio-group-2">
+      <input
+        class="survey__radio visually-hidden"
+        type="radio"
+        name="survey-raio-group"
+        id="survey-raio-group-2"
+      />
+      <span class="survey__label-text">Ответ №2</span>
+    </label>
+    <label class="survey__label" for="survey-raio-group-3">
+      <input
+        class="survey__radio visually-hidden"
+        type="radio"
+        name="survey-raio-group"
+        id="survey-raio-group-3"
+      />
+      <span class="survey__label-text">Ответ №3</span>
+    </label>
+    <label class="survey__label" for="survey-raio-group-4">
+      <input
+        class="survey__radio visually-hidden"
+        type="radio"
+        name="survey-raio-group"
+        id="survey-raio-group-4"
+      />
+      <span class="survey__label-text">Ответ №4</span>
+    </label>
+  </form>
+</section>
+
         <!-- Секция с медиа на главной -->
 <section class="media page__section">
   <div class="media__columns">
@@ -947,8 +957,64 @@
       </ul>
     </div>
   </div>
+  <div class="broadcasts__container">
+    <div class="broadcasts__calendar"></div>
+    <div class="broadcasts__results">
+      <ul class="broadcasts__results-list">
+        <li>
+          <a class="card-link" href="#" rel="noopener ugs">
+            <div class="broadcasts__element">
+              <time class="broadcasts__element-time" datetime="19:00"
+                >19:00</time
+              >
+              <h3 class="broadcasts__element-title">Название трансляции</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="card-link" href="#" rel="noopener ugs">
+            <div class="broadcasts__element">
+              <time class="broadcasts__element-time" datetime="19:00"
+                >19:00</time
+              >
+              <h3 class="broadcasts__element-title">Название трансляции</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="card-link" href="#" rel="noopener ugs">
+            <div class="broadcasts__element">
+              <time class="broadcasts__element-time" datetime="19:00"
+                >19:00</time
+              >
+              <h3 class="broadcasts__element-title">Название трансляции</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="card-link" href="#" rel="noopener ugs">
+            <div class="broadcasts__element">
+              <time class="broadcasts__element-time" datetime="19:00"
+                >19:00</time
+              >
+              <h3 class="broadcasts__element-title">Название трансляции</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="card-link" href="#" rel="noopener ugs">
+            <div class="broadcasts__element">
+              <time class="broadcasts__element-time" datetime="19:00"
+                >19:00</time
+              >
+              <h3 class="broadcasts__element-title">Название трансляции</h3>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
-
         <!-- Секция с топ 10 студСМИ на главной -->
 <section class="page__section top-ten">
   <div class="page__title-block">
@@ -1109,7 +1175,8 @@
 </section>
 
       </main>
-      <footer class="footer bg-gradient">
+      <!-- Подвал страницы -->
+<footer class="footer bg-gradient">
   <div class="footer__wrap">
     <nav class="footer__nav">
       <ul class="footer__nav-list">
@@ -1309,7 +1376,8 @@
 <script src="./scripts/libs/splide.min.js"></script>
 <script src="./scripts/index.js" defer></script>
 
-      <div class="modal modal--content-sign-up">
+      <!-- Модальное окно для регистрации -->
+<div class="modal modal--content-sign-up">
   <div class="modal__container">
     <button
       type="reset"
@@ -1459,7 +1527,8 @@
   </div>
 </div>
 
-      <div class="modal modal--content-contest">
+      <!-- Модальное окно для конкурсов -->
+<div class="modal modal--content-contest">
   <div class="modal__container">
     <button
       type="reset"
@@ -1560,7 +1629,8 @@
   </div>
 </div>
 
-      <div class="tooltip">
+      <!-- Всплывающая подсказка при нажатии на сердечко в карточках и баннерах. Класс открыт - tooltip--opened -->
+<div class="tooltip">
   <div class="tooltip__container">
     <p class="tooltip__text">Чтобы добавить в избранное надо создать аккаунт</p>
     <a href="#" class="tooltip__link text-gradient" rel="noopener ugs">Создай его</a>

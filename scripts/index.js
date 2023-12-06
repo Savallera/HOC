@@ -39,27 +39,31 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Форма принять участие в конкурсе
-const contestButton = document.querySelector('.contests__button');
-const contestModal = document.querySelector('.modal--content-contest');
-const contestModalCloseButton = document.querySelector('.modal__close-button');
-const openContestModal = function () {
-  contestModal.classList.add('modal--opened');
-};
-const closeContestModal = function () {
-  contestModal.classList.remove('modal--opened');
-};
+if (document.querySelector('.contests__button')) {
+  const contestButton = document.querySelector('.contests__button');
+  const contestModal = document.querySelector('.modal--content-contest');
+  const contestModalCloseButton = document.querySelector(
+    '.modal__close-button'
+  );
+  const openContestModal = function () {
+    contestModal.classList.add('modal--opened');
+  };
+  const closeContestModal = function () {
+    contestModal.classList.remove('modal--opened');
+  };
 
-contestButton.addEventListener('click', openContestModal);
-contestModal.addEventListener('click', (evt) => {
-  if (
-    evt.target.classList.contains('modal--content-contest') ||
-    evt.target.classList.contains('modal__close-button')
-  ) {
-    closeContestModal();
-  }
-});
+  contestButton.addEventListener('click', openContestModal);
+  contestModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-contest') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeContestModal();
+    }
+  });
+}
 
-// Header menu for mobile
+// Меню в шапке
 const menuList = document.querySelector('.header__menu-list');
 const mobileMenu = document.querySelector('.header__mobile-menu');
 const mobileMenuList = document.querySelector('.header__mobile-menu-list');
@@ -75,12 +79,10 @@ Array.from(menuList.children).map((children) => {
 });
 
 function checkMenuSize() {
-  // Get instant state
   availableSpace = menuList.getBoundingClientRect().width;
   numOfVisibleItems = menuList.children.length;
   requiredSpace = breakWidths[numOfVisibleItems - 1];
 
-  // There is not enought space
   if (requiredSpace > availableSpace) {
     mobileMenuList.prepend(menuList.children[menuList.children.length - 1]);
     mobileMenuList.firstElementChild
@@ -91,8 +93,6 @@ function checkMenuSize() {
       .classList.add('header__mobile-menu-link');
     numOfVisibleItems -= 1;
     checkMenuSize();
-
-    // There is more than enough space
   } else if (availableSpace > breakWidths[numOfVisibleItems]) {
     menuList.append(mobileMenuList.children[0]);
     menuList.lastElementChild
@@ -104,7 +104,6 @@ function checkMenuSize() {
     numOfVisibleItems += 1;
   }
 
-  // Update the button accordingly
   mobileMenu.setAttribute('count', numberOfItems - numOfVisibleItems);
   if (numOfVisibleItems === numberOfItems)
     mobileMenu.classList.add('visually-hidden');
@@ -120,6 +119,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
+    // Слайдер с подкастами
     if (document.querySelector('#media-podcast-slider')) {
       let mediaPodcastSlider = new Splide('#media-podcast-slider', {
         type: 'slide',
@@ -139,6 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
       mediaPodcastSlider.mount();
     }
 
+    // Слайдер с видео
     if (document.querySelector('#media-video-slider')) {
       let mediaVideoSlider = new Splide('#media-video-slider', {
         type: 'slide',
@@ -159,22 +160,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
-
-const cardLikeButton = document.querySelector('.card__like-button');
-
-cardLikeButton.onclick = (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-
-    tippy(cardLikeButton, {
-        trigger: 'click',
-        content: `<div class="tooltip__container">
-          <p class="tooltip__text">Чтобы добавить в избранное надо создать аккаунт</p>
-          <a href="#" class="tooltip__link text-gradient" rel="noopener ugs">Создай его</a>
-        </div>`,
-        allowHTML: true,
-    })
-};
 
 window.addEventListener('DOMContentLoaded', () => {
     if (Splide) {
@@ -221,8 +206,9 @@ signUpModal.addEventListener('click', (evt) => {
   }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  if (Splide) {
+// Пока не используются
+// window.addEventListener('DOMContentLoaded', () => {
+  // if (Splide) {
     // if (document.querySelector('#article-slider')) {
     //   let articleSlider = new Splide('#article-slider', {
     //     type: 'fade',
@@ -262,8 +248,8 @@ window.addEventListener('DOMContentLoaded', () => {
     //   });
     //   festivalSlider.mount();
     // }
-  }
-});
+  // }
+// });
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
@@ -288,12 +274,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
-
-const tooltipButton = document.querySelector('.card__like-button');
-const tooltipModal = document.querySelector('.tooltip');
-const openToolTipModal = function () {
-  tooltipModal.classList.add('tooltip--opened');
-};
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
