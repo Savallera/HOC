@@ -114,7 +114,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap-grid);
-    margin-block-end: 4.5vw;
+    margin-block-end: min(4.5vw, 2.5em);
   }
 
   &__address-link {
