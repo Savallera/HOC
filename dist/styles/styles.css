@@ -32,7 +32,7 @@
   background-image: linear-gradient(to bottom, #ccc 0%, #eee 50%, #ccc 100%);
 }
 
-.modal, .field__error-icon, .field__error-text, .header__mobile-menu-container {
+.modal, .tooltip, .field__error-icon, .field__error-text, .header__mobile-menu-container {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -44,7 +44,7 @@
   transition: visibility 0s 0.35s, opacity 0.35s;
 }
 
-.modal--opened, .field--state-error .field__error-icon, .field--state-error .field__error-text, .header__mobile-menu:hover .header__mobile-menu-container {
+.modal--opened, .tooltip--opened, .field--state-error .field__error-icon, .field--state-error .field__error-text, .header__mobile-menu:hover .header__mobile-menu-container {
   visibility: visible;
   opacity: 1;
   pointer-events: all;
@@ -864,6 +864,42 @@ textarea {
   outline: 2px solid;
 }
 
+.tooltip {
+  position: fixed;
+  inset: 0 0 auto auto;
+  z-index: 100;
+}
+.tooltip__container {
+  max-inline-size: 372px;
+  padding: clamp(0.9375em, 2.4vw, 1.5em);
+  background-color: var(--main-text-low-color);
+  border-radius: 20px;
+}
+.tooltip__text {
+  margin: 0 0 1.2em;
+  font-size: clamp(0.75em, 2vw, 1.25em);
+}
+.tooltip__link {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  font-size: clamp(0.75em, 2vw, 1.25em);
+  font-variation-settings: "wght" 500;
+  text-decoration: unset;
+  -webkit-border-after: 1px solid;
+          border-block-end: 1px solid;
+}
+.tooltip__link:hover {
+  -webkit-border-after: 2px solid;
+          border-block-end: 2px solid;
+}
+.tooltip__link:focus {
+  outline: none;
+}
+.tooltip__link:focus-visible {
+  outline: 2px solid;
+}
+
 .splide__pagination {
   position: static;
   padding-block: clamp(0.3125em, 2vw, 1.25em) clamp(0.9375em, 3vw, 1.875em);
@@ -1559,7 +1595,7 @@ textarea {
   background-image: linear-gradient(to bottom, #ccc 0%, #eee 50%, #ccc 100%);
 }
 
-.header__mobile-menu-container, .field__error-text, .field__error-icon, .modal {
+.header__mobile-menu-container, .field__error-text, .field__error-icon, .tooltip, .modal {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -1571,7 +1607,7 @@ textarea {
   transition: visibility 0s 0.35s, opacity 0.35s;
 }
 
-.header__mobile-menu:hover .header__mobile-menu-container, .field--state-error .field__error-text, .field--state-error .field__error-icon, .modal--opened {
+.header__mobile-menu:hover .header__mobile-menu-container, .field--state-error .field__error-text, .field--state-error .field__error-icon, .tooltip--opened, .modal--opened {
   visibility: visible;
   opacity: 1;
   pointer-events: all;

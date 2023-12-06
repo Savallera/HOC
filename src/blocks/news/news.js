@@ -1,3 +1,11 @@
+const cardLikeButton = document.querySelector('.card__like-button');
+cardLikeButton.onclick = (evt) => {
+  evt.preventDefault();
+  console.log('Нажата кнопка лайка');
+  // Добавить скрипт, чтобы на каждой картоке с классом .card внутри по щелчку на кнопку лайка с классом .card__like-button ей добавлялся класс нажатого .card__like-button--actived и при повторном нажатии удалялся
+
+  // Не срабатывает событие, т.к. в файле tooltip.js повешено событие на клик, возможно перебивает.
+};
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
     // Слайдер новостей на главной странице

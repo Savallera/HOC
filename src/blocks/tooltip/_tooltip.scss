@@ -1,0 +1,42 @@
+.tooltip {
+  position: fixed;
+  inset: 0 0 auto auto;
+  z-index: 100;
+  @extend %hidden-block;
+
+  &--opened {
+    @extend %visibility-block;
+  }
+
+  &__container {
+    max-inline-size: 372px;
+    padding: clamp(0.9375em, 2.4vw, 1.5em);
+    background-color: var(--main-text-low-color);
+    border-radius: 20px;
+  }
+
+  &__text {
+    margin: 0 0 1.2em;
+    font-size: clamp(0.75em, 2vw, 1.25em);
+  }
+
+  &__link {
+    flex: none;
+    font-size: clamp(0.75em, 2vw, 1.25em);
+    font-variation-settings: 'wght' 500;
+    text-decoration: unset;
+    border-block-end: 1px solid;
+
+    &:hover {
+      border-block-end: 2px solid;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid;
+    }
+  }
+}
