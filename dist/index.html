@@ -177,6 +177,71 @@
   </div>
 </section>
 
+        <!-- Секция с поиском на главной -->
+<section class="page__section search">
+  <form class="search__form" name="meta-search" action="">
+    <div class="field">
+      <label for="meta-search-field" class="field__label visually-hidden"
+        >Поиск по сайту</label
+      >
+      <div class="field__inner">
+        <span
+          class="field__search-icon icon icon--type-search"
+          aria-hidden="true"
+        ></span>
+        <input
+          type="search"
+          class="field__input"
+          placeholder="Поиск по сайту"
+          name="search"
+          id="meta-search-field"
+        />
+        <span class="field__error-text">Вывод ошибки</span>
+        <span
+          class="field__error-icon icon icon--type-error"
+          aria-hidden="true"
+        ></span>
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- Секция с поиском на страницах -->
+<!-- <section class="page__section search">
+  <form class="search__form" name="page-search" action="">
+    <div class="field">
+      <label for="page-search-field" class="field__label visually-hidden"
+        >Поиск </label
+      >
+      <div class="field__inner">
+        <span
+          class="field__search-icon icon icon--type-search"
+          aria-hidden="true"
+        ></span>
+        <input
+          type="search"
+          class="field__input"
+          placeholder="Поиск "
+          name="search"
+          id="page-search-field"
+        />
+        <span class="field__error-text">Вывод ошибки</span>
+        <span
+          class="field__error-icon icon icon--type-error"
+          aria-hidden="true"
+        ></span>
+      </div>
+    </div>
+    <fieldset>
+      <legend class="visually-hidden">Выберите тему</legend>
+      <label for="">
+        <input type="checkbox" name="page-search-theme" id="theme">
+        <span class="">Все</span>
+      </label>
+    </fieldset>
+  </form>
+</section> -->
+
         <!-- Секция с новостями на главной -->
 <section class="news page__section">
   <div class="news__columns">
@@ -1087,6 +1152,8 @@
     </address>
   </div>
 </footer>
+<script src="./scripts/libs/splide.min.js"></script>
+<script src="./scripts/libs/splide-extension-grid.min.js"></script>
 
       <div class="modal modal--content-sign-up">
   <div class="modal__container">
@@ -1098,7 +1165,7 @@
     <form class="modal__form" name="sign-up-modal" action="">
       <p class="modal__title">Регистрируйся здесь и развивай студСМИ с нами!</p>
       <div class="field">
-        <label class="field__label visually-hidden">Имя</label>
+        <label for="sign-up-modal-first-name" class="field__label visually-hidden">Имя</label>
         <div class="field__inner">
           <input
             type="text"
@@ -1106,6 +1173,7 @@
             placeholder="Введите имя"
             autocomplete="first-name"
             name="first-name"
+            id="sign-up-modal-first-name"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -1115,7 +1183,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">Фамилия</label>
+        <label for="sign-up-modal-family-name" class="field__label visually-hidden">Фамилия</label>
         <div class="field__inner">
           <input
             type="text"
@@ -1123,6 +1191,7 @@
             placeholder="Введите фамилию"
             autocomplete="family-name"
             name="family-name"
+            id="sign-up-modal-family-name"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -1132,7 +1201,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">Отчество</label>
+        <label for="sign-up-modal-middle-name" class="field__label visually-hidden">Отчество</label>
         <div class="field__inner">
           <input
             type="text"
@@ -1140,6 +1209,7 @@
             placeholder="Введите отчество"
             autocomplete="middle-name"
             name="middle-name"
+            id="sign-up-modal-middle-name"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -1149,7 +1219,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">Телефон</label>
+        <label for="sign-up-modal-tel" class="field__label visually-hidden">Телефон</label>
         <div class="field__inner">
           <input
             type="tel"
@@ -1157,6 +1227,7 @@
             placeholder="Введите телефон"
             autocomplete="tel"
             name="tel"
+            id="sign-up-modal-tel"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -1166,7 +1237,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">E-mail</label>
+        <label for="sign-up-modal-email" class="field__label visually-hidden">E-mail</label>
         <div class="field__inner">
           <input
             type="email"
@@ -1174,6 +1245,7 @@
             placeholder="Введите e-mail"
             autocomplete="email"
             name="email"
+            id="sign-up-modal-email"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -1183,13 +1255,14 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">Ваше обращение</label>
+        <label for="feedback-field-message" class="field__label visually-hidden">Ваше обращение</label>
         <div class="field__inner">
           <textarea
             class="field__input"
             name="message"
             rows="5"
             placeholder="Введите текст обращения"
+            id="feedback-field-message"
           ></textarea>
           <span class="field__error-text">Вывод ошибки</span>
           <span

@@ -8,7 +8,7 @@
     <form class="modal__form" name="sign-up-modal" action="">
       <p class="modal__title">Регистрируйся здесь и развивай студСМИ с нами!</p>
       <div class="field">
-        <label class="field__label visually-hidden">Имя</label>
+        <label for="sign-up-modal-first-name" class="field__label visually-hidden">Имя</label>
         <div class="field__inner">
           <input
             type="text"
@@ -16,6 +16,7 @@
             placeholder="Введите имя"
             autocomplete="first-name"
             name="first-name"
+            id="sign-up-modal-first-name"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -25,7 +26,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">Фамилия</label>
+        <label for="sign-up-modal-family-name" class="field__label visually-hidden">Фамилия</label>
         <div class="field__inner">
           <input
             type="text"
@@ -33,6 +34,7 @@
             placeholder="Введите фамилию"
             autocomplete="family-name"
             name="family-name"
+            id="sign-up-modal-family-name"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -42,7 +44,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">Отчество</label>
+        <label for="sign-up-modal-middle-name" class="field__label visually-hidden">Отчество</label>
         <div class="field__inner">
           <input
             type="text"
@@ -50,6 +52,7 @@
             placeholder="Введите отчество"
             autocomplete="middle-name"
             name="middle-name"
+            id="sign-up-modal-middle-name"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -59,7 +62,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">Телефон</label>
+        <label for="sign-up-modal-tel" class="field__label visually-hidden">Телефон</label>
         <div class="field__inner">
           <input
             type="tel"
@@ -67,6 +70,7 @@
             placeholder="Введите телефон"
             autocomplete="tel"
             name="tel"
+            id="sign-up-modal-tel"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -76,7 +80,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">E-mail</label>
+        <label for="sign-up-modal-email" class="field__label visually-hidden">E-mail</label>
         <div class="field__inner">
           <input
             type="email"
@@ -84,6 +88,7 @@
             placeholder="Введите e-mail"
             autocomplete="email"
             name="email"
+            id="sign-up-modal-email"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -93,13 +98,14 @@
         </div>
       </div>
       <div class="field">
-        <label class="field__label visually-hidden">Ваше обращение</label>
+        <label for="feedback-field-message" class="field__label visually-hidden">Ваше обращение</label>
         <div class="field__inner">
           <textarea
             class="field__input"
             name="message"
             rows="5"
             placeholder="Введите текст обращения"
+            id="feedback-field-message"
           ></textarea>
           <span class="field__error-text">Вывод ошибки</span>
           <span

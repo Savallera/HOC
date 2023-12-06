@@ -21,13 +21,19 @@ export default {
   },
 
   scripts: {
-    src: [pathSrc + '/scripts/*.js', pathSrc + '/blocks/**/*.js'],
-    watch: [
+    src: [
       pathSrc + '/scripts/*.js',
-      pathSrc + '/scripts/**/*.js',
       pathSrc + '/blocks/**/*.js',
+      '!' + pathSrc + '/scripts/libs/*.js',
     ],
+    watch: [pathSrc + '/scripts/*.js', pathSrc + '/blocks/**/*.js'],
     dest: pathDest + '/scripts',
+  },
+
+  scriptsLibs: {
+    src: [pathSrc + '/scripts/libs/*.js'],
+    watch: [pathSrc + '/scripts/libs/*.js'],
+    dest: pathDest + '/scripts/libs',
   },
 
   images: {
