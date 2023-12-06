@@ -482,11 +482,11 @@ textarea {
   margin-inline: auto;
   inline-size: clamp(7.25em, 22.8vw, 14.25em);
   block-size: clamp(2.5em, 7.8vw, 4.875em);
-  -webkit-mask: url("../images/logo.svg") center/65% no-repeat;
-          mask: url("../images/logo.svg") center/65% no-repeat;
-  background-color: var(--main-color);
+  background: url("../images/logo--place-footer.png") center/65% no-repeat;
 }
 .footer__address-logo-image--type-ministry {
+  background: none;
+  background-color: var(--main-color);
   -webkit-mask: url("../images/ministry-logo.svg") center/contain no-repeat;
           mask: url("../images/ministry-logo.svg") center/contain no-repeat;
 }
