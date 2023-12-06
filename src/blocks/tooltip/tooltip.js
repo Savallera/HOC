@@ -3,4 +3,3 @@ const tooltipModal = document.querySelector('.tooltip');
 const openToolTipModal = function () {
   tooltipModal.classList.add('tooltip--opened');
 };
-
