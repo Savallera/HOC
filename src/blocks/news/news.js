@@ -1,20 +1,15 @@
-// import tippy from "tippy.js";
-
 const cardLikeButton = document.querySelector('.card__like-button');
 
-cardLikeButton.onclick = (evt) => {
-    evt.stopPropagation();
-    evt.preventDefault();
-    console.log('Нажата кнопка лайка');
-    // Добавить скрипт, чтобы на каждой картоке с классом .card внутри по щелчку на кнопку лайка с классом .card__like-button ей добавлялся класс нажатого .card__like-button--actived и при повторном нажатии удалялся
+cardLikeButton.onclick = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
 
-    // Не срабатывает событие, т.к. в файле tooltip.js повешено событие на клик, возможно перебивает.
     tippy(cardLikeButton, {
         trigger: 'click',
         content: `<div class="tooltip__container">
-      <p class="tooltip__text">Чтобы добавить в избранное надо создать аккаунт</p>
-      <a href="#" class="tooltip__link text-gradient" rel="noopener ugs">Создай его</a>
-    </div>`,
+          <p class="tooltip__text">Чтобы добавить в избранное надо создать аккаунт</p>
+          <a href="#" class="tooltip__link text-gradient" rel="noopener ugs">Создай его</a>
+        </div>`,
         allowHTML: true,
     })
 };
