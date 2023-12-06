@@ -1,13 +1,8 @@
-// Libraries
-@import '../../node_modules/@splidejs/splide/dist/css/splide.min.css';
-@import '../../node_modules/tippy.js/dist/tippy.css';
-
-
 // globals
 @import './mixins';
 @import './extends';
-@import './vendor/globals';
-@import './vendor/variables';
+@import './globals';
+@import './variables';
 
 // layout
 @import '../blocks/page/page';

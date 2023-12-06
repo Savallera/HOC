@@ -10,7 +10,7 @@ export default {
     dest: pathDest,
   },
 
-  scss: {
+  styles: {
     src: pathSrc + '/styles/*.scss',
     watch: [
       pathSrc + '/styles/*.scss',
@@ -18,6 +18,14 @@ export default {
       pathSrc + '/blocks/**/*.scss',
     ],
     dest: pathDest + '/styles',
+  },
+
+  stylesLibs: {
+    src: pathSrc + '/styles/libs/*.css',
+    watch: [
+      pathSrc + '/styles/libs/*.css',
+    ],
+    dest: pathDest + '/styles/libs',
   },
 
   scripts: {

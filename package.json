@@ -24,8 +24,7 @@
   },
   "dependencies": {
     "prettier": "^3.0.3",
-    "stylelint": "^15.11.0",
-    "tippy.js": "^6.3.7"
+    "stylelint": "^15.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
