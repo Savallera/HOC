@@ -1,0 +1,110 @@
+<!-- Секция с поиском на страницах -->
+<section class="page__section search">
+  <div class="search__regions">
+    <button
+      class="button button--size-small search__button search__button--content-region search__button--actived"
+      type="button"
+    >
+      <span class="button__text">Все регионы</span>
+    </button>
+    <button
+      class="button button--size-small search__button search__button--content-region"
+      type="button"
+    >
+      <span class="button__text">Москва</span>
+    </button>
+  </div>
+  <div class="search__title-block">
+    <h2 class="search__title">Новости</h2>
+    <button
+      class="button button--size-small search__button search__button--content-calendar"
+      type="button"
+    >
+      <span
+        class="button__icon icon icon--type-calendar"
+        aria-hidden="true"
+      ></span>
+      <span class="button__text">Календарь</span>
+    </button>
+    <button
+      class="button button--size-small search__button search__button--content-calendar search__button--actived"
+      type="button"
+    >
+      <span
+        class="button__icon icon icon--type-calendar"
+        aria-hidden="true"
+      ></span>
+      <span class="button__text">10.08.2023 - 16.08.2023</span>
+    </button>
+  </div>
+  <form class="search__form" name="media-search" action="">
+    <div class="field">
+      <label for="page-search-field" class="field__label visually-hidden"
+        >Поиск
+      </label>
+      <div class="field__inner">
+        <span
+          class="field__search-icon icon icon--type-search"
+          aria-hidden="true"
+        ></span>
+        <input
+          type="search"
+          class="field__input"
+          placeholder="Поиск "
+          name="search"
+          id="page-search-field"
+        />
+        <span class="field__error-text">Вывод ошибки</span>
+        <span
+          class="field__error-icon icon icon--type-error"
+          aria-hidden="true"
+        ></span>
+      </div>
+    </div>
+    <fieldset class="search__radio-group">
+      <label class="search__label-radio" for="search-raio-theme-all">
+        <input
+          class="search__radio visually-hidden"
+          type="radio"
+          name="search-radio-theme"
+          id="search-raio-theme-all"
+          checked
+        />
+        <span class="search__label-text">Все</span>
+      </label>
+      <label class="search__label-radio" for="search-raio-theme-1">
+        <input
+          class="search__radio visually-hidden"
+          type="radio"
+          name="search-radio-theme"
+          id="search-raio-theme-1"
+        />
+        <span class="search__label-text">Тема 1</span>
+      </label>
+      <label class="search__label-radio" for="search-raio-theme-2">
+        <input
+          class="search__radio visually-hidden"
+          type="radio"
+          name="search-radio-theme"
+          id="search-raio-theme-2"
+        />
+        <span class="search__label-text">Тема 2</span>
+      </label>
+      <label class="search__label-radio" for="search-raio-theme-3">
+        <input
+          class="search__radio visually-hidden"
+          type="radio"
+          name="search-radio-theme"
+          id="search-raio-theme-3"
+        />
+        <span class="search__label-text">Тема 3</span>
+      </label>
+    </fieldset>
+    <button
+      class="button button--size-small search__button search__button--content-reset"
+      type="reset"
+    >
+      <span class="button__text">Сбросить фильтры</span>
+    </button>
+  </form>
+</section>

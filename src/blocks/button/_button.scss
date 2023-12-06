@@ -14,6 +14,17 @@
     outline: 2px solid var(--main-text-color);
   }
 
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    inline-size: 1.5em;
+    block-size: 1.5em;
+  }
+
+  &__text {
+    vertical-align: middle;
+  }
+
   &--theme {
     &-gradient {
       font-size: clamp(0.75em, 2.5vw, 1.5625em);
@@ -25,6 +36,18 @@
       color: var(--accent-text-color);
 
       // &:hover {}
+    }
+  }
+
+  &--size {
+    &-small {
+      font-size: clamp(0.75em, 2vw, 1.25em);
+      font-variation-settings: 'wght' 500;
+
+      .button__icon {
+        inline-size: 1.25em;
+        block-size: 1.25em;
+      }
     }
   }
 }

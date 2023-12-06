@@ -28,6 +28,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5em, 2vw, 1.25em);
   }
 
   &__element {
@@ -47,6 +50,7 @@
   }
 
   &__element-title {
+    margin: 0;
     font-size: inherit;
     font-variation-settings: 'wght' 400;
   }

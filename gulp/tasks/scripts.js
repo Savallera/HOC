@@ -21,6 +21,7 @@ export default () => {
         })
       )
       .pipe(concat('index.js'))
+
       // .pipe(babel())
       // .pipe(
       //   webpack({
