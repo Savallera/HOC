@@ -15,24 +15,16 @@
       fill: currentColor;
     }
 
-    &--prev {
-      // inset-inline-start: -1em;
-    }
-
-    &--next {
-      // inset-inline-end: -1em;
-    }
-
     &:hover:not(:disabled) {
       opacity: 1;
       background: var(--main-color);
       color: #fff;
     }
 
-    &:disabled {
-      opacity: 0;
-      pointer-events: none;
-    }
+    // &:disabled {
+    //   opacity: 0;
+    //   pointer-events: none;
+    // }
   }
 
   &__pagination {
@@ -50,6 +42,40 @@
           center;
         pointer-events: none;
         transform: unset;
+      }
+    }
+  }
+
+  &--size-wide {
+    @include media(md) {
+      .splide__arrow {
+        &--prev {
+          left: clamp(1.25rem, -0.6875rem + 9.6875vw, 10.9375rem);
+        }
+        &--next {
+          right: clamp(1.25rem, -0.6875rem + 9.6875vw, 10.9375rem);
+        }
+      }
+    }
+  }
+
+  &--background-gradient {
+    @include media(md) {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        inline-size: 100%;
+        block-size: 100%;
+        pointer-events: none;
+        background: linear-gradient(
+          90deg,
+          #f7f7f7 5%,
+          rgba(247, 247, 247, 0) 30% 70%,
+          #f7f7f7 95%
+        );
       }
     }
   }

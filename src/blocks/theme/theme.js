@@ -16,11 +16,13 @@ window.addEventListener('DOMContentLoaded', () => {
           768: {
             arrows: true,
             perPage: 1.5,
+            gap: '1.25em',
             padding: 'clamp(1.25rem, -3.1875rem + 22.1875vw, 23.4375rem)',
           },
           1024: {
             arrows: true,
             perPage: 2.5,
+            gap: '1.25em',
             padding: 'clamp(1.25rem, -3.1875rem + 22.1875vw, 23.4375rem)',
           },
         },
