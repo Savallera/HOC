@@ -27,6 +27,10 @@ figure {
   padding: 0;
 }
 
+fieldset {
+  border: none;
+}
+
 button,
 a {
   color: currentColor;
@@ -58,14 +62,15 @@ textarea {
   --main-color: #685dc3;
   --accent-color: #d03ec3;
   --main-color-gradient: linear-gradient(to left, #d03ec3, #685dc3);
+  --grey-100: #f7f7f7;
   --main-text-color: #272b37;
   --main-text-low-color: #c0c0c0;
   --accent-text-color: #fff;
   --main-bg-color: #f7f7f7;
   --hover-color: #00000026;
   --main-font-family: "Montserrat", sans-serif;
-  --section-padding: clamp(1.25rem, 2.5vi, 1.5625rem);
-  --section-inline-size: clamp(20rem, 3.0357rem + 84.8214vw, 79.375rem);
+  --section-padding: clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem);
+  --section-inline-size: clamp(20rem, 8.75rem + 56.25vw, 76.25rem);
   --section-inline-size-wide: clamp(20rem, 0rem + 100vw, 120rem);
   --gap-grid: clamp(0.5em, 2vi, 1.25em);
   --gap-section: clamp(0.675em, 4vi, 2.5em);
@@ -107,17 +112,20 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: clamp(0.675em, 4vi, 2.5em);
 }
 .page__title {
   margin: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
   font-variation-settings: "wght" 800;
   font-size: clamp(1.25em, 0.8929em + 1.7857vw, 2.5em);
+}
+.page__subtitle {
+  margin: 0;
+  font-variation-settings: "wght" 800;
+  font-size: clamp(1.25em, 2.5vw, 1.5625em);
 }
 .page__description {
   margin: 0;
@@ -125,6 +133,8 @@ textarea {
   font-size: clamp(1em, 2vw, 1.25em);
 }
 .page__link {
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
@@ -133,10 +143,6 @@ textarea {
   text-decoration: unset;
   -webkit-border-after: 1px solid;
           border-block-end: 1px solid;
-}
-.page__link:hover {
-  -webkit-border-after: 2px solid;
-          border-block-end: 2px solid;
 }
 .page__link:focus {
   outline: none;
@@ -657,14 +663,6 @@ textarea {
   background: var(--main-color-gradient) no-repeat center;
   color: var(--accent-text-color);
 }
-.button--size-small {
-  font-size: clamp(0.75em, 2vw, 1.25em);
-  font-variation-settings: "wght" 500;
-}
-.button--size-small .button__icon {
-  inline-size: 1.25em;
-  block-size: 1.25em;
-}
 
 /* Блок иконка-кнопка */
 .icon-button {
@@ -904,6 +902,13 @@ textarea {
 .field--content-file .field__label:hover {
   background-color: var(--main-color);
 }
+.field--size-small .field__input {
+  padding-block: 0.5rem;
+}
+.field--theme-grey .field__input {
+  border-color: var(--grey-100);
+  background-color: var(--grey-100);
+}
 
 /* Обертка для карточек, когда нужно по клику на всю область карточки переходить по ссылке */
 .card-link {
@@ -971,7 +976,98 @@ textarea {
   transition: visibility 0s, opacity 0.35s;
 }
 
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(0.125em, 2vw, 1.25em);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.form__title {
+  margin: 0;
+  font-size: clamp(1.25em, 4vw, 2.5em);
+  font-variation-settings: "wght" 800;
+}
+.form__subtitle {
+  margin: 0;
+  padding-block: 0 clamp(1.125rem, 4vw, 2.5rem);
+  font-size: clamp(1.125em, 2.5vw, 1.5625em);
+  font-variation-settings: "wght" 800;
+  text-align: center;
+}
+.form__button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.form__regions-list {
+  margin: 0;
+  padding: 2px;
+  list-style: none;
+  max-block-size: 22.5em;
+  overflow-y: auto;
+  -webkit-padding-end: 1.875em;
+          padding-inline-end: 1.875em;
+}
+@media only screen and (width >= 576px) {
+  .form__regions-list::-webkit-scrollbar {
+    width: 21px;
+  }
+  .form__regions-list::-webkit-scrollbar-track {
+    background-color: var(--grey-100);
+    border-radius: 10px;
+  }
+  .form__regions-list::-webkit-scrollbar-thumb {
+    background-color: var(--main-text-low-color);
+    border: 4px solid var(--grey-100);
+    border-radius: 10px;
+  }
+}
+.form__regions-label-radio:has(:focus-visible) {
+  outline: 2px solid var(--main-text-color);
+}
+.form__regions-radio:focus {
+  outline: none;
+}
+.form__regions-radio:checked + .form__regions-label-text {
+  color: var(--accent-color);
+  pointer-events: none;
+}
+.form__regions-label-text {
+  display: block;
+  font-size: clamp(0.9375em, 2vw, 1.25em);
+  padding-block: 0.5em;
+  border-radius: inherit;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.form__regions-label-text:hover {
+  color: var(--accent-color);
+}
+
 /* корректировка базовых стилей для библы splide */
+.splide__arrow {
+  inline-size: 3.3125em;
+  block-size: 3.3125em;
+  border: 3px solid #fff;
+  opacity: 1;
+  background: var(--grey-100);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+  color: var(--main-color);
+}
+.splide__arrow svg {
+  fill: currentColor;
+}
+.splide__arrow:hover:not(:disabled) {
+  opacity: 1;
+  background: var(--main-color);
+  color: #fff;
+}
 .splide__pagination {
   position: static;
   padding-block: clamp(0.3125em, 2vw, 1.25em) clamp(0.9375em, 3vw, 1.875em);
@@ -988,6 +1084,30 @@ textarea {
   -webkit-transform: unset;
       -ms-transform: unset;
           transform: unset;
+}
+@media only screen and (width >= 768px) {
+  .splide--size-wide .splide__arrow--prev {
+    left: clamp(1.25rem, -0.6875rem + 9.6875vw, 10.9375rem);
+  }
+  .splide--size-wide .splide__arrow--next {
+    right: clamp(1.25rem, -0.6875rem + 9.6875vw, 10.9375rem);
+  }
+}
+@media only screen and (width >= 768px) {
+  .splide--background-gradient {
+    position: relative;
+  }
+  .splide--background-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    inline-size: 100%;
+    block-size: 100%;
+    pointer-events: none;
+    background: -webkit-gradient(linear, left top, right top, color-stop(5%, #f7f7f7), color-stop(30%, rgba(247, 247, 247, 0)), color-stop(95%, #f7f7f7));
+    background: linear-gradient(90deg, #f7f7f7 5%, rgba(247, 247, 247, 0) 30% 70%, #f7f7f7 95%);
+  }
 }
 
 /* Блок для градиента фона */
@@ -1259,6 +1379,27 @@ textarea {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-block-size: 3.6em;
+}
+.card__title--height-two-rows {
+  min-block-size: 2.4em;
+  max-height: 2.4em;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card__description {
+  margin: 0;
+  font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
+  max-height: 3.6em;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-block-size: 3.6em;
 }
 .card__text {
   margin: 0;
@@ -1266,6 +1407,39 @@ textarea {
       align-self: flex-start;
   font-size: 0.8125em;
   font-variation-settings: "wght" 500;
+}
+.card__author {
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+  max-width: 65%;
+}
+.card__author-image {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  inline-size: 2.375em;
+  min-inline-size: 2.375em;
+  max-inline-size: 2.375em;
+  block-size: 2.375em;
+  border-radius: 5px;
+}
+.card__author-name {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: clamp(0.75em, 1.6vw, 1em);
+  font-variation-settings: "wght" 500;
+  color: var(--main-text-low-color);
 }
 .card__views {
   margin: 0 0 0 auto;
@@ -1310,23 +1484,6 @@ textarea {
   font-size: clamp(0.75em, 0.6071em + 0.7143vw, 1.25em);
 }
 
-.search__title-block {
-  inline-size: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: clamp(0.675em, 4vi, 2.5em);
-}
-.search__title {
-  margin: 0;
-  font-variation-settings: "wght" 800;
-  font-size: clamp(1.25em, 0.8929em + 1.7857vw, 2.5em);
-}
 .search__regions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1344,13 +1501,12 @@ textarea {
   gap: var(--gap-section);
 }
 .search__radio-group {
-  border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 1.25em;
+  gap: clamp(0.625em, 2vw, 1.25em);
 }
 .search__label-radio {
   border-radius: 10px;
@@ -1382,37 +1538,58 @@ textarea {
   background: var(--main-color) var(--main-color-gradient) no-repeat center;
   color: #fff;
 }
-.search__button {
+.search__region-button, .search__calendar-button, .search__reset-button {
+  background-color: transparent;
   padding: 0;
-  color: var(--main-text-low-color);
+  border: none;
   -webkit-border-after: 1px solid currentColor;
           border-block-end: 1px solid currentColor;
+  color: var(--main-text-low-color);
+  font-size: clamp(0.75em, 2vw, 1.25em);
+  font-variation-settings: "wght" 500;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
-.search__button:hover {
+.search__region-button:hover, .search__calendar-button:hover, .search__reset-button:hover {
   color: var(--accent-color);
   background: var(--main-color-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-block-end-color: var(--accent-color);
 }
-.search__button--content-regions {
-  font-variation-settings: "wght" 600;
+.search__region-button:focus, .search__calendar-button:focus, .search__reset-button:focus {
+  outline: none;
 }
-.search__button--content-calendar {
-  -webkit-border-after: none;
-          border-block-end: none;
+.search__region-button:focus-visible, .search__calendar-button:focus-visible, .search__reset-button:focus-visible {
+  outline: 2px solid var(--main-text-color);
 }
-.search__button--content-reset {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-.search__button--actived {
+.search__region-button--actived, .search__calendar-button--actived, .search__reset-button--actived {
   color: var(--accent-color);
   background: var(--main-color-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-block-end-color: var(--accent-color);
   pointer-events: none;
+}
+.search__region-button {
+  font-variation-settings: "wght" 600;
+}
+.search__calendar-button {
+  -webkit-border-after: none;
+          border-block-end: none;
+}
+.search__calendar-button .icon {
+  display: inline-block;
+  inline-size: 1.25em;
+  block-size: 1.25em;
+  vertical-align: middle;
+}
+.search__calendar-button span {
+  vertical-align: middle;
+}
+.search__reset-button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 /* Секция с новостями на главной странице */
@@ -1478,6 +1655,24 @@ textarea {
     -ms-grid-rows: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
+}
+.news__card-deck {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+  gap: var(--gap-grid);
+}
+.news__more-button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-border-after: 1px solid var(--accent-color);
+          border-block-end: 1px solid var(--accent-color);
+  font-size: clamp(0.75em, 2.5vw, 1.5625em);
+  font-variation-settings: "wght" 600;
 }
 
 /* Секция с конкурсами на главной */
@@ -1552,11 +1747,11 @@ textarea {
   }
 }
 
-.survey {
+.survey__wrapper {
   padding: clamp(0.9375em, 4vw, 2.5em);
-  gap: 1.25em;
   border-radius: 10px;
   color: var(--accent-text-color);
+  gap: 1.25em;
 }
 .survey__title {
   margin: 0 auto;
@@ -1763,7 +1958,7 @@ textarea {
   display: -ms-grid;
   display: grid;
   gap: clamp(1.5em, 5vw, 3.125em);
-  grid-template-columns: repeat(auto-fill, minmax(min(16vw, 12.5em), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(15vw, 10em), 1fr));
 }
 .top-ten__card {
   border-radius: 10px;
@@ -1839,6 +2034,31 @@ textarea {
   font-size: clamp(1em, 2.5vw, 1.5625em);
 }
 
+/* Секция с темами */
+.theme {
+  margin-inline: auto;
+  margin-block: clamp(1.5625em, 10vw, 6.25em);
+  max-inline-size: var(--section-inline-size-wide);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap-section);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.theme__title-block {
+  inline-size: 100%;
+  padding-inline: var(--section-padding);
+}
+@media only screen and (width >= 768px) {
+  .theme__title-block {
+    margin-inline: auto;
+    max-inline-size: var(--section-inline-size);
+  }
+}
+
 /* Модальное окно */
 .modal {
   position: fixed;
@@ -1868,10 +2088,12 @@ textarea {
 .modal__container {
   margin: auto;
   position: relative;
-  inline-size: min(90vw, 75em);
   background-color: #fff;
   border-radius: 10px;
   padding: clamp(0.9375em, 4vw, 2.5em);
+}
+.modal__container--size-small {
+  inline-size: min(95vw, 31.25em);
 }
 .modal__close-button {
   position: absolute;
@@ -1887,25 +2109,8 @@ textarea {
 }
 .modal__title {
   margin: 0;
-  padding-block: 0 clamp(1.125rem, 4vw, 2.5rem);
-  font-size: clamp(1.125em, 2.5vw, 1.5625em);
+  font-size: clamp(1.25em, 4vw, 2.5em);
   font-variation-settings: "wght" 800;
-  text-align: center;
-}
-.modal__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: clamp(0.125em, 2vw, 1.25em);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.modal__button {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 .modal--opened {
   visibility: visible;
@@ -1913,6 +2118,12 @@ textarea {
   pointer-events: all;
   -webkit-transition: visibility 0s, opacity 0.35s;
   transition: visibility 0s, opacity 0.35s;
+}
+.modal--size-wide .modal__container {
+  inline-size: min(95vw, 75em);
+}
+.modal--size-small .modal__container {
+  inline-size: clamp(17em, 50vw, 31.25em);
 }
 @supports (min-block-size: 100dvb) {
   .modal {

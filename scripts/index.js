@@ -42,9 +42,6 @@ window.addEventListener('DOMContentLoaded', () => {
 if (document.querySelector('.contests__button')) {
   const contestButton = document.querySelector('.contests__button');
   const contestModal = document.querySelector('.modal--content-contest');
-  const contestModalCloseButton = document.querySelector(
-    '.modal__close-button'
-  );
   const openContestModal = function () {
     contestModal.classList.add('modal--opened');
   };
@@ -185,26 +182,51 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Форма присоединиться к проекту
-const signUpButton = document.querySelector('.sign-up__button');
-const signUpModal = document.querySelector('.modal--content-sign-up');
-const signUpModalCloseButton = document.querySelector('.modal__close-button');
-const openSignUpModal = function () {
-  signUpModal.classList.add('modal--opened');
-};
-const closeSignUpModal = function () {
-  signUpModal.classList.remove('modal--opened');
-};
+// Форма поиска, открытие выбора региона
+if (document.querySelector('.search__region-button--content-all')) {
+  const regionsButton = document.querySelector(
+    '.search__region-button--content-all'
+  );
+  const regionsModal = document.querySelector('.modal--content-regions');
+  const openRegionsModal = function () {
+    regionsModal.classList.add('modal--opened');
+  };
+  const closeRegionsModal = function () {
+    regionsModal.classList.remove('modal--opened');
+  };
 
-signUpButton.addEventListener('click', openSignUpModal);
-signUpModal.addEventListener('click', (evt) => {
-  if (
-    evt.target.classList.contains('modal--content-sign-up') ||
-    evt.target.classList.contains('modal__close-button')
-  ) {
-    closeSignUpModal();
-  }
-});
+  regionsButton.addEventListener('click', openRegionsModal);
+  regionsModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-regions') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeRegionsModal();
+    }
+  });
+}
+
+// Форма присоединиться к проекту
+if (document.querySelector('.sign-up')) {
+  const signUpButton = document.querySelector('.sign-up__button');
+  const signUpModal = document.querySelector('.modal--content-sign-up');
+  const openSignUpModal = function () {
+    signUpModal.classList.add('modal--opened');
+  };
+  const closeSignUpModal = function () {
+    signUpModal.classList.remove('modal--opened');
+  };
+
+  signUpButton.addEventListener('click', openSignUpModal);
+  signUpModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-sign-up') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeSignUpModal();
+    }
+  });
+}
 
 // Пока не используются
 // window.addEventListener('DOMContentLoaded', () => {
@@ -271,6 +293,40 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       testsSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
+    // Слайдер с темами
+    if (document.querySelector('#theme-slider')) {
+      let themeSlider = new Splide('#theme-slider', {
+        type: 'slide',
+        // autoplay: true,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        perPage: 1.1,
+        perMove: 1,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            arrows: true,
+            perPage: 1.5,
+            gap: '1.25em',
+            padding: 'clamp(1.25rem, -3.1875rem + 22.1875vw, 23.4375rem)',
+          },
+          1024: {
+            arrows: true,
+            perPage: 2.5,
+            gap: '1.25em',
+            padding: 'clamp(1.25rem, -3.1875rem + 22.1875vw, 23.4375rem)',
+          },
+        },
+      });
+      themeSlider.mount();
     }
   }
 });
