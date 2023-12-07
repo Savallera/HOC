@@ -4,17 +4,24 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('#theme-slider')) {
       let themeSlider = new Splide('#theme-slider', {
         type: 'slide',
-        autoplay: false,
+        // autoplay: true,
         arrows: false,
         pagination: false,
         gap: '.9375em',
         perPage: 1.1,
-        // padding: 'var(--section-padding)',
+        perMove: 1,
+        padding: 'var(--section-padding)',
         mediaQuery: 'min',
         breakpoints: {
           768: {
             arrows: true,
-            perPage: 3,
+            perPage: 1.5,
+            padding: 'clamp(1.25rem, -3.1875rem + 22.1875vw, 23.4375rem)',
+          },
+          1024: {
+            arrows: true,
+            perPage: 2.5,
+            padding: 'clamp(1.25rem, -3.1875rem + 22.1875vw, 23.4375rem)',
           },
         },
       });

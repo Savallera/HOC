@@ -12,8 +12,9 @@
   --hover-color: #00000026;
 
   --main-font-family: 'Montserrat', sans-serif;
-  --section-padding: clamp(1.25rem, 2.5vi, 1.5625rem); // 20 - 25
-  --section-inline-size: clamp(20rem, 3.0357rem + 84.8214vw, 79.375rem); // 1220
+  --section-padding: clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem); // 20 - 25
+  --section-inline-size: clamp(20rem, 8.75rem + 56.25vw, 76.25rem); // 1220
+  --section-inline-size-wide: clamp(20rem, 0rem + 100vw, 120rem); // 1920
 
   --gap-grid: clamp(0.5em, 2vi, 1.25em); // 8 - 20
   --gap-section: clamp(0.675em, 4vi, 2.5em); // 10 - 40

@@ -1,17 +1,19 @@
 /* Секция с темами */
 .theme {
-  max-inline-size: unset;
-  display: grid;
-  grid-template-columns: 1fr var(--section-inline-size) 1fr;
+  max-inline-size: var(--section-inline-size-wide);
+  margin-block: clamp(1.5625em, 10vw, 6.25em);
 
-  &__container {
-    grid-column: 2/4;
+  display: flex;
+  gap: var(--gap-section);
+  flex-direction: column;
 
+  &__title {
+    inline-size: 100%;
     padding-inline: var(--section-padding);
-    margin-block: clamp(1.5625em, 10vw, 6.25em);
 
-    display: flex;
-    gap: var(--gap-section);
-    flex-direction: column;
+    @include media(md) {
+      margin-inline: auto;
+      max-inline-size: var(--section-inline-size);
+    }
   }
 }

@@ -1,5 +1,40 @@
 /* корректировка базовых стилей для библы splide */
 .splide {
+  // &__arrows {}
+
+  &__arrow {
+    inline-size: 3.3125em;
+    block-size: 3.3125em;
+    border: 3px solid #fff;
+    opacity: 1;
+    background: var(--grey-100);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    color: var(--main-color);
+
+    svg {
+      fill: currentColor;
+    }
+
+    &--prev {
+      // inset-inline-start: -1em;
+    }
+
+    &--next {
+      // inset-inline-end: -1em;
+    }
+
+    &:hover:not(:disabled) {
+      opacity: 1;
+      background: var(--main-color);
+      color: #fff;
+    }
+
+    &:disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
   &__pagination {
     position: static;
     padding-block: clamp(0.3125em, 2vw, 1.25em) clamp(0.9375em, 3vw, 1.875em);
