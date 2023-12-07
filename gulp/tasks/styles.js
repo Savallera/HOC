@@ -30,7 +30,7 @@ export default () => {
         })
       )
       .pipe(concat('styles.scss'))
-      .pipe(sass({ sourceComments: true }))
+      .pipe(sass())
       .pipe(cssImport())
       // .pipe(webpCss())
       .pipe(

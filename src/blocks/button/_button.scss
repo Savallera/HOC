@@ -39,15 +39,15 @@
     }
   }
 
-  &--size {
-    &-small {
-      font-size: clamp(0.75em, 2vw, 1.25em);
-      font-variation-settings: 'wght' 500;
+  // &--size {
+  //   &-small {
+  //     font-size: clamp(0.75em, 2vw, 1.25em);
+  //     font-variation-settings: 'wght' 500;
 
-      .button__icon {
-        inline-size: 1.25em;
-        block-size: 1.25em;
-      }
-    }
-  }
+  //     .button__icon {
+  //       inline-size: 1.25em;
+  //       block-size: 1.25em;
+  //     }
+  //   }
+  // }
 }

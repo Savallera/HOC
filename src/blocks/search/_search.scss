@@ -1,18 +1,4 @@
 .search {
-  &__title-block {
-    inline-size: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: clamp(0.675em, 4vi, 2.5em);
-  }
-
-  &__title {
-    margin: 0;
-    font-variation-settings: 'wght' 800;
-    font-size: clamp(1.25em, 0.8929em + 1.7857vw, 2.5em); // 40 - 20
-  }
-
   &__regions {
     display: flex;
     gap: var(--gap-grid);
@@ -25,10 +11,9 @@
   }
 
   &__radio-group {
-    border: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.25em;
+    gap: clamp(0.625em, 2vw, 1.25em);
   }
 
   &__label-radio {
@@ -69,10 +54,17 @@
     }
   }
 
-  &__button {
+  &__region-button,
+  &__calendar-button,
+  &__reset-button {
+    background-color: transparent;
     padding: 0;
-    color: var(--main-text-low-color);
+    border: none;
     border-block-end: 1px solid currentColor;
+    color: var(--main-text-low-color);
+    font-size: clamp(0.75em, 2vw, 1.25em);
+    font-variation-settings: 'wght' 500;
+    transition: background 0.3s;
 
     &:hover {
       color: var(--accent-color);
@@ -81,21 +73,12 @@
       -webkit-text-fill-color: transparent;
       border-block-end-color: var(--accent-color);
     }
-
-    &--content {
-      &-regions {
-        font-variation-settings: 'wght' 600;
-      }
-
-      &-calendar {
-        border-block-end: none;
-      }
-
-      &-reset {
-        align-self: flex-start;
-      }
+    &:focus {
+      outline: none;
     }
-
+    &:focus-visible {
+      outline: 2px solid var(--main-text-color);
+    }
     &--actived {
       color: var(--accent-color);
       background: var(--main-color-gradient);
@@ -104,5 +87,26 @@
       border-block-end-color: var(--accent-color);
       pointer-events: none;
     }
+  }
+
+  &__region-button {
+    font-variation-settings: 'wght' 600;
+  }
+  &__calendar-button {
+    border-block-end: none;
+
+    .icon {
+      display: inline-block;
+      inline-size: 1.25em;
+      block-size: 1.25em;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+  &__reset-button {
+    align-self: flex-start;
   }
 }

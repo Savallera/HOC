@@ -23,12 +23,12 @@
   &__title-block {
     inline-size: 100%;
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    gap: clamp(0.675em, 4vi, 2.5em);
   }
 
   &__title {
     margin: 0;
-    flex: auto;
     font-variation-settings: 'wght' 800;
     font-size: clamp(1.25em, 0.8929em + 1.7857vw, 2.5em); // 40 - 20
   }
@@ -40,6 +40,7 @@
   }
 
   &__link {
+    margin-inline-start: auto;
     flex: none;
     font-size: clamp(0.75em, 0.6071em + 0.7143vw, 1.25em); // 25 - 12
     font-variation-settings: 'wght' 600;

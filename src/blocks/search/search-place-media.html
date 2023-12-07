@@ -1,43 +1,31 @@
-<!-- Секция с поиском на страницах -->
+<!-- Секция с поиском на странице медиацентра -->
 <section class="page__section search">
-  <div class="search__regions">
-    <button
-      class="button button--size-small search__button search__button--content-region search__button--actived"
-      type="button"
-    >
-      <span class="button__text">Все регионы</span>
-    </button>
-    <button
-      class="button button--size-small search__button search__button--content-region"
-      type="button"
-    >
-      <span class="button__text">Москва</span>
-    </button>
-  </div>
-  <div class="search__title-block">
-    <h2 class="search__title">Новости</h2>
-    <button
-      class="button button--size-small search__button search__button--content-calendar"
-      type="button"
-    >
-      <span
-        class="button__icon icon icon--type-calendar"
-        aria-hidden="true"
-      ></span>
-      <span class="button__text">Календарь</span>
-    </button>
-    <button
-      class="button button--size-small search__button search__button--content-calendar search__button--actived"
-      type="button"
-    >
-      <span
-        class="button__icon icon icon--type-calendar"
-        aria-hidden="true"
-      ></span>
-      <span class="button__text">10.08.2023 - 16.08.2023</span>
-    </button>
-  </div>
   <form class="search__form" name="media-search" action="">
+    <fieldset class="search__regions">
+      <button
+        class="search__region-button search__region-button--content-all"
+        type="button"
+      >
+        <span>Все регионы</span>
+      </button>
+      <button class="search__region-button" type="button">
+        <span>Москва</span>
+      </button>
+    </fieldset>
+    <div class="page__title-block">
+      <h2 class="page__title">Новости</h2>
+      <button class="search__calendar-button" type="button">
+        <span class="icon icon--type-calendar" aria-hidden="true"></span>
+        <span>Календарь</span>
+      </button>
+      <button
+        class="search__calendar-button search__calendar-button--actived"
+        type="button"
+      >
+        <span class="icon icon--type-calendar" aria-hidden="true"></span>
+        <span>10.08.2023 - 16.08.2023</span>
+      </button>
+    </div>
     <div class="field">
       <label for="page-search-field" class="field__label visually-hidden"
         >Поиск
@@ -62,49 +50,46 @@
       </div>
     </div>
     <fieldset class="search__radio-group">
-      <label class="search__label-radio" for="search-raio-theme-all">
+      <label class="search__label-radio" for="search-radio-theme-all">
         <input
           class="search__radio visually-hidden"
           type="radio"
           name="search-radio-theme"
-          id="search-raio-theme-all"
+          id="search-radio-theme-all"
           checked
         />
         <span class="search__label-text">Все</span>
       </label>
-      <label class="search__label-radio" for="search-raio-theme-1">
+      <label class="search__label-radio" for="search-radio-theme-1">
         <input
           class="search__radio visually-hidden"
           type="radio"
           name="search-radio-theme"
-          id="search-raio-theme-1"
+          id="search-radio-theme-1"
         />
         <span class="search__label-text">Тема 1</span>
       </label>
-      <label class="search__label-radio" for="search-raio-theme-2">
+      <label class="search__label-radio" for="search-radio-theme-2">
         <input
           class="search__radio visually-hidden"
           type="radio"
           name="search-radio-theme"
-          id="search-raio-theme-2"
+          id="search-radio-theme-2"
         />
         <span class="search__label-text">Тема 2</span>
       </label>
-      <label class="search__label-radio" for="search-raio-theme-3">
+      <label class="search__label-radio" for="search-radio-theme-3">
         <input
           class="search__radio visually-hidden"
           type="radio"
           name="search-radio-theme"
-          id="search-raio-theme-3"
+          id="search-radio-theme-3"
         />
         <span class="search__label-text">Тема 3</span>
       </label>
     </fieldset>
-    <button
-      class="button button--size-small search__button search__button--content-reset"
-      type="reset"
-    >
-      <span class="button__text">Сбросить фильтры</span>
+    <button class="search__reset-button" type="reset">
+      <span>Сбросить фильтры</span>
     </button>
   </form>
 </section>

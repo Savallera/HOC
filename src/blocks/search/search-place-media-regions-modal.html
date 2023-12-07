@@ -1,0 +1,147 @@
+<!-- Модальное окно Выбор региона -->
+<div class="modal modal--size-small modal--content-regions">
+  <div class="modal__container">
+    <button
+      type="reset"
+      class="icon-button icon icon--type-close modal__close-button"
+      aria-label="Закрыть"
+    ></button>
+    <form class="form" name="regions-modal" action="">
+      <p class="form__title">Выбрать регион</p>
+      <div class="field field--size-small field--theme-grey">
+        <label for="regions-modal-field" class="field__label visually-hidden"
+          >Выберите регион
+        </label>
+        <div class="field__inner">
+          <input
+            type="search"
+            class="field__input"
+            placeholder="Поиск региона"
+            name="search"
+            id="regions-modal-field"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <ul class="form__regions-list">
+        <li>
+          <label
+            class="form__regions-label-radio"
+            for="regions-modal-radio-all"
+          >
+            <input
+              class="form__regions-radio visually-hidden"
+              type="radio"
+              name="regions-modal-radio"
+              id="regions-modal-radio-all"
+              checked
+            />
+            <span class="form__regions-label-text">Все</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__regions-label-radio" for="regions-modal-radio-1">
+            <input
+              class="form__regions-radio visually-hidden"
+              type="radio"
+              name="regions-modal-radio"
+              id="regions-modal-radio-1"
+              checked
+            />
+            <span class="form__regions-label-text">Алтайский край</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__regions-label-radio" for="regions-modal-radio-2">
+            <input
+              class="form__regions-radio visually-hidden"
+              type="radio"
+              name="regions-modal-radio"
+              id="regions-modal-radio-2"
+              checked
+            />
+            <span class="form__regions-label-text">Амурская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__regions-label-radio" for="regions-modal-radio-2">
+            <input
+              class="form__regions-radio visually-hidden"
+              type="radio"
+              name="regions-modal-radio"
+              id="regions-modal-radio-2"
+              checked
+            />
+            <span class="form__regions-label-text">Архангельская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__regions-label-radio" for="regions-modal-radio-3">
+            <input
+              class="form__regions-radio visually-hidden"
+              type="radio"
+              name="regions-modal-radio"
+              id="regions-modal-radio-3"
+              checked
+            />
+            <span class="form__regions-label-text">Астраханская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__regions-label-radio" for="regions-modal-radio-4">
+            <input
+              class="form__regions-radio visually-hidden"
+              type="radio"
+              name="regions-modal-radio"
+              id="regions-modal-radio-4"
+              checked
+            />
+            <span class="form__regions-label-text">Белгородская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__regions-label-radio" for="regions-modal-radio-5">
+            <input
+              class="form__regions-radio visually-hidden"
+              type="radio"
+              name="regions-modal-radio"
+              id="regions-modal-radio-5"
+              checked
+            />
+            <span class="form__regions-label-text">Брянская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__regions-label-radio" for="regions-modal-radio-6">
+            <input
+              class="form__regions-radio visually-hidden"
+              type="radio"
+              name="regions-modal-radio"
+              id="regions-modal-radio-6"
+              checked
+            />
+            <span class="form__regions-label-text">Владимирская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__regions-label-radio" for="regions-modal-radio-7">
+            <input
+              class="form__regions-radio visually-hidden"
+              type="radio"
+              name="regions-modal-radio"
+              id="regions-modal-radio-7"
+              checked
+            />
+            <span class="form__regions-label-text"
+              >Самое длинное название области в нашей большой стране</span
+            >
+          </label>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>

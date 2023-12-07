@@ -24,10 +24,13 @@
   &__container {
     margin: auto;
     position: relative;
-    inline-size: min(90vw, 75em);
     background-color: #fff;
     border-radius: 10px;
     padding: clamp(0.9375em, 4vw, 2.5em);
+
+    &--size-small {
+      inline-size: min(95vw, 31.25em);
+    }
   }
 
   &__close-button {
@@ -46,20 +49,8 @@
 
   &__title {
     margin: 0;
-    padding-block: 0 clamp(1.125rem, 4vw, 2.5rem);
-    font-size: clamp(1.125em, 2.5vw, 1.5625em);
+    font-size: clamp(1.25em, 4vw, 2.5em);
     font-variation-settings: 'wght' 800;
-    text-align: center;
-  }
-
-  &__form {
-    display: flex;
-    gap: clamp(0.125em, 2vw, 1.25em);
-    flex-direction: column;
-  }
-
-  &__button {
-    align-self: center;
   }
 
   &--opened {
@@ -69,6 +60,14 @@
     transition:
       visibility 0s,
       opacity 0.35s;
+  }
+
+  &--size-wide .modal__container {
+    inline-size: min(95vw, 75em);
+  }
+
+  &--size-small .modal__container {
+    inline-size: clamp(17em, 50vw, 31.25em);
   }
 
   @supports (min-block-size: 100dvb) {

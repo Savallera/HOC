@@ -2,9 +2,6 @@
 if (document.querySelector('.contests__button')) {
   const contestButton = document.querySelector('.contests__button');
   const contestModal = document.querySelector('.modal--content-contest');
-  const contestModalCloseButton = document.querySelector(
-    '.modal__close-button'
-  );
   const openContestModal = function () {
     contestModal.classList.add('modal--opened');
   };

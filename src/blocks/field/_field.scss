@@ -186,4 +186,18 @@
       }
     }
   }
+
+  // Используется в Выборе регионов, возможно перенести в другой класс
+  &--size-small {
+    .field__input {
+      padding-block: 0.5rem;
+    }
+  }
+
+  &--theme-grey {
+    .field__input {
+      border-color: var(--grey-100);
+      background-color: var(--grey-100);
+    }
+  }
 }
