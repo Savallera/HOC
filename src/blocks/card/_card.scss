@@ -71,10 +71,19 @@
     font-variation-settings: 'wght' 800;
 
     @include clamp(3, 1.2);
+    min-block-size: 3.6em;
 
-    // &--fs-big {
-    //   font-size: clamp(1rem, 0.2143rem + 3.9286vw, 3.75rem); // 16 - 60
-    // }
+    &--height-two-rows {
+      min-block-size: 2.4em;
+      @include clamp(2, 1.2);
+    }
+  }
+
+  &__description {
+    margin: 0;
+    font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
+    @include clamp(3, 1.2);
+    min-block-size: 3.6em;
   }
 
   &__text {
@@ -82,6 +91,34 @@
     align-self: flex-start;
     font-size: 0.8125em; // 13
     font-variation-settings: 'wght' 500;
+  }
+
+  &__author {
+    margin: 0;
+    flex: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    max-width: 65%;
+  }
+
+  &__author-image {
+    flex: none;
+    inline-size: 2.375em;
+    min-inline-size: 2.375em;
+    max-inline-size: 2.375em;
+    block-size: 2.375em;
+    border-radius: 5px;
+  }
+
+  &__author-name {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: clamp(0.75em, 1.6vw, 1em);
+    font-variation-settings: 'wght' 500;
+    color: var(--main-text-low-color);
   }
 
   &__views {
@@ -122,6 +159,7 @@
   &--size-md {
     .card__main-content {
       padding: clamp(0.675em, 1.125vw, 1.125em) clamp(0.75em, 1.25vw, 1.25em);
+      // min-block-size: clamp(9.375rem, 8.125rem + 6.25vw, 15.625rem);
     }
 
     .card__title {
