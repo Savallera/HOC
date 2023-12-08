@@ -101,6 +101,10 @@
     align-self: flex-start;
     font-size: 0.8125em;
     font-variation-settings: 'wght' 500;
+
+    span {
+      display: block;
+    }
   }
 
   &__author {

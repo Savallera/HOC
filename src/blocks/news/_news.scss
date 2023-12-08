@@ -27,7 +27,7 @@
   &__slider-list {
     @include media(md) {
       gap: var(--gap-grid);
-      grid-template-columns: .9fr 1fr 1fr;
+      grid-template-columns: 0.9fr 1fr 1fr;
       grid-auto-flow: column;
 
       li {
@@ -59,25 +59,5 @@
       height: 100%;
       grid-template-rows: 1fr 1fr 1fr 1fr;
     }
-  }
-
-  &__card-deck {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-    gap: var(--gap-grid);
-  }
-
-  &__more-button {
-    align-self: center;
-    border-block-end: 1px solid var(--accent-color);
-    font-size: clamp(0.75em, 2.5vw, 1.5625em);
-    font-variation-settings: 'wght' 600;
-
-    // &:hover {
-    //   border-block-end: 2px solid;
-    // }
   }
 }

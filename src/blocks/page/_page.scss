@@ -20,6 +20,15 @@
     flex-direction: column;
   }
 
+  &__card-deck {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+    gap: var(--gap-grid);
+  }
+
   &__title-block {
     inline-size: 100%;
     display: flex;
@@ -28,6 +37,15 @@
     gap: var(--gap-section);
   }
 
+  /* Заголовок страницы */
+  &__heading {
+    margin: 0;
+    line-height: 1;
+    font-variation-settings: 'wght' 800;
+    font-size: clamp(1.25em, 6vw, 3.75em); // 60 - 20
+  }
+
+  /* Заголовок секции */
   &__title {
     margin: 0;
     font-variation-settings: 'wght' 800;
@@ -71,6 +89,17 @@
     @include media(sm) {
       align-self: center;
     }
+  }
+
+  &__more-button {
+    align-self: center;
+    border-block-end: 1px solid var(--accent-color);
+    font-size: clamp(0.75em, 2.5vw, 1.5625em);
+    font-variation-settings: 'wght' 600;
+
+    // &:hover {
+    //   border-block-end: 2px solid;
+    // }
   }
 
   @supports (min-block-size: 100dvb) {

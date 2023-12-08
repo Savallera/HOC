@@ -40,6 +40,10 @@
     &:has(:focus-visible) {
       outline: 2px solid var(--main-text-color);
     }
+
+    &--corner-rounded {
+      border-radius: 36px;
+    }
   }
 
   &__radio {
@@ -59,7 +63,7 @@
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
     color: var(--main-text-low-color);
-    padding: 1rem clamp(0.875rem, 2vw, 1.25rem);
+    padding: clamp(0.325em, 1.2vw, .75rem) clamp(0.875rem, 2vw, 1.25rem);
     background-color: #fff;
     border-radius: inherit;
     cursor: pointer;
@@ -111,6 +115,7 @@
   &__region-button {
     font-variation-settings: 'wght' 600;
   }
+
   &__calendar-button {
     border-block-end: none;
 
@@ -125,6 +130,7 @@
       vertical-align: middle;
     }
   }
+
   &__reset-button {
     align-self: flex-start;
   }

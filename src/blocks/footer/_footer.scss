@@ -46,6 +46,8 @@
         border-radius: 50%;
         background-color: currentColor;
         inline-size: 4px;
+        min-inline-size: 4px;
+        max-inline-size: 4px;
         block-size: 4px;
       }
     }
