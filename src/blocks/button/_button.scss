@@ -1,6 +1,7 @@
 /* Блок кнопка */
 .button {
   text-decoration: unset;
+  text-align: center;
   background-color: transparent;
   border: none;
   font-variation-settings: 'wght' 500;
@@ -36,6 +37,10 @@
       color: var(--accent-text-color);
 
       // &:hover {}
+
+      @include media(lg) {
+        min-inline-size: 16em;
+      }
     }
   }
 

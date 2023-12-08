@@ -6,7 +6,7 @@
       gap: var(--gap-grid);
     }
     @include media(lg) {
-      grid-template-columns: 0.25fr 1fr;
+      grid-template-columns: 0.275fr 1fr;
     }
   }
 

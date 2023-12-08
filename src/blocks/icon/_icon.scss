@@ -50,6 +50,9 @@
     &-search::before {
       mask-image: url('../images/icons.svg#search');
     }
+    &-share::before {
+      mask-image: url('../images/icons.svg#share');
+    }
     &-telegram::before {
       mask-image: url('../images/icons.svg#telegram');
     }

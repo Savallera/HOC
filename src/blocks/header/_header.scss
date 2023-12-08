@@ -7,7 +7,7 @@
     max-inline-size: var(--section-inline-size);
 
     display: flex;
-    gap: 0.9375em;
+    gap: 0.5em;
   }
 
   &__logo {
@@ -69,10 +69,10 @@
   &__mobile-menu-btn {
     align-self: center;
     display: block;
-    inline-size: clamp(2.5em, 3.8vw, 3.375em);
-    min-inline-size: clamp(2.5em, 3.8vw, 3.375em);
-    max-inline-size: clamp(2.5em, 3.8vw, 3.375em);
-    block-size: clamp(2.5em, 3.8vw, 3.375em);
+    inline-size: clamp(2.5em, 5.4vw, 3.375em);
+    min-inline-size: clamp(2.5em, 5.4vw, 3.375em);
+    max-inline-size: clamp(2.5em, 5.4vw, 3.375em);
+    block-size: clamp(2.5em, 5.4vw, 3.375em);
   }
 
   &__mobile-menu-container {
@@ -92,6 +92,8 @@
   }
 
   &__mobile-menu {
+    flex: none;
+
     position: relative;
     display: flex;
     z-index: 100;

@@ -4,6 +4,25 @@
     gap: var(--gap-grid);
   }
 
+  &__title-block {
+    inline-size: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--gap-section);
+  }
+
+  &__title {
+    margin: 0;
+    line-height: 1;
+    font-variation-settings: 'wght' 800;
+    font-size: clamp(1.25em, 6vw, 3.75em); // 60 - 20
+
+    @include media(sm, max) {
+      min-inline-size: 100%;
+    }
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -97,8 +116,8 @@
 
     .icon {
       display: inline-block;
-      inline-size: 1.25em;
-      block-size: 1.25em;
+      inline-size: 1.5em;
+      block-size: 1.5em;
       vertical-align: middle;
     }
 

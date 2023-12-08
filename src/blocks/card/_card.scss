@@ -14,7 +14,7 @@
     overflow: hidden;
     background-color: var(--main-text-low-color);
     inline-size: 100%;
-    aspect-ratio: 6/3.2;
+    aspect-ratio: 258/138;
     object-fit: cover;
     object-position: center;
 
@@ -44,7 +44,7 @@
   &__iframe {
     background-color: var(--main-text-low-color);
     inline-size: 100%;
-    aspect-ratio: 6/3.2;
+    aspect-ratio: 258/138;
     object-fit: cover;
     object-position: center;
   }
@@ -52,7 +52,7 @@
   &__main-content {
     flex: auto;
 
-    padding: 0.675em 0.75em;
+    padding: 0.5em 0.75em;
     display: flex;
     flex-direction: column;
     gap: clamp(0.75em, 2.4vw, 1.5em);
@@ -62,7 +62,11 @@
     margin-block-start: auto;
     display: flex;
     align-items: center;
-    gap: 0.375em;
+    gap: 1.25em 0.375em;
+
+    @include media(sm, max) {
+      flex-wrap: wrap;
+    }
   }
 
   &__title {
@@ -70,31 +74,37 @@
     font-size: 1em;
     font-variation-settings: 'wght' 800;
 
-    @include clamp(3, 1.2);
-    min-block-size: 3.6em;
-
-    &--height-two-rows {
-      min-block-size: 2.4em;
-      @include clamp(2, 1.2);
+    @include media(sm) {
+      &--height-two-rows {
+        @include clamp(2, 1.2);
+        min-block-size: 2.4em;
+      }
     }
   }
 
   &__description {
     margin: 0;
     font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
-    @include clamp(3, 1.2);
-    min-block-size: 3.6em;
+
+    @include media(sm) {
+      max-inline-size: 60rem;
+
+      &--height-three-rows {
+        @include clamp(3, 1.2);
+        min-block-size: 3.6em;
+      }
+    }
   }
 
   &__text {
     margin: 0;
     align-self: flex-start;
-    font-size: 0.8125em; // 13
+    font-size: 0.8125em;
     font-variation-settings: 'wght' 500;
   }
 
   &__author {
-    margin: 0;
+    margin: 0 auto 0 0;
     flex: auto;
     display: flex;
     align-items: center;
@@ -104,45 +114,53 @@
 
   &__author-image {
     flex: none;
-    inline-size: 2.375em;
-    min-inline-size: 2.375em;
-    max-inline-size: 2.375em;
-    block-size: 2.375em;
+    inline-size: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
+    min-inline-size: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
+    max-inline-size: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
+    block-size: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
     border-radius: 5px;
   }
 
   &__author-name {
     margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     font-size: clamp(0.75em, 1.6vw, 1em);
     font-variation-settings: 'wght' 500;
     color: var(--main-text-low-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    span {
+      display: block;
+    }
   }
 
   &__views {
     margin: 0 0 0 auto;
     display: flex;
     align-items: center;
-    gap: 0.375em;
+    gap: clamp(0.25em, 0.5vw, 0.375em);
     color: var(--main-text-low-color);
   }
 
   &__views-icon {
-    inline-size: 1.5em;
-    block-size: 1.5em;
+    inline-size: clamp(1.125em, 2vw, 1.25em);
+    block-size: clamp(1.125em, 2vw, 1.25em);
     color: currentColor;
   }
 
   &__views-value {
     font-variation-settings: 'wght' 500;
-    font-size: 0.975em;
+    font-size: 0.75em;
+
+    @include media(sm) {
+      font-size: 0.625em;
+    }
   }
 
   &__like-button {
-    inline-size: 1.5em;
-    block-size: 1.5em;
+    inline-size: clamp(1.125em, 2vw, 1.25em);
+    block-size: clamp(1.125em, 2vw, 1.25em);
     padding: 0;
     color: var(--main-text-low-color);
 
@@ -156,18 +174,83 @@
     }
   }
 
+  &__share-button {
+    margin-block-start: auto;
+    font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+    color: var(--main-text-low-color);
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    @include media(sm, max) {
+      min-inline-size: 100%;
+      text-align: left;
+    }
+  }
+
+  &__share-icon {
+    inline-size: 1em;
+    block-size: 1em;
+  }
+
+  &--role-preview-button {
+    cursor: pointer;
+  }
+
   &--size-md {
     .card__main-content {
       padding: clamp(0.675em, 1.125vw, 1.125em) clamp(0.75em, 1.25vw, 1.25em);
-      // min-block-size: clamp(9.375rem, 8.125rem + 6.25vw, 15.625rem);
     }
 
     .card__title {
-      font-size: clamp(1em, 0.8393em + 0.8036vw, 1.5625em); // 25 - 16
+      font-size: clamp(1em, 2.5vw, 1.5625em); // 25 - 16
     }
 
     .card__text {
       font-size: clamp(0.75em, 0.6071em + 0.7143vw, 1.25em); // 20 - 12
+    }
+
+    .card__controls {
+      gap: 1.25em 0.875em;
+    }
+
+    .card__views-icon {
+      inline-size: clamp(1.125em, 2.8vw, 1.75em);
+      block-size: clamp(1.125em, 2.8vw, 1.75em);
+    }
+
+    .card__views-value {
+      @include media(sm) {
+        font-size: 0.9375em;
+      }
+    }
+
+    .card__like-button {
+      inline-size: clamp(1.125em, 2.8vw, 1.75em);
+      block-size: clamp(1.125em, 2.8vw, 1.75em);
+    }
+  }
+
+  &--size-lg {
+    .card__iframe,
+    .card__image {
+      border-radius: 20px;
+    }
+
+    .card__title {
+      font-size: clamp(1rem, 0.2143rem + 3.9286vw, 3.75rem); // 60 - 16
+    }
+
+    .card__author-name {
+      font-size: clamp(0.75em, 2vw, 1.25em);
+    }
+
+    .card__author-image {
+      inline-size: clamp(1.75rem, 1.2679rem + 2.4107vw, 3.4375rem);
+      min-inline-size: clamp(1.75rem, 1.2679rem + 2.4107vw, 3.4375rem);
+      max-inline-size: clamp(1.75rem, 1.2679rem + 2.4107vw, 3.4375rem);
+      block-size: clamp(1.75rem, 1.2679rem + 2.4107vw, 3.4375rem);
     }
   }
 }

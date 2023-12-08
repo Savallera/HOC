@@ -1,5 +1,5 @@
 /* Секция с конкурсами на главной */
-.contests{
+.contests {
   &__inner {
     position: relative;
     z-index: 1;
@@ -43,5 +43,9 @@
     max-inline-size: min(13em, 100%);
     color: var(--accent-text-color);
     text-transform: uppercase;
+
+    @include media(sm) {
+      margin-block-end: 1em;
+    }
   }
 }

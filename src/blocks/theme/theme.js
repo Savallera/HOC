@@ -7,23 +7,19 @@ window.addEventListener('DOMContentLoaded', () => {
         // autoplay: true,
         arrows: false,
         pagination: false,
-        gap: '.9375em',
+        gap: 'clamp(.9375em, 2vw, 1.25em)',
         perPage: 1.1,
         perMove: 1,
-        padding: 'var(--section-padding)',
+        padding: 'var(--section-inline-start)',
         mediaQuery: 'min',
         breakpoints: {
           768: {
             arrows: true,
             perPage: 1.5,
-            gap: '1.25em',
-            padding: 'clamp(1.25rem, -3.1875rem + 22.1875vw, 23.4375rem)',
           },
           1024: {
             arrows: true,
             perPage: 2.5,
-            gap: '1.25em',
-            padding: 'clamp(1.25rem, -3.1875rem + 22.1875vw, 23.4375rem)',
           },
         },
       });

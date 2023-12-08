@@ -4,11 +4,6 @@
 @import './globals';
 @import './variables';
 
-// layout
-@import '../blocks/page/page';
-@import '../blocks/header/header';
-@import '../blocks/footer/footer';
-
 // UI
 @import '../blocks/icon/icon';
 @import '../blocks/button/button';
@@ -17,6 +12,11 @@
 @import '../blocks/card-link/card-link';
 @import '../blocks/tooltip/tooltip';
 @import '../blocks/form/form';
+
+// layout
+@import '../blocks/page/page';
+@import '../blocks/header/header';
+@import '../blocks/footer/footer';
 
 // Blocks
 @import '../blocks/splide/splide';
