@@ -1,0 +1,31 @@
+<!-- Блок с поиском на странице событий -->
+<div class="search podcasts__search">
+  <form class="search__form" name="podsacts-search" action="">
+    <div class="field">
+      <label for="page-search-field" class="field__label visually-hidden"
+        >Поиск
+      </label>
+      <div class="field__inner">
+        <span
+          class="field__search-icon icon icon--type-search"
+          aria-hidden="true"
+        ></span>
+        <input
+          type="search"
+          class="field__input"
+          placeholder="Поиск "
+          name="search"
+          id="page-search-field"
+        />
+        <span class="field__error-text">Вывод ошибки</span>
+        <span
+          class="field__error-icon icon icon--type-error"
+          aria-hidden="true"
+        ></span>
+      </div>
+    </div>
+    <button class="search__reset-button" type="reset">
+      <span>Сбросить фильтры</span>
+    </button>
+  </form>
+</div>

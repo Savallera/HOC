@@ -58,47 +58,21 @@
     gap: clamp(0.75em, 2.4vw, 1.5em);
   }
 
-  &__controls {
-    margin-block-start: auto;
-    display: flex;
-    align-items: center;
-    gap: 1.25em 0.375em;
-
-    @include media(sm, max) {
-      flex-wrap: wrap;
-    }
-  }
-
   &__title {
     margin: 0;
     font-size: 1em;
     font-variation-settings: 'wght' 800;
-
-    @include media(sm) {
-      &--height-two-rows {
-        @include clamp(2, 1.2);
-        min-block-size: 2.4em;
-      }
-    }
   }
 
   &__description {
     margin: 0;
-    font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
-
-    @include media(sm) {
-      max-inline-size: 60rem;
-
-      &--height-three-rows {
-        @include clamp(3, 1.2);
-        min-block-size: 3.6em;
-      }
-    }
+    font-size: clamp(0.75rem, 2vw, 1.25rem);
+    max-inline-size: 60rem;
   }
 
   &__text {
+    flex: auto;
     margin: 0;
-    align-self: flex-start;
     font-size: 0.8125em;
     font-variation-settings: 'wght' 500;
 
@@ -107,13 +81,44 @@
     }
   }
 
+  &__controls {
+    margin-block-start: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 1.25em 0.375em;
+
+    @include media(sm, max) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__address {
+    flex: auto;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  &__address-text {
+    margin: 0;
+    font-size: clamp(0.75em, 2vw, 1.25em);
+    font-variation-settings: 'wght' 500;
+  }
+
+  &__address-icon {
+    vertical-align: middle;
+    display: inline-block;
+    inline-size: 1.25em;
+    block-size: 1.25em;
+  }
+
   &__author {
-    margin: 0 auto 0 0;
     flex: auto;
     display: flex;
     align-items: center;
     gap: 0.5em;
-    max-width: 65%;
   }
 
   &__author-image {
@@ -130,9 +135,6 @@
     font-size: clamp(0.75em, 1.6vw, 1em);
     font-variation-settings: 'wght' 500;
     color: var(--main-text-low-color);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 
     span {
       display: block;
@@ -140,9 +142,10 @@
   }
 
   &__views {
-    margin: 0 0 0 auto;
+    flex: none;
     display: flex;
     align-items: center;
+    margin: 0;
     gap: clamp(0.25em, 0.5vw, 0.375em);
     color: var(--main-text-low-color);
   }
@@ -163,6 +166,9 @@
   }
 
   &__like-button {
+    flex: none;
+    min-inline-size: clamp(1.125em, 2vw, 1.25em);
+    max-inline-size: clamp(1.125em, 2vw, 1.25em);
     inline-size: clamp(1.125em, 2vw, 1.25em);
     block-size: clamp(1.125em, 2vw, 1.25em);
     padding: 0;
@@ -179,17 +185,12 @@
   }
 
   &__share-button {
-    margin-block-start: auto;
+    flex: none;
     font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
     color: var(--main-text-low-color);
 
     &:hover {
       color: var(--accent-color);
-    }
-
-    @include media(sm, max) {
-      min-inline-size: 100%;
-      text-align: left;
     }
   }
 
@@ -221,6 +222,8 @@
 
     .card__views-icon {
       inline-size: clamp(1.125em, 2.8vw, 1.75em);
+      min-inline-size: clamp(1.125em, 2.8vw, 1.75em);
+      max-inline-size: clamp(1.125em, 2.8vw, 1.75em);
       block-size: clamp(1.125em, 2.8vw, 1.75em);
     }
 
@@ -232,6 +235,8 @@
 
     .card__like-button {
       inline-size: clamp(1.125em, 2.8vw, 1.75em);
+      min-inline-size: clamp(1.125em, 2.8vw, 1.75em);
+      max-inline-size: clamp(1.125em, 2.8vw, 1.75em);
       block-size: clamp(1.125em, 2.8vw, 1.75em);
     }
   }

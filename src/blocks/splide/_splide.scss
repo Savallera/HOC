@@ -47,7 +47,7 @@
   }
 
   &--size-wide {
-    @include media(md) {
+    @media screen and (width > 90em) {
       .splide__arrow {
         &--prev {
           left: clamp(1.25rem, -0.6875rem + 9.6875vw, 10.9375rem);
@@ -60,7 +60,7 @@
   }
 
   &--background-gradient {
-    @include media(md) {
+    @media screen and (width > 90em) {
       position: relative;
       &::before {
         content: '';

@@ -62,7 +62,7 @@ $breakpoints: (
 }
 
 @mixin clamp($numbers: 3, $line-height: 1.5) {
-    max-height: $numbers * $line-height * 1em;
+    max-block-size: $numbers * $line-height * 1em;
     line-height: $line-height;
     display: -webkit-box;
     -webkit-line-clamp: $numbers;
