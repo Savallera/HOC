@@ -143,4 +143,8 @@
       padding-block: clamp(0.9375em, 5vw, 3.125em);
     }
   }
+
+  &--no-overlay::before {
+    content: unset;
+  }
 }

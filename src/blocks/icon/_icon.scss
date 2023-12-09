@@ -20,6 +20,9 @@
     &-calendar::before {
       mask-image: url('../images/icons.svg#calendar');
     }
+    &-check::before {
+      mask-image: url('../images/icons.svg#check');
+    }
     &-close::before {
       mask-image: url('../images/icons.svg#close');
     }

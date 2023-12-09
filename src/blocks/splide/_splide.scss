@@ -97,4 +97,11 @@
       }
     }
   }
+
+  &--pagination-size-sm {
+    .splide__pagination__page {
+      inline-size: clamp(0.375em, 1.2vw, 0.75em);
+      block-size: clamp(0.375em, 1.2vw, 0.75em);
+    }
+  }
 }
