@@ -2135,16 +2135,8 @@ textarea {
   list-style: none;
   display: -ms-grid;
   display: grid;
-  gap: clamp(1.5em, 5vw, 3.125em);
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-}
-@media only screen and (width >= 768px) {
-  .top-ten__cards {
-    gap: 3.125em;
-    -ms-grid-columns: (1fr)[5];
-    grid-template-columns: repeat(5, 1fr);
-  }
+  gap: clamp(1.25em, 5vw, 3.125em);
+  grid-template-columns: repeat(auto-fill, minmax(min(20vw, 12.5em), 1fr));
 }
 .top-ten__image {
   border-radius: 10px;
@@ -2153,7 +2145,6 @@ textarea {
   overflow: hidden;
   display: block;
   inline-size: 100%;
-  block-size: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
