@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         gap: '.9375em',
-        perPage: 1.1,
+        autoWidth: true,
         padding: 'var(--section-padding)',
         mediaQuery: 'min',
         breakpoints: {
@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         gap: '.9375em',
-        perPage: 1.1,
+        autoWidth: true,
         padding: 'var(--section-padding)',
         mediaQuery: 'min',
         breakpoints: {
@@ -122,7 +122,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         gap: '.9375em',
-        perPage: 1.1,
+        autoWidth: true,
         padding: 'var(--section-padding)',
         mediaQuery: 'min',
         breakpoints: {
@@ -236,7 +236,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 arrows: false,
                 pagination: false,
                 gap: '.9375em',
-                perPage: 1.1,
+                autoWidth: true,
                 padding: 'var(--section-padding)',
                 mediaQuery: 'min',
                 breakpoints: {
@@ -305,7 +305,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         gap: '.9375em',
-        perPage: 1.2,
+        autoWidth: true,
         padding: 'var(--section-padding)',
         mediaQuery: 'min',
         breakpoints: {
@@ -321,6 +321,36 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
+    // Слайдер с темами
+    if (document.querySelector('#theme-slider')) {
+      let themeSlider = new Splide('#theme-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        autoWidth: true,
+        padding: 'var(--section-inline-start)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            arrows: true,
+            perPage: 2,
+            autoWidth: false,
+          },
+          1024: {
+            arrows: true,
+            perPage: 3,
+            autoWidth: false,
+          },
+        },
+      });
+      themeSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
     // Главный баннер на главной странице
     if (document.querySelector('#top-banner-slider')) {
       let topBannerSlider = new Splide('#top-banner-slider', {
@@ -330,36 +360,6 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
       });
       topBannerSlider.mount();
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  if (Splide) {
-    // Слайдер с темами
-    if (document.querySelector('#theme-slider')) {
-      let themeSlider = new Splide('#theme-slider', {
-        type: 'slide',
-        // autoplay: true,
-        arrows: false,
-        pagination: false,
-        gap: 'clamp(.9375em, 2vw, 1.25em)',
-        perPage: 1.1,
-        perMove: 1,
-        padding: 'var(--section-inline-start)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            arrows: true,
-            perPage: 1.5,
-          },
-          1024: {
-            arrows: true,
-            perPage: 2.5,
-          },
-        },
-      });
-      themeSlider.mount();
     }
   }
 });
