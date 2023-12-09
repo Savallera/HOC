@@ -56,6 +56,11 @@
     display: flex;
     flex-direction: column;
     gap: clamp(0.75em, 2.4vw, 1.5em);
+
+    // Для карточек где пустое содержимое
+    &--min-height {
+      min-block-size: clamp(7.125em, 17vw, 10.625em);
+    }
   }
 
   &__title {
@@ -71,30 +76,28 @@
   }
 
   &__text {
-    flex: auto;
-    margin: 0;
+    margin-block: 0;
+    margin-inline-end: auto;
     font-size: 0.8125em;
     font-variation-settings: 'wght' 500;
-
-    span {
-      display: block;
-    }
   }
 
   &__controls {
     margin-block-start: auto;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-start;
     gap: 1.25em 0.375em;
 
-    @include media(sm, max) {
-      flex-wrap: wrap;
+    &--column-mobile {
+      @include media(sm, max) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   }
 
   &__address {
-    flex: auto;
+    overflow: hidden;
     font-style: normal;
     display: flex;
     flex-direction: column;
@@ -102,19 +105,26 @@
   }
 
   &__address-text {
-    margin: 0;
+    margin-block: 0;
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
   }
 
   &__address-icon {
-    vertical-align: middle;
+    flex: none;
     display: inline-block;
     inline-size: 1.25em;
+    min-inline-size: 1.25em;
+    max-inline-size: 1.25em;
     block-size: 1.25em;
   }
 
   &__author {
+    overflow: hidden;
     flex: auto;
     display: flex;
     align-items: center;
@@ -131,21 +141,19 @@
   }
 
   &__author-name {
-    margin: 0;
+    margin-block: 0;
     font-size: clamp(0.75em, 1.6vw, 1em);
     font-variation-settings: 'wght' 500;
     color: var(--main-text-low-color);
-
-    span {
-      display: block;
-    }
   }
 
   &__views {
     flex: none;
+    margin-block: 0;
+    margin-inline-start: auto;
+
     display: flex;
     align-items: center;
-    margin: 0;
     gap: clamp(0.25em, 0.5vw, 0.375em);
     color: var(--main-text-low-color);
   }
@@ -197,6 +205,23 @@
   &__share-icon {
     inline-size: 1em;
     block-size: 1em;
+  }
+
+  // Для построения
+  &__press-bottom {
+    margin-block-start: auto;
+  }
+
+  // Для обрезки текста
+  &__cut-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // Для переноса внутри параграфа
+  &__span-text {
+    display: block;
   }
 
   &--role-preview-button {

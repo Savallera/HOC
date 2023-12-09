@@ -52,6 +52,18 @@
     }
   }
 
+  &__slide--desktop-wide-width {
+    @include media(md) {
+      width: min(40vw, 37.5em);
+    }
+  }
+
+  &__slide--desktop-auto-width {
+    @include media(md) {
+      width: min(30vw, 28em);
+    }
+  }
+
   &--size-wide {
     @media screen and (width > 90em) {
       .splide__arrow {
@@ -78,9 +90,9 @@
         pointer-events: none;
         background: linear-gradient(
           90deg,
-          #f7f7f7 7.5%,
-          rgba(247, 247, 247, 0) 25% 85%,
-          #f7f7f7 92.5%
+          #f7f7f7 5%,
+          rgba(247, 247, 247, 0) 15% 80%,
+          #f7f7f7 95%
         );
       }
     }

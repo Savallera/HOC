@@ -13,13 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
         breakpoints: {
           768: {
             arrows: true,
-            perPage: 2,
-            autoWidth: false,
-          },
-          1024: {
-            arrows: true,
-            perPage: 3,
-            autoWidth: false,
           },
         },
       });
