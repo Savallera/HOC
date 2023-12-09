@@ -56,10 +56,10 @@
     @media screen and (width > 90em) {
       .splide__arrow {
         &--prev {
-          left: clamp(1.25rem, -0.6875rem + 9.6875vw, 10.9375rem);
+          left: clamp(3.4375rem, -19.0625rem + 25vw, 10.9375rem);
         }
         &--next {
-          right: clamp(1.25rem, -0.6875rem + 9.6875vw, 10.9375rem);
+          right: clamp(3.4375rem, -19.0625rem + 25vw, 10.9375rem);
         }
       }
     }
@@ -78,9 +78,9 @@
         pointer-events: none;
         background: linear-gradient(
           90deg,
-          #f7f7f7 5%,
-          rgba(247, 247, 247, 0) 20% 80%,
-          #f7f7f7 95%
+          #f7f7f7 7.5%,
+          rgba(247, 247, 247, 0) 25% 85%,
+          #f7f7f7 92.5%
         );
       }
     }
