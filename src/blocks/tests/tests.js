@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         gap: '.9375em',
-        perPage: 1.2,
+        autoWidth: true,
         padding: 'var(--section-padding)',
         mediaQuery: 'min',
         breakpoints: {

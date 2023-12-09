@@ -46,6 +46,12 @@
     }
   }
 
+  &__slide--auto-width {
+    @include media(md, max) {
+      width: min(90vw, 18.75em);
+    }
+  }
+
   &--size-wide {
     @media screen and (width > 90em) {
       .splide__arrow {

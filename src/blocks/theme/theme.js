@@ -4,22 +4,22 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('#theme-slider')) {
       let themeSlider = new Splide('#theme-slider', {
         type: 'slide',
-        // autoplay: true,
         arrows: false,
         pagination: false,
         gap: 'clamp(.9375em, 2vw, 1.25em)',
-        perPage: 1.1,
-        perMove: 1,
+        autoWidth: true,
         padding: 'var(--section-inline-start)',
         mediaQuery: 'min',
         breakpoints: {
           768: {
             arrows: true,
-            perPage: 1.5,
+            perPage: 2,
+            autoWidth: false,
           },
           1024: {
             arrows: true,
-            perPage: 2.5,
+            perPage: 3,
+            autoWidth: false,
           },
         },
       });
