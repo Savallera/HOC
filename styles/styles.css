@@ -1148,6 +1148,16 @@ textarea {
     width: min(90vw, 18.75em);
   }
 }
+@media only screen and (width >= 768px) {
+  .splide__slide--desktop-wide-width {
+    width: min(40vw, 37.5em);
+  }
+}
+@media only screen and (width >= 768px) {
+  .splide__slide--desktop-auto-width {
+    width: min(30vw, 28em);
+  }
+}
 @media screen and (width > 90em) {
   .splide--size-wide .splide__arrow--prev {
     left: clamp(3.4375rem, -19.0625rem + 25vw, 10.9375rem);
@@ -1168,8 +1178,8 @@ textarea {
     inline-size: 100%;
     block-size: 100%;
     pointer-events: none;
-    background: -webkit-gradient(linear, left top, right top, color-stop(7.5%, #f7f7f7), color-stop(25%, rgba(247, 247, 247, 0)), color-stop(92.5%, #f7f7f7));
-    background: linear-gradient(90deg, #f7f7f7 7.5%, rgba(247, 247, 247, 0) 25% 85%, #f7f7f7 92.5%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(5%, #f7f7f7), color-stop(15%, rgba(247, 247, 247, 0)), color-stop(95%, #f7f7f7));
+    background: linear-gradient(90deg, #f7f7f7 5%, rgba(247, 247, 247, 0) 15% 80%, #f7f7f7 95%);
   }
 }
 
@@ -1443,6 +1453,9 @@ textarea {
           flex-direction: column;
   gap: clamp(0.75em, 2.4vw, 1.5em);
 }
+.card__main-content--min-height {
+  min-block-size: clamp(7.125em, 17vw, 10.625em);
+}
 .card__title {
   margin: 0;
   font-size: 1em;
@@ -1454,15 +1467,11 @@ textarea {
   max-inline-size: 60rem;
 }
 .card__text {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
-  margin: 0;
+  margin-block: 0;
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
   font-size: 0.8125em;
   font-variation-settings: "wght" 500;
-}
-.card__text span {
-  display: block;
 }
 .card__controls {
   -webkit-margin-before: auto;
@@ -1473,21 +1482,21 @@ textarea {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   gap: 1.25em 0.375em;
 }
 @media only screen and (width < 576px) {
-  .card__controls {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .card__controls--column-mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 .card__address {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  overflow: hidden;
   font-style: normal;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1499,17 +1508,29 @@ textarea {
   gap: 0.5em;
 }
 .card__address-text {
-  margin: 0;
+  margin-block: 0;
   font-size: clamp(0.75em, 2vw, 1.25em);
   font-variation-settings: "wght" 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.5em;
 }
 .card__address-icon {
-  vertical-align: middle;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   display: inline-block;
   inline-size: 1.25em;
+  min-inline-size: 1.25em;
+  max-inline-size: 1.25em;
   block-size: 1.25em;
 }
 .card__author {
+  overflow: hidden;
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
@@ -1532,25 +1553,24 @@ textarea {
   border-radius: 5px;
 }
 .card__author-name {
-  margin: 0;
+  margin-block: 0;
   font-size: clamp(0.75em, 1.6vw, 1em);
   font-variation-settings: "wght" 500;
   color: var(--main-text-low-color);
-}
-.card__author-name span {
-  display: block;
 }
 .card__views {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
+  margin-block: 0;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
   gap: clamp(0.25em, 0.5vw, 0.375em);
   color: var(--main-text-low-color);
 }
@@ -1599,6 +1619,18 @@ textarea {
 .card__share-icon {
   inline-size: 1em;
   block-size: 1em;
+}
+.card__press-bottom {
+  -webkit-margin-before: auto;
+          margin-block-start: auto;
+}
+.card__cut-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card__span-text {
+  display: block;
 }
 .card--role-preview-button {
   cursor: pointer;
