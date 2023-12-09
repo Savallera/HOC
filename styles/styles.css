@@ -2135,7 +2135,7 @@ textarea {
   list-style: none;
   display: -ms-grid;
   display: grid;
-  gap: 1.5em;
+  gap: clamp(1.5em, 5vw, 3.125em);
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
 }
@@ -2146,13 +2146,9 @@ textarea {
     grid-template-columns: repeat(5, 1fr);
   }
 }
-.top-ten__card {
+.top-ten__image {
   border-radius: 10px;
   aspect-ratio: 1/1;
-  inline-size: 100%;
-  overflow: hidden;
-}
-.top-ten__card-image {
   position: relative;
   overflow: hidden;
   display: block;
@@ -2163,7 +2159,7 @@ textarea {
   -o-object-position: center;
      object-position: center;
 }
-.top-ten__card-image:after {
+.top-ten__image:after {
   content: attr(alt);
   display: -webkit-box;
   display: -ms-flexbox;
