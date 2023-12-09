@@ -9,18 +9,14 @@
     grid-template-columns: repeat(4, 1fr);
 
     @include media(md) {
+      gap: 3.125em;
       grid-template-columns: repeat(5, 1fr);
     }
   }
 
-  &__card {
+  &__image {
     border-radius: 10px;
     aspect-ratio: 1/1;
-    inline-size: 100%;
-    overflow: hidden;
-  }
-
-  &__card-image {
     position: relative;
     overflow: hidden;
 
