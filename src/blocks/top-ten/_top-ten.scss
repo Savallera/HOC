@@ -6,7 +6,11 @@
     list-style: none;
     display: grid;
     gap: clamp(1.5em, 5vw, 3.125em);
-    grid-template-columns: repeat(auto-fill, minmax(min(15vw, 12.5em), 1fr));
+    grid-template-columns: repeat(4, 1fr);
+
+    @include media(md) {
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
 
   &__card {
