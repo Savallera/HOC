@@ -5,13 +5,8 @@
     padding: 0;
     list-style: none;
     display: grid;
-    gap: clamp(1.5em, 5vw, 3.125em);
-    grid-template-columns: repeat(4, 1fr);
-
-    @include media(md) {
-      gap: 3.125em;
-      grid-template-columns: repeat(5, 1fr);
-    }
+    gap: clamp(1.25em, 5vw, 3.125em);
+    grid-template-columns: repeat(auto-fill, minmax(min(15vw, 12.5em), 1fr));
   }
 
   &__image {
@@ -22,7 +17,8 @@
 
     display: block;
     inline-size: 100%;
-    block-size: 100%;
+    // inline-size: clamp(4em, 20vw, 12.5em);
+    // block-size: clamp(4em, 20vw, 12.5em);
     object-fit: cover;
     object-position: center;
     &:after {
