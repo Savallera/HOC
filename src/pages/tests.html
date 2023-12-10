@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+  @@include("../blocks/head/head.html", {"title": "Интерактивные тесты"})
+  <body>
+    <div class="page">
+      @@include("../blocks/header/header.html")
+      <main class="page__content">
+        <section class="page__section">
+          <h1 class="page__heading">Интерактивные тесты</h1>
+          @@include("../blocks/search/search-place-tests.html")
+          <!-- Отображение карточек тестов в сетке 3 в ряд -->
+          <ul class="page__card-deck">
+            <li>
+              <a
+                href="./test-article.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="https://s3-alpha-sig.figma.com/img/0e50/6b89/16bd548d2af9f5a41156c956fe06df3c?Expires=1702857600&Signature=PLdDrCjjQVPV3IySAagQZE7K0LDMhZOirbLKwA6w2TZ1IS1htRRNzJNAHAFkiVxMeSLP9utoeayRffP0XdRn6CezGYD7G0RextbqChcBC63xjJcM5Hf2AgbZcbM7WbhoybLAYDgGuR8Dg~kRX73hrDWxS2K7GfQYtx2Rls2SZFV9DNtf5F4x3qywpT7W-eG4SDA-CodgvTv-vTi~T18RdFjTB~P-BG6pw64twd0CMEBk9IJS0ISrd9D0z20o0zZlfdPr-qpkaeRRBMpsYa3hyeeBKsmGWYA3PPL-7ZDrMPpRApsnfhoV3gpxfsFpUzOLy55qtmfeMiviqfIU85zxvQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div
+                    class="card__main-content card__main-content--min-height"
+                  >
+                    <h2 class="card__title">Тест на знание математики</h2>
+                    <p class="card__text text-gradient card__press-bottom">
+                      Интеллектуальные
+                    </p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./test-article.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="https://s3-alpha-sig.figma.com/img/0e50/6b89/16bd548d2af9f5a41156c956fe06df3c?Expires=1702857600&Signature=PLdDrCjjQVPV3IySAagQZE7K0LDMhZOirbLKwA6w2TZ1IS1htRRNzJNAHAFkiVxMeSLP9utoeayRffP0XdRn6CezGYD7G0RextbqChcBC63xjJcM5Hf2AgbZcbM7WbhoybLAYDgGuR8Dg~kRX73hrDWxS2K7GfQYtx2Rls2SZFV9DNtf5F4x3qywpT7W-eG4SDA-CodgvTv-vTi~T18RdFjTB~P-BG6pw64twd0CMEBk9IJS0ISrd9D0z20o0zZlfdPr-qpkaeRRBMpsYa3hyeeBKsmGWYA3PPL-7ZDrMPpRApsnfhoV3gpxfsFpUzOLy55qtmfeMiviqfIU85zxvQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div
+                    class="card__main-content card__main-content--min-height"
+                  >
+                    <h2 class="card__title">Тест география России</h2>
+                    <p class="card__text text-gradient card__press-bottom">
+                      Интеллектуальные
+                    </p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./test-article.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="https://s3-alpha-sig.figma.com/img/0e50/6b89/16bd548d2af9f5a41156c956fe06df3c?Expires=1702857600&Signature=PLdDrCjjQVPV3IySAagQZE7K0LDMhZOirbLKwA6w2TZ1IS1htRRNzJNAHAFkiVxMeSLP9utoeayRffP0XdRn6CezGYD7G0RextbqChcBC63xjJcM5Hf2AgbZcbM7WbhoybLAYDgGuR8Dg~kRX73hrDWxS2K7GfQYtx2Rls2SZFV9DNtf5F4x3qywpT7W-eG4SDA-CodgvTv-vTi~T18RdFjTB~P-BG6pw64twd0CMEBk9IJS0ISrd9D0z20o0zZlfdPr-qpkaeRRBMpsYa3hyeeBKsmGWYA3PPL-7ZDrMPpRApsnfhoV3gpxfsFpUzOLy55qtmfeMiviqfIU85zxvQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div
+                    class="card__main-content card__main-content--min-height"
+                  >
+                    <h2 class="card__title">Тест на знание химии</h2>
+                    <p class="card__text text-gradient card__press-bottom">
+                      Интеллектуальные
+                    </p>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+          <button class="button page__more-button text-gradient" type="button">
+            <span class="button__text">Смотреть еще</span>
+          </button>
+        </section>
+      </main>
+      @@include("../blocks/footer/footer.html")
+      @@include("../blocks/tooltip/tooltip.html")
+      @@include("../blocks/modal/modal-place-search.html")
+    </div>
+  </body>
+</html>

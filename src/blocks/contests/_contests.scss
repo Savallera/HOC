@@ -27,7 +27,7 @@
     }
 
     @include media(md) {
-      aspect-ratio: 12.18/3.57;
+      min-block-size: 22.5em;
     }
   }
 
