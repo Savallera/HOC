@@ -104,7 +104,7 @@
 
       <main class="page__content">
         <section class="events page__section">
-          <h2 class="page__heading">События</h2>
+          <h1 class="page__heading">События</h1>
           <!-- Блок с поиском на странице событий -->
 <div class="search podcasts__search">
   <form class="search__form" name="podsacts-search" action="">
@@ -131,16 +131,49 @@
         ></span>
       </div>
     </div>
-    <button class="search__reset-button" type="reset">
-      <span>Сбросить фильтры</span>
-    </button>
+    <div class="search__filters-wrapper">
+      <fieldset class="search__filters">
+        <button class="search__filter-button search__filter-button--actived" type="button">
+          <span>Дата: 01.01.2023 - 31.12.2023</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+        <button class="search__filter-button" type="button">
+          <span>Тип мероприятия</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+        <button class="search__filter-button" type="button">
+          <span>Формат участия</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+        <button class="search__filter-button" type="button">
+          <span>Доступ</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+      </fieldset>
+      <button class="search__reset-button" type="reset">
+        <span>Сбросить фильтры</span>
+      </button>
+    </div>
   </form>
 </div>
+
           <div class="splide" id="events-slider">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <a href="#" class="card-link" rel="noopener ugs">
+                  <a href="./event-article.html" class="card-link" rel="noopener ugs">
                     <article
                       class="card-banner"
                       style="
@@ -172,7 +205,7 @@
                   </a>
                 </li>
                 <li class="splide__slide">
-                  <a href="#" class="card-link" rel="noopener ugs">
+                  <a href="./event-article.html" class="card-link" rel="noopener ugs">
                     <article
                       class="card-banner"
                       style="
@@ -204,7 +237,7 @@
                   </a>
                 </li>
                 <li class="splide__slide">
-                  <a href="#" class="card-link" rel="noopener ugs">
+                  <a href="./event-article.html" class="card-link" rel="noopener ugs">
                     <article
                       class="card-banner"
                       style="
@@ -243,7 +276,10 @@
 <section class="theme">
   <div class="page__title-block theme__title-block">
     <h2 class="page__title">Крупные мероприятия регионального масштаба</h2>
-    <a href="./broadcasts.html" class="page__link text-gradient" rel="noopener ugs"
+    <a
+      href="./broadcasts.html"
+      class="page__link text-gradient"
+      rel="noopener ugs"
       >Все подкасты</a
     >
   </div>
@@ -253,7 +289,9 @@
   >
     <div class="splide__track theme__video-slider-track">
       <ul class="splide__list theme__video-slider-list">
-        <li class="splide__slide splide__slide--auto-width splide__slide--desktop-wide-width">
+        <li
+          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
+        >
           <a href="./broadcasts.html" class="card-link" rel="noopener ugs">
             <article class="card card--size-md">
               <img
@@ -263,7 +301,7 @@
                 alt="Описание изображения"
               />
               <div class="card__main-content">
-                <h2 class="card__title">Конкурс «Россия — незападный мир»</h2>
+                <h3 class="card__title">Конкурс «Россия — незападный мир»</h3>
                 <p class="card__description text-rows text-rows--three">
                   Международный молодежный центр РУДН совместно с Минобрнауки
                   России и платформой «Дигория» запускает конкурс-практикум
@@ -295,7 +333,9 @@
             </article>
           </a>
         </li>
-        <li class="splide__slide splide__slide--auto-width splide__slide--desktop-wide-width">
+        <li
+          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
+        >
           <a href="./broadcasts.html" class="card-link" rel="noopener ugs">
             <article class="card card--size-md">
               <img
@@ -305,7 +345,7 @@
                 alt="Описание изображения"
               />
               <div class="card__main-content">
-                <h2 class="card__title">Конкурс «Россия — незападный мир»</h2>
+                <h3 class="card__title">Конкурс «Россия — незападный мир»</h3>
                 <p class="card__description text-rows text-rows--three">
                   Международный молодежный центр РУДН совместно с Минобрнауки
                   России и платформой «Дигория» запускает конкурс-практикум
@@ -337,7 +377,9 @@
             </article>
           </a>
         </li>
-        <li class="splide__slide splide__slide--auto-width splide__slide--desktop-wide-width">
+        <li
+          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
+        >
           <a href="./broadcasts.html" class="card-link" rel="noopener ugs">
             <article class="card card--size-md">
               <img
@@ -347,7 +389,7 @@
                 alt="Описание изображения"
               />
               <div class="card__main-content">
-                <h2 class="card__title">Конкурс «Россия — незападный мир»</h2>
+                <h3 class="card__title">Конкурс «Россия — незападный мир»</h3>
                 <p class="card__description text-rows text-rows--three">
                   Международный молодежный центр РУДН совместно с Минобрнауки
                   России и платформой «Дигория» запускает конкурс-практикум
@@ -379,7 +421,9 @@
             </article>
           </a>
         </li>
-        <li class="splide__slide splide__slide--auto-width splide__slide--desktop-wide-width">
+        <li
+          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
+        >
           <a href="./broadcasts.html" class="card-link" rel="noopener ugs">
             <article class="card card--size-md">
               <img
@@ -389,7 +433,7 @@
                 alt="Описание изображения"
               />
               <div class="card__main-content">
-                <h2 class="card__title">Конкурс «Россия — незападный мир»</h2>
+                <h3 class="card__title">Конкурс «Россия — незападный мир»</h3>
                 <p class="card__description text-rows text-rows--three">
                   Международный молодежный центр РУДН совместно с Минобрнауки
                   России и платформой «Дигория» запускает конкурс-практикум
@@ -426,6 +470,149 @@
   </div>
 </section>
 
+        <!-- Отображение карточек событий в сетке 2 в ряд -->
+        <section class="page__section">
+          <ul class="page__card-deck page__card-deck--size-lg">
+            <li>
+              <a href="./event-article.html" class="card-link" rel="noopener ugs">
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    loading="lazy"
+                    src="https://s3-alpha-sig.figma.com/img/db6b/ddaa/e6d6bf4ae8e7f9b3f1f75ae565ecc54e?Expires=1702857600&Signature=SLZOPkZnDHFNXjBB0ikIE-uptUaO7J5S419ZH6ajnQpNHFm-NNc3UsuaimaIlWiDudWH1O~5QiKD1wKzWxVu~r4GLjv36i1E6K6i08JgzMfFqZXthMACvaxeu0VCDPtV1HyAvxzXcKQuVVofLee~oieBJWIhQLoa9CK5tx9Ywr9DYo71X-BLrjwkseHIUAUCZfTZyZWqYt8-JvdDZubJS2aC0B1SvM70JdtDqCzDjzf72Ai5uwbuMtdIXe4gUglTAGz-VUmNYFGHD1hfsm4j51ilAq-fy3d51NpaTAVyZ78wyO4rvzDe3B2DaEnAEGtqfq0zgmbdYSzAjovgfqJmKw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="Описание изображения"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title">
+                      Конкурс «Россия — незападный мир»
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      Международный молодежный центр РУДН совместно с
+                      Минобрнауки России и платформой «Дигория» запускает
+                      конкурс-практикум
+                    </p>
+                    <div class="card__controls">
+                      <address class="card__address">
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-calendar"
+                            aria-hidden="true"
+                          ></span>
+                          29 сентября 2023
+                        </p>
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-location"
+                            aria-hidden="true"
+                          ></span>
+                          г. Сочи, ул. Просвещения, 139
+                        </p>
+                      </address>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="./event-article.html" class="card-link" rel="noopener ugs">
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    loading="lazy"
+                    src="https://s3-alpha-sig.figma.com/img/db6b/ddaa/e6d6bf4ae8e7f9b3f1f75ae565ecc54e?Expires=1702857600&Signature=SLZOPkZnDHFNXjBB0ikIE-uptUaO7J5S419ZH6ajnQpNHFm-NNc3UsuaimaIlWiDudWH1O~5QiKD1wKzWxVu~r4GLjv36i1E6K6i08JgzMfFqZXthMACvaxeu0VCDPtV1HyAvxzXcKQuVVofLee~oieBJWIhQLoa9CK5tx9Ywr9DYo71X-BLrjwkseHIUAUCZfTZyZWqYt8-JvdDZubJS2aC0B1SvM70JdtDqCzDjzf72Ai5uwbuMtdIXe4gUglTAGz-VUmNYFGHD1hfsm4j51ilAq-fy3d51NpaTAVyZ78wyO4rvzDe3B2DaEnAEGtqfq0zgmbdYSzAjovgfqJmKw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="Описание изображения"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title">
+                      Конкурс «Россия — незападный мир»
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      Международный молодежный центр РУДН совместно с
+                      Минобрнауки России и платформой «Дигория» запускает
+                      конкурс-практикум
+                    </p>
+                    <div class="card__controls">
+                      <address class="card__address">
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-calendar"
+                            aria-hidden="true"
+                          ></span>
+                          29 сентября 2023
+                        </p>
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-location"
+                            aria-hidden="true"
+                          ></span>
+                          г. Сочи, ул. Просвещения, 139
+                        </p>
+                      </address>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="./event-article.html" class="card-link" rel="noopener ugs">
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    loading="lazy"
+                    src="https://s3-alpha-sig.figma.com/img/db6b/ddaa/e6d6bf4ae8e7f9b3f1f75ae565ecc54e?Expires=1702857600&Signature=SLZOPkZnDHFNXjBB0ikIE-uptUaO7J5S419ZH6ajnQpNHFm-NNc3UsuaimaIlWiDudWH1O~5QiKD1wKzWxVu~r4GLjv36i1E6K6i08JgzMfFqZXthMACvaxeu0VCDPtV1HyAvxzXcKQuVVofLee~oieBJWIhQLoa9CK5tx9Ywr9DYo71X-BLrjwkseHIUAUCZfTZyZWqYt8-JvdDZubJS2aC0B1SvM70JdtDqCzDjzf72Ai5uwbuMtdIXe4gUglTAGz-VUmNYFGHD1hfsm4j51ilAq-fy3d51NpaTAVyZ78wyO4rvzDe3B2DaEnAEGtqfq0zgmbdYSzAjovgfqJmKw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="Описание изображения"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title">
+                      Конкурс «Россия — незападный мир»
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      Международный молодежный центр РУДН совместно с
+                      Минобрнауки России и платформой «Дигория» запускает
+                      конкурс-практикум
+                    </p>
+                    <div class="card__controls">
+                      <address class="card__address">
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-calendar"
+                            aria-hidden="true"
+                          ></span>
+                          29 сентября 2023
+                        </p>
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-location"
+                            aria-hidden="true"
+                          ></span>
+                          г. Сочи, ул. Просвещения, 139
+                        </p>
+                      </address>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+          <button class="button page__more-button text-gradient" type="button">
+            <span class="button__text">Смотреть еще</span>
+          </button>
+        </section>
       </main>
       <!-- Подвал страницы -->
 <footer class="footer bg-gradient">

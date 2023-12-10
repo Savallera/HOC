@@ -110,42 +110,102 @@
 <div class="search podcasts__search">
   <form class="search__form" name="podsacts-search" action="">
     <fieldset class="search__radio-group">
-      <label class="search__label-radio search__label-radio--corner-rounded" for="search-radio-theme-all">
-        <input
-          class="search__radio visually-hidden"
-          type="radio"
-          name="search-radio-theme"
-          id="search-radio-theme-all"
-          checked
-        />
-        <span class="search__label-text">Интеллектуальные</span>
-      </label>
-      <label class="search__label-radio search__label-radio--corner-rounded" for="search-radio-theme-1">
+      <label
+        class="search__label-radio search__label-radio--corner-rounded"
+        for="search-radio-theme-1"
+      >
         <input
           class="search__radio visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-1"
+          checked
         />
-        <span class="search__label-text">Развлекательные</span>
+        <span class="search__label-text">Интеллектуальные</span>
       </label>
-      <label class="search__label-radio search__label-radio--corner-rounded" for="search-radio-theme-2">
+      <label
+        class="search__label-radio search__label-radio--corner-rounded"
+        for="search-radio-theme-2"
+      >
         <input
           class="search__radio visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-2"
         />
-        <span class="search__label-text">Профильные</span>
+        <span class="search__label-text">Развлекательные</span>
       </label>
-      <label class="search__label-radio search__label-radio--corner-rounded" for="search-radio-theme-3">
+      <label
+        class="search__label-radio search__label-radio--corner-rounded"
+        for="search-radio-theme-3"
+      >
         <input
           class="search__radio visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-3"
         />
+        <span class="search__label-text">Профильные</span>
+      </label>
+      <label
+        class="search__label-radio search__label-radio--corner-rounded"
+        for="search-radio-theme-4"
+      >
+        <input
+          class="search__radio visually-hidden"
+          type="radio"
+          name="search-radio-theme"
+          id="search-radio-theme-4"
+        />
         <span class="search__label-text">Образовательные</span>
+      </label>
+      <label
+        class="search__label-radio search__label-radio--corner-rounded"
+        for="search-radio-theme-5"
+      >
+        <input
+          class="search__radio visually-hidden"
+          type="radio"
+          name="search-radio-theme"
+          id="search-radio-theme-5"
+        />
+        <span class="search__label-text">Языковые</span>
+      </label>
+      <label
+        class="search__label-radio search__label-radio--corner-rounded"
+        for="search-radio-theme-6"
+      >
+        <input
+          class="search__radio visually-hidden"
+          type="radio"
+          name="search-radio-theme"
+          id="search-radio-theme-6"
+        />
+        <span class="search__label-text">При приеме на работу</span>
+      </label>
+      <label
+        class="search__label-radio search__label-radio--corner-rounded"
+        for="search-radio-theme-7"
+      >
+        <input
+          class="search__radio visually-hidden"
+          type="radio"
+          name="search-radio-theme"
+          id="search-radio-theme-7"
+        />
+        <span class="search__label-text">Повышение уровня знаний</span>
+      </label>
+      <label
+        class="search__label-radio search__label-radio--corner-rounded"
+        for="search-radio-theme-8"
+      >
+        <input
+          class="search__radio visually-hidden"
+          type="radio"
+          name="search-radio-theme"
+          id="search-radio-theme-8"
+        />
+        <span class="search__label-text">Популярные</span>
       </label>
     </fieldset>
     <button class="search__reset-button" type="reset">
@@ -159,6 +219,66 @@
             <li>
               <!-- Добавлен класс card--preview-button для открытия превью окна для просмотра трансляции и добавлен курсор палец -->
               <article class="card card--size-md card--role-preview-button">
+                <iframe
+                  class="card__iframe"
+                  src="https://www.youtube.com/embed/GYX7DaQVgUo?si=1rpOdUD4OecCbfAA"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <div class="card__main-content card__main-content--min-height">
+                  <h2 class="card__title">Подкаст про что-то</h2>
+                  <div class="card__controls">
+                    <p class="card__text text-gradient">Интеллектуальные</p>
+                    <p class="card__views" aria-label="Количество просмотров">
+                      <span
+                        class="card__views-icon icon icon--type-eye"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="card__views-value">123</span>
+                    </p>
+                    <button
+                      type="button"
+                      class="card__like-button icon-button icon icon--type-like"
+                      aria-label="Нравится"
+                    ></button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="card card--size-md">
+                <iframe
+                  class="card__iframe"
+                  src="https://www.youtube.com/embed/GYX7DaQVgUo?si=1rpOdUD4OecCbfAA"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <div class="card__main-content card__main-content--min-height">
+                  <h2 class="card__title">Подкаст про что-то</h2>
+                  <div class="card__controls">
+                    <p class="card__text text-gradient">Интеллектуальные</p>
+                    <p class="card__views" aria-label="Количество просмотров">
+                      <span
+                        class="card__views-icon icon icon--type-eye"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="card__views-value">123</span>
+                    </p>
+                    <button
+                      type="button"
+                      class="card__like-button icon-button icon icon--type-like"
+                      aria-label="Нравится"
+                    ></button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="card card--size-md">
                 <iframe
                   class="card__iframe"
                   src="https://www.youtube.com/embed/GYX7DaQVgUo?si=1rpOdUD4OecCbfAA"

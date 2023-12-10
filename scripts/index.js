@@ -352,6 +352,24 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       testsSlider.mount();
     }
+
+    // Фотографии в тестах
+    if (document.querySelector('#tests-image-slider')) {
+      let testsImageSlider = new Splide('#tests-image-slider', {
+        type: 'slide',
+        arrows: false,
+        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        cover: true,
+        heightRatio: 0.56,
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            heightRatio: 0.54,
+          },
+        },
+      });
+      testsImageSlider.mount();
+    }
   }
 });
 
