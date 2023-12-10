@@ -46,21 +46,31 @@
     }
   }
 
-  &__slide--auto-width {
+  // На мобильных кастомная ширина
+  &__slide--mobile-width-auto {
     @include media(md, max) {
       width: min(90vw, 18.75em);
     }
   }
 
-  &__slide--desktop-wide-width {
+  // На декстопе кастомная ширина 600
+  &__slide--desktop-width-lg {
     @include media(md) {
       width: min(40vw, 37.5em);
     }
   }
 
-  &__slide--desktop-auto-width {
+  // На декстопе кастомная ширина 460
+  &__slide--desktop-width-md {
     @include media(md) {
-      width: min(30vw, 28em);
+      width: min(30vw, 28.75em);
+    }
+  }
+
+  // На декстопе кастомная ширина 400
+  &__slide--desktop-width-sm {
+    @include media(md) {
+      width: min(27vw, 25em);
     }
   }
 
