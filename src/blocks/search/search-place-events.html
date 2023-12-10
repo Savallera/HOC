@@ -24,8 +24,40 @@
         ></span>
       </div>
     </div>
-    <button class="search__reset-button" type="reset">
-      <span>Сбросить фильтры</span>
-    </button>
+    <div class="search__filters-wrapper">
+      <fieldset class="search__filters">
+        <button class="search__filter-button search__filter-button--actived" type="button">
+          <span>Дата: 01.01.2023 - 31.12.2023</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+        <button class="search__filter-button" type="button">
+          <span>Тип мероприятия</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+        <button class="search__filter-button" type="button">
+          <span>Формат участия</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+        <button class="search__filter-button" type="button">
+          <span>Доступ</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+      </fieldset>
+      <button class="search__reset-button" type="reset">
+        <span>Сбросить фильтры</span>
+      </button>
+    </div>
   </form>
 </div>

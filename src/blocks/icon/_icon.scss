@@ -26,6 +26,9 @@
     &-close::before {
       mask-image: url('../images/icons.svg#close');
     }
+    &-docs::before {
+      mask-image: url('../images/icons.svg#docs');
+    }
     &-email::before {
       mask-image: url('../images/icons.svg#email');
     }
@@ -46,6 +49,9 @@
     }
     &-phone::before {
       mask-image: url('../images/icons.svg#phone');
+    }
+    &-plus::before {
+      mask-image: url('../images/icons.svg#plus');
     }
     &-rutube::before {
       mask-image: url('../images/icons.svg#rutube');

@@ -27,6 +27,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
     gap: var(--gap-grid);
+
+    &--size-lg {
+      grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
+    }
   }
 
   &__title-block {
