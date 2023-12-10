@@ -115,6 +115,19 @@
     border-radius: 10px;
   }
 
+  &__iframe {
+    background-color: var(--main-text-low-color);
+    inline-size: 100%;
+    aspect-ratio: 1150/616;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+    @include media(sm) {
+      border-radius: 20px;
+    }
+  }
+
   &__hashtag-link {
     align-self: flex-start;
     font-size: clamp(1em, 2vw, 1.25em);
