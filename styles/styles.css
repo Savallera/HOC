@@ -742,7 +742,7 @@ textarea {
 }
 .page__description {
   margin: 0;
-  max-inline-size: 40em;
+  max-inline-size: 50em;
   font-size: clamp(1em, 2vw, 1.25em);
 }
 .page__link {
@@ -1235,6 +1235,21 @@ textarea {
 @media only screen and (width >= 768px) {
   .splide__slide--desktop-width-sm {
     width: min(27vw, 25em);
+  }
+}
+.splide--visible-mobile.is-initialized:not(.is-active) .splide__list {
+  display: -ms-grid;
+  display: grid;
+}
+@media only screen and (width < 768px) {
+  .splide--visible-mobile {
+    margin-inline: calc(var(--section-padding) * -1);
+  }
+}
+@media only screen and (width >= 768px) {
+  .splide--visible-mobile .splide__list {
+    grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+    gap: var(--gap-grid);
   }
 }
 @media screen and (width > 90em) {
@@ -2064,22 +2079,6 @@ textarea {
   }
 }
 
-.tests__slider.is-initialized:not(.is-active) .splide__list {
-  display: -ms-grid;
-  display: grid;
-}
-@media only screen and (width < 768px) {
-  .tests__slider {
-    margin-inline: calc(var(--section-padding) * -1);
-  }
-}
-@media only screen and (width >= 768px) {
-  .tests__columns {
-    grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-    gap: var(--gap-grid);
-  }
-}
-
 .survey__wrapper {
   padding: clamp(0.9375em, 3.6vw, 2.25em);
   border-radius: 10px;
@@ -2229,22 +2228,7 @@ textarea {
   }
 }
 
-/* Секция с трансляциями. Возможно объединить стиль в блоке page */
-.broadcasts__slider.is-initialized:not(.is-active) .splide__list {
-  display: -ms-grid;
-  display: grid;
-}
-@media only screen and (width < 768px) {
-  .broadcasts__slider {
-    margin-inline: calc(var(--section-padding) * -1);
-  }
-}
-@media only screen and (width >= 768px) {
-  .broadcasts__columns {
-    grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-    gap: var(--gap-grid);
-  }
-}
+/* Секция с трансляциями. */
 .broadcasts__results-list {
   margin: 0;
   padding: 0;
