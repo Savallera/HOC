@@ -17,6 +17,18 @@
     text-align: center;
   }
 
+  &__legend {
+    padding-inline: 0;
+    grid-column: 1/-1;
+    padding-block: 0 clamp(1.125rem, 4vw, 2.5rem);
+    font-size: clamp(1em, 2vw, 1.25em);
+    font-variation-settings: 'wght' 800;
+
+    @include media(sm) {
+      text-align: center;
+    }
+  }
+
   &__button {
     align-self: center;
   }
@@ -76,5 +88,57 @@
     &:hover {
       color: var(--accent-color);
     }
+  }
+
+  &__checkbox-group {
+    display: grid;
+    gap: clamp(1.25em, 6vw, 3.75em) var(--gap-grid);
+    margin-block-end: clamp(1.5625em, 10vw, 6.25em);
+    grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
+  }
+
+  &__checkbox-label {
+    cursor: pointer;
+
+    &:has(:focus-visible) {
+      outline: 2px solid var(--main-text-color);
+    }
+  }
+
+  &__checkbox {
+    &:checked + .form__checkbox-pseudo-checkbox {
+      border-color: transparent;
+      background: var(--main-color-gradient) border-box;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  }
+
+  &__checkbox-pseudo-checkbox {
+    display: inline-block;
+    margin-inline-end: clamp(0.625em, 1.6vw, 1em);
+    inline-size: clamp(1.625em, 4.2vw, 2.625em);
+    block-size: clamp(1.625em, 4.2vw, 2.625em);
+    border-radius: 50%;
+    border: 5px solid;
+    color: var(--main-text-low-color);
+    vertical-align: middle;
+
+    @include media(sm) {
+      border: 7px solid;
+    }
+  }
+
+  &__checkbox-text {
+    margin-block: 0;
+    font-size: clamp(1em, 2vw, 1.25em);
+    vertical-align: middle;
+  }
+
+  &--place-tests {
+    margin-block-end: clamp(1.875em, 6vw, 3.75em);
   }
 }

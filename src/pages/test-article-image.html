@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru">
-  @@include("../blocks/head/head.html", {"title": "Интерактивный тест - Видео"})
+  @@include("../blocks/head/head.html", {"title": "Интерактивный тест - Фото"})
   <body>
     <div class="page">
       @@include("../blocks/header/header.html")
@@ -11,20 +11,53 @@
             <div class="article__test-group">
               <p class="article__category article__test-question">138/140</p>
               <a
-                href="./test-article-image.html"
+                href="./test-article-text.html"
                 class="article__link article__test-skip-link"
                 rel="noopener ugs"
               >
                 Пропустить вопрос
               </a>
-              <iframe
-                class="article__iframe article__test-row"
-                src="https://www.youtube.com/embed/GYX7DaQVgUo?si=1rpOdUD4OecCbfAA"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+              <div class="splide article__test-row" id="tests-image-slider">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide article__slider-image">
+                      <img
+                        loading="lazy"
+                        src="https://s3-alpha-sig.figma.com/img/db6b/ddaa/e6d6bf4ae8e7f9b3f1f75ae565ecc54e?Expires=1702857600&Signature=SLZOPkZnDHFNXjBB0ikIE-uptUaO7J5S419ZH6ajnQpNHFm-NNc3UsuaimaIlWiDudWH1O~5QiKD1wKzWxVu~r4GLjv36i1E6K6i08JgzMfFqZXthMACvaxeu0VCDPtV1HyAvxzXcKQuVVofLee~oieBJWIhQLoa9CK5tx9Ywr9DYo71X-BLrjwkseHIUAUCZfTZyZWqYt8-JvdDZubJS2aC0B1SvM70JdtDqCzDjzf72Ai5uwbuMtdIXe4gUglTAGz-VUmNYFGHD1hfsm4j51ilAq-fy3d51NpaTAVyZ78wyO4rvzDe3B2DaEnAEGtqfq0zgmbdYSzAjovgfqJmKw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="Описание изображения"
+                      />
+                    </li>
+                    <li class="splide__slide article__slider-image">
+                      <img
+                        loading="lazy"
+                        src="https://s3-alpha-sig.figma.com/img/db6b/ddaa/e6d6bf4ae8e7f9b3f1f75ae565ecc54e?Expires=1702857600&Signature=SLZOPkZnDHFNXjBB0ikIE-uptUaO7J5S419ZH6ajnQpNHFm-NNc3UsuaimaIlWiDudWH1O~5QiKD1wKzWxVu~r4GLjv36i1E6K6i08JgzMfFqZXthMACvaxeu0VCDPtV1HyAvxzXcKQuVVofLee~oieBJWIhQLoa9CK5tx9Ywr9DYo71X-BLrjwkseHIUAUCZfTZyZWqYt8-JvdDZubJS2aC0B1SvM70JdtDqCzDjzf72Ai5uwbuMtdIXe4gUglTAGz-VUmNYFGHD1hfsm4j51ilAq-fy3d51NpaTAVyZ78wyO4rvzDe3B2DaEnAEGtqfq0zgmbdYSzAjovgfqJmKw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="Описание изображения"
+                      />
+                    </li>
+                    <li class="splide__slide article__slider-image">
+                      <img
+                        loading="lazy"
+                        src="https://s3-alpha-sig.figma.com/img/db6b/ddaa/e6d6bf4ae8e7f9b3f1f75ae565ecc54e?Expires=1702857600&Signature=SLZOPkZnDHFNXjBB0ikIE-uptUaO7J5S419ZH6ajnQpNHFm-NNc3UsuaimaIlWiDudWH1O~5QiKD1wKzWxVu~r4GLjv36i1E6K6i08JgzMfFqZXthMACvaxeu0VCDPtV1HyAvxzXcKQuVVofLee~oieBJWIhQLoa9CK5tx9Ywr9DYo71X-BLrjwkseHIUAUCZfTZyZWqYt8-JvdDZubJS2aC0B1SvM70JdtDqCzDjzf72Ai5uwbuMtdIXe4gUglTAGz-VUmNYFGHD1hfsm4j51ilAq-fy3d51NpaTAVyZ78wyO4rvzDe3B2DaEnAEGtqfq0zgmbdYSzAjovgfqJmKw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="Описание изображения"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="article__main-text">
+              <p>
+                В течение мероприятия, участники рассказывали о быте, культуре,
+                традициях и истории блюд своих народов️. Было замечательно
+                услышать разные истории и узнать больше о разнообразии
+                кулинарного наследия. Это событие собрало множество гостей,
+                включая проректора по ВиСр Гаирбекова М.М., начальника отдела по
+                молодёжной политике управления спорта, туризма и работы с
+                молодежью Ахмедову Д.С. и руководителя КДМ Ахмедова А.М.Однако,
+                главным итогом этого фестиваля стала дружба. Встречи и общение
+                между гостями и участниками позволили нам почувствовать единство
+                и сблизиться друг с другом.
+              </p>
             </div>
             <form class="form form--place-tests" name="tests-form" action="">
               <fieldset class="form__checkbox-group">
@@ -73,7 +106,7 @@
                 </label>
               </fieldset>
               <a
-                href="./test-article-image.html"
+                href="./test-article-text.html"
                 class="button button--theme-gradient form__button"
                 rel="noopener ugs"
                 >Далее</a

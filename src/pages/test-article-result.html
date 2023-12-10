@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  @@include("../blocks/head/head.html", {"title": "Интерактивный тест - Итог"})
+  <body>
+    <div class="page">
+      @@include("../blocks/header/header.html")
+      <main class="page__content">
+        <section class="article">
+          <div class="article__inner">
+            <h1 class="article__title">Название теста</h1>
+            <div class="article__test-group">
+              <p class="article__category article__test-question">
+                Тест пройден
+              </p>
+              <div class="article__main-text article__test-row">
+                <p>
+                  В течение мероприятия, участники рассказывали о быте,
+                  культуре, традициях и истории блюд своих народов️. Было
+                  замечательно услышать разные истории и узнать больше о
+                  разнообразии кулинарного наследия. Это событие собрало
+                  множество гостей, включая проректора по ВиСр Гаирбекова М.М.,
+                  начальника отдела по молодёжной политике управления спорта,
+                  туризма и работы с молодежью Ахмедову Д.С. и руководителя КДМ
+                  Ахмедова А.М.Однако, главным итогом этого фестиваля стала
+                  дружба. Встречи и общение между гостями и участниками
+                  позволили нам почувствовать единство и сблизиться друг с
+                  другом.
+                </p>
+              </div>
+            </div>
+            <div class="article__controls article__controls--column-mobile">
+              <div class="article__author">
+                <img
+                  class="article__author-image"
+                  src="https://s3-alpha-sig.figma.com/img/308c/63c7/be318116dad240f4c88f3f9217a714d8?Expires=1702857600&Signature=TsB5DQsn0YZNFDko2muoSDUUGQFjiCoR3pvFg5Y6k7XiodRxqeeZ4M0MWYtM68bh1MlW175tF1wVUNeD0yfN8CvNEpwlEU7fiwiAOpQZc2U85OgLlNNu3TEQAwtlpzzqJUIrhRkugmvNTARUApaxbO3F5-m407eRjSZLsrN83s6RiSfeJOoaoJy0TJxtosbZCx7wx9eLERAJKjXAKifFKnu7Ijb2a-x2owAyU296SED4f~9PxVxhAJN~JA1xdmN1u-BQb3ZFaPPcVCh6i0Jq~vvNY9dbeubhi7jAat0-2ETCF8aJguIGLpqXkZKSDDfrvim2rxemmO0gVOi6ePtoRg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  alt="Описание изображения"
+                  loading="lasy"
+                />
+                <p class="article__author-text">
+                  Комитет по делам молодежи
+                  <span class="article__span-text">Автор: ФИО</span>
+                </p>
+              </div>
+              <button type="button" class="button article__share-button article__share-button--size-lg text-gradient">
+                <span class="button__text">Поделиться</span>
+                <span
+                  class="button__icon article__share-icon icon icon--type-share"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </section>
+        @@include("../blocks/theme/theme-place-test-article.html")
+      </main>
+      @@include("../blocks/footer/footer.html")
+      @@include("../blocks/tooltip/tooltip.html")
+    </div>
+  </body>
+</html>

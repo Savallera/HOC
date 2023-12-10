@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru">
-  @@include("../blocks/head/head.html", {"title": "Интерактивный тест - Видео"})
+  @@include("../blocks/head/head.html", {"title": "Интерактивный тест - Текст"})
   <body>
     <div class="page">
       @@include("../blocks/header/header.html")
@@ -11,20 +11,27 @@
             <div class="article__test-group">
               <p class="article__category article__test-question">138/140</p>
               <a
-                href="./test-article-image.html"
+                href="./test-article-result.html"
                 class="article__link article__test-skip-link"
                 rel="noopener ugs"
               >
                 Пропустить вопрос
               </a>
-              <iframe
-                class="article__iframe article__test-row"
-                src="https://www.youtube.com/embed/GYX7DaQVgUo?si=1rpOdUD4OecCbfAA"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+              <div class="article__main-text article__test-row">
+                <p>
+                  В течение мероприятия, участники рассказывали о быте,
+                  культуре, традициях и истории блюд своих народов️. Было
+                  замечательно услышать разные истории и узнать больше о
+                  разнообразии кулинарного наследия. Это событие собрало
+                  множество гостей, включая проректора по ВиСр Гаирбекова М.М.,
+                  начальника отдела по молодёжной политике управления спорта,
+                  туризма и работы с молодежью Ахмедову Д.С. и руководителя КДМ
+                  Ахмедова А.М.Однако, главным итогом этого фестиваля стала
+                  дружба. Встречи и общение между гостями и участниками
+                  позволили нам почувствовать единство и сблизиться друг с
+                  другом.
+                </p>
+              </div>
             </div>
             <form class="form form--place-tests" name="tests-form" action="">
               <fieldset class="form__checkbox-group">
@@ -73,7 +80,7 @@
                 </label>
               </fieldset>
               <a
-                href="./test-article-image.html"
+                href="./test-article-result.html"
                 class="button button--theme-gradient form__button"
                 rel="noopener ugs"
                 >Далее</a

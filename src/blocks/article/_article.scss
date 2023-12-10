@@ -17,10 +17,17 @@
   &__controls {
     display: flex;
     align-items: center;
-    gap: clamp(0.75em, 2vw, 1.25em);
+    gap: 1.25em clamp(0.75em, 2vw, 1.25em);
     font-size: clamp(0.75em, 1.6vw, 1em);
     font-variation-settings: 'wght' 500;
     color: var(--main-text-low-color);
+
+    &--column-mobile {
+      @include media(sm, max) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   }
 
   &__title {
@@ -62,6 +69,10 @@
 
     &:hover {
       color: var(--accent-color);
+    }
+
+    &--size-lg {
+      font-size: clamp(0.75rem, 2.4vw, 1.5rem);
     }
   }
 
@@ -118,6 +129,10 @@
 
   &__slider-image {
     border-radius: 10px;
+
+    @include media(sm) {
+      border-radius: 20px;
+    }
   }
 
   &__iframe,
@@ -135,17 +150,29 @@
   }
 
   &__link {
+    text-decoration: unset;
     align-self: flex-start;
-    font-size: clamp(1em, 2vw, 1.25em);
-    border-block-end: 1px solid transparent;
+    color: var(--main-text-low-color);
+    font-size: clamp(0.75em, 2vw, 1.25em);
+    border-block-end: 2px solid;
 
     &:hover {
-      border-block-end-color: currentColor;
+      color: var(--accent-color);
+    }
+
+    &--role-hastag {
+      color: #fff;
+      border-block-end-color: transparent;
+      &:hover {
+        border-block-end-color: var(--accent-color);
+      }
     }
 
     &--role-certificate {
-
+      color: #fff;
+      border-block-end: 1px solid;
       &:hover {
+        color: #fff;
         border-block-end-color: transparent;
       }
 
@@ -270,6 +297,33 @@
     @include media(sm, max) {
       border-radius: 5px;
       outline-width: 2px;
+    }
+  }
+
+  // Для тестов
+  &__test-group {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: clamp(0.5em, 2vw, 1.25em);
+  }
+
+  &__test-question {
+    justify-self: start;
+
+    @include media(lg) {
+      grid-column: 1/-1;
+    }
+  }
+
+  &__test-row {
+    grid-column: 1/-1;
+  }
+
+  &__test-skip-link {
+    align-self: center;
+    justify-self: end;
+    @include media(lg) {
+      grid-row: 3/4;
     }
   }
 
