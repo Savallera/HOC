@@ -24,12 +24,32 @@ window.addEventListener('DOMContentLoaded', () => {
         padding: 'var(--section-inline-start)',
         mediaQuery: 'min',
         breakpoints: {
-            768: {
-              heightRatio: 0.275,
-            },
+          768: {
+            heightRatio: 0.275,
+          },
         },
       });
       articleSlider.mount();
+    }
+
+    // Слайдер на детальное странице базы знаний
+    if (document.querySelector('#knowledge-base-article-slider')) {
+      let knowledgeBaseSlider = new Splide('#knowledge-base-article-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        autoWidth: true,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      knowledgeBaseSlider.mount();
     }
   }
 });

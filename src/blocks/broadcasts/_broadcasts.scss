@@ -1,28 +1,10 @@
-/* Секция с трансляциями. Возможно объединить стиль в блоке page */
+/* Секция с трансляциями. */
 .broadcasts {
-  &__slider {
-    &.is-initialized:not(.is-active) .splide__list {
-      display: grid;
-    }
-    @include media(md, max) {
-      margin-inline: calc(var(--section-padding) * -1);
-    }
-  }
-  &__columns {
-    @include media(md) {
-      grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-      gap: var(--gap-grid);
-    }
-  }
+  // &__container {}
 
-  &__container {
-  }
+  // &__calendar {}
 
-  &__calendar {
-  }
-
-  &__results {
-  }
+  // &__results {}
 
   &__results-list {
     margin: 0;

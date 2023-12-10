@@ -1,17 +1,2 @@
-// Секция с тестами. Возможно объединить стиль в блоке page
-.tests {
-  &__slider {
-    &.is-initialized:not(.is-active) .splide__list {
-      display: grid;
-    }
-    @include media(md, max) {
-      margin-inline: calc(var(--section-padding) * -1);
-    }
-  }
-  &__columns {
-    @include media(md) {
-      grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-      gap: var(--gap-grid);
-    }
-  }
-}
+// Секция с тестами.
+// .tests {}

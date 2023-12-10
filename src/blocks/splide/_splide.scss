@@ -74,6 +74,23 @@
     }
   }
 
+  // Слайдер только на мобильных, на десктопе три в ряд
+  &--visible-mobile {
+    &.is-initialized:not(.is-active) .splide__list {
+      display: grid;
+    }
+    @include media(md, max) {
+      margin-inline: calc(var(--section-padding) * -1);
+    }
+
+    .splide__list {
+      @include media(md) {
+        grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+        gap: var(--gap-grid);
+      }
+    }
+  }
+
   &--size-wide {
     @media screen and (width > 90em) {
       .splide__arrow {
