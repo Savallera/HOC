@@ -126,7 +126,7 @@
     font-size: clamp(0.625em, 1.6vw, 1em);
     text-decoration: none;
     font-variation-settings: 'wght' 700;
-    transition: color 0.3s;
+    transition: color 0.25s;
 
     &:hover {
       color: var(--main-text-color);

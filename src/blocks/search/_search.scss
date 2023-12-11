@@ -101,7 +101,7 @@
     color: var(--main-text-low-color);
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
-    transition: background 0.3s;
+    transition: background 0.25s;
 
     &:hover {
       color: var(--accent-color);

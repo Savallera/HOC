@@ -120,6 +120,10 @@
     justify-self: flex-start;
     margin-inline-start: clamp(0.875em, 2vw, 1.25em);
 
+    &::before {
+      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+    }
+
     & ~ .field__input {
       padding-inline-start: clamp(3rem, 6.8vw, 4.25rem);
     }
