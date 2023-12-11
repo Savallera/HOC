@@ -33,6 +33,16 @@
     }
   }
 
+  // небольшие отступы
+  &__inner {
+    padding: 0;
+    margin-block: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75em, 2.4vw, 1.5em); // 12 - 24
+  }
+
   &__title-block {
     inline-size: 100%;
     display: flex;

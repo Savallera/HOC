@@ -11,6 +11,7 @@
     mask-size: contain;
     inline-size: 100%;
     block-size: 100%;
+    transition: 0.25s;
   }
 
   &--type {
@@ -46,6 +47,9 @@
     }
     &-menu::before {
       mask-image: url('../images/icons.svg#menu');
+    }
+    &-minus::before {
+      mask-image: url('../images/icons.svg#minus');
     }
     &-phone::before {
       mask-image: url('../images/icons.svg#phone');
