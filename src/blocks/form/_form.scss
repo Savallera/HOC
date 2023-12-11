@@ -1,7 +1,13 @@
 .form {
   display: flex;
-  gap: clamp(0.125em, 2vw, 1.25em);
+  gap: clamp(0.75em, 2vw, 1.25em);
   flex-direction: column;
+
+  &__two-columns {
+    display: grid;
+    gap: clamp(0.75em, 2vw, 1.25em);
+    grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
+  }
 
   &__title {
     margin: 0;
@@ -33,6 +39,27 @@
 
     @include media(sm) {
       text-align: center;
+    }
+  }
+
+  &__link {
+    font-size: clamp(1em, 2vw, 1.25em);
+    font-variation-settings: 'wght' 500;
+    margin-inline: auto;
+    text-decoration: unset;
+    color: var(--main-text-low-color);
+    border-block-end: 2px solid transparent;
+
+    &:hover {
+      border-block-end-color: currentColor;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--main-text-color);
     }
   }
 

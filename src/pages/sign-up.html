@@ -1,27 +1,73 @@
 <!doctype html>
 <html lang="ru">
-  @@include("../blocks/head/head.html", {"title": "Заявка на вступление"})
+  @@include("../blocks/head/head.html", {"title": "Регистрация"})
   <body>
     <div class="page">
       @@include("../blocks/header/header.html")
       <main class="page__content">
         <section class="page__section">
-          <h1 class="page__heading">
-            Заявка на вступление в Студенческий медиацентр Минобрнауки России
-          </h1>
-          <form class="form" name="sign-up" action="">
+          <h1 class="page__heading">Регистрация</h1>
+          <form class="form" name="sign-up-form" action="">
+            <div class="form__two-columns">
+              <div class="field field--theme-white">
+                <label
+                  for="sign-up-first-name"
+                  class="field__label visually-hidden"
+                  >Имя</label
+                >
+                <div class="field__inner">
+                  <input
+                    type="text"
+                    class="field__input"
+                    placeholder="Имя*"
+                    autocomplete="first-name"
+                    name="first-name"
+                    id="sign-up-first-name"
+                    required
+                  />
+                  <span class="field__error-text">Вывод ошибки</span>
+                  <span
+                    class="field__error-icon icon icon--type-error"
+                    aria-hidden="true"
+                  ></span>
+                </div>
+              </div>
+              <div class="field field--theme-white">
+                <label
+                  for="sign-up-family-name"
+                  class="field__label visually-hidden"
+                  >Фамилия</label
+                >
+                <div class="field__inner">
+                  <input
+                    type="text"
+                    class="field__input"
+                    placeholder="Фамилия*"
+                    autocomplete="family-name"
+                    name="family-name"
+                    id="sign-up-family-name"
+                    required
+                  />
+                  <span class="field__error-text">Вывод ошибки</span>
+                  <span
+                    class="field__error-icon icon icon--type-error"
+                    aria-hidden="true"
+                  ></span>
+                </div>
+              </div>
+            </div>
             <div class="field field--theme-white">
-              <label for="sign-up-name" class="field__label visually-hidden"
-                >ФИО*</label
+              <label for="sign-up-city" class="field__label visually-hidden"
+                >Город</label
               >
               <div class="field__inner">
                 <input
                   type="text"
                   class="field__input"
-                  placeholder="ФИО*"
-                  autocomplete="name"
-                  name="name"
-                  id="sign-up-name"
+                  placeholder="Город*"
+                  autocomplete="city"
+                  name="city"
+                  id="sign-up-city"
                   required
                 />
                 <span class="field__error-text">Вывод ошибки</span>
@@ -35,13 +81,13 @@
               <label
                 for="sign-up-university"
                 class="field__label visually-hidden"
-                >Наименование вуза*</label
+                >Университет</label
               >
               <div class="field__inner">
                 <input
                   type="text"
                   class="field__input"
-                  placeholder="Наименование вуза*"
+                  placeholder="Университет*"
                   autocomplete="university"
                   name="university"
                   id="sign-up-university"
@@ -55,17 +101,19 @@
               </div>
             </div>
             <div class="field field--theme-white">
-              <label for="sign-up-tel" class="field__label visually-hidden"
-                >Контактный номер телефона*</label
+              <label
+                for="sign-up-university-year"
+                class="field__label visually-hidden"
+                >Курс</label
               >
               <div class="field__inner">
                 <input
-                  type="tel"
+                  type="number"
                   class="field__input"
-                  placeholder="Контактный номер телефона*"
-                  autocomplete="tel"
-                  name="tel"
-                  id="sign-up-tel"
+                  placeholder="Курс*"
+                  autocomplete="university-year"
+                  name="university-year"
+                  id="sign-up-university-year"
                   required
                 />
                 <span class="field__error-text">Вывод ошибки</span>
@@ -87,6 +135,7 @@
                   autocomplete="email"
                   name="email"
                   id="sign-up-email"
+                  required
                 />
                 <span class="field__error-text">Вывод ошибки</span>
                 <span
@@ -95,23 +144,52 @@
                 ></span>
               </div>
             </div>
-            <div class="field field--theme-white">
-              <label for="sign-up-telegram" class="field__label visually-hidden"
-                >Ссылка на аккаунт в Telegram</label
-              >
-              <div class="field__inner">
-                <input
-                  type="text"
-                  class="field__input"
-                  placeholder="Ссылка на аккаунт в Telegram*"
-                  name="telegram"
-                  id="sign-up-telegram"
-                />
-                <span class="field__error-text">Вывод ошибки</span>
-                <span
-                  class="field__error-icon icon icon--type-error"
-                  aria-hidden="true"
-                ></span>
+            <div class="form__two-columns">
+              <div class="field field--theme-white">
+                <label
+                  for="sign-up-password"
+                  class="field__label visually-hidden"
+                  >Пароль</label
+                >
+                <div class="field__inner">
+                  <input
+                    type="password"
+                    class="field__input"
+                    placeholder="Пароль*"
+                    autocomplete="new-password"
+                    name="password"
+                    id="sign-up-password"
+                    required
+                  />
+                  <span class="field__error-text">Вывод ошибки</span>
+                  <span
+                    class="field__error-icon icon icon--type-error"
+                    aria-hidden="true"
+                  ></span>
+                </div>
+              </div>
+              <div class="field field--theme-white">
+                <label
+                  for="sign-up-resume-password"
+                  class="field__label visually-hidden"
+                  >Повторите пароль</label
+                >
+                <div class="field__inner">
+                  <input
+                    type="password"
+                    class="field__input"
+                    placeholder="Повторите пароль*"
+                    autocomplete="new-password"
+                    name="resume-password"
+                    id="sign-up-resume-password"
+                    required
+                  />
+                  <span class="field__error-text">Вывод ошибки</span>
+                  <span
+                    class="field__error-icon icon icon--type-error"
+                    aria-hidden="true"
+                  ></span>
+                </div>
               </div>
             </div>
             <p class="form__description">*поля обязательны для заполнения</p>

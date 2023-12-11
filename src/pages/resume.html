@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  @@include("../blocks/head/head.html", {"title": "Восстановление пароля"})
+  <body>
+    <div class="page">
+      @@include("../blocks/header/header.html")
+      <main class="page__content">
+        <section class="page__section">
+          <h1 class="page__heading">
+            Восстановление <br />
+            пароля
+          </h1>
+          <form class="form" name="resume-form" action="">
+            <div class="field field--theme-white">
+              <label for="resume-email" class="field__label visually-hidden"
+                >Электронная почта</label
+              >
+              <div class="field__inner">
+                <input
+                  type="email"
+                  class="field__input"
+                  placeholder="Введите ваш E-mail"
+                  autocomplete="email"
+                  name="email"
+                  id="resume-email"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="button button--theme-gradient button--corner-rounded"
+            >
+              <span class="button__text">Отправить</span>
+            </button>
+          </form>
+        </section>
+      </main>
+      @@include("../blocks/footer/footer.html")
+    </div>
+  </body>
+</html>
