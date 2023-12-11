@@ -36,7 +36,7 @@
     <menu class="header__menu">
       <ul class="header__menu-list">
         <li>
-          <a href="#" class="header__menu-link" rel="noopener ugc"
+          <a href="./studSMI.html" class="header__menu-link" rel="noopener ugc"
             >Студенческий медиацентр</a
           >
         </li>
@@ -1158,7 +1158,7 @@
           >
         </li>
         <li>
-          <a href="#" class="footer__nav-link" rel="noopener ugc"
+          <a href="./publishing-rule.html" class="footer__nav-link" rel="noopener ugc"
             >Правила публикации</a
           >
         </li>
@@ -1333,13 +1333,19 @@
   <div class="modal__container">
     <button
       type="reset"
-      class="icon-button icon icon--type-close modal__close-button"
+      class="modal__close-button"
       aria-label="Закрыть"
     ></button>
     <form class="form" name="sign-up-modal" action="">
-      <p class="form__subtitle">Регистрируйся здесь и развивай студСМИ с нами!</p>
+      <p class="form__subtitle">
+        Регистрируйся здесь и развивай студСМИ с нами!
+      </p>
       <div class="field">
-        <label for="sign-up-modal-first-name" class="field__label visually-hidden">Имя</label>
+        <label
+          for="sign-up-modal-first-name"
+          class="field__label visually-hidden"
+          >Имя</label
+        >
         <div class="field__inner">
           <input
             type="text"
@@ -1357,7 +1363,11 @@
         </div>
       </div>
       <div class="field">
-        <label for="sign-up-modal-family-name" class="field__label visually-hidden">Фамилия</label>
+        <label
+          for="sign-up-modal-family-name"
+          class="field__label visually-hidden"
+          >Фамилия</label
+        >
         <div class="field__inner">
           <input
             type="text"
@@ -1375,7 +1385,11 @@
         </div>
       </div>
       <div class="field">
-        <label for="sign-up-modal-middle-name" class="field__label visually-hidden">Отчество</label>
+        <label
+          for="sign-up-modal-middle-name"
+          class="field__label visually-hidden"
+          >Отчество</label
+        >
         <div class="field__inner">
           <input
             type="text"
@@ -1393,7 +1407,9 @@
         </div>
       </div>
       <div class="field">
-        <label for="sign-up-modal-tel" class="field__label visually-hidden">Телефон</label>
+        <label for="sign-up-modal-tel" class="field__label visually-hidden"
+          >Телефон</label
+        >
         <div class="field__inner">
           <input
             type="tel"
@@ -1411,7 +1427,9 @@
         </div>
       </div>
       <div class="field">
-        <label for="sign-up-modal-email" class="field__label visually-hidden">E-mail</label>
+        <label for="sign-up-modal-email" class="field__label visually-hidden"
+          >E-mail</label
+        >
         <div class="field__inner">
           <input
             type="email"
@@ -1429,7 +1447,9 @@
         </div>
       </div>
       <div class="field">
-        <label for="feedback-field-message" class="field__label visually-hidden">Ваше обращение</label>
+        <label for="feedback-field-message" class="field__label visually-hidden"
+          >Ваше обращение</label
+        >
         <div class="field__inner">
           <textarea
             class="field__input"
@@ -1467,12 +1487,25 @@
             name="privacy"
             id="feedback-field-privacy"
           />
-          Я даю согласие на обработку персональных данных, и соглашаюсь с
-          политикой конфиденциальности
+          <span>
+            Я ознакомился с
+            <a
+              href="./files/НОС_Политика_в_отношении_персональных_данных.pdf"
+              rel="noopener ugs"
+              >Политикой</a
+            >
+            в отношении обработки персональных данных и даю своё
+            <a
+              href="./files/НОС_Согласие_на_обработку_персональных_данных.pdf"
+              rel="noopener ugs"
+              >Согласие</a
+            >
+            на обработку персональных данных
+          </span>
         </label>
         <span class="field__error-text">Вывод ошибки</span>
       </div>
-      <button type="submit" class="button button--theme-gradient form__button">
+      <button type="submit" class="button button--theme-gradient button--justify-center">
         <span class="button__text">Отправить заявку</span>
       </button>
     </form>
@@ -1484,7 +1517,7 @@
   <div class="modal__container">
     <button
       type="reset"
-      class="icon-button icon icon--type-close modal__close-button"
+      class="modal__close-button"
       aria-label="Закрыть"
     ></button>
     <form class="form" name="join-modal" action="">
@@ -1574,7 +1607,7 @@
           ></span>
         </div>
       </div>
-      <button type="submit" class="button button--theme-gradient form__button">
+      <button type="submit" class="button button--theme-gradient button--justify-center">
         <span class="button__text">Принять участие</span>
       </button>
     </form>
