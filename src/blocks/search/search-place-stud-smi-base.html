@@ -1,0 +1,56 @@
+<!-- Блок с поиском на странице базы студСМИ -->
+<div class="search">
+  <form class="search__form" name="stud-smi-base-search" action="">
+    <div class="field field--theme-white">
+      <label for="page-search-field" class="field__label visually-hidden"
+        >Поиск
+      </label>
+      <div class="field__inner">
+        <span
+          class="field__search-icon icon icon--type-search"
+          aria-hidden="true"
+        ></span>
+        <input
+          type="search"
+          class="field__input"
+          placeholder="Поиск "
+          name="search"
+          id="page-search-field"
+        />
+        <span class="field__error-text">Вывод ошибки</span>
+        <span
+          class="field__error-icon icon icon--type-error"
+          aria-hidden="true"
+        ></span>
+      </div>
+    </div>
+    <div class="search__filters-wrapper">
+      <fieldset class="search__filters">
+        <button class="search__filter-button" type="button">
+          <span>Регион</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+        <button class="search__filter-button" type="button">
+          <span>Город</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+        <button class="search__filter-button" type="button">
+          <span>Соцсети</span>
+          <span
+            class="search__filter-button-icon icon icon--type-plus"
+            aria-hidden="true"
+          ></span>
+        </button>
+      </fieldset>
+      <button class="search__reset-button" type="reset">
+        <span>Сбросить фильтры</span>
+      </button>
+    </div>
+  </form>
+</div>
