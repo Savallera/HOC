@@ -122,6 +122,10 @@
     min-inline-size: 1.25em;
     max-inline-size: 1.25em;
     block-size: 1.25em;
+
+    &::before {
+      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+    }
   }
 
   &__author {
@@ -186,10 +190,18 @@
     &:hover {
       color: var(--accent-color);
       background-color: transparent;
+      &::before {
+        background: var(--main-color) var(--main-color-gradient) no-repeat
+          center;
+      }
     }
 
     &--actived {
       color: var(--accent-color);
+      &::before {
+        background: var(--main-color) var(--main-color-gradient) no-repeat
+          center;
+      }
     }
   }
 
@@ -200,6 +212,10 @@
 
     &:hover {
       color: var(--accent-color);
+      &::before {
+        background: var(--main-color) var(--main-color-gradient) no-repeat
+          center;
+      }
     }
   }
 

@@ -278,10 +278,11 @@
 
   &__comment-field-send-button {
     display: block;
-    inline-size: clamp(1.25rem, 3vw, 1.875rem);
-    block-size: clamp(1.25rem, 3vw, 1.875rem);
-    padding: 0.125rem;
-    outline: 3px solid;
+    inline-size: clamp(1.25rem, 4.2vw, 2.625rem);
+    block-size: clamp(1.25rem, 4.2vw, 2.625rem);
+    padding: 0;
+    // padding: 0.125rem;
+    // outline: 3px solid;
     color: var(--main-text-low-color);
     grid-area: 1/1/2/2;
 
@@ -290,13 +291,12 @@
     margin-inline-end: clamp(1.25rem, 4vw, 2.5rem);
 
     &:hover {
-      color: var(--accent-color);
       background-color: transparent;
-    }
 
-    @include media(sm, max) {
-      border-radius: 5px;
-      outline-width: 2px;
+      &::before {
+        background: var(--main-color) var(--main-color-gradient) no-repeat
+          center;
+      }
     }
   }
 

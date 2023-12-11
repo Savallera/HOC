@@ -109,13 +109,21 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       border-block-end-color: var(--accent-color);
+
+      .icon::before {
+        background: var(--main-color) var(--main-color-gradient) no-repeat
+          center;
+      }
     }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
       outline: 2px solid var(--main-text-color);
     }
+
     &--actived {
       color: var(--accent-color);
       background: var(--main-color-gradient);
@@ -123,6 +131,11 @@
       -webkit-text-fill-color: transparent;
       border-block-end-color: var(--accent-color);
       // pointer-events: none;
+
+      .icon::before {
+        background: var(--main-color) var(--main-color-gradient) no-repeat
+          center;
+      }
     }
   }
 
@@ -153,11 +166,9 @@
     border-block-end: none;
 
     .icon {
-      border: 2px solid;
-      border-radius: 5px;
       display: inline-block;
-      inline-size: 1.125em;
-      block-size: 1.125em;
+      inline-size: 1.375em;
+      block-size: 1.375em;
       vertical-align: middle;
     }
 
