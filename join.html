@@ -16,7 +16,7 @@
   <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />
-  <title>Регистрация</title>
+  <title>Заявка на вступление</title>
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/libs/splide.min.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
@@ -36,76 +36,52 @@
     <menu class="header__menu">
       <ul class="header__menu-list">
         <li>
-          <a href="./stud-smi.html" class="header__menu-link" rel="noopener ugc"
+          <a href="./studSMI.html" class="header__menu-link" rel="noopener ugc"
             >Студенческий медиацентр</a
           >
         </li>
         <li>
-          <a href="./news.html" class="header__menu-link" rel="noopener ugc"
-            >Новости</a
-          >
+          <a href="./news.html" class="header__menu-link" rel="noopener ugc">Новости</a>
         </li>
         <li>
-          <a href="./events.html" class="header__menu-link" rel="noopener ugc"
-            >События</a
-          >
+          <a href="./events.html" class="header__menu-link" rel="noopener ugc">События</a>
         </li>
         <li>
-          <a href="./stud-smi-base.html" class="header__menu-link" rel="noopener ugc"
+          <a href="./studSMI.html" class="header__menu-link" rel="noopener ugc"
             >База студСМИ</a
           >
         </li>
         <li>
-          <a href="./about.html" class="header__menu-link" rel="noopener ugc"
-            >О проекте</a
-          >
+          <a href="./about.html" class="header__menu-link" rel="noopener ugc">О проекте</a>
         </li>
         <li>
-          <a href="./podcasts.html" class="header__menu-link" rel="noopener ugc"
-            >Подкасты</a
-          >
+          <a href="./podcasts.html" class="header__menu-link" rel="noopener ugc">Подкасты</a>
         </li>
         <li>
-          <a
-            href="./broadcasts.html"
-            class="header__menu-link"
-            rel="noopener ugc"
+          <a href="./broadcasts.html" class="header__menu-link" rel="noopener ugc"
             >Трансляции</a
           >
         </li>
         <li>
-          <a href="./tests.html" class="header__menu-link" rel="noopener ugc"
-            >Тесты</a
-          >
+          <a href="./tests.html" class="header__menu-link" rel="noopener ugc">Тесты</a>
         </li>
         <li>
-          <a
-            href="./knowledge-base.html"
-            class="header__menu-link"
-            rel="noopener ugc"
+          <a href="./knowledge-base.html" class="header__menu-link" rel="noopener ugc"
             >База знаний</a
           >
         </li>
         <li>
-          <a
-            href="./workshops.html"
-            class="header__menu-link"
-            rel="noopener ugc"
+          <a href="./workshops.html" class="header__menu-link" rel="noopener ugc"
             >Мастерская по производству контента</a
           >
         </li>
         <li>
-          <a
-            href="./regional-sites.html"
-            class="header__menu-link"
-            rel="noopener ugc"
+          <a href="./regional-sites.html" class="header__menu-link" rel="noopener ugc"
             >Региональные площадки
           </a>
         </li>
       </ul>
-      <a class="header__sign-up-link" href="#sign-up-section"
-        >Присоединиться к проекту</a
-      >
+      <a class="header__sign-up-link" href="#sign-up-section">Присоединиться к проекту</a>
       <div class="header__mobile-menu">
         <button
           type="button"
@@ -118,7 +94,7 @@
       </div>
       <a
         class="header__user-link icon-button icon icon--type-user"
-        href="./sign-in.html"
+        href="./personal-account.html"
         rel="noopener ugc"
         aria-label="Вход в личный кабинет"
       ></a>
@@ -128,68 +104,22 @@
 
       <main class="page__content">
         <section class="page__section">
-          <h1 class="page__heading">Регистрация</h1>
-          <form class="form" name="sign-up-form" action="">
-            <div class="form__two-columns">
-              <div class="field field--theme-white">
-                <label
-                  for="sign-up-first-name"
-                  class="field__label visually-hidden"
-                  >Имя</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Имя*"
-                    autocomplete="first-name"
-                    name="first-name"
-                    id="sign-up-first-name"
-                    required
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </div>
-              <div class="field field--theme-white">
-                <label
-                  for="sign-up-family-name"
-                  class="field__label visually-hidden"
-                  >Фамилия</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Фамилия*"
-                    autocomplete="family-name"
-                    name="family-name"
-                    id="sign-up-family-name"
-                    required
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </div>
-            </div>
+          <h1 class="page__heading">
+            Заявка на вступление в Студенческий медиацентр Минобрнауки России
+          </h1>
+          <form class="form" name="sign-up" action="">
             <div class="field field--theme-white">
-              <label for="sign-up-city" class="field__label visually-hidden"
-                >Город</label
+              <label for="sign-up-name" class="field__label visually-hidden"
+                >ФИО*</label
               >
               <div class="field__inner">
                 <input
                   type="text"
                   class="field__input"
-                  placeholder="Город*"
-                  autocomplete="city"
-                  name="city"
-                  id="sign-up-city"
+                  placeholder="ФИО*"
+                  autocomplete="name"
+                  name="name"
+                  id="sign-up-name"
                   required
                 />
                 <span class="field__error-text">Вывод ошибки</span>
@@ -203,13 +133,13 @@
               <label
                 for="sign-up-university"
                 class="field__label visually-hidden"
-                >Университет</label
+                >Наименование вуза*</label
               >
               <div class="field__inner">
                 <input
                   type="text"
                   class="field__input"
-                  placeholder="Университет*"
+                  placeholder="Наименование вуза*"
                   autocomplete="university"
                   name="university"
                   id="sign-up-university"
@@ -223,19 +153,17 @@
               </div>
             </div>
             <div class="field field--theme-white">
-              <label
-                for="sign-up-university-year"
-                class="field__label visually-hidden"
-                >Курс</label
+              <label for="sign-up-tel" class="field__label visually-hidden"
+                >Контактный номер телефона*</label
               >
               <div class="field__inner">
                 <input
-                  type="number"
+                  type="tel"
                   class="field__input"
-                  placeholder="Курс*"
-                  autocomplete="university-year"
-                  name="university-year"
-                  id="sign-up-university-year"
+                  placeholder="Контактный номер телефона*"
+                  autocomplete="tel"
+                  name="tel"
+                  id="sign-up-tel"
                   required
                 />
                 <span class="field__error-text">Вывод ошибки</span>
@@ -257,7 +185,6 @@
                   autocomplete="email"
                   name="email"
                   id="sign-up-email"
-                  required
                 />
                 <span class="field__error-text">Вывод ошибки</span>
                 <span
@@ -266,52 +193,23 @@
                 ></span>
               </div>
             </div>
-            <div class="form__two-columns">
-              <div class="field field--theme-white">
-                <label
-                  for="sign-up-password"
-                  class="field__label visually-hidden"
-                  >Пароль</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="password"
-                    class="field__input"
-                    placeholder="Пароль*"
-                    autocomplete="new-password"
-                    name="password"
-                    id="sign-up-password"
-                    required
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </div>
-              <div class="field field--theme-white">
-                <label
-                  for="sign-up-resume-password"
-                  class="field__label visually-hidden"
-                  >Повторите пароль</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="password"
-                    class="field__input"
-                    placeholder="Повторите пароль*"
-                    autocomplete="new-password"
-                    name="resume-password"
-                    id="sign-up-resume-password"
-                    required
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                </div>
+            <div class="field field--theme-white">
+              <label for="sign-up-telegram" class="field__label visually-hidden"
+                >Ссылка на аккаунт в Telegram</label
+              >
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="Ссылка на аккаунт в Telegram*"
+                  name="telegram"
+                  id="sign-up-telegram"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
               </div>
             </div>
             <p class="form__description">*поля обязательны для заполнения</p>
@@ -361,7 +259,7 @@
           >
         </li>
         <li>
-          <a href="./stud-smi.html" class="footer__nav-link" rel="noopener ugc"
+          <a href="./studSMI.html" class="footer__nav-link" rel="noopener ugc"
             >О студенческом Медиацентре</a
           >
         </li>

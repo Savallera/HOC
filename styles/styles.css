@@ -564,11 +564,17 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: clamp(0.125em, 2vw, 1.25em);
+  gap: clamp(0.75em, 2vw, 1.25em);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.form__two-columns {
+  display: -ms-grid;
+  display: grid;
+  gap: clamp(0.75em, 2vw, 1.25em);
+  grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
 }
 .form__title {
   margin: 0;
@@ -599,6 +605,24 @@ textarea {
   .form__legend {
     text-align: center;
   }
+}
+.form__link {
+  font-size: clamp(1em, 2vw, 1.25em);
+  font-variation-settings: "wght" 500;
+  margin-inline: auto;
+  text-decoration: unset;
+  color: var(--main-text-low-color);
+  -webkit-border-after: 2px solid transparent;
+          border-block-end: 2px solid transparent;
+}
+.form__link:hover {
+  border-block-end-color: currentColor;
+}
+.form__link:focus {
+  outline: none;
+}
+.form__link:focus-visible {
+  outline: 2px solid var(--main-text-color);
 }
 .form__regions-list {
   margin: 0;
@@ -2371,8 +2395,22 @@ textarea {
   gap: clamp(1.25em, 5vw, 3.125em);
   grid-template-columns: repeat(auto-fill, minmax(min(15vw, 12.5em), 1fr));
 }
-.top-ten__image {
+.top-ten__cards--place-stud-smi {
+  gap: clamp(1.25em, 2vw, 1.25em);
+  grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+}
+.top-ten__card {
+  background-color: #fff;
   border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+@media only screen and (width >= 576px) {
+  .top-ten__card {
+    border-radius: 20px;
+  }
+}
+.top-ten__card-image {
   aspect-ratio: 1/1;
   position: relative;
   overflow: hidden;
@@ -2383,7 +2421,7 @@ textarea {
   -o-object-position: center;
      object-position: center;
 }
-.top-ten__image:after {
+.top-ten__card-image:after {
   content: attr(alt);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2404,6 +2442,31 @@ textarea {
   text-align: center;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), color-stop(50%, #eee), to(#ccc));
   background-image: linear-gradient(to bottom, #ccc 0%, #eee 50%, #ccc 100%);
+}
+.top-ten__card-image--corner-rounded {
+  border-radius: 10px;
+}
+.top-ten__card-content {
+  padding: clamp(1.25em, 2.4vw, 1.5em) clamp(0.9375em, 1.8vw, 1.125em);
+}
+.top-ten__card-rating {
+  margin-block: 0;
+  position: absolute;
+  inset: 0.75rem 1rem auto auto;
+  font-size: clamp(1.25em, 2.5vw, 1.5625em);
+  font-variation-settings: "wght" 800;
+}
+.top-ten__card-title {
+  margin-block: 0 0.75em;
+  font-size: clamp(1em, 2.5vw, 1.5625em);
+  font-variation-settings: "wght" 800;
+}
+.top-ten__card-text {
+  margin-block: 0;
+  line-height: 1.5;
+  font-size: clamp(0.75em, 1.5vw, 0.9375em);
+  font-variation-settings: "wght" 500;
+  color: var(--main-text-low-color);
 }
 
 /* Секция для регистрации на главной */

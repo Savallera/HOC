@@ -16,7 +16,7 @@
   <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />
-  <title>Интерактивный тест - Видео</title>
+  <title>Авторизация</title>
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/libs/splide.min.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
@@ -36,7 +36,7 @@
     <menu class="header__menu">
       <ul class="header__menu-list">
         <li>
-          <a href="./stud-smi.html" class="header__menu-link" rel="noopener ugc"
+          <a href="./studSMI.html" class="header__menu-link" rel="noopener ugc"
             >Студенческий медиацентр</a
           >
         </li>
@@ -51,7 +51,7 @@
           >
         </li>
         <li>
-          <a href="./stud-smi-base.html" class="header__menu-link" rel="noopener ugc"
+          <a href="./studSMI.html" class="header__menu-link" rel="noopener ugc"
             >База студСМИ</a
           >
         </li>
@@ -127,188 +127,66 @@
 </header>
 
       <main class="page__content">
-        <section class="article">
-          <div class="article__inner">
-            <h1 class="article__title">Название теста</h1>
-            <div class="article__test-group">
-              <p class="article__category article__test-question">138/140</p>
-              <a
-                href="./test-article-image.html"
-                class="article__link article__test-skip-link"
-                rel="noopener ugs"
+        <section class="page__section">
+          <h1 class="page__heading">Вход</h1>
+          <form class="form" name="sign-in" action="">
+            <div class="field field--theme-white">
+              <label for="sign-in-email" class="field__label visually-hidden"
+                >Электронная почта</label
               >
-                Пропустить вопрос
-              </a>
-              <iframe
-                class="article__iframe article__test-row"
-                src="https://www.youtube.com/embed/GYX7DaQVgUo?si=1rpOdUD4OecCbfAA"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+              <div class="field__inner">
+                <input
+                  type="email"
+                  class="field__input"
+                  placeholder="Электронная почта"
+                  autocomplete="email"
+                  name="email"
+                  id="sign-in-email"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+              </div>
             </div>
-            <form class="form form--place-tests" name="tests-form" action="">
-              <fieldset class="form__checkbox-group">
-                <legend class="form__legend">
-                  Выберите один или несколько правильных ответов
-                </legend>
-                <label class="form__checkbox-label" for="tests-answer-1">
-                  <input
-                    class="form__checkbox visually-hidden"
-                    type="checkbox"
-                    name="tests-answer-1"
-                    id="tests-answer-1"
-                  />
-                  <span class="form__checkbox-pseudo-checkbox"></span>
-                  <span class="form__checkbox-text">Вариант ответа</span>
-                </label>
-                <label class="form__checkbox-label" for="tests-answer-2">
-                  <input
-                    class="form__checkbox visually-hidden"
-                    type="checkbox"
-                    name="tests-answer-2"
-                    id="tests-answer-2"
-                  />
-                  <span class="form__checkbox-pseudo-checkbox"></span>
-                  <span class="form__checkbox-text">Вариант ответа</span>
-                </label>
-                <label class="form__checkbox-label" for="tests-answer-3">
-                  <input
-                    class="form__checkbox visually-hidden"
-                    type="checkbox"
-                    name="tests-answer-3"
-                    id="tests-answer-3"
-                  />
-                  <span class="form__checkbox-pseudo-checkbox"></span>
-                  <span class="form__checkbox-text">Вариант ответа</span>
-                </label>
-                <label class="form__checkbox-label" for="tests-answer-4">
-                  <input
-                    class="form__checkbox visually-hidden"
-                    type="checkbox"
-                    name="tests-answer-4"
-                    id="tests-answer-4"
-                  />
-                  <span class="form__checkbox-pseudo-checkbox"></span>
-                  <span class="form__checkbox-text">Вариант ответа</span>
-                </label>
-              </fieldset>
-              <a
-                href="./test-article-image.html"
-                class="button button--theme-gradient button--justify-center"
-                rel="noopener ugs"
-                >Далее</a
+            <div class="field field--theme-white">
+              <label for="sign-in-password" class="field__label visually-hidden"
+                >Пароль</label
               >
-            </form>
-            <div class="article__author">
-              <img
-                class="article__author-image"
-                src="https://s3-alpha-sig.figma.com/img/308c/63c7/be318116dad240f4c88f3f9217a714d8?Expires=1702857600&Signature=TsB5DQsn0YZNFDko2muoSDUUGQFjiCoR3pvFg5Y6k7XiodRxqeeZ4M0MWYtM68bh1MlW175tF1wVUNeD0yfN8CvNEpwlEU7fiwiAOpQZc2U85OgLlNNu3TEQAwtlpzzqJUIrhRkugmvNTARUApaxbO3F5-m407eRjSZLsrN83s6RiSfeJOoaoJy0TJxtosbZCx7wx9eLERAJKjXAKifFKnu7Ijb2a-x2owAyU296SED4f~9PxVxhAJN~JA1xdmN1u-BQb3ZFaPPcVCh6i0Jq~vvNY9dbeubhi7jAat0-2ETCF8aJguIGLpqXkZKSDDfrvim2rxemmO0gVOi6ePtoRg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                alt="Описание изображения"
-                loading="lasy"
-              />
-              <p class="article__author-text">
-                Комитет по делам молодежи
-                <span class="article__span-text">Автор: ФИО</span>
-              </p>
+              <div class="field__inner">
+                <input
+                  type="password"
+                  class="field__input"
+                  placeholder="Пароль"
+                  autocomplete="password"
+                  name="password"
+                  id="sign-in-password"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+              </div>
             </div>
-          </div>
+            <button
+              type="submit"
+              class="button button--theme-gradient button--corner-rounded"
+            >
+              <span class="button__text">Войти</span>
+            </button>
+            <a
+              href="./resume.html"
+              class="form__link text-gradient"
+              rel="noopener ugs"
+              >Забыли пароль?</a
+            >
+            <a href="./sign-up.html" class="form__link" rel="noopener ugs"
+              >Зарегистрироваться</a
+            >
+          </form>
         </section>
-        <!-- Секция с темами на странице интерактивного теста -->
-<section class="theme">
-  <h2 class="page__title theme__title-block">Другие тесты по теме</h2>
-  <div
-    class="splide splide--size-wide splide--background-gradient theme__slider"
-    id="theme-slider"
-  >
-    <div class="splide__track theme__video-slider-track">
-      <ul class="splide__list theme__video-slider-list">
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="https://s3-alpha-sig.figma.com/img/0e50/6b89/16bd548d2af9f5a41156c956fe06df3c?Expires=1702857600&Signature=PLdDrCjjQVPV3IySAagQZE7K0LDMhZOirbLKwA6w2TZ1IS1htRRNzJNAHAFkiVxMeSLP9utoeayRffP0XdRn6CezGYD7G0RextbqChcBC63xjJcM5Hf2AgbZcbM7WbhoybLAYDgGuR8Dg~kRX73hrDWxS2K7GfQYtx2Rls2SZFV9DNtf5F4x3qywpT7W-eG4SDA-CodgvTv-vTi~T18RdFjTB~P-BG6pw64twd0CMEBk9IJS0ISrd9D0z20o0zZlfdPr-qpkaeRRBMpsYa3hyeeBKsmGWYA3PPL-7ZDrMPpRApsnfhoV3gpxfsFpUzOLy55qtmfeMiviqfIU85zxvQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="https://s3-alpha-sig.figma.com/img/faa9/d329/313c6f3bfc92a3a3a9fb43714d6d1ac0?Expires=1702857600&Signature=WYl7cOrbL-PZrVsWPtLgPk3KvVT6kn1NG5qO~vLEi4qRqzzdL5AL0nN7Q2iFri5~m5BWI3LXlNynDdA9m81nS0hPTxVh59phrmUP5vIcS5W~teyEHp1laVcMzJGcOS2es5OliF4r4GgXsmVdDoGMxYuzFheE6n1PVOuWwYEf83CPNcQRvQRkwr~RO1OiQYYkBq6Th5Jt-f5~mT0v4Vp0pQOHNkePNkaJ-e2KMPAQQb6viAWfUZXJBCEvplPsrp3XnqBzGeDblaazcqVZSO~CeSyz9azVxbMz7SijF52gCaXfCoHC6K4BSkVgXHxgnCzVcShT~OL4R6qpKfgv34QliQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="https://s3-alpha-sig.figma.com/img/7c6a/26ed/62a48d1c9948addc573707a17080ea81?Expires=1702857600&Signature=Y7UqFQou0H0zpbum8Re10~KCMeN9VHpAuU8R6nIQ3sa~vSORbWZNcb3znFLoWFiqt5yFjDJ6mmFRdtfSSh7eGryGakoVty2XIUp~4Z9qrIGCaew3zAhdqVca~5vKyqMmNgNo7iTXyxF56GrYFummL-L5KRU12Y4M1Q1uFo1BtvVFAhKvel1e1dVEhYYrV-jeZ1ZqklVuvGhlF~skoH-VZbZJDvbryQo54xxsJew4VGRyTH~PbYcVZyoZmFgr5xCjh1WN~90Usmml4R1bjrOW171qj89CpztQZVooonVyt6ycYmbeTezT6ABOpdRnoYnhUTssu0R2mTAXbi17PLI6xg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="https://s3-alpha-sig.figma.com/img/7c6a/26ed/62a48d1c9948addc573707a17080ea81?Expires=1702857600&Signature=Y7UqFQou0H0zpbum8Re10~KCMeN9VHpAuU8R6nIQ3sa~vSORbWZNcb3znFLoWFiqt5yFjDJ6mmFRdtfSSh7eGryGakoVty2XIUp~4Z9qrIGCaew3zAhdqVca~5vKyqMmNgNo7iTXyxF56GrYFummL-L5KRU12Y4M1Q1uFo1BtvVFAhKvel1e1dVEhYYrV-jeZ1ZqklVuvGhlF~skoH-VZbZJDvbryQo54xxsJew4VGRyTH~PbYcVZyoZmFgr5xCjh1WN~90Usmml4R1bjrOW171qj89CpztQZVooonVyt6ycYmbeTezT6ABOpdRnoYnhUTssu0R2mTAXbi17PLI6xg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
       </main>
       <!-- Подвал страницы -->
 <footer class="footer bg-gradient">
@@ -321,7 +199,7 @@
           >
         </li>
         <li>
-          <a href="./stud-smi.html" class="footer__nav-link" rel="noopener ugc"
+          <a href="./studSMI.html" class="footer__nav-link" rel="noopener ugc"
             >О студенческом Медиацентре</a
           >
         </li>

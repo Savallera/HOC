@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   src:
     url(./Montserrat-VariableFont_wght.woff) format('woff2 supports variations'),
     url(./Montserrat-VariableFont_wght.woff2) format('woff2-variations');
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   src:
     url(./Montserrat-Italic-VariableFont_wght.woff) format('woff2 supports variations'),
     url(./Montserrat-Italic-VariableFont_wght.woff2) format('woff2-variations');
