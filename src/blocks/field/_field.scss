@@ -1,11 +1,9 @@
 /* Блок с полем */
 .field {
   &__label {
-    line-height: 2;
     font-size: clamp(0.75em, 2vw, 1.25em);
-    padding-inline-start: clamp(0.875rem, 2vw, 1.25rem);
     font-variation-settings: 'wght' 400;
-    color: var(--main-text-low-color);
+    color: var(--main-text-color);
   }
 
   &__label-icon {
@@ -42,9 +40,12 @@
   &__checkbox {
     appearance: none;
     grid-area: 1/1/2/2;
-    inline-size: 0.675em;
-    block-size: 0.675em;
+    inline-size: 0.875em;
+    min-inline-size: 0.875em;
+    max-inline-size: 0.875em;
+    block-size: 0.875em;
     border-radius: 50%;
+    margin-inline-start: 0.25rem;
     cursor: pointer;
     position: relative;
 
@@ -55,18 +56,27 @@
       block-size: inherit;
       border-radius: inherit;
       background-color: transparent;
-      outline: 1px solid var(--main-text-color);
-      outline-offset: 1px;
+      outline: 2px solid var(--main-text-color);
+      outline-offset: 2px;
       transition: background-color 0.3s;
     }
+
+    &:hover::before {
+      outline-color: var(--accent-color);
+      background-color: var(--main-text-low-color);
+    }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
-      outline: 2px solid var(--main-color);
+      outline: 2px solid var(--accent-color);
     }
+
     &:checked::before {
-      background-color: var(--main-color);
+      background-color: var(--accent-color);
+      outline-color: var(--accent-color);
     }
   }
 
@@ -155,13 +165,14 @@
   &--content {
     &-checkbox {
       .field__label {
-        padding-inline-start: 0;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: clamp(0.5em, 1.2vw, 0.75em);
+        padding-inline-start: 0.25rem;
       }
 
-      .field__checkbox {
-        margin-inline-end: 0.5em;
-      }
+      // .field__checkbox {}
 
       .field__error-text {
         grid-area: 2/2/3/3;
@@ -202,6 +213,13 @@
     .field__input {
       border-color: var(--grey-100);
       background-color: var(--grey-100);
+    }
+  }
+
+  &--theme-white {
+    .field__input {
+      border-color: #fff;
+      background-color: #fff;
     }
   }
 }

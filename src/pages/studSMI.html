@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="ru">
+  @@include("../blocks/head/head.html", {"title": "Студенческий медиацентр"})
+  <body>
+    <div class="page">
+      @@include("../blocks/header/header.html")
+      <main class="page__content">
+        <section
+          class="banner"
+          style="
+            background-image: url(https://s3-alpha-sig.figma.com/img/d10d/b93e/d4c479b339d46e30451772ace02fc413?Expires=1703462400&Signature=obki4LyI5mgRTMDugFJ-uQ-UWj8i33ZNVUXpuvuF3~k2OB81vA14WELqULIjkSkXGJn8dU0AipKBe9UWgwppRI-OvLaV6JU~sEZoaAgMEIYWTskLwlMmy8hitfZuIkH~jHA5HB9cdBo5CntgkkJiLukJJ8SsgXFvqQloqBHVhEV~FgA~3Kz52T3yV0c0UxUwjO6b0sitBNGx1IucC0RhGZwo~FweOYOaut~P6QJpnrcnFZkAsU2s4k4nSUD-cm4pL79V5E1raupOUo5S-Fgdy7CnDCLtyTqhQBrCy12Riyo3uoFrTeTt2A6JH1qhb2gEpsNMtzwXMix3-rv1td-TfQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+          "
+        >
+          <div class="banner__card">
+            <h1 class="banner__title">
+              Студенческий медиацентр минобрнауки России
+            </h1>
+            <a
+              href="./sign-up.html"
+              class="button button--theme-gradient button--corner-rounded banner__button"
+              rel="noopener ugs"
+              >Вступить</a
+            >
+          </div>
+        </section>
+        <section class="page__section stud-smi">
+          <div class="page__inner">
+            <h2 class="page__title">Миссия и цель</h2>
+            <p class="page__description stud-smi__description">
+              Формирование единого молодежного сообщества для поддержки
+              представителей российских студенческих СМИ путем создания и
+              реализации медийных проектов.
+            </p>
+            <p class="page__description stud-smi__description">
+              Организация и проведение комплекса практикоориентированных
+              мероприятий для повышения уровня профессиональных навыков и
+              компетенций в цифровой сфере.
+            </p>
+          </div>
+          <div class="splide splide--visible-mobile" id="stud-smi-cards-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide splide__slide--mobile-width-auto">
+                  <article class="stud-smi__card">
+                    <h3 class="stud-smi__card-title text-gradient">#1</h3>
+                    <p class="stud-smi__card-description">
+                      Формирование единого федерального пула студенческих СМИ
+                    </p>
+                  </article>
+                </li>
+                <li class="splide__slide splide__slide--mobile-width-auto">
+                  <article class="stud-smi__card">
+                    <h3 class="stud-smi__card-title text-gradient">#2</h3>
+                    <p class="stud-smi__card-description">
+                      Создание центров притяжения для молодежных медиа в
+                      регионах
+                    </p>
+                  </article>
+                </li>
+                <li class="splide__slide splide__slide--mobile-width-auto">
+                  <article class="stud-smi__card">
+                    <h3 class="stud-smi__card-title text-gradient">#3</h3>
+                    <p class="stud-smi__card-description">
+                      Вовлечение молодежи в вопросы популяризации науки и
+                      высшего образования
+                    </p>
+                  </article>
+                </li>
+                <li class="splide__slide splide__slide--mobile-width-auto">
+                  <article class="stud-smi__card">
+                    <h3 class="stud-smi__card-title text-gradient">#4</h3>
+                    <p class="stud-smi__card-description">
+                      Распространение в молодежной среде информации об
+                      общественно-политической и культурной жизни в России
+                    </p>
+                  </article>
+                </li>
+                <li class="splide__slide splide__slide--mobile-width-auto">
+                  <article class="stud-smi__card">
+                    <h3 class="stud-smi__card-title text-gradient">#5</h3>
+                    <p class="stud-smi__card-description">
+                      Создание для представителей студенческих медиа
+                      возможностей для повышения уровня профессиональных навыков
+                    </p>
+                  </article>
+                </li>
+                <li class="splide__slide splide__slide--mobile-width-auto">
+                  <article class="stud-smi__card">
+                    <h3 class="stud-smi__card-title text-gradient">#6</h3>
+                    <p class="stud-smi__card-description">
+                      Формирование кадрового резерва из числа активистов проекта
+                    </p>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="page__inner">
+            <h2 class="page__title">Структура</h2>
+            <div class="page__card-deck">
+              <a
+                href="#"
+                class="button button--theme-gradient button--corner-rounded stud-smi__button"
+                rel="noopener ugs"
+                >Проектный офис</a
+              >
+              <a
+                href="#"
+                class="button button--theme-gradient button--corner-rounded stud-smi__button"
+                rel="noopener ugs"
+                >Региональные площадки</a
+              >
+              <a
+                href="#"
+                class="button button--theme-gradient button--corner-rounded stud-smi__button"
+                rel="noopener ugs"
+                >Активисты проекта</a
+              >
+            </div>
+          </div>
+        </section>
+        <section class="page__section news">
+          <div class="splide page__hidden-mobile" id="stud-smi-news-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <a href="#" class="card-link" rel="noopener ugs">
+                    <article
+                      class="card-banner"
+                      style="
+                        background-image: url(https://s3-alpha-sig.figma.com/img/1210/a89f/bfa8c840b8f9d3794e04e0352a954bad?Expires=1702252800&Signature=a07i-YI-MUEPa-s4fIFWz1wDtYIi4-hEQNyA~I8KJzmXM2Yx6GgZBPk0f8i3kWobVkKw31sN7rS7k05KwdiQRAOIFdlT3A5quRmzBJmEipVELE4x0bXr9sXXY8vhKb2L7XGkAUICnbBNt-Y2l7BA8gnxL6C51ZLEfrEmSvfBIQJaF73D7~N9JnHyHfNwpAdbgUT6MHyqyVDFEFSaF8JE0XapF~0UfELE00lTIH~3LgtZE8vpXaGbRD~EH2Xhytcq8HpzPnT1fnBxvt~Rny6pwoiybQaU5TlJm83UlGJy-No-My3c6cLh0gQcMA8ZaiOBc~LIvAe0ROrFWItv1OU1Mg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+                      "
+                    >
+                      <div
+                        class="card-banner__main-content card-banner__main-content--with-controls"
+                      >
+                        <h2 class="card-banner__title">
+                          Фестиваль национальных блюд
+                        </h2>
+                        <p class="card-banner__text">Популярное</p>
+                        <div class="card-banner__controls">
+                          <p
+                            class="card-banner__views"
+                            aria-label="Количество просмотров"
+                          >
+                            <span
+                              class="card-banner__views-icon icon icon--type-eye"
+                              aria-hidden="true"
+                            ></span>
+                            <span class="card-banner__views-value">123</span>
+                          </p>
+                          <button
+                            type="button"
+                            class="card-banner__like-button icon-button icon icon--type-like"
+                            aria-label="Нравится"
+                          ></button>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="#" class="card-link" rel="noopener ugs">
+                    <article
+                      class="card-banner"
+                      style="
+                        background-image: url(https://s3-alpha-sig.figma.com/img/1210/a89f/bfa8c840b8f9d3794e04e0352a954bad?Expires=1702252800&Signature=a07i-YI-MUEPa-s4fIFWz1wDtYIi4-hEQNyA~I8KJzmXM2Yx6GgZBPk0f8i3kWobVkKw31sN7rS7k05KwdiQRAOIFdlT3A5quRmzBJmEipVELE4x0bXr9sXXY8vhKb2L7XGkAUICnbBNt-Y2l7BA8gnxL6C51ZLEfrEmSvfBIQJaF73D7~N9JnHyHfNwpAdbgUT6MHyqyVDFEFSaF8JE0XapF~0UfELE00lTIH~3LgtZE8vpXaGbRD~EH2Xhytcq8HpzPnT1fnBxvt~Rny6pwoiybQaU5TlJm83UlGJy-No-My3c6cLh0gQcMA8ZaiOBc~LIvAe0ROrFWItv1OU1Mg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+                      "
+                    >
+                      <div
+                        class="card-banner__main-content card-banner__main-content--with-controls"
+                      >
+                        <h2 class="card-banner__title">
+                          Фестиваль национальных блюд
+                        </h2>
+                        <p class="card-banner__text">Популярное</p>
+                        <div class="card-banner__controls">
+                          <p
+                            class="card-banner__views"
+                            aria-label="Количество просмотров"
+                          >
+                            <span
+                              class="card-banner__views-icon icon icon--type-eye"
+                              aria-hidden="true"
+                            ></span>
+                            <span class="card-banner__views-value">123</span>
+                          </p>
+                          <button
+                            type="button"
+                            class="card-banner__like-button icon-button icon icon--type-like"
+                            aria-label="Нравится"
+                          ></button>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="news__columns">
+            <div class="splide news__slider" id="news-slider">
+              <div class="splide__track news__slider-track">
+                <ul class="splide__list news__slider-list">
+                  <li class="splide__slide splide__slide--mobile-width-auto">
+                    <a
+                      href="./new-article.html"
+                      class="card-link"
+                      rel="noopener ugs"
+                    >
+                      <article class="card">
+                        <img
+                          class="card__image"
+                          src="https://s3-alpha-sig.figma.com/img/1210/a89f/bfa8c840b8f9d3794e04e0352a954bad?Expires=1702252800&Signature=a07i-YI-MUEPa-s4fIFWz1wDtYIi4-hEQNyA~I8KJzmXM2Yx6GgZBPk0f8i3kWobVkKw31sN7rS7k05KwdiQRAOIFdlT3A5quRmzBJmEipVELE4x0bXr9sXXY8vhKb2L7XGkAUICnbBNt-Y2l7BA8gnxL6C51ZLEfrEmSvfBIQJaF73D7~N9JnHyHfNwpAdbgUT6MHyqyVDFEFSaF8JE0XapF~0UfELE00lTIH~3LgtZE8vpXaGbRD~EH2Xhytcq8HpzPnT1fnBxvt~Rny6pwoiybQaU5TlJm83UlGJy-No-My3c6cLh0gQcMA8ZaiOBc~LIvAe0ROrFWItv1OU1Mg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                          alt="Описание изображения"
+                          loading="lazy"
+                        />
+                        <div class="card__main-content">
+                          <h2 class="card__title">
+                            Фестиваль национальных блюд
+                          </h2>
+                          <div class="card__controls">
+                            <p class="card__text text-gradient">Популярное</p>
+                            <p
+                              class="card__views"
+                              aria-label="Количество просмотров"
+                            >
+                              <span
+                                class="card__views-icon icon icon--type-eye"
+                                aria-hidden="true"
+                              ></span>
+                              <span class="card__views-value">123</span>
+                            </p>
+                            <button
+                              type="button"
+                              class="card__like-button card__like-button--actived icon-button icon icon--type-like"
+                              aria-label="Нравится"
+                            ></button>
+                          </div>
+                        </div>
+                      </article>
+                    </a>
+                  </li>
+                  <li class="splide__slide splide__slide--mobile-width-auto">
+                    <a
+                      href="./new-article.html"
+                      class="card-link"
+                      rel="noopener ugs"
+                    >
+                      <article class="card">
+                        <img
+                          class="card__image"
+                          src="https://s3-alpha-sig.figma.com/img/1210/a89f/bfa8c840b8f9d3794e04e0352a954bad?Expires=1702252800&Signature=a07i-YI-MUEPa-s4fIFWz1wDtYIi4-hEQNyA~I8KJzmXM2Yx6GgZBPk0f8i3kWobVkKw31sN7rS7k05KwdiQRAOIFdlT3A5quRmzBJmEipVELE4x0bXr9sXXY8vhKb2L7XGkAUICnbBNt-Y2l7BA8gnxL6C51ZLEfrEmSvfBIQJaF73D7~N9JnHyHfNwpAdbgUT6MHyqyVDFEFSaF8JE0XapF~0UfELE00lTIH~3LgtZE8vpXaGbRD~EH2Xhytcq8HpzPnT1fnBxvt~Rny6pwoiybQaU5TlJm83UlGJy-No-My3c6cLh0gQcMA8ZaiOBc~LIvAe0ROrFWItv1OU1Mg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                          alt="Описание изображения"
+                          loading="lazy"
+                        />
+                        <div class="card__main-content">
+                          <h2 class="card__title">
+                            Студент мечтает о трёх вещах!
+                          </h2>
+                          <div class="card__controls">
+                            <p class="card__text text-gradient">Популярное</p>
+                            <p
+                              class="card__views"
+                              aria-label="Количество просмотров"
+                            >
+                              <span
+                                class="card__views-icon icon icon--type-eye"
+                                aria-hidden="true"
+                              ></span>
+                              <span class="card__views-value">123</span>
+                            </p>
+                            <button
+                              type="button"
+                              class="card__like-button icon-button icon icon--type-like"
+                              aria-label="Нравится"
+                            ></button>
+                          </div>
+                        </div>
+                      </article>
+                    </a>
+                  </li>
+                  <li class="splide__slide splide__slide--mobile-width-auto">
+                    <a
+                      href="./new-article.html"
+                      class="card-link"
+                      rel="noopener ugs"
+                    >
+                      <article class="card card--size-md">
+                        <img
+                          class="card__image"
+                          src="https://www.figma.com/file/eKBcAMx6aUx9iqctZq5ixW/image/05aeb49e1a00ef406ea6411d88faf44f42866267"
+                          alt="Описание изображения"
+                          loading="lazy"
+                        />
+                        <div class="card__main-content">
+                          <h2 class="card__title">
+                            Первый день Школы «Forest Active School»
+                          </h2>
+                          <div class="card__controls">
+                            <p class="card__text text-gradient">Популярное</p>
+                            <p
+                              class="card__views"
+                              aria-label="Количество просмотров"
+                            >
+                              <span
+                                class="card__views-icon icon icon--type-eye"
+                                aria-hidden="true"
+                              ></span>
+                              <span class="card__views-value">123</span>
+                            </p>
+                            <button
+                              type="button"
+                              class="card__like-button icon-button icon icon--type-like"
+                              aria-label="Нравится"
+                            ></button>
+                          </div>
+                        </div>
+                      </article>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <ul class="news__asside-list">
+              <li>
+                <a
+                  href="./new-article.html"
+                  class="card-link"
+                  rel="noopener ugs"
+                >
+                  <article class="card">
+                    <div class="card__main-content">
+                      <h2 class="card__title text-rows text-rows--two">
+                        Фестиваль национальных блюд из всех регионов России
+                      </h2>
+                      <div class="card__controls">
+                        <p class="card__text text-gradient">Популярное</p>
+                        <p
+                          class="card__views"
+                          aria-label="Количество просмотров"
+                        >
+                          <span
+                            class="card__views-icon icon icon--type-eye"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="card__views-value">123</span>
+                        </p>
+                        <button
+                          type="button"
+                          class="card__like-button icon-button icon icon--type-like"
+                          aria-label="Нравится"
+                        ></button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./new-article.html"
+                  class="card-link"
+                  rel="noopener ugs"
+                >
+                  <article class="card">
+                    <div class="card__main-content">
+                      <h2 class="card__title text-rows text-rows--two">
+                        Фестиваль национальных блюд
+                      </h2>
+                      <div class="card__controls">
+                        <p class="card__text text-gradient">Популярное</p>
+                        <p
+                          class="card__views"
+                          aria-label="Количество просмотров"
+                        >
+                          <span
+                            class="card__views-icon icon icon--type-eye"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="card__views-value">123</span>
+                        </p>
+                        <button
+                          type="button"
+                          class="card__like-button icon-button icon icon--type-like"
+                          aria-label="Нравится"
+                        ></button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./new-article.html"
+                  class="card-link"
+                  rel="noopener ugs"
+                >
+                  <article class="card">
+                    <div class="card__main-content">
+                      <h2 class="card__title text-rows text-rows--two">
+                        Фестиваль блюд
+                      </h2>
+                      <div class="card__controls">
+                        <p class="card__text text-gradient">Популярное</p>
+                        <p
+                          class="card__views"
+                          aria-label="Количество просмотров"
+                        >
+                          <span
+                            class="card__views-icon icon icon--type-eye"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="card__views-value">123</span>
+                        </p>
+                        <button
+                          type="button"
+                          class="card__like-button icon-button icon icon--type-like"
+                          aria-label="Нравится"
+                        ></button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./new-article.html"
+                  class="card-link"
+                  rel="noopener ugs"
+                >
+                  <article class="card">
+                    <div class="card__main-content">
+                      <h2 class="card__title text-rows text-rows--two">
+                        Фестиваль национальных блюд с самым большим названием
+                      </h2>
+                      <div class="card__controls">
+                        <p class="card__text text-gradient">Популярное</p>
+                        <p
+                          class="card__views"
+                          aria-label="Количество просмотров"
+                        >
+                          <span
+                            class="card__views-icon icon icon--type-eye"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="card__views-value">123</span>
+                        </p>
+                        <button
+                          type="button"
+                          class="card__like-button icon-button icon icon--type-like"
+                          aria-label="Нравится"
+                        ></button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="button button--theme-gradient button--corner-rounded button--justify-center"
+            type="button"
+          >
+            <span class="button__text">Смотреть все новости</span>
+          </button>
+        </section>
+        @@include("../blocks/media/media.html")
+        @@include("../blocks/broadcasts/broadcasts.html")
+        <section class="page__section">
+          <h2 class="page__title">Карта студенческих СМИ</h2>
+          <div>карта</div>
+          <a
+            class="button button--theme-gradient button--corner-rounded button--justify-center"
+            href="./sign-up.html"
+            rel="noopener ugs"
+            >Присоединиться к проекту</a
+          >
+        </section>
+      </main>
+      @@include("../blocks/footer/footer.html")
+      @@include("../blocks/tooltip/tooltip.html")
+    </div>
+  </body>
+</html>

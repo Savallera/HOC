@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+  @@include("../blocks/head/head.html", {"title": "Заявка на вступление"})
+  <body>
+    <div class="page">
+      @@include("../blocks/header/header.html")
+      <main class="page__content">
+        <section class="page__section">
+          <h1 class="page__heading">
+            Заявка на вступление в Студенческий медиацентр Минобрнауки России
+          </h1>
+          <form class="form" name="sign-up" action="">
+            <div class="field field--theme-white">
+              <label for="sign-up-name" class="field__label visually-hidden"
+                >ФИО*</label
+              >
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="ФИО*"
+                  autocomplete="name"
+                  name="name"
+                  id="sign-up-name"
+                  required
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+              </div>
+            </div>
+            <div class="field field--theme-white">
+              <label
+                for="sign-up-university"
+                class="field__label visually-hidden"
+                >Наименование вуза*</label
+              >
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="Наименование вуза*"
+                  autocomplete="university"
+                  name="university"
+                  id="sign-up-university"
+                  required
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+              </div>
+            </div>
+            <div class="field field--theme-white">
+              <label for="sign-up-tel" class="field__label visually-hidden"
+                >Контактный номер телефона*</label
+              >
+              <div class="field__inner">
+                <input
+                  type="tel"
+                  class="field__input"
+                  placeholder="Контактный номер телефона*"
+                  autocomplete="tel"
+                  name="tel"
+                  id="sign-up-tel"
+                  required
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+              </div>
+            </div>
+            <div class="field field--theme-white">
+              <label for="sign-up-email" class="field__label visually-hidden"
+                >Адрес электронной почты</label
+              >
+              <div class="field__inner">
+                <input
+                  type="email"
+                  class="field__input"
+                  placeholder="Адрес электронной почты*"
+                  autocomplete="email"
+                  name="email"
+                  id="sign-up-email"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+              </div>
+            </div>
+            <div class="field field--theme-white">
+              <label for="sign-up-telegram" class="field__label visually-hidden"
+                >Ссылка на аккаунт в Telegram</label
+              >
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="Ссылка на аккаунт в Telegram*"
+                  name="telegram"
+                  id="sign-up-telegram"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+              </div>
+            </div>
+            <p class="form__description">*поля обязательны для заполнения</p>
+            <div class="field field--content-checkbox">
+              <label for="feedback-field-privacy" class="field__label">
+                <input
+                  type="checkbox"
+                  class="field__checkbox"
+                  name="privacy"
+                  id="feedback-field-privacy"
+                />
+                <span>
+                  Я ознакомился с
+                  <a
+                    href="./files/НОС_Политика_в_отношении_персональных_данных.pdf"
+                    rel="noopener ugs"
+                    >Политикой</a
+                  >
+                  в отношении обработки персональных данных и даю своё
+                  <a
+                    href="./files/НОС_Согласие_на_обработку_персональных_данных.pdf"
+                    rel="noopener ugs"
+                    >Согласие</a
+                  >
+                  на обработку персональных данных
+                </span>
+              </label>
+              <span class="field__error-text">Вывод ошибки</span>
+            </div>
+            <button
+              type="submit"
+              class="button button--theme-gradient button--corner-rounded"
+            >
+              <span class="button__text">Отправить</span>
+            </button>
+          </form>
+        </section>
+      </main>
+      @@include("../blocks/footer/footer.html")
+    </div>
+  </body>
+</html>

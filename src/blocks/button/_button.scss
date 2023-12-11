@@ -11,6 +11,7 @@
   &:focus {
     outline: none;
   }
+
   &:focus-visible {
     outline: 2px solid var(--main-text-color);
   }
@@ -44,15 +45,11 @@
     }
   }
 
-  // &--size {
-  //   &-small {
-  //     font-size: clamp(0.75em, 2vw, 1.25em);
-  //     font-variation-settings: 'wght' 500;
+  &--corner-rounded {
+    border-radius: 20px;
+  }
 
-  //     .button__icon {
-  //       inline-size: 1.25em;
-  //       block-size: 1.25em;
-  //     }
-  //   }
-  // }
+  &--justify-center {
+    margin-inline: auto;
+  }
 }

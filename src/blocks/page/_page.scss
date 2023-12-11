@@ -121,4 +121,10 @@
   @supports (min-block-size: 100dvb) {
     min-block-size: 100dvb;
   }
+
+  &__hidden-mobile {
+    @include media(lg, max) {
+      display: none;
+    }
+  }
 }
