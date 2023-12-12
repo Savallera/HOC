@@ -275,6 +275,7 @@
                       ></span>
                       <span class="card__views-value">123</span>
                     </p>
+                    <!-- Класс для активного лайка -->
                     <button
                       type="button"
                       class="card__like-button card__like-button--actived icon-button icon icon--type-like"
@@ -453,7 +454,7 @@
       </li>
     </ul>
   </div>
-  <a href="./new-article.html" class="page__button button button--theme-gradient"
+  <a href="./new-article.html" class="button button--theme-gradient button--justify-center"
     >Смотреть все новости</a
   >
 </section>
@@ -466,9 +467,7 @@
       background-image: url(https://s3-alpha-sig.figma.com/img/faa9/d329/313c6f3bfc92a3a3a9fb43714d6d1ac0?Expires=1702857600&Signature=WYl7cOrbL-PZrVsWPtLgPk3KvVT6kn1NG5qO~vLEi4qRqzzdL5AL0nN7Q2iFri5~m5BWI3LXlNynDdA9m81nS0hPTxVh59phrmUP5vIcS5W~teyEHp1laVcMzJGcOS2es5OliF4r4GgXsmVdDoGMxYuzFheE6n1PVOuWwYEf83CPNcQRvQRkwr~RO1OiQYYkBq6Th5Jt-f5~mT0v4Vp0pQOHNkePNkaJ-e2KMPAQQb6viAWfUZXJBCEvplPsrp3XnqBzGeDblaazcqVZSO~CeSyz9azVxbMz7SijF52gCaXfCoHC6K4BSkVgXHxgnCzVcShT~OL4R6qpKfgv34QliQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
     "
   >
-    <h2 class="page__title contests__title">
-      Название конкурса и про что он
-    </h2>
+    <h2 class="page__title contests__title">Название конкурса и про что он</h2>
     <button
       type="button"
       class="contests__button button button--theme-gradient"
@@ -668,7 +667,9 @@
           name="survey-raio-group"
           id="survey-raio-group-1"
         />
+        <span class="survey__label-procent" style="inline-size: 7%"></span>
         <span class="survey__label-text">Ответ №1</span>
+        <span class="survey__label-icon" aria-hidden="true"></span>
       </label>
       <label class="survey__label" for="survey-raio-group-2">
         <input
@@ -677,7 +678,9 @@
           name="survey-raio-group"
           id="survey-raio-group-2"
         />
+        <span class="survey__label-procent" style="inline-size: 13%"></span>
         <span class="survey__label-text">Ответ №2</span>
+        <span class="survey__label-icon" aria-hidden="true"></span>
       </label>
       <label class="survey__label" for="survey-raio-group-3">
         <input
@@ -686,7 +689,9 @@
           name="survey-raio-group"
           id="survey-raio-group-3"
         />
+        <span class="survey__label-procent" style="inline-size: 20%"></span>
         <span class="survey__label-text">Ответ №3</span>
+        <span class="survey__label-icon" aria-hidden="true"></span>
       </label>
       <label class="survey__label" for="survey-raio-group-4">
         <input
@@ -695,7 +700,9 @@
           name="survey-raio-group"
           id="survey-raio-group-4"
         />
+        <span class="survey__label-procent" style="inline-size: 60%"></span>
         <span class="survey__label-text">Ответ №4</span>
+        <span class="survey__label-icon" aria-hidden="true"></span>
       </label>
     </form>
   </div>
@@ -707,7 +714,10 @@
     <div class="media__column">
       <div class="page__title-block media__podsast-title-block">
         <h2 class="page__title">Подкасты</h2>
-        <a href="./podcasts.html" class="page__link text-gradient" rel="noopener ugs"
+        <a
+          href="./podcasts.html"
+          class="page__link page__hidden-desktop text-gradient"
+          rel="noopener ugs"
           >Все подкасты</a
         >
       </div>
@@ -799,7 +809,9 @@
                   allowfullscreen
                 ></iframe>
                 <div class="card__main-content">
-                  <h3 class="card__title">VIII Всероссийский молодежный форум</h3>
+                  <h3 class="card__title">
+                    VIII Всероссийский молодежный форум
+                  </h3>
                   <div class="card__controls">
                     <p class="card__text text-gradient">Популярное</p>
                     <p class="card__views" aria-label="Количество просмотров">
@@ -829,7 +841,9 @@
                   allowfullscreen
                 ></iframe>
                 <div class="card__main-content">
-                  <h3 class="card__title">VIII Всероссийский молодежный форум</h3>
+                  <h3 class="card__title">
+                    VIII Всероссийский молодежный форум
+                  </h3>
                   <div class="card__controls">
                     <p class="card__text text-gradient">Популярное</p>
                     <p class="card__views" aria-label="Количество просмотров">
@@ -1147,7 +1161,10 @@
     <h3 class="sign-up__banner-title">
       Регистрируйся здесь и развивай студСМИ с нами!
     </h3>
-    <button type="button" class="sign-up__button page__button button button--theme-gradient">
+    <button
+      type="button"
+      class="sign-up__button button button--theme-gradient button--justify-center"
+    >
       <span class="button__text">Подробнее</span>
     </button>
   </div>
@@ -1175,7 +1192,7 @@
           >
         </li>
         <li>
-          <a href="#" class="footer__nav-link" rel="noopener ugc"
+          <a href="./application-for-membership.html" class="footer__nav-link" rel="noopener ugc"
             >Стать автором</a
           >
         </li>
@@ -1190,12 +1207,12 @@
           >
         </li>
         <li>
-          <a href="#" class="footer__nav-link" rel="noopener ugc"
+          <a href="./files/НОС_Политика_в_отношении_персональных_данных.pdf" class="footer__nav-link" rel="noopener ugc"
             >Политика обработки персональных данных</a
           >
         </li>
         <li>
-          <a href="#" class="footer__nav-link" rel="noopener ugc"
+          <a href="./files/НОС_Согласие_на_обработку_персональных_данных.pdf" class="footer__nav-link" rel="noopener ugc"
             >Согласие на обработку персональных данных</a
           >
         </li>
@@ -1634,7 +1651,10 @@
           ></span>
         </div>
       </div>
-      <button type="submit" class="button button--theme-gradient button--justify-center">
+      <button
+        type="submit"
+        class="button button--theme-gradient button--justify-center"
+      >
         <span class="button__text">Принять участие</span>
       </button>
     </form>

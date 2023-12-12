@@ -130,7 +130,7 @@
         <!-- Секция с поиском на странице новостей -->
 <section class="page__section search">
   <form class="search__form" name="media-search" action="">
-    <fieldset class="search__regions">
+    <fieldset class="search__inner">
       <button
         class="search__region-button search__region-button--content-all"
         type="button"
@@ -143,19 +143,21 @@
     </fieldset>
     <div class="search__title-block">
       <h1 class="search__title">Новости</h1>
-      <button class="search__calendar-button" type="button">
-        <span class="icon icon--type-calendar" aria-hidden="true"></span>
-        <span>Календарь</span>
-      </button>
-      <button
-        class="search__calendar-button search__calendar-button--actived"
-        type="button"
-      >
-        <span class="icon icon--type-calendar" aria-hidden="true"></span>
-        <span>10.08.2023 - 16.08.2023</span>
-      </button>
+      <div class="search__inner">
+        <button class="search__calendar-button" type="button">
+          <span class="icon icon--type-calendar" aria-hidden="true"></span>
+          <span>Календарь</span>
+        </button>
+        <button
+          class="search__calendar-button search__calendar-button--actived"
+          type="button"
+        >
+          <span class="icon icon--type-calendar" aria-hidden="true"></span>
+          <span>10.08.2023 - 16.08.2023</span>
+        </button>
+      </div>
     </div>
-    <div class="field">
+    <div class="field field--theme-white">
       <label for="page-search-field" class="field__label visually-hidden"
         >Поиск
       </label>
@@ -178,43 +180,42 @@
         ></span>
       </div>
     </div>
-    <fieldset class="search__radio-group">
-      <label class="search__label-radio" for="search-radio-theme-all">
+    <fieldset class="search__inner">
+      <label class="search__filter-label" for="search-radio-theme-all">
         <input
-          class="search__radio visually-hidden"
+          class="search__filter-field visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-all"
-          checked
         />
-        <span class="search__label-text">Все</span>
+        <span class="search__filter-text">Все</span>
       </label>
-      <label class="search__label-radio" for="search-radio-theme-1">
+      <label class="search__filter-label" for="search-radio-theme-1">
         <input
-          class="search__radio visually-hidden"
+          class="search__filter-field visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-1"
         />
-        <span class="search__label-text">Тема 1</span>
+        <span class="search__filter-text">Тема 1</span>
       </label>
-      <label class="search__label-radio" for="search-radio-theme-2">
+      <label class="search__filter-label" for="search-radio-theme-2">
         <input
-          class="search__radio visually-hidden"
+          class="search__filter-field visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-2"
         />
-        <span class="search__label-text">Тема 2</span>
+        <span class="search__filter-text">Тема 2</span>
       </label>
-      <label class="search__label-radio" for="search-radio-theme-3">
+      <label class="search__filter-label" for="search-radio-theme-3">
         <input
-          class="search__radio visually-hidden"
+          class="search__filter-field visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-3"
         />
-        <span class="search__label-text">Тема 3</span>
+        <span class="search__filter-text">Тема 3</span>
       </label>
     </fieldset>
     <button class="search__reset-button" type="reset">
@@ -223,7 +224,6 @@
   </form>
 </section>
 
-        <!-- Секция с новостями на странице новостей (одинаковая, только без кнопки внизу) -->
         <section class="news page__section">
           <div class="news__columns">
             <div class="splide news__slider" id="news-slider">
@@ -1067,7 +1067,7 @@
           >
         </li>
         <li>
-          <a href="#" class="footer__nav-link" rel="noopener ugc"
+          <a href="./application-for-membership.html" class="footer__nav-link" rel="noopener ugc"
             >Стать автором</a
           >
         </li>
@@ -1082,12 +1082,12 @@
           >
         </li>
         <li>
-          <a href="#" class="footer__nav-link" rel="noopener ugc"
+          <a href="./files/НОС_Политика_в_отношении_персональных_данных.pdf" class="footer__nav-link" rel="noopener ugc"
             >Политика обработки персональных данных</a
           >
         </li>
         <li>
-          <a href="#" class="footer__nav-link" rel="noopener ugc"
+          <a href="./files/НОС_Согласие_на_обработку_персональных_данных.pdf" class="footer__nav-link" rel="noopener ugc"
             >Согласие на обработку персональных данных</a
           >
         </li>
@@ -1265,7 +1265,7 @@
     ></button>
     <form class="form" name="regions-modal" action="">
       <p class="form__title">Выбрать регион</p>
-      <div class="field field--size-small field--theme-grey">
+      <div class="field field--theme-grey">
         <label for="regions-modal-field" class="field__label visually-hidden"
           >Выберите регион
         </label>
@@ -1284,116 +1284,104 @@
           ></span>
         </div>
       </div>
-      <ul class="form__regions-list">
+      <ul class="form__filters-list">
         <li>
-          <label
-            class="form__regions-label-radio"
-            for="regions-modal-radio-all"
-          >
+          <label class="form__filter-label" for="filters-modal-radio-all">
             <input
-              class="form__regions-radio visually-hidden"
+              class="form__filter-field visually-hidden"
               type="radio"
-              name="regions-modal-radio"
-              id="regions-modal-radio-all"
-              checked
+              name="filters-modal-radio"
+              id="filters-modal-radio-all"
             />
-            <span class="form__regions-label-text">Все</span>
+            <span class="form__filter-text">Все</span>
           </label>
         </li>
         <li>
-          <label class="form__regions-label-radio" for="regions-modal-radio-1">
+          <label class="form__filter-label" for="filters-modal-radio-1">
             <input
-              class="form__regions-radio visually-hidden"
+              class="form__filter-field visually-hidden"
               type="radio"
-              name="regions-modal-radio"
-              id="regions-modal-radio-1"
-              checked
+              name="filters-modal-radio"
+              id="filters-modal-radio-1"
             />
-            <span class="form__regions-label-text">Алтайский край</span>
+            <span class="form__filter-text">Алтайский край</span>
           </label>
         </li>
         <li>
-          <label class="form__regions-label-radio" for="regions-modal-radio-2">
+          <label class="form__filter-label" for="filters-modal-radio-2">
             <input
-              class="form__regions-radio visually-hidden"
+              class="form__filter-field visually-hidden"
               type="radio"
-              name="regions-modal-radio"
-              id="regions-modal-radio-2"
-              checked
+              name="filters-modal-radio"
+              id="filters-modal-radio-2"
             />
-            <span class="form__regions-label-text">Амурская область</span>
+            <span class="form__filter-text">Амурская область</span>
           </label>
         </li>
         <li>
-          <label class="form__regions-label-radio" for="regions-modal-radio-2">
+          <label class="form__filter-label" for="filters-modal-radio-3">
             <input
-              class="form__regions-radio visually-hidden"
+              class="form__filter-field visually-hidden"
               type="radio"
-              name="regions-modal-radio"
-              id="regions-modal-radio-2"
-              checked
+              name="filters-modal-radio"
+              id="filters-modal-radio-3"
             />
-            <span class="form__regions-label-text">Архангельская область</span>
+            <span class="form__filter-text">Архангельская область</span>
           </label>
         </li>
         <li>
-          <label class="form__regions-label-radio" for="regions-modal-radio-3">
+          <label class="form__filter-label" for="filters-modal-radio-4">
             <input
-              class="form__regions-radio visually-hidden"
+              class="form__filter-field visually-hidden"
               type="radio"
-              name="regions-modal-radio"
-              id="regions-modal-radio-3"
-              checked
+              name="filters-modal-radio"
+              id="filters-modal-radio-4"
             />
-            <span class="form__regions-label-text">Астраханская область</span>
+            <span class="form__filter-text">Астраханская область</span>
           </label>
         </li>
         <li>
-          <label class="form__regions-label-radio" for="regions-modal-radio-4">
+          <label class="form__filter-label" for="filters-modal-radio-5">
             <input
-              class="form__regions-radio visually-hidden"
+              class="form__filter-field visually-hidden"
               type="radio"
-              name="regions-modal-radio"
-              id="regions-modal-radio-4"
-              checked
+              name="filters-modal-radio"
+              id="filters-modal-radio-5"
             />
-            <span class="form__regions-label-text">Белгородская область</span>
+            <span class="form__filter-text">Белгородская область</span>
           </label>
         </li>
         <li>
-          <label class="form__regions-label-radio" for="regions-modal-radio-5">
+          <label class="form__filter-label" for="filters-modal-radio-6">
             <input
-              class="form__regions-radio visually-hidden"
+              class="form__filter-field visually-hidden"
               type="radio"
-              name="regions-modal-radio"
-              id="regions-modal-radio-5"
-              checked
+              name="filters-modal-radio"
+              id="filters-modal-radio-6"
             />
-            <span class="form__regions-label-text">Брянская область</span>
+            <span class="form__filter-text">Брянская область</span>
           </label>
         </li>
         <li>
-          <label class="form__regions-label-radio" for="regions-modal-radio-6">
+          <label class="form__filter-label" for="filters-modal-radio-7">
             <input
-              class="form__regions-radio visually-hidden"
+              class="form__filter-field visually-hidden"
               type="radio"
-              name="regions-modal-radio"
-              id="regions-modal-radio-6"
-              checked
+              name="filters-modal-radio"
+              id="filters-modal-radio-7"
             />
-            <span class="form__regions-label-text">Владимирская область</span>
+            <span class="form__filter-text">Владимирская область</span>
           </label>
         </li>
         <li>
-          <label class="form__regions-label-radio" for="regions-modal-radio-7">
+          <label class="form__filter-label" for="filters-modal-radio-8">
             <input
-              class="form__regions-radio visually-hidden"
+              class="form__filter-field visually-hidden"
               type="radio"
-              name="regions-modal-radio"
-              id="regions-modal-radio-7"
-              checked
+              name="filters-modal-radio"
+              id="filters-modal-radio-8"
             />
-            <span class="form__regions-label-text"
+            <span class="form__filter-text"
               >Самое длинное название области в нашей большой стране</span
             >
           </label>
