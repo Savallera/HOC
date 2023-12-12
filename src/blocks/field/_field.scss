@@ -17,7 +17,7 @@
 
   &__input {
     grid-area: 1/1/2/2;
-    padding: .75em clamp(0.875rem, 2vw, 1.25rem);
+    padding: 0.75em clamp(0.875rem, 2vw, 1.25rem);
     line-height: 1.3;
     font-size: clamp(0.875em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
@@ -33,7 +33,7 @@
     }
 
     &:focus-visible {
-      outline: 1px solid var(--main-color);
+      outline: 2px solid var(--main-color);
     }
   }
 
@@ -202,13 +202,6 @@
     }
   }
 
-  // Используется в Выборе регионов, возможно перенести в другой класс
-  &--size-small {
-    .field__input {
-      padding-block: 0.5rem;
-    }
-  }
-
   &--theme-grey {
     .field__input {
       border-color: var(--grey-100);
@@ -216,10 +209,7 @@
     }
   }
 
-  &--theme-white {
-    .field__input {
-      border-color: #fff;
-      background-color: #fff;
-    }
+  &--theme-white .field__input {
+    border-color: #fff;
   }
 }

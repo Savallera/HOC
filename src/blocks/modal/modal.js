@@ -67,7 +67,7 @@ if (document.querySelector('.search__region-button--content-all')) {
 }
 
 // Модальное окно с формой поиска, открытие выбора фильтров
-if (document.querySelector('.search__filters')) {
+if (document.querySelector('.search__filter-button')) {
   const filtersButtons = document.querySelectorAll('.search__filter-button');
   const filtersModal = document.querySelector('.modal--content-filters');
   const openFiltersModal = function () {

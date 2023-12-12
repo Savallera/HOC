@@ -1,7 +1,7 @@
 <!-- Секция с поиском на странице новостей -->
 <section class="page__section search">
   <form class="search__form" name="media-search" action="">
-    <fieldset class="search__regions">
+    <fieldset class="search__inner">
       <button
         class="search__region-button search__region-button--content-all"
         type="button"
@@ -14,19 +14,21 @@
     </fieldset>
     <div class="search__title-block">
       <h1 class="search__title">Новости</h1>
-      <button class="search__calendar-button" type="button">
-        <span class="icon icon--type-calendar" aria-hidden="true"></span>
-        <span>Календарь</span>
-      </button>
-      <button
-        class="search__calendar-button search__calendar-button--actived"
-        type="button"
-      >
-        <span class="icon icon--type-calendar" aria-hidden="true"></span>
-        <span>10.08.2023 - 16.08.2023</span>
-      </button>
+      <div class="search__inner">
+        <button class="search__calendar-button" type="button">
+          <span class="icon icon--type-calendar" aria-hidden="true"></span>
+          <span>Календарь</span>
+        </button>
+        <button
+          class="search__calendar-button search__calendar-button--actived"
+          type="button"
+        >
+          <span class="icon icon--type-calendar" aria-hidden="true"></span>
+          <span>10.08.2023 - 16.08.2023</span>
+        </button>
+      </div>
     </div>
-    <div class="field">
+    <div class="field field--theme-white">
       <label for="page-search-field" class="field__label visually-hidden"
         >Поиск
       </label>
@@ -49,43 +51,42 @@
         ></span>
       </div>
     </div>
-    <fieldset class="search__radio-group">
-      <label class="search__label-radio" for="search-radio-theme-all">
+    <fieldset class="search__inner">
+      <label class="search__filter-label" for="search-radio-theme-all">
         <input
-          class="search__radio visually-hidden"
+          class="search__filter-field visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-all"
-          checked
         />
-        <span class="search__label-text">Все</span>
+        <span class="search__filter-text">Все</span>
       </label>
-      <label class="search__label-radio" for="search-radio-theme-1">
+      <label class="search__filter-label" for="search-radio-theme-1">
         <input
-          class="search__radio visually-hidden"
+          class="search__filter-field visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-1"
         />
-        <span class="search__label-text">Тема 1</span>
+        <span class="search__filter-text">Тема 1</span>
       </label>
-      <label class="search__label-radio" for="search-radio-theme-2">
+      <label class="search__filter-label" for="search-radio-theme-2">
         <input
-          class="search__radio visually-hidden"
+          class="search__filter-field visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-2"
         />
-        <span class="search__label-text">Тема 2</span>
+        <span class="search__filter-text">Тема 2</span>
       </label>
-      <label class="search__label-radio" for="search-radio-theme-3">
+      <label class="search__filter-label" for="search-radio-theme-3">
         <input
-          class="search__radio visually-hidden"
+          class="search__filter-field visually-hidden"
           type="radio"
           name="search-radio-theme"
           id="search-radio-theme-3"
         />
-        <span class="search__label-text">Тема 3</span>
+        <span class="search__filter-text">Тема 3</span>
       </label>
     </fieldset>
     <button class="search__reset-button" type="reset">

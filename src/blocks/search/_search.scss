@@ -6,23 +6,16 @@
     gap: var(--gap-grid);
   }
 
-  &__regions {
-    display: flex;
-    gap: var(--gap-grid);
-  }
-
-  &__filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap-grid);
-  }
-
   &__title-block {
-    inline-size: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: var(--gap-section);
+
+    @include media(sm, max) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__title {
@@ -30,10 +23,6 @@
     line-height: 1;
     font-variation-settings: 'wght' 800;
     font-size: clamp(1.25em, 6vw, 3.75em); // 60 - 20
-
-    @include media(sm, max) {
-      min-inline-size: 100%;
-    }
   }
 
   &__form {
@@ -42,32 +31,34 @@
     gap: var(--gap-section);
   }
 
-  &__radio-group {
+  // для внутреннего построения
+  &__inner {
     display: flex;
     flex-wrap: wrap;
-    gap: clamp(0.625em, 2vw, 1.25em);
+    gap: var(--gap-grid);
   }
 
-  &__label-radio {
+  // Плашки для выбора категорий
+  &__filter-label {
     border-radius: 10px;
     &:has(:focus-visible) {
       outline: 2px solid var(--main-text-color);
     }
   }
 
-  &__radio {
+  &__filter-field {
     &:focus {
       outline: none;
     }
 
-    &:checked + .search__label-text {
+    &:checked + .search__filter-text {
       background: var(--main-color) var(--main-color-gradient) no-repeat center;
       color: #fff;
       pointer-events: none;
     }
   }
 
-  &__label-text {
+  &__filter-text {
     display: block;
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
@@ -93,7 +84,7 @@
     background-color: transparent;
     padding: 0;
     border: none;
-    border-block-end: 1px solid currentColor;
+    border-block-end: 2px solid currentColor;
     color: var(--main-text-low-color);
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
