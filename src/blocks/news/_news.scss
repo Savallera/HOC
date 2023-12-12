@@ -1,9 +1,9 @@
 /* Секция с новостями на главной странице */
 .news {
   &__columns {
-    display: grid;
-    gap: var(--gap-grid);
-    @include media(lg) {
+    @include media(md) {
+      display: grid;
+      gap: var(--gap-grid);
       grid-template-columns: 1fr 0.36fr;
     }
   }
@@ -55,7 +55,7 @@
     gap: var(--gap-grid);
     grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
 
-    @include media(lg) {
+    @include media(md) {
       height: 100%;
       grid-template-rows: 1fr 1fr 1fr 1fr;
     }
