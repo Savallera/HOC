@@ -133,7 +133,7 @@
 
   &--place-top-banner {
     border-radius: 0;
-    @include media(xxl) {
+    @include media(xl) {
       min-block-size: 100vh;
 
       @supports (max-block-size: 100dvb) {

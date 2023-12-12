@@ -1,13 +1,13 @@
 // Секция с квизом на главной
 .survey {
   &__wrapper {
-    padding: clamp(0.9375em, 3.6vw, 2.25em);
+    padding: clamp(1.25em, 3.6vw, 2.25em);
     border-radius: 10px;
     color: var(--accent-text-color);
   }
 
   &__title {
-    margin: 0 auto .5em;
+    margin: 0 auto 0.5em;
     text-align: center;
     font-size: clamp(1em, 2.5vw, 1.5625em);
     max-inline-size: 20em;
@@ -24,13 +24,34 @@
     margin: clamp(1.875em, 6.4vw, 5em) 0 0;
     display: flex;
     flex-direction: column;
-    gap: 1.25em;
+    gap: clamp(0.75em, 2vw, 1.25em);
+
+    &--show-result {
+      pointer-events: none;
+
+      .survey__label-procent {
+        transform: translateX(0);
+      }
+    }
   }
 
   &__label {
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
+
     &:has(:focus-visible) {
       outline: 2px solid var(--main-text-color);
+    }
+
+    &--current {
+      .survey__label-icon {
+        animation: notific-show 0.35s 0.05s ease-out both;
+      }
+      .survey__radio:checked + .survey__label-text,
+      .survey__label-text:hover {
+        background-color: var(--hover-color);
+      }
     }
   }
 
@@ -42,9 +63,14 @@
     &:checked + .survey__label-text {
       background-color: var(--accent-color);
     }
+
+    &:disabled + .survey__label-text {
+      background-color: transparent;
+    }
   }
 
   &__label-text {
+    position: relative;
     display: block;
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
@@ -52,10 +78,70 @@
     background-color: var(--hover-color);
     border-radius: inherit;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.25s;
 
     &:hover {
       background-color: var(--accent-color);
     }
+  }
+
+  &__label-procent {
+    position: absolute;
+    inset: 0 auto 0 0;
+    display: block;
+    inline-size: 0;
+    background-color: var(--hover-color);
+    transform: translateX(-100%);
+    transition: transform 0.75s 0.5s ease-in-out;
+  }
+
+  &__label-icon {
+    position: absolute;
+    inset: clamp(0.75em, 1.6vw, 1em) clamp(0.75em, 1.6vw, 1em)
+      clamp(0.75em, 1.6vw, 1em) auto;
+    display: block;
+    inline-size: 1.875em;
+    block-size: 1.875em;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0, -10%, 0) scale(0);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      display: block;
+      block-size: 100%;
+      inline-size: 5px;
+      border-radius: 3px 3px 0 0;
+      background-color: currentColor;
+      transform: rotate(37deg) translateX(225%) translateY(-40%);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      display: block;
+      block-size: 60%;
+      inline-size: 5px;
+      border-radius: 3px 3px 0 0;
+      background-color: currentColor;
+      transform: rotate(-45deg) translateX(-70%) translateY(45%);
+    }
+  }
+}
+
+@keyframes notific-show {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0) scale(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
