@@ -63,7 +63,7 @@
     }
   }
 
-  &__regions-list {
+  &__filters-list {
     margin: 0;
     padding: 2px; // на обводку
     list-style: none;
@@ -90,13 +90,13 @@
     }
   }
 
-  &__regions-label-radio {
+  &__filters-label-radio {
     &:has(:focus-visible) {
       outline: 2px solid var(--main-text-color);
     }
   }
 
-  &__regions-radio {
+  &__filters-radio {
     &:focus {
       outline: none;
     }
@@ -107,7 +107,7 @@
     }
   }
 
-  &__regions-label-text {
+  &__filters-label-text {
     display: block;
     font-size: clamp(0.9375em, 2vw, 1.25em);
     padding-block: 0.5em;

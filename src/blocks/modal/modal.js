@@ -66,6 +66,30 @@ if (document.querySelector('.search__region-button--content-all')) {
   });
 }
 
+// Модальное окно с формой поиска, открытие выбора фильтров
+if (document.querySelector('.search__filters')) {
+  const filtersButtons = document.querySelectorAll('.search__filter-button');
+  const filtersModal = document.querySelector('.modal--content-filters');
+  const openFiltersModal = function () {
+    filtersModal.classList.add('modal--opened');
+  };
+  const closeFiltersModal = function () {
+    filtersModal.classList.remove('modal--opened');
+  };
+
+  for (i = 0; i < filtersButtons.length; i++) {
+    filtersButtons[i].addEventListener('click', openFiltersModal);
+  }
+  filtersModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-filters') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeFiltersModal();
+    }
+  });
+}
+
 // Модальное окно для просмотра трансляции
 if (document.querySelector('.card--role-preview-button')) {
   const broadcastsButton = document.querySelector('.card--role-preview-button');
