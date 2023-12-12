@@ -1,9 +1,9 @@
 /* Блок с карточкой с фоновой картинкой */
 .card-banner {
-  max-block-size: 100vh;
   display: grid;
   inline-size: 100%;
-  aspect-ratio: 1220/650;
+  // aspect-ratio: 1220/650;
+  min-block-size: clamp(12em, 55vw, 40.625em);
   background-color: var(--main-text-color);
   background-size: cover;
   background-position: center;
@@ -131,20 +131,17 @@
     }
   }
 
-  @include media(sm) {
-    border-radius: 20px;
-  }
-
-  @supports (max-block-size: 100dvb) {
-    max-block-size: 100dvb;
-  }
-
   &--place-top-banner {
     border-radius: 0;
+    min-block-size: 100vh;
 
     .card-banner__main-content {
       gap: clamp(0.3125em, 2.5vw, 1.5625em);
       padding-block: clamp(0.9375em, 5vw, 3.125em);
+    }
+
+    @supports (max-block-size: 100dvb) {
+      min-block-size: 100dvb;
     }
   }
 

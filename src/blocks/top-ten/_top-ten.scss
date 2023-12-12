@@ -19,10 +19,6 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-
-    @include media(sm) {
-      border-radius: 20px;
-    }
   }
 
   &__card-image {

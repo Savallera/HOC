@@ -60,7 +60,6 @@
     overflow: hidden;
 
     @include media(sm) {
-      border-radius: 20px;
       gap: clamp(1.125em, 9.3vw, 5.8125em);
     }
   }

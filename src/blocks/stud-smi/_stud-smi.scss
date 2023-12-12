@@ -2,6 +2,7 @@
 .stud-smi {
   &__description {
     font-size: clamp(0.625em, 2vw, 1.25em);
+    max-inline-size: unset;
   }
 
   &__button {

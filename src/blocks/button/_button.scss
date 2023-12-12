@@ -45,11 +45,9 @@
     }
   }
 
-  &--corner-rounded {
-    border-radius: 20px;
-  }
-
   &--justify-center {
-    margin-inline: auto;
+    @include media(sm) {
+      margin-inline: auto;
+    }
   }
 }

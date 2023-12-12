@@ -142,7 +142,7 @@
     min-inline-size: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
     max-inline-size: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
     block-size: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   &__author-name {
@@ -284,11 +284,6 @@
   }
 
   &--size-lg {
-    .card__iframe,
-    .card__image {
-      border-radius: 20px;
-    }
-
     .card__title {
       font-size: clamp(1rem, 0.2143rem + 3.9286vw, 3.75rem); // 60 - 16
     }

@@ -89,15 +89,7 @@
     color: var(--accent-text-color);
     padding: clamp(0.325em, 1.2vw, 0.75rem) clamp(0.875rem, 2vw, 1.25rem);
     background: var(--main-color) var(--main-color-gradient) no-repeat center;
-    border-radius: 20px;
-
-    @include media(sm) {
-      border-radius: 10px;
-    }
-
-    &--corner-rounded {
-      border-radius: 36px;
-    }
+    border-radius: 10px;
   }
 
   &__columns {
@@ -129,10 +121,6 @@
 
   &__slider-image {
     border-radius: 10px;
-
-    @include media(sm) {
-      border-radius: 20px;
-    }
   }
 
   &__iframe,
@@ -143,10 +131,6 @@
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
-
-    @include media(sm) {
-      border-radius: 20px;
-    }
   }
 
   &__link {
@@ -178,7 +162,6 @@
 
       @include media(sm, max) {
         padding: 0.625em 0.5em;
-        border-radius: 13px;
       }
     }
   }
@@ -225,7 +208,6 @@
 
     &--place-comments {
       background-color: #fff;
-      border-radius: 20px;
       padding: clamp(0.625rem, 1.6vw, 1rem);
       color: var(--main-text-color);
       margin-block-end: clamp(0.75rem, 2vw, 1.25rem);
@@ -239,10 +221,6 @@
     max-inline-size: clamp(1.75rem, 5.8vw, 3.4375rem);
     block-size: clamp(1.75rem, 5.8vw, 3.4375rem);
     border-radius: 10px;
-
-    @include media(sm) {
-      border-radius: 5px;
-    }
   }
 
   &__author-text {
@@ -275,7 +253,6 @@
   // &__comment-field {}
 
   &__comment-field-input {
-    border-radius: 20px;
     border-color: #fff;
     padding: clamp(1.25rem, 3vw, 1.875rem) clamp(1.25rem, 4vw, 2.5rem);
   }

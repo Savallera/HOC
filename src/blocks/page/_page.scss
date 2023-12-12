@@ -101,12 +101,6 @@
     }
   }
 
-  &__button {
-    @include media(sm) {
-      align-self: center;
-    }
-  }
-
   &__more-button {
     align-self: center;
     border-block-end: 1px solid var(--accent-color);
@@ -124,6 +118,12 @@
 
   &__hidden-mobile {
     @include media(lg, max) {
+      display: none;
+    }
+  }
+
+  &__hidden-desktop {
+    @include media(lg) {
       display: none;
     }
   }

@@ -16,12 +16,6 @@
     flex-direction: column;
   }
 
-  &__podsast-title-block a {
-    @include media(lg) {
-      display: none;
-    }
-  }
-
   &__podcast-slider {
     &.is-initialized:not(.is-active) .splide__list {
       display: grid;

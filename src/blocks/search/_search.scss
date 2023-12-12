@@ -53,10 +53,6 @@
     &:has(:focus-visible) {
       outline: 2px solid var(--main-text-color);
     }
-
-    &--corner-rounded {
-      border-radius: 36px;
-    }
   }
 
   &__radio {
