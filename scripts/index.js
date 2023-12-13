@@ -175,6 +175,74 @@ window.addEventListener('DOMContentLoaded', () => {
   checkMenuSize();
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
+    // Слайдер с подкастами
+    if (document.querySelector('#media-podcast-slider')) {
+      let mediaPodcastSlider = new Splide('#media-podcast-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        autoWidth: true,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      mediaPodcastSlider.mount();
+    }
+
+    // Слайдер с видео
+    if (document.querySelector('#media-video-slider')) {
+      let mediaVideoSlider = new Splide('#media-video-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        autoWidth: true,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      mediaVideoSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (Splide) {
+        // Слайдер новостей на главной странице
+        if (document.querySelector('#news-slider')) {
+            let newsSlider = new Splide('#news-slider', {
+                type: 'slide',
+                autoplay: false,
+                arrows: false,
+                pagination: false,
+                gap: '.9375em',
+                autoWidth: true,
+                padding: 'var(--section-padding)',
+                mediaQuery: 'min',
+                breakpoints: {
+                    768: {
+                        destroy: 'completely',
+                    },
+                },
+            });
+            newsSlider.mount();
+        }
+    }
+});
+
 // Модальное окно с формой присоединиться к проекту
 if (document.querySelector('.sign-up')) {
   const signUpButton = document.querySelector('.sign-up__button');
@@ -288,74 +356,6 @@ if (document.querySelector('.card--role-preview-button')) {
     }
   });
 }
-
-window.addEventListener('DOMContentLoaded', () => {
-  if (Splide) {
-    // Слайдер с подкастами
-    if (document.querySelector('#media-podcast-slider')) {
-      let mediaPodcastSlider = new Splide('#media-podcast-slider', {
-        type: 'slide',
-        autoplay: false,
-        arrows: false,
-        pagination: false,
-        gap: '.9375em',
-        autoWidth: true,
-        padding: 'var(--section-padding)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            destroy: 'completely',
-          },
-        },
-      });
-      mediaPodcastSlider.mount();
-    }
-
-    // Слайдер с видео
-    if (document.querySelector('#media-video-slider')) {
-      let mediaVideoSlider = new Splide('#media-video-slider', {
-        type: 'slide',
-        autoplay: false,
-        arrows: false,
-        pagination: false,
-        gap: '.9375em',
-        autoWidth: true,
-        padding: 'var(--section-padding)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            destroy: 'completely',
-          },
-        },
-      });
-      mediaVideoSlider.mount();
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-    if (Splide) {
-        // Слайдер новостей на главной странице
-        if (document.querySelector('#news-slider')) {
-            let newsSlider = new Splide('#news-slider', {
-                type: 'slide',
-                autoplay: false,
-                arrows: false,
-                pagination: false,
-                gap: '.9375em',
-                autoWidth: true,
-                padding: 'var(--section-padding)',
-                mediaQuery: 'min',
-                breakpoints: {
-                    768: {
-                        destroy: 'completely',
-                    },
-                },
-            });
-            newsSlider.mount();
-        }
-    }
-});
 
 // Пока не используются
 // window.addEventListener('DOMContentLoaded', () => {
@@ -514,6 +514,25 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       themeSlider.mount();
+    }
+
+    // Слайдер для ЛК
+    if (document.querySelector('#theme-lk-slider')) {
+      let themeLkSlider = new Splide('#theme-lk-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        autoWidth: true,
+        padding: 'var(--section-inline-start)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            arrows: true,
+          },
+        },
+      });
+      themeLkSlider.mount();
     }
   }
 });
