@@ -1,8 +1,20 @@
 .account {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-section);
+  margin-block-end: clamp(1.25em, 2.4vw, 1.5em);
+
   &__columns {
     display: grid;
-    grid-template-columns: 0.45fr 1fr;
     gap: clamp(1em, 4vw, 2.5em);
+
+    @include media(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(lg) {
+      grid-template-columns: 0.46fr 1fr;
+    }
   }
 
   &__image {
@@ -10,7 +22,7 @@
     overflow: hidden;
     background-color: var(--main-text-low-color);
     inline-size: 100%;
-    aspect-ratio: 1/1.05;
+    aspect-ratio: 370/383;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
@@ -46,36 +58,49 @@
   &__icon-button {
     flex: none;
     padding: 0;
-    inline-size: 3.5em;
-    min-inline-size: 3.5em;
-    max-inline-size: 3.5em;
-    block-size: 3.5em;
+    inline-size: clamp(2em, 5.6vw, 3.5em);
+    min-inline-size: clamp(2em, 5.6vw, 3.5em);
+    max-inline-size: clamp(2em, 5.6vw, 3.5em);
+    block-size: clamp(2em, 5.6vw, 3.5em);
     color: var(--main-text-low-color);
+
+    &:hover {
+      color: var(--accent-color);
+      background-color: transparent;
+    }
   }
 
   &__main-info {
-    height: 100%;
-    display: flex;
-    gap: 0 1.5em;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    flex: auto;
+
+    display: grid;
+
+    @include media(md) {
+      gap: 0 1.5em;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto 1fr auto;
+    }
   }
 
   &__title {
+    grid-column: 1/-1;
+
     margin: 0;
     font-variation-settings: 'wght' 800;
-    font-size: clamp(1.25em, 0.8929em + 1.7857vw, 2.5em); // 40 - 20
-
-    min-inline-size: 100%;
+    font-size: clamp(1.25em, 4vw, 2.5em); // 40 - 20
   }
 
   &__title-span {
     display: block;
-    line-height: 1;
-    font-size: 1.6em;
+
+    @include media(lg) {
+      font-size: 1.625em;
+      line-height: 1.1;
+    }
   }
 
   &__link {
+    align-self: center;
     text-decoration: unset;
     font-size: clamp(1em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
@@ -83,18 +108,29 @@
   }
 
   &__button {
+    flex: none;
+    justify-self: start;
     padding: 0;
     font-size: clamp(1em, 2vw, 1.25em);
+
+    .icon {
+      inline-size: 1.875em;
+      block-size: 1.875em;
+    }
   }
 
   // рейтинг
   &__rating {
-    min-inline-size: 100%;
-    margin-block-start: clamp(1.25em, 3vw, 2em);
+    grid-column: 1/-1;
+    margin-block-start: clamp(1.25em, 2.4vw, 1.5em);
+
+    @include media(md, max) {
+      margin-block: clamp(1.25em, 2.4vw, 1.5em);
+    }
   }
 
   &__rating-text {
-    margin-block: 0;
+    margin-block: 0 0.125em;
     color: var(--main-text-low-color);
     font-variation-settings: 'wght' 500;
     font-size: clamp(1em, 2vw, 1.25em);
@@ -102,38 +138,44 @@
 
   &__rating-bar {
     position: relative;
-    block-size: clamp(1.875em, 51.2vw, 3.2em);
-    inline-size: clamp(9.375em, 256vw, 16em);
+    block-size: clamp(1.875em, 5.5vw, 3.4375em);
+    inline-size: clamp(10.625em, 24.3vw, 15.1875em);
     background-color: var(--main-text-low-color);
-    mask-image: url('../images/icons.svg#star');
+    mask: url('../images/rating.svg') left center / 100% 100% no-repeat;
   }
 
   &__rating-bar-progress {
     block-size: inherit;
     background-color: var(--main-color);
-    mask-image: url('../images/icons.svg#star');
+    mask: url('../images/rating.svg') left center /
+      clamp(10.625em, 24.3vw, 15.1875em) 100% no-repeat;
   }
 
   &__logos {
-    min-inline-size: 100%;
-    margin-block-start: auto;
+    grid-column: 1/-1;
+    margin-block-start: 1em;
 
     display: flex;
     gap: clamp(0.5rem, 1.4vw, 0.875rem);
+
+    @include media(md, max) {
+      grid-row: 3/4;
+      margin-block: 1.5em;
+    }
   }
 
   &__logo {
     flex: none;
-    inline-size: clamp(1.75em, 5.8vw, 3.4375em);
-    block-size: clamp(1.75em, 5.8vw, 3.4375em);
+    inline-size: clamp(2em, 5.8vw, 3.4375em);
+    block-size: clamp(2em, 5.8vw, 3.4375em);
     border-radius: 10px;
   }
 
   // Достижения
   &__achievements {
     display: grid;
-    gap: var(--gap-grid);
-    grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
+    gap: clamp(0.9375em, 2vw, 1.25em);
+    grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
   }
 
   &__achievements-card {
