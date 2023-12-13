@@ -58,7 +58,7 @@
       background-color: transparent;
       outline: 2px solid var(--main-text-color);
       outline-offset: 2px;
-      transition: background-color 0.3s;
+      transition: background-color 0.35s;
     }
 
     &:hover::before {
@@ -88,7 +88,7 @@
     font-size: clamp(0.75em, 1.6vw, 1em);
     padding-inline-start: clamp(0.875rem, 2vw, 1.25rem);
     font-variation-settings: 'wght' 500;
-    color: var(--accent-color);
+    color: var(--error-color);
 
     visibility: hidden;
     opacity: 0;
@@ -104,7 +104,7 @@
     display: block;
     inline-size: clamp(1.25em, 1.75vw, 1.75em);
     block-size: clamp(1.25em, 1.75vw, 1.75em);
-    color: var(--accent-color);
+    color: var(--error-color);
     grid-area: 1/1/2/2;
 
     align-self: center;
@@ -188,7 +188,7 @@
         padding: 0.785rem clamp(0.875rem, 2vw, 1.25rem);
         background-color: var(--main-text-low-color);
         border-radius: 10px;
-        transition: background-color 0.3s;
+        transition: background-color 0.35s;
         cursor: pointer;
 
         &:has(:focus-visible) {

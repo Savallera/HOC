@@ -131,8 +131,8 @@
     font-size: clamp(0.9375em, 2vw, 1.25em);
     cursor: pointer;
     transition:
-      background 0.3s,
-      color 0.3s;
+      background 0.35s,
+      color 0.35s;
 
     &:hover {
       background-color: var(--grey-100);

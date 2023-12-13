@@ -2,6 +2,7 @@
 .article {
   margin-block: clamp(1.5625em, 10vw, 6.25em);
 
+  // Внутренние поля
   &__inner {
     margin-inline: auto;
     margin-block: clamp(0.9375em, 4vw, 2.5em); // 15 - 40
@@ -14,13 +15,26 @@
     flex-direction: column;
   }
 
+  // Для маленьких расстояний
+  &__indent {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-grid);
+
+    &--size-sm {
+      gap: clamp(0.25em, 1vw, 0.625em);
+    }
+
+    &--column {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
   &__controls {
     display: flex;
     align-items: center;
     gap: 1.25em clamp(0.75em, 2vw, 1.25em);
-    font-size: clamp(0.75em, 1.6vw, 1em);
-    font-variation-settings: 'wght' 500;
-    color: var(--main-text-low-color);
 
     &--column-mobile {
       @include media(sm, max) {
@@ -30,9 +44,46 @@
     }
   }
 
-  &__title {
-    margin: 0;
+  // Добавить публикацию
+  &__icon-button {
+    padding: 0;
+    inline-size: clamp(1.5em, 5vw, 3.125em);
+    block-size: clamp(1.5em, 5vw, 3.125em);
+    color: var(--main-text-low-color);
+
+    &:hover {
+      background-color: transparent;
+
+      &::before {
+        background: var(--main-color) var(--main-color-gradient) no-repeat;
+      }
+    }
+  }
+
+  // Кол-во на модерации
+  &__count-button {
+    padding: 0;
+    border-radius: 13px;
+    inline-size: clamp(1.875em, 4.2vw, 2.625em);
+    block-size: clamp(1.875em, 4.2vw, 2.625em);
+    border: 0.25em solid currentColor;
+    cursor: default;
+  }
+
+  &__count-button-text {
+    font-size: clamp(0.875em, 3.5vw, 2.1875em);
+    font-variation-settings: 'wght' 700;
     line-height: 1;
+  }
+
+  &__title-block {
+    display: flex;
+    align-items: center;
+    gap: 1.25em clamp(0.75em, 2vw, 1.25em);
+  }
+
+  &__title {
+    margin: 0 0 0.125em; // небольшой отступ для выравнивания по центру с иконками/кнопками
     font-variation-settings: 'wght' 800;
     font-size: clamp(1.25em, 6vw, 3.75em); // 60 - 20
     max-inline-size: 15em;
@@ -45,7 +96,12 @@
     max-inline-size: 18em;
   }
 
-  // &__date {}
+  &__date {
+    margin-block: 0;
+    font-size: clamp(0.75em, 1.6vw, 1em);
+    font-variation-settings: 'wght' 500;
+    color: var(--main-text-low-color);
+  }
 
   &__views {
     flex: none;
@@ -54,6 +110,10 @@
     display: flex;
     align-items: center;
     gap: clamp(0.25em, 0.5vw, 0.375em);
+
+    font-size: clamp(0.75em, 1.6vw, 1em);
+    font-variation-settings: 'wght' 500;
+    color: var(--main-text-low-color);
   }
 
   &__views-icon {
@@ -66,6 +126,9 @@
 
   &__share-button {
     flex: none;
+    font-size: clamp(0.75em, 1.6vw, 1em);
+    font-variation-settings: 'wght' 500;
+    color: var(--main-text-low-color);
 
     &:hover {
       color: var(--accent-color);
@@ -308,6 +371,7 @@
     }
   }
 
+  // Девайсы
   &__hidden-mobile {
     @include media(lg, max) {
       display: none;

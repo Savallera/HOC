@@ -1,10 +1,11 @@
 /* Базовая карточка */
 .card {
+  position: relative;
   inline-size: 100%;
   block-size: 100%;
   background-color: #fff;
   border-radius: 10px;
-  overflow: hidden;
+  // overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -17,6 +18,7 @@
     aspect-ratio: 258/138;
     object-fit: cover;
     object-position: center;
+    border-radius: 10px 10px 0 0;
 
     &:after {
       content: attr(alt);
@@ -47,6 +49,7 @@
     aspect-ratio: 258/138;
     object-fit: cover;
     object-position: center;
+    border-radius: 10px 10px 0 0;
   }
 
   &__main-content {
@@ -216,6 +219,40 @@
         background: var(--main-color) var(--main-color-gradient) no-repeat
           center;
       }
+    }
+  }
+
+  &__remove-button {
+    position: absolute;
+    inset: -0.5em -0.5em auto auto;
+    inline-size: clamp(1.25em, 3vw, 1.875em);
+    block-size: clamp(1.25em, 3vw, 1.875em);
+    color: var(--error-color);
+    background-color: #fff;
+    border-radius: 10px;
+    border: 0.2em solid currentColor;
+    transition: 0.35s;
+
+    &:hover {
+      transform: scale(1.05) translateY(-5%);
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      inline-size: 80%;
+      block-size: 3px;
+      border-radius: 4px;
+      background: currentColor;
+      transform-origin: center;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 

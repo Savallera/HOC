@@ -1,0 +1,162 @@
+.account {
+  &__columns {
+    display: grid;
+    grid-template-columns: 0.45fr 1fr;
+    gap: clamp(1em, 4vw, 2.5em);
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--main-text-low-color);
+    inline-size: 100%;
+    aspect-ratio: 1/1.05;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+    &:after {
+      content: attr(alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75em;
+      padding: 0.75em;
+      color: var(--main-text-color);
+
+      position: absolute;
+      inset: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      text-align: center;
+      background-image: linear-gradient(
+        to bottom,
+        #ccc 0%,
+        #eee 50%,
+        #ccc 100%
+      );
+    }
+  }
+
+  &__column {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  &__icon-button {
+    flex: none;
+    padding: 0;
+    inline-size: 3.5em;
+    min-inline-size: 3.5em;
+    max-inline-size: 3.5em;
+    block-size: 3.5em;
+    color: var(--main-text-low-color);
+  }
+
+  &__main-info {
+    height: 100%;
+    display: flex;
+    gap: 0 1.5em;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin: 0;
+    font-variation-settings: 'wght' 800;
+    font-size: clamp(1.25em, 0.8929em + 1.7857vw, 2.5em); // 40 - 20
+
+    min-inline-size: 100%;
+  }
+
+  &__title-span {
+    display: block;
+    line-height: 1;
+    font-size: 1.6em;
+  }
+
+  &__link {
+    text-decoration: unset;
+    font-size: clamp(1em, 2vw, 1.25em);
+    font-variation-settings: 'wght' 500;
+    color: var(--main-text-low-color);
+  }
+
+  &__button {
+    padding: 0;
+    font-size: clamp(1em, 2vw, 1.25em);
+  }
+
+  // рейтинг
+  &__rating {
+    min-inline-size: 100%;
+    margin-block-start: clamp(1.25em, 3vw, 2em);
+  }
+
+  &__rating-text {
+    margin-block: 0;
+    color: var(--main-text-low-color);
+    font-variation-settings: 'wght' 500;
+    font-size: clamp(1em, 2vw, 1.25em);
+  }
+
+  &__rating-bar {
+    position: relative;
+    block-size: clamp(1.875em, 51.2vw, 3.2em);
+    inline-size: clamp(9.375em, 256vw, 16em);
+    background-color: var(--main-text-low-color);
+    mask-image: url('../images/icons.svg#star');
+  }
+
+  &__rating-bar-progress {
+    block-size: inherit;
+    background-color: var(--main-color);
+    mask-image: url('../images/icons.svg#star');
+  }
+
+  &__logos {
+    min-inline-size: 100%;
+    margin-block-start: auto;
+
+    display: flex;
+    gap: clamp(0.5rem, 1.4vw, 0.875rem);
+  }
+
+  &__logo {
+    flex: none;
+    inline-size: clamp(1.75em, 5.8vw, 3.4375em);
+    block-size: clamp(1.75em, 5.8vw, 3.4375em);
+    border-radius: 10px;
+  }
+
+  // Достижения
+  &__achievements {
+    display: grid;
+    gap: var(--gap-grid);
+    grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
+  }
+
+  &__achievements-card {
+    background-color: #fff;
+    padding: clamp(0.625rem, 1.6vw, 1rem) clamp(1rem, 3vw, 1.875rem);
+    border-radius: 10px;
+    font-size: clamp(0.75em, 2.4vw, 1.5em);
+  }
+
+  &__achievements-card-icon {
+    display: block;
+    inline-size: 1.125em;
+    block-size: 1.125em;
+    margin-block-end: 0.25em;
+    color: var(--main-text-color);
+  }
+
+  &__achievements-card-title {
+    margin-block: 0;
+    font-variation-settings: 'wght' 800;
+  }
+
+  &__achievements-card-text {
+    margin-block: 0;
+  }
+}

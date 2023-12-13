@@ -29,6 +29,9 @@
     &-docs::before {
       mask-image: url('../images/icons.svg#docs');
     }
+    &-edit::before {
+      mask-image: url('../images/icons.svg#edit');
+    }
     &-email::before {
       mask-image: url('../images/icons.svg#email');
     }
@@ -43,6 +46,9 @@
     }
     &-location::before {
       mask-image: url('../images/icons.svg#location');
+    }
+    &-medal::before {
+      mask-image: url('../images/icons.svg#medal');
     }
     &-menu::before {
       mask-image: url('../images/icons.svg#menu');
@@ -67,6 +73,9 @@
     }
     &-telegram::before {
       mask-image: url('../images/icons.svg#telegram');
+    }
+    &-trophy::before {
+      mask-image: url('../images/icons.svg#trophy');
     }
     &-user::before {
       mask-image: url('../images/icons.svg#user');

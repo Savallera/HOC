@@ -46,6 +46,10 @@
     }
   }
 
+  &__track--with-padding-block {
+    padding-block: 1em;
+  }
+
   // На мобильных кастомная ширина
   &__slide--mobile-width-auto {
     @include media(md, max) {
