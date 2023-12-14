@@ -37,5 +37,43 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       themeLkSlider.mount();
     }
+
+    // Слайдер для ЛК инвайтов
+    if (document.querySelector('#theme-lk-invite-slider')) {
+      let themeLkInviteSlider = new Splide('#theme-lk-invite-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        autoWidth: true,
+        padding: 'var(--section-inline-start)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            arrows: true,
+          },
+        },
+      });
+      themeLkInviteSlider.mount();
+    }
+
+    // Слайдер для ЛК сертификатов
+    if (document.querySelector('#theme-lk-certificate-slider')) {
+      let themeLkCertificateSlider = new Splide('#theme-lk-certificate-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        perPage: 3,
+        gap: 'clamp(.625em, 2vw, 1.25em)',
+        padding: 'var(--section-inline-start)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            arrows: true,
+          },
+        },
+      });
+      themeLkCertificateSlider.mount();
+    }
   }
 });

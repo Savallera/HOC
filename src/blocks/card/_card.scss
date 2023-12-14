@@ -41,6 +41,12 @@
         #ccc 100%
       );
     }
+
+    &--content-certificate {
+      aspect-ratio: 378/537;
+      border-radius: 10px;
+      object-fit: contain;
+    }
   }
 
   &__iframe {

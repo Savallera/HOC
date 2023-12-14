@@ -19,7 +19,7 @@
   }
 
   &__title {
-    margin: 0 0 0.125em;
+    margin-block: 0 0.125em;
     line-height: 1;
     font-variation-settings: 'wght' 800;
     font-size: clamp(1.25em, 6vw, 3.75em); // 60 - 20
