@@ -1,0 +1,203 @@
+<!-- Модальное окно редактирования профиля -->
+<div class="modal modal--size-wide modal--content-edit-profile">
+  <div class="modal__container">
+    <button
+      type="reset"
+      class="modal__close-button"
+      aria-label="Закрыть"
+    ></button>
+    <h2 class="modal__title">Настройки профиля</h2>
+    <form name="edit-profile" class="form" action="">
+      <div class="form__two-columns form__two-columns--content-profile">
+        <div class="form__photo-block">
+          <img
+            class="form__photo-image"
+            src="./images/no-photo.png"
+            alt="описание изображения"
+          />
+          <input
+            type="file"
+            name="photo"
+            id="edit-profile-photo"
+            class="visually-hidden"
+          />
+          <div class="form__photo-controls">
+            <button
+              type="button"
+              class="form__photo-control-icon icon-button icon icon--type-edit"
+              aria-label="Редактировать"
+            ></button>
+            <button
+              type="button"
+              class="form__photo-control-icon icon-button icon icon--type-close"
+              aria-label="Удалить"
+            ></button>
+          </div>
+        </div>
+        <fieldset class="form__column form__column--indent-sm">
+          <div class="field field--with-controls">
+            <label
+              for="edit-profile-family-name"
+              class="field__label visually-hidden"
+              >Фамилия</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите фамилию"
+                autocomplete="family-name"
+                name="family-name"
+                id="edit-profile-family-name"
+                value="Иванов"
+                disabled
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+              <div class="field__controls">
+                <button
+                  type="button"
+                  class="field__control-icon icon-button icon icon--type-edit"
+                  aria-label="Редактировать"
+                ></button>
+                <button
+                  type="button"
+                  class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
+                  aria-label="Сохранить"
+                ></button>
+                <button
+                  type="button"
+                  class="field__control-icon icon-button icon icon--type-close"
+                  aria-label="Удалить"
+                ></button>
+              </div>
+            </div>
+          </div>
+          <div class="field field--with-controls">
+            <label
+              for="edit-profile-first-name"
+              class="field__label visually-hidden"
+              >Имя</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите имя"
+                autocomplete="first-name"
+                name="first-name"
+                id="edit-profile-first-name"
+                value="Иван"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+              <div class="field__controls">
+                <button
+                  type="button"
+                  class="field__control-icon field__control-icon--actived icon-button icon icon--type-edit"
+                  aria-label="Редактировать"
+                ></button>
+                <button
+                  type="button"
+                  class="field__control-icon icon-button icon icon--type-check"
+                  aria-label="Сохранить"
+                ></button>
+                <button
+                  type="button"
+                  class="field__control-icon icon-button icon icon--type-close"
+                  aria-label="Удалить"
+                ></button>
+              </div>
+            </div>
+          </div>
+          <div class="field field--with-controls">
+            <label
+              for="edit-profile-middle-name"
+              class="field__label visually-hidden"
+              >Отчество</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите отчество"
+                autocomplete="middle-name"
+                name="middle-name"
+                id="edit-profile-middle-name"
+                disabled
+                value="Иванович"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+              <div class="field__controls">
+                <button
+                  type="button"
+                  class="field__control-icon icon-button icon icon--type-edit"
+                  aria-label="Редактировать"
+                ></button>
+                <button
+                  type="button"
+                  class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
+                  aria-label="Сохранить"
+                ></button>
+                <button
+                  type="button"
+                  class="field__control-icon icon-button icon icon--type-close"
+                  aria-label="Удалить"
+                ></button>
+              </div>
+            </div>
+          </div>
+          <div class="field field--with-controls">
+            <label
+              for="edit-profile-desription"
+              class="field__label visually-hidden"
+              >Обо мне</label
+            >
+            <div class="field__inner">
+              <textarea
+                class="field__input"
+                name="message"
+                rows="5"
+                placeholder="Введите небольшое описание"
+                id="edit-profile-desription"
+                disabled
+              >Специалист управления информационной политики и связей с общественностью</textarea>
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+              <div class="field__controls">
+                <button
+                  type="button"
+                  class="field__control-icon icon-button icon icon--type-edit"
+                  aria-label="Редактировать"
+                ></button>
+                <button
+                  type="button"
+                  class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
+                  aria-label="Сохранить"
+                ></button>
+                <button
+                  type="button"
+                  class="field__control-icon icon-button icon icon--type-close"
+                  aria-label="Удалить"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+</div>

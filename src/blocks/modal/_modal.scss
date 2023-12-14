@@ -10,6 +10,7 @@
 
   display: flex;
   padding-block: 3em;
+  padding-inline: 1em;
 
   backdrop-filter: blur(18px);
   background-color: rgba(0, 0, 0, 0.4);
@@ -69,10 +70,24 @@
     }
   }
 
+  &__content-align-center {
+    text-align: center;
+  }
+
   &__title {
-    margin: 0;
-    font-size: clamp(1.25em, 4vw, 2.5em);
+    margin-block: 0 1em;
+    font-size: clamp(1.25em, 4vw, 2.5em); // 20 - 40
     font-variation-settings: 'wght' 800;
+  }
+
+  &__title-icon {
+    display: inline-block;
+    inline-size: clamp(3.75em, 11.2vw, 7em);
+    block-size: clamp(3.75em, 11.2vw, 7em);
+
+    &::before {
+      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+    }
   }
 
   &--opened {

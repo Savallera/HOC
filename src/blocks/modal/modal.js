@@ -111,3 +111,55 @@ if (document.querySelector('.card--role-preview-button')) {
     }
   });
 }
+
+// Модальное окно для редактирования профиля
+if (document.querySelector('.account__icon-button--role-edit-profile')) {
+  const editProfileButton = document.querySelector(
+    '.account__icon-button--role-edit-profile'
+  );
+  const editProfileModal = document.querySelector(
+    '.modal--content-edit-profile'
+  );
+  const openEditProfileModal = function () {
+    editProfileModal.classList.add('modal--opened');
+  };
+  const closeEditProfileModal = function () {
+    editProfileModal.classList.remove('modal--opened');
+  };
+
+  editProfileButton.addEventListener('click', openEditProfileModal);
+  editProfileModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-edit-profile') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeEditProfileModal();
+    }
+  });
+}
+
+// Модальное окно для просмотра уведомлений
+if (document.querySelector('.article__count-button--role-notifications')) {
+  const notificationsButton = document.querySelector(
+    '.article__count-button--role-notifications'
+  );
+  const notificationsModal = document.querySelector(
+    '.modal--content-notifications'
+  );
+  const openNotificationsModal = function () {
+    notificationsModal.classList.add('modal--opened');
+  };
+  const closeNotificationsModal = function () {
+    notificationsModal.classList.remove('modal--opened');
+  };
+
+  notificationsButton.addEventListener('click', openNotificationsModal);
+  notificationsModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-notifications') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeNotificationsModal();
+    }
+  });
+}

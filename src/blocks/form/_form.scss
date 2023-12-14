@@ -12,6 +12,21 @@
       gap: var(--gap-section);
       margin-block-end: var(--gap-section);
     }
+
+    &--content-profile {
+      @include media(md) {
+        grid-template-columns: 0.4fr 1fr;
+      }
+    }
+  }
+
+  &__column {
+    display: grid;
+    gap: var(--gap-grid);
+
+    &--indent-sm {
+      gap: clamp(0.5em, 1.4vw, 0.875em);
+    }
   }
 
   &__title {
@@ -156,6 +171,64 @@
     &--size-lg {
       inline-size: 1.875em;
       block-size: 1.875em;
+    }
+  }
+
+  // Редактирование фото профиля
+  &__photo-block {
+    display: grid;
+  }
+
+  &__photo-image {
+    grid-area: 1/1/2/2;
+
+    position: relative;
+    overflow: hidden;
+    background-color: var(--main-text-low-color);
+    inline-size: 100%;
+    aspect-ratio: 370/383;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+    &:after {
+      content: attr(alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75em;
+      padding: 0.75em;
+      color: var(--main-text-color);
+
+      position: absolute;
+      inset: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      text-align: center;
+      background-image: linear-gradient(
+        to bottom,
+        #ccc 0%,
+        #eee 50%,
+        #ccc 100%
+      );
+    }
+  }
+
+  &__photo-controls {
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    margin: 0.5em;
+  }
+
+  &__photo-control-icon {
+    padding: 0;
+    inline-size: 1.875em;
+    block-size: 1.875em;
+    color: var(--main-text-low-color);
+
+    &:hover {
+      color: var(--main-color);
+      background: transparent;
     }
   }
 

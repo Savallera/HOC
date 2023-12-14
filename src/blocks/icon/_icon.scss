@@ -56,6 +56,9 @@
     &-minus::before {
       mask-image: url('../images/icons.svg#minus');
     }
+    &-notification::before {
+      mask-image: url('../images/icons.svg#notification');
+    }
     &-phone::before {
       mask-image: url('../images/icons.svg#phone');
     }

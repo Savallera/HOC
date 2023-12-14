@@ -35,6 +35,9 @@
     &:focus-visible {
       outline: 2px solid var(--main-color);
     }
+
+    &:disabled {
+    }
   }
 
   &__checkbox {
@@ -102,13 +105,14 @@
 
   &__error-icon {
     display: block;
-    inline-size: clamp(1.25em, 1.75vw, 1.75em);
-    block-size: clamp(1.25em, 1.75vw, 1.75em);
+    inline-size: 1.875em;
+    block-size: 1.875em;
     color: var(--error-color);
     grid-area: 1/1/2/2;
 
-    align-self: center;
-    justify-self: flex-end;
+    align-self: start;
+    justify-self: end;
+    margin-block-start: clamp(0.5em, 1.4vw, 0.875em);
     margin-inline-end: clamp(0.875em, 2vw, 1.25em);
 
     visibility: hidden;
@@ -127,7 +131,7 @@
     color: var(--accent-color);
     grid-area: 1/1/2/2;
     align-self: center;
-    justify-self: flex-start;
+    justify-self: start;
     margin-inline-start: clamp(0.875em, 2vw, 1.25em);
 
     &::before {
@@ -136,6 +140,27 @@
 
     & ~ .field__input {
       padding-inline-start: clamp(3rem, 6.8vw, 4.25rem);
+    }
+  }
+
+  &__controls {
+    grid-area: 1/1/2/2;
+    align-self: start;
+    justify-self: end;
+    margin-block-start: clamp(0.5em, 1.4vw, 0.875em);
+    margin-inline-end: clamp(0.875em, 2vw, 1.25em);
+  }
+
+  &__control-icon {
+    padding: 0;
+    inline-size: clamp(1.5em, 3vw, 1.875em);
+    block-size: clamp(1.5em, 3vw, 1.875em);
+    color: var(--main-text-low-color);
+
+    &:hover,
+    &--actived {
+      color: var(--main-color);
+      background: transparent;
     }
   }
 
@@ -159,6 +184,12 @@
       transition:
         visibility 0s,
         opacity 0.35s;
+    }
+    .field__controls {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      user-select: none;
     }
   }
 
@@ -211,5 +242,11 @@
 
   &--theme-white .field__input {
     border-color: #fff;
+  }
+
+  &--with-controls {
+    .field__input {
+      padding-inline-end: clamp(6rem, 14.4vw, 9rem);
+    }
   }
 }
