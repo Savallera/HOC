@@ -219,30 +219,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-    if (Splide) {
-        // Слайдер новостей на главной странице
-        if (document.querySelector('#news-slider')) {
-            let newsSlider = new Splide('#news-slider', {
-                type: 'slide',
-                autoplay: false,
-                arrows: false,
-                pagination: false,
-                gap: '.9375em',
-                autoWidth: true,
-                padding: 'var(--section-padding)',
-                mediaQuery: 'min',
-                breakpoints: {
-                    768: {
-                        destroy: 'completely',
-                    },
-                },
-            });
-            newsSlider.mount();
-        }
-    }
-});
-
 // Модальное окно с формой присоединиться к проекту
 if (document.querySelector('.sign-up')) {
   const signUpButton = document.querySelector('.sign-up__button');
@@ -356,6 +332,82 @@ if (document.querySelector('.card--role-preview-button')) {
     }
   });
 }
+
+// Модальное окно для редактирования профиля
+if (document.querySelector('.account__icon-button--role-edit-profile')) {
+  const editProfileButton = document.querySelector(
+    '.account__icon-button--role-edit-profile'
+  );
+  const editProfileModal = document.querySelector(
+    '.modal--content-edit-profile'
+  );
+  const openEditProfileModal = function () {
+    editProfileModal.classList.add('modal--opened');
+  };
+  const closeEditProfileModal = function () {
+    editProfileModal.classList.remove('modal--opened');
+  };
+
+  editProfileButton.addEventListener('click', openEditProfileModal);
+  editProfileModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-edit-profile') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeEditProfileModal();
+    }
+  });
+}
+
+// Модальное окно для просмотра уведомлений
+if (document.querySelector('.article__count-button--role-notifications')) {
+  const notificationsButton = document.querySelector(
+    '.article__count-button--role-notifications'
+  );
+  const notificationsModal = document.querySelector(
+    '.modal--content-notifications'
+  );
+  const openNotificationsModal = function () {
+    notificationsModal.classList.add('modal--opened');
+  };
+  const closeNotificationsModal = function () {
+    notificationsModal.classList.remove('modal--opened');
+  };
+
+  notificationsButton.addEventListener('click', openNotificationsModal);
+  notificationsModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-notifications') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeNotificationsModal();
+    }
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (Splide) {
+        // Слайдер новостей на главной странице
+        if (document.querySelector('#news-slider')) {
+            let newsSlider = new Splide('#news-slider', {
+                type: 'slide',
+                autoplay: false,
+                arrows: false,
+                pagination: false,
+                gap: '.9375em',
+                autoWidth: true,
+                padding: 'var(--section-padding)',
+                mediaQuery: 'min',
+                breakpoints: {
+                    768: {
+                        destroy: 'completely',
+                    },
+                },
+            });
+            newsSlider.mount();
+        }
+    }
+});
 
 // Пока не используются
 // window.addEventListener('DOMContentLoaded', () => {
@@ -533,6 +585,44 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       themeLkSlider.mount();
+    }
+
+    // Слайдер для ЛК инвайтов
+    if (document.querySelector('#theme-lk-invite-slider')) {
+      let themeLkInviteSlider = new Splide('#theme-lk-invite-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        autoWidth: true,
+        padding: 'var(--section-inline-start)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            arrows: true,
+          },
+        },
+      });
+      themeLkInviteSlider.mount();
+    }
+
+    // Слайдер для ЛК сертификатов
+    if (document.querySelector('#theme-lk-certificate-slider')) {
+      let themeLkCertificateSlider = new Splide('#theme-lk-certificate-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        perPage: 3,
+        gap: 'clamp(.625em, 2vw, 1.25em)',
+        padding: 'var(--section-inline-start)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            arrows: true,
+          },
+        },
+      });
+      themeLkCertificateSlider.mount();
     }
   }
 });
