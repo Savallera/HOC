@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  @@include("../blocks/head/head.html", {"title": "ЛК студента"})
+  <body>
+    <div class="page">
+      @@include("../blocks/header/header.html")
+      <main class="page__content">
+        <section class="article">
+          <div class="article__inner">
+            <div class="account">
+              <div class="account__columns">
+                <!-- Без фото -->
+                <img
+                  class="account__image"
+                  src="./images/no-photo.png"
+                  alt="Изображение отсутствует"
+                />
+                <div class="account__column">
+                  <div class="account__main-info">
+                    <h1 class="account__title">
+                      <span class="account__title-span">Фамилия</span>
+                      Имя Отчество
+                    </h1>
+                    <a href="#" class="account__link" rel="noopener nofollow"
+                      >@nastyastryuk</a
+                    >
+                  </div>
+                  <button
+                    class="account__icon-button icon-button icon icon--type-edit"
+                    type="button"
+                    aria-label="Редактировать профиль"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <div class="article__indent article__indent--column">
+              <h2 class="article__subtitle">Обо мне</h2>
+              <div class="article__main-text">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
+                  aliquam, non nisi velit sapiente necessitatibus ipsa explicabo
+                  eveniet ducimus sequi qui eaque sit consequatur eius? Vel
+                  cumque mollitia aut quam!
+                </p>
+              </div>
+            </div>
+          </div>
+          @@include("../blocks/theme/theme-place-personal-account.html")
+        </section>
+      </main>
+      @@include("../blocks/footer/footer.html")
+      @@include("../blocks/tooltip/tooltip.html")
+    </div>
+  </body>
+</html>
