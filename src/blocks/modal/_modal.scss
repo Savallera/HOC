@@ -120,6 +120,8 @@
       padding: 0;
       .modal__container {
         inline-size: 100vw;
+        min-block-size: 100vh;
+        min-block-size: 100dvb;
         border-radius: 0;
       }
     }

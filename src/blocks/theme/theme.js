@@ -87,12 +87,20 @@ window.addEventListener('DOMContentLoaded', () => {
         pagination: false,
         autoWidth: true,
         gap: '.375em',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {},
-        },
       });
       resumeCertificateSlider.mount();
+    }
+
+    // Слайдер для фото при создании публикаций
+    if (document.querySelector('#add-article-image-slider')) {
+      let addArticleImageSlider = new Splide('#add-article-image-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        autoWidth: true,
+        gap: 'clamp(.625em, 2vw, 1.25em)',
+      });
+      addArticleImageSlider.mount();
     }
   }
 });

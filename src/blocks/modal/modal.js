@@ -153,9 +153,57 @@ if (document.querySelector('.account__button--role-resume')) {
   resumeModal.addEventListener('click', (evt) => {
     if (
       evt.target.classList.contains('modal--content-resume') ||
-      evt.target.classList.contains('modal__close-button')
+      evt.target.classList.contains('account__icon-button--role-close-button')
     ) {
       closeResumeModal();
+    }
+  });
+}
+
+// Модальное окно редактирования резюме
+if (document.querySelector('.account__icon-button--role-edit-resume')) {
+  const editResumeButton = document.querySelector(
+    '.account__icon-button--role-edit-resume'
+  );
+  const editResumeModal = document.querySelector('.modal--content-edit-resume');
+  const openEditResumeModal = function () {
+    editResumeModal.classList.add('modal--opened');
+  };
+  const closeEditResumeModal = function () {
+    editResumeModal.classList.remove('modal--opened');
+  };
+
+  editResumeButton.addEventListener('click', openEditResumeModal);
+  editResumeModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-edit-resume') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeEditResumeModal();
+    }
+  });
+}
+
+// Модальное окно создания публикации
+if (document.querySelector('.article__icon-button--role-add-article')) {
+  const addArticleButton = document.querySelector(
+    '.article__icon-button--role-add-article'
+  );
+  const addArticleModal = document.querySelector('.modal--content-add-article');
+  const openAddArticleModal = function () {
+    addArticleModal.classList.add('modal--opened');
+  };
+  const closeAddArticleModal = function () {
+    addArticleModal.classList.remove('modal--opened');
+  };
+
+  addArticleButton.addEventListener('click', openAddArticleModal);
+  addArticleModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-add-article') ||
+      evt.target.classList.contains('form__control-icon--role-close-button')
+    ) {
+      closeAddArticleModal();
     }
   });
 }

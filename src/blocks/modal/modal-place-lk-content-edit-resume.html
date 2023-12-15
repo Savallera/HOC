@@ -1,0 +1,258 @@
+<!-- Модальное окно редактирования резюме -->
+<div
+  class="modal modal--mobile-fullscreen modal--size-wide modal--content-edit-resume"
+>
+  <div
+    class="modal__container modal__container--indent-sm modal__container--theme-grey"
+  >
+    <button
+      type="reset"
+      class="modal__close-button"
+      aria-label="Закрыть"
+    ></button>
+    <form name="edit-resume" class="form" action="">
+      <div class="form__three-columns form__separator">
+        <div class="form__photo-block">
+          <img
+            class="form__photo-image"
+            src="./images/no-photo.png"
+            alt="описание изображения"
+          />
+        </div>
+        <fieldset class="form__column">
+          <div class="field field--theme-white field--padding-block-sm">
+            <label for="edit-resume-name" class="field__label visually-hidden"
+              >Фамилия, имя, отчество</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите фамилия, имя, отчество"
+                autocomplete="name"
+                name="name"
+                id="edit-resume-name"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+          <div class="field field--theme-white field--padding-block-sm">
+            <label for="edit-resume-tel" class="field__label visually-hidden"
+              >Телефон</label
+            >
+            <div class="field__inner">
+              <input
+                type="tel"
+                class="field__input"
+                placeholder="Введите телефон"
+                autocomplete="tel"
+                name="tel"
+                id="edit-resume-tel"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+          <div class="field field--theme-white field--padding-block-sm">
+            <label for="edit-resume-email" class="field__label visually-hidden"
+              >Почта</label
+            >
+            <div class="field__inner">
+              <input
+                type="email"
+                class="field__input"
+                placeholder="Введите почту"
+                autocomplete="email"
+                name="email"
+                id="edit-resume-email"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+          <div class="field field--theme-white field--padding-block-sm">
+            <label
+              for="edit-resume-country"
+              class="field__label visually-hidden"
+              >Гражданство</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите гражданство"
+                autocomplete="country"
+                name="country"
+                id="edit-resume-country"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+          <div class="field field--theme-white field--padding-block-sm">
+            <label for="edit-resume-city" class="field__label visually-hidden"
+              >Город проживания</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите город проживания"
+                autocomplete="city"
+                name="city"
+                id="edit-resume-city"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__column">
+          <div class="form__filter-group">
+            <label class="form__filter-label" for="edit-resume-gender-male">
+              <input
+                class="form__filter-field visually-hidden"
+                type="radio"
+                name="edit-resume-gender"
+                id="edit-resume-gender-male"
+              />
+              <span class="form__filter-text">
+                <span
+                  class="form__filter-pseudo-checkbox"
+                  aria-hidden="true"
+                ></span>
+                Мужской</span
+              >
+            </label>
+            <label class="form__filter-label" for="edit-resume-gender-female">
+              <input
+                class="form__filter-field visually-hidden"
+                type="radio"
+                name="edit-resume-gender"
+                id="edit-resume-gender-female"
+              />
+              <span class="form__filter-text">
+                <span
+                  class="form__filter-pseudo-checkbox"
+                  aria-hidden="true"
+                ></span>
+                Женский</span
+              >
+            </label>
+          </div>
+          <div class="form__filter-group">
+            <label
+              class="form__filter-label"
+              for="edit-resume-moving-not-possible"
+            >
+              <input
+                class="form__filter-field visually-hidden"
+                type="radio"
+                name="edit-resume-moving"
+                id="edit-resume-moving-not-possible"
+              />
+              <span class="form__filter-text">
+                <span
+                  class="form__filter-pseudo-checkbox"
+                  aria-hidden="true"
+                ></span>
+                Переезд невозможен</span
+              >
+            </label>
+            <label class="form__filter-label" for="edit-resume-moving-possible">
+              <input
+                class="form__filter-field visually-hidden"
+                type="radio"
+                name="edit-resume-moving"
+                id="edit-resume-moving-possible"
+              />
+              <span class="form__filter-text">
+                <span
+                  class="form__filter-pseudo-checkbox"
+                  aria-hidden="true"
+                ></span>
+                Переезд возможен</span
+              >
+            </label>
+          </div>
+          <div class="form__filter-group">
+            <label class="form__filter-label" for="edit-resume-trip-ready">
+              <input
+                class="form__filter-field visually-hidden"
+                type="radio"
+                name="edit-resume-trip"
+                id="edit-resume-trip-ready"
+              />
+              <span class="form__filter-text">
+                <span
+                  class="form__filter-pseudo-checkbox"
+                  aria-hidden="true"
+                ></span>
+                Готов к командировкам</span
+              >
+            </label>
+            <label class="form__filter-label" for="edit-resume-trip-not-ready">
+              <input
+                class="form__filter-field visually-hidden"
+                type="radio"
+                name="edit-resume-trip"
+                id="edit-resume-trip-not-ready"
+              />
+              <span class="form__filter-text">
+                <span
+                  class="form__filter-pseudo-checkbox"
+                  aria-hidden="true"
+                ></span>
+                Не готов к командировкам</span
+              >
+            </label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="field field--theme-white field--padding-block-sm">
+        <label for="edit-resume-position" class="field__label visually-hidden"
+          >Желаемая должность</label
+        >
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите желаемую должность"
+            autocomplete="position"
+            name="position"
+            id="edit-resume-position"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <!-- Опыт работы -->
+      <!-- Образование -->
+      <button
+        type="submit"
+        class="button button--theme-gradient button--justify-center"
+      >
+        <span class="button__text">Сохранить</span>
+      </button>
+    </form>
+  </div>
+</div>

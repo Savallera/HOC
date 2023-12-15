@@ -244,6 +244,27 @@
     border-color: #fff;
   }
 
+  &--size-lg .field__input {
+    font-size: clamp(0.875em, 2.5vw, 1.5625em);
+    font-variation-settings: 'wght' 800;
+  }
+
+  &--padding-block-sm {
+    .field__input {
+      padding-block: 0.45em;
+    }
+    .field__error-icon {
+      margin-block-start: 0.5em;
+    }
+    .field__controls {
+      margin-block-start: 0.5em;
+    }
+  }
+
+  &--color-accent .field__input {
+    color: var(--accent-color);
+  }
+
   &--with-controls {
     .field__input {
       padding-inline-end: clamp(6rem, 14.4vw, 9rem);

@@ -64,6 +64,13 @@
     }
   }
 
+  &__slide--add-article-width {
+    width: min(20vw, 4em);
+    @include media(md) {
+      width: min(25vw, 8.25em);
+    }
+  }
+
   // На декстопе кастомная ширина 600
   &__slide--desktop-width-lg {
     @include media(md) {

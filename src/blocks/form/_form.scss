@@ -18,14 +18,63 @@
         grid-template-columns: 0.4fr 1fr;
       }
     }
+
+    &--content-add-article {
+      @include media(md) {
+        grid-template-columns: 1fr auto;
+      }
+    }
+  }
+
+  &__three-columns {
+    display: grid;
+    gap: var(--gap-grid);
+    @include media(md) {
+      grid-template-columns: 0.7fr 1.1fr 0.9fr;
+    }
   }
 
   &__column {
     display: grid;
     gap: var(--gap-grid);
+    align-content: start;
 
     &--indent-sm {
       gap: clamp(0.5em, 1.4vw, 0.875em);
+    }
+  }
+
+  &__field-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(22em, 100%), 1fr));
+    gap: var(--gap-grid);
+  }
+
+  &__controls {
+    &--place-add-article {
+      text-align: center;
+      @include media(md) {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        .form__control-icon.icon--type-check {
+          align-self: end;
+          grid-column: 2/3;
+        }
+      }
+    }
+  }
+
+  &__control-icon {
+    padding: 0;
+    inline-size: clamp(1.5em, 3vw, 1.875em);
+    block-size: clamp(1.5em, 3vw, 1.875em);
+    color: var(--main-text-low-color);
+
+    &:hover,
+    &--actived {
+      color: var(--main-color);
+      background: transparent;
     }
   }
 
@@ -48,6 +97,10 @@
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 400;
     color: var(--main-text-low-color);
+
+    &--size-sm {
+      font-size: clamp(0.75em, 1.6vw, 1em);
+    }
   }
 
   &__legend {
@@ -83,6 +136,7 @@
     }
   }
 
+  // Список с прокруткой
   &__filters-list {
     margin: 0;
     padding: 2px; // на обводку
@@ -108,6 +162,11 @@
         border-radius: 10px;
       }
     }
+  }
+
+  &__filter-group {
+    background-color: #fff;
+    border-radius: 10px;
   }
 
   // Выбор фильтра / Вариант ответа
@@ -230,6 +289,12 @@
       color: var(--main-color);
       background: transparent;
     }
+  }
+
+  &__separator:not(:last-child) {
+    padding-block-end: clamp(1em, 2.4vw, 1.5em);
+    margin-block-end: clamp(1em, 2.4vw, 1.5em);
+    border-block-end: 1px solid var(--main-text-low-color);
   }
 
   &--place-tests {

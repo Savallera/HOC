@@ -385,6 +385,16 @@
       mask-size: 45%;
       color: var(--grey-100);
     }
+
+    &:hover {
+      &::before {
+        color: var(--accent-color);
+      }
+    }
+
+    &--text-low::before {
+      color: var(--main-text-low-color);
+    }
   }
 
   // Девайсы

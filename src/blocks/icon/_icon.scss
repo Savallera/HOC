@@ -65,6 +65,9 @@
     &-plus::before {
       mask-image: url('../images/icons.svg#plus');
     }
+    &-plus-large::before {
+      mask-image: url('../images/icons.svg#plus-large');
+    }
     &-rutube::before {
       mask-image: url('../images/icons.svg#rutube');
     }
