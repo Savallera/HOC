@@ -208,6 +208,32 @@ if (document.querySelector('.article__icon-button--role-add-article')) {
   });
 }
 
+// Модальное окно модерации публикации
+if (document.querySelector('.article__icon-button--role-moderation-article')) {
+  const moderationArticleButton = document.querySelector(
+    '.article__icon-button--role-moderation-article'
+  );
+  const moderationArticleModal = document.querySelector(
+    '.modal--content-moderation-article'
+  );
+  const openModerationArticleModal = function () {
+    moderationArticleModal.classList.add('modal--opened');
+  };
+  const closeModerationArticleModal = function () {
+    moderationArticleModal.classList.remove('modal--opened');
+  };
+
+  moderationArticleButton.addEventListener('click', openModerationArticleModal);
+  moderationArticleModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-moderation-article') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeModerationArticleModal();
+    }
+  });
+}
+
 // Модальное окно для просмотра уведомлений
 if (document.querySelector('.article__count-button--role-notifications')) {
   const notificationsButton = document.querySelector(

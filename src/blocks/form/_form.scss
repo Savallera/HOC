@@ -19,7 +19,7 @@
       }
     }
 
-    &--content-add-article {
+    &--content-article {
       @include media(md) {
         grid-template-columns: 1fr auto;
       }

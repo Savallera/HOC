@@ -102,5 +102,17 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       addArticleImageSlider.mount();
     }
+
+    // Слайдер для фото при модерации публикаций
+    if (document.querySelector('#moderation-article-image-slider')) {
+      let addArticleImageSlider = new Splide('#moderation-article-image-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        autoWidth: true,
+        gap: 'clamp(.625em, 2vw, 1.25em)',
+      });
+      addArticleImageSlider.mount();
+    }
   }
 });
