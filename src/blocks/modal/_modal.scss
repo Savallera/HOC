@@ -32,6 +32,14 @@
     &--size-small {
       inline-size: min(95vw, 31.25em);
     }
+
+    &--theme-grey {
+      background-color: var(--grey-100);
+    }
+
+    &--indent-sm {
+      padding: clamp(0.625em, 2vw, 1.25em);
+    }
   }
 
   &__close-button {
@@ -105,6 +113,16 @@
 
   &--size-small .modal__container {
     inline-size: clamp(17em, 50vw, 31.25em);
+  }
+
+  &--mobile-fullscreen {
+    @include media(md, max) {
+      padding: 0;
+      .modal__container {
+        inline-size: 100vw;
+        border-radius: 0;
+      }
+    }
   }
 
   @supports (min-block-size: 100dvb) {

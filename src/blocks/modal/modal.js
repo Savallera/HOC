@@ -138,6 +138,28 @@ if (document.querySelector('.account__icon-button--role-edit-profile')) {
   });
 }
 
+// Модальное окно резюме
+if (document.querySelector('.account__button--role-resume')) {
+  const resumeButton = document.querySelector('.account__button--role-resume');
+  const resumeModal = document.querySelector('.modal--content-resume');
+  const openResumeModal = function () {
+    resumeModal.classList.add('modal--opened');
+  };
+  const closeResumeModal = function () {
+    resumeModal.classList.remove('modal--opened');
+  };
+
+  resumeButton.addEventListener('click', openResumeModal);
+  resumeModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-resume') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeResumeModal();
+    }
+  });
+}
+
 // Модальное окно для просмотра уведомлений
 if (document.querySelector('.article__count-button--role-notifications')) {
   const notificationsButton = document.querySelector(

@@ -59,21 +59,40 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Слайдер для ЛК сертификатов
     if (document.querySelector('#theme-lk-certificate-slider')) {
-      let themeLkCertificateSlider = new Splide('#theme-lk-certificate-slider', {
+      let themeLkCertificateSlider = new Splide(
+        '#theme-lk-certificate-slider',
+        {
+          type: 'slide',
+          arrows: false,
+          pagination: false,
+          perPage: 3,
+          gap: 'clamp(.625em, 2vw, 1.25em)',
+          padding: 'var(--section-inline-start)',
+          mediaQuery: 'min',
+          breakpoints: {
+            768: {
+              arrows: true,
+            },
+          },
+        }
+      );
+      themeLkCertificateSlider.mount();
+    }
+
+    // Слайдер для резюме сертификатов
+    if (document.querySelector('#resume-certificate-slider')) {
+      let resumeCertificateSlider = new Splide('#resume-certificate-slider', {
         type: 'slide',
         arrows: false,
         pagination: false,
-        perPage: 3,
-        gap: 'clamp(.625em, 2vw, 1.25em)',
-        padding: 'var(--section-inline-start)',
+        autoWidth: true,
+        gap: '.375em',
         mediaQuery: 'min',
         breakpoints: {
-          768: {
-            arrows: true,
-          },
+          768: {},
         },
       });
-      themeLkCertificateSlider.mount();
+      resumeCertificateSlider.mount();
     }
   }
 });
