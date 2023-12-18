@@ -44,13 +44,15 @@
 
     &--content-certificate {
       aspect-ratio: 378/537;
-      border-radius: 10px;
       object-fit: contain;
+    }
+
+    &--only-image {
+      border-radius: 10px;
     }
 
     &--square-image {
       aspect-ratio: 1/1;
-      border-radius: 10px;
     }
   }
 

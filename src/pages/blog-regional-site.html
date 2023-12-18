@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="ru">
+  @@include("../blocks/head/head.html", {"title": "Блог региональной площадки"})
+  <body>
+    <div class="page">
+      @@include("../blocks/header/header.html")
+      <main class="page__content">
+        <!-- Фоновый логотип размещается при помощи свойства style="background-image: url(...);" темный -->
+        <section
+          class="banner banner--place-blog"
+          style="
+            background-image: url(https://trafaret-decor.ru/sites/default/files/2022-12/Фон%20для%20презентации%20по%20технологии%20для%20девочек%20%288%29_0.jpg);
+          "
+        >
+          <div class="banner__inner">
+            <h1 class="banner__title banner__title--size-lg">
+              ТОЛК
+              <span class="banner__title-span">Студмедиа ПсковГУ</span>
+            </h1>
+          </div>
+        </section>
+        <section class="page__section">
+          <h2 class="page__title">О региональной площадке</h2>
+          <div class="page__description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              blanditiis dolore nobis rem fugiat iste repudiandae, at, debitis
+              aspernatur perspiciatis perferendis, officia eveniet deleniti.
+              Fugit ab repudiandae architecto natus earum?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              blanditiis dolore nobis rem fugiat iste repudiandae, at, debitis
+              aspernatur perspiciatis perferendis, officia eveniet deleniti.
+              Fugit ab repudiandae architecto natus earum?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              blanditiis dolore nobis rem fugiat iste repudiandae, at, debitis
+              aspernatur perspiciatis perferendis, officia eveniet deleniti.
+              Fugit ab repudiandae architecto natus earum?
+            </p>
+          </div>
+        </section>
+        <!-- Новости -->
+        <section class="page__section news">
+          <h2 class="page__title">Новости</h2>
+          <div class="splide page__hidden-mobile" id="stud-smi-news-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <a href="#" class="card-link" rel="noopener ugs">
+                    <article
+                      class="card-banner"
+                      style="
+                        background-image: url(https://чувашпотребсоюз.рф/files/public/parags/IMG_9959.jpg);
+                      "
+                    >
+                      <div
+                        class="card-banner__main-content card-banner__main-content--with-controls"
+                      >
+                        <h2 class="card-banner__title">
+                          Фестиваль национальных блюд
+                        </h2>
+                        <p class="card-banner__text">Популярное</p>
+                        <div class="card-banner__controls">
+                          <p
+                            class="card-banner__views"
+                            aria-label="Количество просмотров"
+                          >
+                            <span
+                              class="card-banner__views-icon icon icon--type-eye"
+                              aria-hidden="true"
+                            ></span>
+                            <span class="card-banner__views-value">123</span>
+                          </p>
+                          <button
+                            type="button"
+                            class="card-banner__like-button icon-button icon icon--type-like"
+                            aria-label="Нравится"
+                          ></button>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="#" class="card-link" rel="noopener ugs">
+                    <article
+                      class="card-banner"
+                      style="
+                        background-image: url(https://for-travels.ru/wp-content/uploads/2023/07/word-image-4041-11.jpeg);
+                      "
+                    >
+                      <div
+                        class="card-banner__main-content card-banner__main-content--with-controls"
+                      >
+                        <h2 class="card-banner__title">
+                          Фестиваль национальных блюд
+                        </h2>
+                        <p class="card-banner__text">Популярное</p>
+                        <div class="card-banner__controls">
+                          <p
+                            class="card-banner__views"
+                            aria-label="Количество просмотров"
+                          >
+                            <span
+                              class="card-banner__views-icon icon icon--type-eye"
+                              aria-hidden="true"
+                            ></span>
+                            <span class="card-banner__views-value">123</span>
+                          </p>
+                          <button
+                            type="button"
+                            class="card-banner__like-button icon-button icon icon--type-like"
+                            aria-label="Нравится"
+                          ></button>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="news__columns">
+            <div class="splide news__slider" id="news-slider">
+              <div class="splide__track news__slider-track">
+                <ul class="splide__list news__slider-list">
+                  <li class="splide__slide splide__slide--mobile-width-auto">
+                    <a
+                      href="./new-article.html"
+                      class="card-link"
+                      rel="noopener ugs"
+                    >
+                      <article class="card">
+                        <img
+                          class="card__image"
+                          src="https://for-travels.ru/wp-content/uploads/2023/07/word-image-4041-11.jpeg"
+                          alt="Описание изображения"
+                          loading="lazy"
+                        />
+                        <div class="card__main-content">
+                          <h2 class="card__title">
+                            Фестиваль национальных блюд
+                          </h2>
+                          <div class="card__controls">
+                            <p class="card__text text-gradient">Популярное</p>
+                            <p
+                              class="card__views"
+                              aria-label="Количество просмотров"
+                            >
+                              <span
+                                class="card__views-icon icon icon--type-eye"
+                                aria-hidden="true"
+                              ></span>
+                              <span class="card__views-value">123</span>
+                            </p>
+                            <button
+                              type="button"
+                              class="card__like-button card__like-button--actived icon-button icon icon--type-like"
+                              aria-label="Нравится"
+                            ></button>
+                          </div>
+                        </div>
+                      </article>
+                    </a>
+                  </li>
+                  <li class="splide__slide splide__slide--mobile-width-auto">
+                    <a
+                      href="./new-article.html"
+                      class="card-link"
+                      rel="noopener ugs"
+                    >
+                      <article class="card">
+                        <img
+                          class="card__image"
+                          src="https://for-travels.ru/wp-content/uploads/2023/07/word-image-4041-11.jpeg"
+                          alt="Описание изображения"
+                          loading="lazy"
+                        />
+                        <div class="card__main-content">
+                          <h2 class="card__title">
+                            Студент мечтает о трёх вещах!
+                          </h2>
+                          <div class="card__controls">
+                            <p class="card__text text-gradient">Популярное</p>
+                            <p
+                              class="card__views"
+                              aria-label="Количество просмотров"
+                            >
+                              <span
+                                class="card__views-icon icon icon--type-eye"
+                                aria-hidden="true"
+                              ></span>
+                              <span class="card__views-value">123</span>
+                            </p>
+                            <button
+                              type="button"
+                              class="card__like-button icon-button icon icon--type-like"
+                              aria-label="Нравится"
+                            ></button>
+                          </div>
+                        </div>
+                      </article>
+                    </a>
+                  </li>
+                  <li class="splide__slide splide__slide--mobile-width-auto">
+                    <a
+                      href="./new-article.html"
+                      class="card-link"
+                      rel="noopener ugs"
+                    >
+                      <article class="card card--size-md">
+                        <img
+                          class="card__image"
+                          src="https://www.figma.com/file/eKBcAMx6aUx9iqctZq5ixW/image/05aeb49e1a00ef406ea6411d88faf44f42866267"
+                          alt="Описание изображения"
+                          loading="lazy"
+                        />
+                        <div class="card__main-content">
+                          <h2 class="card__title">
+                            Первый день Школы «Forest Active School»
+                          </h2>
+                          <div class="card__controls">
+                            <p class="card__text text-gradient">Популярное</p>
+                            <p
+                              class="card__views"
+                              aria-label="Количество просмотров"
+                            >
+                              <span
+                                class="card__views-icon icon icon--type-eye"
+                                aria-hidden="true"
+                              ></span>
+                              <span class="card__views-value">123</span>
+                            </p>
+                            <button
+                              type="button"
+                              class="card__like-button icon-button icon icon--type-like"
+                              aria-label="Нравится"
+                            ></button>
+                          </div>
+                        </div>
+                      </article>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <ul class="news__asside-list">
+              <li>
+                <a
+                  href="./new-article.html"
+                  class="card-link"
+                  rel="noopener ugs"
+                >
+                  <article class="card">
+                    <div class="card__main-content">
+                      <h2 class="card__title text-rows text-rows--two">
+                        Фестиваль национальных блюд из всех регионов России
+                      </h2>
+                      <div class="card__controls">
+                        <p class="card__text text-gradient">Популярное</p>
+                        <p
+                          class="card__views"
+                          aria-label="Количество просмотров"
+                        >
+                          <span
+                            class="card__views-icon icon icon--type-eye"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="card__views-value">123</span>
+                        </p>
+                        <button
+                          type="button"
+                          class="card__like-button icon-button icon icon--type-like"
+                          aria-label="Нравится"
+                        ></button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./new-article.html"
+                  class="card-link"
+                  rel="noopener ugs"
+                >
+                  <article class="card">
+                    <div class="card__main-content">
+                      <h2 class="card__title text-rows text-rows--two">
+                        Фестиваль национальных блюд
+                      </h2>
+                      <div class="card__controls">
+                        <p class="card__text text-gradient">Популярное</p>
+                        <p
+                          class="card__views"
+                          aria-label="Количество просмотров"
+                        >
+                          <span
+                            class="card__views-icon icon icon--type-eye"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="card__views-value">123</span>
+                        </p>
+                        <button
+                          type="button"
+                          class="card__like-button icon-button icon icon--type-like"
+                          aria-label="Нравится"
+                        ></button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./new-article.html"
+                  class="card-link"
+                  rel="noopener ugs"
+                >
+                  <article class="card">
+                    <div class="card__main-content">
+                      <h2 class="card__title text-rows text-rows--two">
+                        Фестиваль блюд
+                      </h2>
+                      <div class="card__controls">
+                        <p class="card__text text-gradient">Популярное</p>
+                        <p
+                          class="card__views"
+                          aria-label="Количество просмотров"
+                        >
+                          <span
+                            class="card__views-icon icon icon--type-eye"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="card__views-value">123</span>
+                        </p>
+                        <button
+                          type="button"
+                          class="card__like-button icon-button icon icon--type-like"
+                          aria-label="Нравится"
+                        ></button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./new-article.html"
+                  class="card-link"
+                  rel="noopener ugs"
+                >
+                  <article class="card">
+                    <div class="card__main-content">
+                      <h2 class="card__title text-rows text-rows--two">
+                        Фестиваль национальных блюд с самым большим названием
+                      </h2>
+                      <div class="card__controls">
+                        <p class="card__text text-gradient">Популярное</p>
+                        <p
+                          class="card__views"
+                          aria-label="Количество просмотров"
+                        >
+                          <span
+                            class="card__views-icon icon icon--type-eye"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="card__views-value">123</span>
+                        </p>
+                        <button
+                          type="button"
+                          class="card__like-button icon-button icon icon--type-like"
+                          aria-label="Нравится"
+                        ></button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="button button--theme-gradient button--justify-center"
+            type="button"
+          >
+            <span class="button__text">Смотреть все новости</span>
+          </button>
+        </section>
+        @@include("../blocks/media/media.html")
+        @@include("../blocks/broadcasts/broadcasts.html")
+        <!-- События -->
+        <section class="page__section">
+          <div class="page__title-block">
+            <h2 class="page__title">События</h2>
+            <a
+              href="./events.html"
+              class="page__link text-gradient"
+              rel="noopener ugs"
+              >Все события</a
+            >
+          </div>
+          <div class="splide" id="events-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <a
+                    href="./event-article.html"
+                    class="card-link"
+                    rel="noopener ugs"
+                  >
+                    <article
+                      class="card-banner"
+                      style="
+                        background-image: url(https://avatars.mds.yandex.net/i?id=414186ec6a9e3725c56be1d944aa2a43af904c67-9231706-images-thumbs&n=13);
+                      "
+                    >
+                      <div class="card-banner__main-content">
+                        <h2 class="card-banner__title">
+                          Школа экономики и управления
+                        </h2>
+                        <address class="card-banner__address">
+                          <p class="card-banner__text">
+                            <span
+                              class="card-banner__text-icon icon icon--type-calendar"
+                              aria-hidden="true"
+                            ></span>
+                            29 сентября 2023
+                          </p>
+                          <p class="card-banner__text">
+                            <span
+                              class="card-banner__text-icon icon icon--type-location"
+                              aria-hidden="true"
+                            ></span>
+                            г. Сочи, ул. Просвещения, 139
+                          </p>
+                        </address>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a
+                    href="./event-article.html"
+                    class="card-link"
+                    rel="noopener ugs"
+                  >
+                    <article
+                      class="card-banner"
+                      style="
+                        background-image: url(https://narfu.ru/upload/iblock/419/image_29_10_21_03_09_2.jpeg);
+                      "
+                    >
+                      <div class="card-banner__main-content">
+                        <h2 class="card-banner__title">
+                          Школа экономики и управления
+                        </h2>
+                        <address class="card-banner__address">
+                          <p class="card-banner__text">
+                            <span
+                              class="card-banner__text-icon icon icon--type-calendar"
+                              aria-hidden="true"
+                            ></span>
+                            29 сентября 2023
+                          </p>
+                          <p class="card-banner__text">
+                            <span
+                              class="card-banner__text-icon icon icon--type-location"
+                              aria-hidden="true"
+                            ></span>
+                            г. Сочи, ул. Просвещения, 139
+                          </p>
+                        </address>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Кто с нами -->
+        <section class="page__section top-ten">
+          <div class="page__title-block">
+            <h2 class="page__title">Кто с нами</h2>
+            <a
+              href="./stud-smi-base.html"
+              class="page__link text-gradient"
+              rel="noopener ugs"
+              >Смотреть все</a
+            >
+          </div>
+          <ol class="top-ten__cards">
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/308c/63c7/be318116dad240f4c88f3f9217a714d8?Expires=1702857600&Signature=TsB5DQsn0YZNFDko2muoSDUUGQFjiCoR3pvFg5Y6k7XiodRxqeeZ4M0MWYtM68bh1MlW175tF1wVUNeD0yfN8CvNEpwlEU7fiwiAOpQZc2U85OgLlNNu3TEQAwtlpzzqJUIrhRkugmvNTARUApaxbO3F5-m407eRjSZLsrN83s6RiSfeJOoaoJy0TJxtosbZCx7wx9eLERAJKjXAKifFKnu7Ijb2a-x2owAyU296SED4f~9PxVxhAJN~JA1xdmN1u-BQb3ZFaPPcVCh6i0Jq~vvNY9dbeubhi7jAat0-2ETCF8aJguIGLpqXkZKSDDfrvim2rxemmO0gVOi6ePtoRg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/ff1e/0753/ea6816ffc9bf1d10ab163c02cf38f75d?Expires=1702857600&Signature=TfpjpFz9RW0lBkAwB6xUiBoG1LmCVH1D1GmywZ4KFRf0Hz7QV~gZDuL1qmOPrEnB9u0vvxJPNyiQPaE1kz2-SCW~hTW-ByJfCJuPcaPGvuH-xkujyvUH1FAUOdLuvnlowYzxXFEh1KIYLBuMc6bziSaXiCXfMrQvXAGlk1yrnT4wYzZqyErwakx1-VLjroFQNoiJS~qVwKSJFnC0dS-fk8x6a~gz3Gcbi-QD-hAiVXWcQIpLVwbeOrVBuvdfQW5oIjtkbspjtj6SWshs-GMd~WS9BNwo2sUPp89JpfJrWI~lt8OaRAel84lN6EfwVdf8j53cpQnJ3mquu4DvUbPz2Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/b77f/5499/bf9b28e5527c29f603283cad3f3ff3db?Expires=1702857600&Signature=I~hEpMFfDG9bHozBFpd3iHto434PSmkH73IabgBpsGxFFs2KWcYiGAzYwDuynh4BO42dE8bddy~h5lozkl1W1l3ryqrMyAogwKHcexyWFlEV5A3946PJ3eUVUpjvDbVtONNeSj5DnkZ0hf51bmFaJ6XqiXXqDuNp6Ty8CJAFyISu9FIpCXqB9mjAHn2lez5AYtMgIRtA8qTuT1RO8s27UB5qDmz40U1tmQmthh13CjTJl~PNS8SLntt2fAErKLCK2BgHs51AJsK3WPuQQT6A-rKGqR6heTV9XWTi4KswKYNYLmpRJ1gwi-rNsb6hJvrwOlDhY9nYLvMpQDl5BHKxBA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/4eb2/f126/3a16bb796a16cb0b954106d74c64f24c?Expires=1702857600&Signature=Oqc-SsCaLMMORmiLBsRCZyED6b5Bpgr9XeVRFUQyYf5AzHZe5ZaV-P6qm-PESUw5BJmsgi7Jd884tlNIQ0PCan-1PvfBrpryiK2XyWzlTGW6qtCXiB3rDDXC4Sj87A8xraXnCZ2XSsir1AFv1eVqELHmoLJTzTnQxEDcsLWzi5I6qUr293uNPxES4ylFlDExKOtZP6k6S3xiNSfNyqZMeknZYVOvatZKeIQrY7jUy90Dd8QwAZUXLAsDqWfk5BUVPI7YkVt1Y0QRA1gacsMYwMRCEkZjdZ08XOhU0tCrIpqOSO~FnG6pamd3HzQkTX8KdsuUSnOmtHwfgMP3R6MXlw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/b734/14cf/06523f90c7f1ce4692d2719898bb9243?Expires=1702857600&Signature=DRF0aFxDWgUOfX88aR4sv164hMO-oD-VUWuXiULYkl5vrxRRsnitfqtHMCvhi6q-9kFHHFadWOdddfyl~s1UmIvSaJYfW1GVZS463b9sTpb5EIbFhA0hbk6fAgpqdU2Bm~u969eH8TSqsUM68rL7p0APohXYLO5QOp4-IqcTFDA6hbYtmKFcbw3HtqbCWAcFRREVmSA5rmysDiYinmgwX21eCa~-28Ni9YD~UuRCIxw2zvUUSTYu~j8G04Qwi87jamj9lnRV51b4SbKIzyTJDWLfO9jFbckrbq-JNOu1xqw42geM9ZLQP6cmrrezK5nuXXesD981OZ6fAOpv1CNoOg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/4960/8f80/2b4d5a478769c64b96ef53847d9307a7?Expires=1702857600&Signature=hQy3JJ8TSk9srVCVLoqtFWW12kVgv7NXIhDLiNEImAB8YDFdmjuLqFJ-1aRQji8VXZntJXfXT2FPzSKwC8~AdNtTP~aWo59jw6qagm~pij~vtkUyT2NOzmbCsqXENeDUzb586cddkzdACD6UijvrnYBPRgqEvSAXWErCZF5n95LajNI9lcP3HONRuLg61KflWNUjRAKzsGY2a1UV1AoGdjxsr1l2qHEnBz4GU4mIT8aDt294e9W0oqADTTFh2Mn842IFP4FlqRXggPvf26FDyUlO4kC0t~YLhB7e3PRF9iZ1k3h-~zHgaK1eJ4JwHKf0KtgC2h4V4CfpeaqxyaNFHw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/b8c7/2817/872b3f59378c7d3efad72d5a7d9cce5d?Expires=1702857600&Signature=cDPslXzYMPXDpT-q53lQwlbVHewRKfjJ-p9OwGM2WLMeFawihR60YhdvH-yQola1-KFjKahy6Sbslb8IyjnI8usmcWkOoeXnhJhUaxSud1D4N3ZhrrDN4xJyfCjpUqvHoKbkn9~BNbtyr4Pp~spnHIlMbuZL84fNyZTN2wFUtqNX-2cV4Ps-OmpzwhYcG8gTUJ-YjBnPQeYdUs-UqAv78nx8x7BEFHJKwTqzVq7SodwxzoOUScE3VAS2S2N8PtsXddzrTMD3hDe~zPked1~WCcDluh0jYQ14hq9B8OO7q5Lu3jeWxiBFSbVPu-3INe9zSF35rlTPSSyYnzSY5yFHaA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/3033/1c35/543e0ee02fc1e453613e49a3a3e81759?Expires=1702857600&Signature=QtNAG15lcRBq3qVg3P4bLkjeqtn8VDsi71SbRVhLctDr12dywyYqI0y65DH0WtjrHJYyKEkNXmr0bs0aZua9KEeByCxpiqYH-cHoxljcC-E0pdsUE9kwHVjMoeDce9PwMz9E33kOmnaxBwgi3V8SuAtCPsctpbnoIM4bifIu2656bxa46ZnbuXAHLq8mS1y7fUVjKru9clUUgLRY8J0Zh5JANVPG7JchHjWZTRS8FurQMQcAh5k2UAXekiX3lMJps18gc5rCT0WDGwMSoZdP-4pIttLlKgeAXnc-URk5k919Y43~NT2YOAW4IGwUZfK~PoncsaVV9ptm0MjsxAU2CQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/8444/64c5/e7e6a178c29d9db548bcce1679068b48?Expires=1702857600&Signature=HQwB09iqksM03wxgCNg9oWp0gzFg0fiW-dhsWQHItDSvPsFJGgjvDu82TZ2E1a8FqqN9yfgg-Vc1AemZFuyFC2nE3GRf9G8uaz8VR04JaCJ8Vcp-IadNux4EOqgPwZbD2ddygUGpGMA~LlvD51W9G59NshrYXbcn7WsHu-Ua5dCC4YfPabHzIB1AbCeSxT4Yfp7zzjWW3qUbHSEfvvyPmVlEfSf5-6SDZNrg8D9gig3Ex-ze2Ji95PqgGkRPJfX0RQtd9Z2BYQG5A59t3S0BNG6mXb3~icg2hu9GnSz0ykAAshbjvvmWoi~mdSZCUwiCMJa5UGBO59XaSIQsKA-8wg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="./stud-smi-base.html"
+                class="card-link"
+                rel="noopener ugs"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/4dbe/dcc9/b96346ed961f6f371859884c53543abc?Expires=1702857600&Signature=JTv6Gr4DlZoJUUfRHTzKye~2T5HuTHu5qXH2cfcKGXfY8XcU6CAGLGG-AT8imjAEs-gHnwdqwokdzHa0kKHs~Z-mCTFMucJkEOicRrj9EutmK8kncE01eWYPpOhw4av0XEdvjnUBgJJFhi1Pd0C6LhTEk1Kw7iYjpsL-7wvo40QE7ib5tyjhPJcJLoKxAsKG5zzFxerVUkRzT7LUmso7ifT9hJujnprin90O4TfpXEw~vMtV9N5t58IKsK09nDpmmQNA3DUhAqVs8maWGGgRyUMBCpeGzHZuyEH5svKnJeCowbwimufJ~gzc31RYWt57I-g0c1XVv4gsGmcCvW57Pg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  alt="Описание картинки"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+          </ol>
+        </section>
+        <!-- Контакты -->
+        <section class="page__section">
+          <h2 class="page__title">Контакты</h2>
+          <address class="page__address page__inner">
+            <a
+              class="page__address-link text-gradient"
+              href="tel:89999999999"
+              rel="noopener nofollow"
+              aria-label="Телефон"
+            >
+              <span
+                class="icon icon--type-phone page__address-link-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="page__address-link-text">+7 (999) 999-99-99</span>
+            </a>
+            <a
+              class="page__address-link text-gradient"
+              href="mailto:info@info.ru"
+              rel="noopener nofollow"
+              aria-label="Емайл"
+            >
+              <span
+                class="icon icon--type-email page__address-link-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="page__address-link-text">info@info.ru</span>
+            </a>
+            <p class="page__description">
+              По вопросам информационного освещения <br />Студенческий
+              медиацентр
+            </p>
+            <a
+              class="page__address-link text-gradient"
+              href="#"
+              rel="noopener nofollow"
+              aria-label="Адрес"
+            >
+              <span
+                class="icon icon--type-location page__address-link-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="page__address-link-text"
+                >Россия, Москва ул. Московская, 33</span
+              >
+            </a>
+            <a
+              class="page__address-link text-gradient"
+              href="tel:89999999999"
+              rel="noopener nofollow"
+              aria-label="Телефон"
+            >
+              <span
+                class="icon icon--type-phone page__address-link-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="page__address-link-text">+7 (999) 999-99-99</span>
+            </a>
+            <a
+              class="page__address-link text-gradient"
+              href="mailto:info@info.ru"
+              rel="noopener nofollow"
+              aria-label="Емайл"
+            >
+              <span
+                class="icon icon--type-email page__address-link-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="page__address-link-text">info@info.ru</span>
+            </a>
+          </address>
+        </section>
+      </main>
+      @@include("../blocks/footer/footer.html")
+      @@include("../blocks/tooltip/tooltip.html")
+    </div>
+  </body>
+</html>

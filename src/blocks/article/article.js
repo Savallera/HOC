@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
       articleSlider.mount();
     }
 
-    // Слайдер на детальное странице базы знаний
+    // Слайдер на детальной странице базы знаний
     if (document.querySelector('#knowledge-base-article-slider')) {
       let knowledgeBaseSlider = new Splide('#knowledge-base-article-slider', {
         type: 'slide',
@@ -50,6 +50,28 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       knowledgeBaseSlider.mount();
+    }
+
+    // Карточки авторов на странице Блог студСМИ
+    if (document.querySelector('#authors-slider')) {
+      let authorsSlider = new Splide('#authors-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        autoWidth: true,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            perPage: 4,
+            autoWidth: false,
+            pagination: true,
+            padding: 0,
+          },
+        },
+      });
+      authorsSlider.mount();
     }
   }
 });

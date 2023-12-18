@@ -40,7 +40,10 @@ function checkMenuSize() {
   }
 
   mobileMenu.setAttribute('count', numberOfItems - numOfVisibleItems);
-  if (numOfVisibleItems === numberOfItems)
+  if (
+    numOfVisibleItems === numberOfItems &&
+    mobileMenuList.childElementCount === 0
+  )
     mobileMenu.classList.add('visually-hidden');
   else mobileMenu.classList.remove('visually-hidden');
 }

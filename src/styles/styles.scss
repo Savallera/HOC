@@ -19,12 +19,6 @@
 @import '../blocks/header/header';
 @import '../blocks/footer/footer';
 
-// Blocks
-@import '../blocks/splide/splide';
-@import '../blocks/bg-gradient/bg-gradient';
-@import '../blocks/text-gradient/text-gradient';
-@import '../blocks/text-rows/text-rows';
-
 // Cards
 @import '../blocks/card-banner/card-banner';
 @import '../blocks/card/card';
@@ -48,3 +42,9 @@
 
 // Modals
 @import '../blocks/modal/modal';
+
+// Blocks
+@import '../blocks/splide/splide';
+@import '../blocks/bg-gradient/bg-gradient';
+@import '../blocks/text-gradient/text-gradient';
+@import '../blocks/text-rows/text-rows';

@@ -50,45 +50,53 @@
     padding-block: 1em;
   }
 
-  // На мобильных кастомная ширина
-  &__slide--mobile-width-auto {
-    @include media(md, max) {
-      width: min(90vw, 18.75em);
+  &__slide {
+    // На мобильных кастомная ширина
+    &--mobile-width-auto {
+      @include media(md, max) {
+        width: min(90vw, 18.75em);
+      }
     }
-  }
 
-  &__slide--sertificate-width {
-    width: min(20vw, 4em);
-    @include media(md) {
-      width: min(20vw, 4.75em);
+    &--mobile-width-sm {
+      @include media(md, max) {
+        width: min(50vw, 8.75em);
+      }
     }
-  }
 
-  &__slide--add-article-width {
-    width: min(20vw, 4em);
-    @include media(md) {
-      width: min(25vw, 8.25em);
+    &--sertificate-width {
+      width: min(20vw, 4em);
+      @include media(md) {
+        width: min(20vw, 4.75em);
+      }
     }
-  }
 
-  // На декстопе кастомная ширина 600
-  &__slide--desktop-width-lg {
-    @include media(md) {
-      width: min(40vw, 37.5em);
+    &--add-article-width {
+      width: min(20vw, 4em);
+      @include media(md) {
+        width: min(25vw, 8.25em);
+      }
     }
-  }
 
-  // На декстопе кастомная ширина 460
-  &__slide--desktop-width-md {
-    @include media(md) {
-      width: min(30vw, 28.75em);
+    // На декстопе кастомная ширина 600
+    &--desktop-width-lg {
+      @include media(md) {
+        width: min(40vw, 37.5em);
+      }
     }
-  }
 
-  // На декстопе кастомная ширина 400
-  &__slide--desktop-width-sm {
-    @include media(md) {
-      width: min(27vw, 25em);
+    // На декстопе кастомная ширина 460
+    &--desktop-width-md {
+      @include media(md) {
+        width: min(30vw, 28.75em);
+      }
+    }
+
+    // На декстопе кастомная ширина 400
+    &--desktop-width-sm {
+      @include media(md) {
+        width: min(27vw, 25em);
+      }
     }
   }
 
@@ -106,6 +114,13 @@
         grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
         gap: var(--gap-grid);
       }
+    }
+  }
+
+  // Слайдер без полей на мобильных
+  &--wide-mobile {
+    @include media(md, max) {
+      margin-inline: calc(var(--section-padding) * -1);
     }
   }
 

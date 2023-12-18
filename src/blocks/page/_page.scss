@@ -28,6 +28,10 @@
     grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
     gap: var(--gap-grid);
 
+    &--size-sm {
+      grid-template-columns: repeat(auto-fill, minmax(min(17em, 100%), 1fr));
+    }
+
     &--size-lg {
       grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
     }
@@ -75,7 +79,6 @@
 
   &__description {
     margin: 0;
-    max-inline-size: 50em;
     font-size: clamp(1em, 2vw, 1.25em);
   }
 
@@ -110,6 +113,48 @@
     // &:hover {
     //   border-block-end: 2px solid;
     // }
+  }
+
+  &__address {
+    font-variation-settings: 'wght' 700;
+    align-items: flex-start;
+  }
+
+  &__address-link {
+    text-decoration: unset;
+    font-size: clamp(1em, 2vw, 1.25em);
+
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.5em;
+
+    &:hover .page__address-link-text {
+      border-block-end-color: currentColor;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid;
+    }
+  }
+  &__address-link-text {
+    border-block-end: 2px solid transparent;
+  }
+
+  &__address-link-icon {
+    flex: none;
+    display: inline-block;
+    inline-size: 1.25em;
+    min-inline-size: 1.25em;
+    max-inline-size: 1.25em;
+    block-size: 1.25em;
+
+    &::before {
+      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+    }
   }
 
   @supports (min-block-size: 100dvb) {
