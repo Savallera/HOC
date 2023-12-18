@@ -246,7 +246,252 @@
         </div>
       </div>
       <!-- Опыт работы -->
+      <div class="form__title-block">
+        <p class="form__title form__title--size-sm">Опыт работы</p>
+        <button
+          type="button"
+          class="form__icon-button form__icon-button--role-add-company icon-button icon icon--type-plus"
+          aria-label="Добавить компанию"
+        ></button>
+      </div>
+      <div class="form__inner form__separator">
+        <div
+          class="field field--theme-white field--text-bold field--padding-block-sm"
+        >
+          <label
+            for="edit-resume-company-01"
+            class="field__label visually-hidden"
+            >Название комании
+          </label>
+          <div class="field__inner">
+            <input
+              type="text"
+              class="field__input"
+              placeholder="Введите название комании"
+              name="company"
+              id="edit-resume-company-01"
+            />
+            <span class="field__error-text">Вывод ошибки</span>
+            <span
+              class="field__error-icon icon icon--type-error"
+              aria-hidden="true"
+            ></span>
+          </div>
+        </div>
+        <div class="form__field-group">
+          <div class="field field--theme-white field--padding-block-sm">
+            <label
+              for="edit-resume-city-01"
+              class="field__label visually-hidden"
+              >Город</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите город"
+                autocomplete="city"
+                name="city"
+                id="edit-resume-city-01"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+          <div class="field field--theme-white field--padding-block-sm">
+            <label
+              for="edit-resume-company-01-cite"
+              class="field__label visually-hidden"
+              >Сайт компании</label
+            >
+            <div class="field__inner">
+              <input
+                type="url"
+                class="field__input"
+                placeholder="Введите сайт компании"
+                autocomplete="cite"
+                name="cite"
+                id="edit-resume-company-01-cite"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+          <div class="field field--theme-white field--padding-block-sm">
+            <label
+              for="edit-resume-company-01-position"
+              class="field__label visually-hidden"
+              >Должность</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите должность"
+                autocomplete="position"
+                name="position"
+                id="edit-resume-company-01-position"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+          <div class="field field--theme-white field--padding-block-sm">
+            <label
+              for="edit-resume-company-01-period-work"
+              class="field__label visually-hidden"
+              >Период работы</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите период работы"
+                autocomplete="period-work"
+                name="period-work"
+                id="edit-resume-company-01-period-work"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="field field--theme-white field--padding-block-sm">
+          <label
+            for="edit-resume-01-functions"
+            class="field__label visually-hidden"
+            >Обязанности</label
+          >
+          <div class="field__inner">
+            <textarea
+              class="field__input"
+              name="01-functions"
+              rows="8"
+              placeholder="Опишите обязанности"
+              id="edit-resume-01-functions"
+            ></textarea>
+            <span class="field__error-text">Вывод ошибки</span>
+            <span
+              class="field__error-icon icon icon--type-error"
+              aria-hidden="true"
+            ></span>
+          </div>
+        </div>
+      </div>
       <!-- Образование -->
+      <div class="form__title-block">
+        <p class="form__title form__title--size-sm">Образование</p>
+        <button
+          type="button"
+          class="form__icon-button form__icon-button--role-add-education icon-button icon icon--type-plus"
+          aria-label="Добавить Образование"
+        ></button>
+      </div>
+      <div class="form__inner form__separator">
+        <div
+          class="field field--theme-white field--text-bold field--padding-block-sm"
+        >
+          <label
+            for="edit-resume-university-01"
+            class="field__label visually-hidden"
+            >Институт
+          </label>
+          <div class="field__inner">
+            <input
+              type="text"
+              class="field__input"
+              placeholder="Введите институт"
+              name="university"
+              id="edit-resume-university-01"
+            />
+            <span class="field__error-text">Вывод ошибки</span>
+            <span
+              class="field__error-icon icon icon--type-error"
+              aria-hidden="true"
+            ></span>
+          </div>
+        </div>
+        <div class="field field--theme-white field--padding-block-sm">
+          <label
+            for="edit-resume-specialization-01"
+            class="field__label visually-hidden"
+            >Специализация</label
+          >
+          <div class="field__inner">
+            <input
+              type="text"
+              class="field__input"
+              placeholder="Введите специализацию"
+              autocomplete="specialization"
+              name="specialization"
+              id="edit-resume-specialization-01"
+            />
+            <span class="field__error-text">Вывод ошибки</span>
+            <span
+              class="field__error-icon icon icon--type-error"
+              aria-hidden="true"
+            ></span>
+          </div>
+        </div>
+        <div class="form__field-group">
+          <div class="field field--theme-white field--padding-block-sm">
+            <label
+              for="edit-resume-year-graduated-01"
+              class="field__label visually-hidden"
+              >Год окончания</label
+            >
+            <div class="field__inner">
+              <input
+                type="number"
+                class="field__input"
+                placeholder="Введите год окончания"
+                autocomplete="year-graduated"
+                name="year-graduated"
+                id="edit-resume-year-graduated-01"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+          <div class="field field--theme-white field--padding-block-sm">
+            <label
+              for="edit-resume-level-education-01"
+              class="field__label visually-hidden"
+              >Уровень образования</label
+            >
+            <div class="field__inner">
+              <input
+                type="text"
+                class="field__input"
+                placeholder="Введите уровень образования"
+                autocomplete="level-education"
+                name="level-education"
+                id="edit-resume-level-education-01"
+              />
+              <span class="field__error-text">Вывод ошибки</span>
+              <span
+                class="field__error-icon icon icon--type-error"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
       <button
         type="submit"
         class="button button--theme-gradient button--justify-center"

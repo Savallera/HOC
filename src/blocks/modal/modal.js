@@ -153,6 +153,7 @@ if (document.querySelector('.account__button--role-resume')) {
   resumeModal.addEventListener('click', (evt) => {
     if (
       evt.target.classList.contains('modal--content-resume') ||
+      evt.target.classList.contains('modal__close-button') ||
       evt.target.classList.contains('account__icon-button--role-close-button')
     ) {
       closeResumeModal();
@@ -162,7 +163,7 @@ if (document.querySelector('.account__button--role-resume')) {
 
 // Модальное окно редактирования резюме
 if (document.querySelector('.account__icon-button--role-edit-resume')) {
-  const editResumeButton = document.querySelector(
+  const editResumeButtons = document.querySelectorAll(
     '.account__icon-button--role-edit-resume'
   );
   const editResumeModal = document.querySelector('.modal--content-edit-resume');
@@ -173,7 +174,9 @@ if (document.querySelector('.account__icon-button--role-edit-resume')) {
     editResumeModal.classList.remove('modal--opened');
   };
 
-  editResumeButton.addEventListener('click', openEditResumeModal);
+  editResumeButtons.forEach((button) =>
+    button.addEventListener('click', openEditResumeModal)
+  );
   editResumeModal.addEventListener('click', (evt) => {
     if (
       evt.target.classList.contains('modal--content-edit-resume') ||
@@ -201,7 +204,7 @@ if (document.querySelector('.article__icon-button--role-add-article')) {
   addArticleModal.addEventListener('click', (evt) => {
     if (
       evt.target.classList.contains('modal--content-add-article') ||
-      evt.target.classList.contains('form__control-icon--role-close-button')
+      evt.target.classList.contains('form__icon-button--role-close-button')
     ) {
       closeAddArticleModal();
     }

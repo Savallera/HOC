@@ -249,6 +249,10 @@
     font-variation-settings: 'wght' 800;
   }
 
+  &--text-bold .field__input {
+    font-variation-settings: 'wght' 700;
+  }
+
   &--padding-block-sm {
     .field__input {
       padding-block: 0.45em;
