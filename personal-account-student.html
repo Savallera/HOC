@@ -51,56 +51,12 @@
           >
         </li>
         <li>
-          <a href="./stud-smi-base.html" class="header__menu-link" rel="noopener ugc"
+          <a
+            href="./stud-smi-base.html"
+            class="header__menu-link"
+            rel="noopener ugc"
             >База студСМИ</a
           >
-        </li>
-        <li>
-          <a href="./about.html" class="header__menu-link" rel="noopener ugc"
-            >О проекте</a
-          >
-        </li>
-        <li>
-          <a href="./podcasts.html" class="header__menu-link" rel="noopener ugc"
-            >Подкасты</a
-          >
-        </li>
-        <li>
-          <a
-            href="./broadcasts.html"
-            class="header__menu-link"
-            rel="noopener ugc"
-            >Трансляции</a
-          >
-        </li>
-        <li>
-          <a href="./tests.html" class="header__menu-link" rel="noopener ugc"
-            >Тесты</a
-          >
-        </li>
-        <li>
-          <a
-            href="./knowledge-base.html"
-            class="header__menu-link"
-            rel="noopener ugc"
-            >База знаний</a
-          >
-        </li>
-        <li>
-          <a
-            href="./workshops.html"
-            class="header__menu-link"
-            rel="noopener ugc"
-            >Мастерская по производству контента</a
-          >
-        </li>
-        <li>
-          <a
-            href="./regional-sites.html"
-            class="header__menu-link"
-            rel="noopener ugc"
-            >Региональные площадки
-          </a>
         </li>
       </ul>
       <a class="header__sign-up-link" href="#sign-up-section"
@@ -113,7 +69,64 @@
           aria-label="Выпадающее меню"
         ></button>
         <div class="header__mobile-menu-container">
-          <ul class="header__mobile-menu-list"></ul>
+          <ul class="header__mobile-menu-list">
+            <li>
+              <a
+                href="./about.html"
+                class="header__mobile-menu-link"
+                rel="noopener ugc"
+                >О проекте</a
+              >
+            </li>
+            <li>
+              <a
+                href="./podcasts.html"
+                class="header__mobile-menu-link"
+                rel="noopener ugc"
+                >Подкасты</a
+              >
+            </li>
+            <li>
+              <a
+                href="./broadcasts.html"
+                class="header__mobile-menu-link"
+                rel="noopener ugc"
+                >Трансляции</a
+              >
+            </li>
+            <li>
+              <a
+                href="./tests.html"
+                class="header__mobile-menu-link"
+                rel="noopener ugc"
+                >Тесты</a
+              >
+            </li>
+            <li>
+              <a
+                href="./knowledge-base.html"
+                class="header__mobile-menu-link"
+                rel="noopener ugc"
+                >База знаний</a
+              >
+            </li>
+            <li>
+              <a
+                href="./workshops.html"
+                class="header__mobile-menu-link"
+                rel="noopener ugc"
+                >Мастерская по производству контента</a
+              >
+            </li>
+            <li>
+              <a
+                href="./regional-sites.html"
+                class="header__mobile-menu-link"
+                rel="noopener ugc"
+                >Региональные площадки
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <a
@@ -551,6 +564,12 @@
                   ></button>
                 </div>
               </div>
+              <button
+                type="button"
+                class="card__remove-button"
+                aria-label="Удалить из избранного"
+                title="Удалить из избранного"
+              ></button>
             </article>
           </a>
         </li>
@@ -598,6 +617,12 @@
                   ></button>
                 </div>
               </div>
+              <button
+                type="button"
+                class="card__remove-button"
+                aria-label="Удалить из избранного"
+                title="Удалить из избранного"
+              ></button>
             </article>
           </a>
         </li>
@@ -646,6 +671,12 @@
                   ></button>
                 </div>
               </div>
+              <button
+                type="button"
+                class="card__remove-button"
+                aria-label="Удалить из избранного"
+                title="Удалить из избранного"
+              ></button>
             </article>
           </a>
         </li>
@@ -866,8 +897,12 @@
 </div>
 
       <!-- Модальное окно редактирования профиля -->
-<div class="modal modal--size-wide modal--content-edit-profile">
-  <div class="modal__container">
+<div
+  class="modal modal--mobile-fullscreen modal--size-wide modal--content-edit-profile"
+>
+  <div
+    class="modal__container modal__container--indent-sm modal__container--theme-grey"
+  >
     <button
       type="reset"
       class="modal__close-button"
@@ -902,7 +937,7 @@
           </div>
         </div>
         <fieldset class="form__column form__column--indent-sm">
-          <div class="field field--with-controls">
+          <div class="field field--theme-white field--with-controls">
             <label
               for="edit-profile-family-name"
               class="field__label visually-hidden"
@@ -943,7 +978,7 @@
               </div>
             </div>
           </div>
-          <div class="field field--with-controls">
+          <div class="field field--theme-white field--with-controls">
             <label
               for="edit-profile-first-name"
               class="field__label visually-hidden"
@@ -983,7 +1018,7 @@
               </div>
             </div>
           </div>
-          <div class="field field--with-controls">
+          <div class="field field--theme-white field--with-controls">
             <label
               for="edit-profile-middle-name"
               class="field__label visually-hidden"
@@ -1024,7 +1059,7 @@
               </div>
             </div>
           </div>
-          <div class="field field--with-controls">
+          <div class="field field--theme-white field--with-controls">
             <label
               for="edit-profile-desription"
               class="field__label visually-hidden"
@@ -1034,11 +1069,13 @@
               <textarea
                 class="field__input"
                 name="message"
-                rows="5"
+                rows="10"
                 placeholder="Введите небольшое описание"
                 id="edit-profile-desription"
                 disabled
-              >Специалист управления информационной политики и связей с общественностью</textarea>
+              >
+Специалист управления информационной политики и связей с общественностью</textarea
+              >
               <span class="field__error-text">Вывод ошибки</span>
               <span
                 class="field__error-icon icon icon--type-error"

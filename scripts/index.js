@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
       articleSlider.mount();
     }
 
-    // Слайдер на детальное странице базы знаний
+    // Слайдер на детальной странице базы знаний
     if (document.querySelector('#knowledge-base-article-slider')) {
       let knowledgeBaseSlider = new Splide('#knowledge-base-article-slider', {
         type: 'slide',
@@ -78,6 +78,28 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       knowledgeBaseSlider.mount();
+    }
+
+    // Карточки авторов на странице Блог студСМИ
+    if (document.querySelector('#authors-slider')) {
+      let authorsSlider = new Splide('#authors-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        autoWidth: true,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            perPage: 4,
+            autoWidth: false,
+            pagination: true,
+            padding: 0,
+          },
+        },
+      });
+      authorsSlider.mount();
     }
   }
 });
@@ -163,7 +185,10 @@ function checkMenuSize() {
   }
 
   mobileMenu.setAttribute('count', numberOfItems - numOfVisibleItems);
-  if (numOfVisibleItems === numberOfItems)
+  if (
+    numOfVisibleItems === numberOfItems &&
+    mobileMenuList.childElementCount === 0
+  )
     mobileMenu.classList.add('visually-hidden');
   else mobileMenu.classList.remove('visually-hidden');
 }
@@ -355,6 +380,105 @@ if (document.querySelector('.account__icon-button--role-edit-profile')) {
       evt.target.classList.contains('modal__close-button')
     ) {
       closeEditProfileModal();
+    }
+  });
+}
+
+// Модальное окно резюме
+if (document.querySelector('.account__button--role-resume')) {
+  const resumeButton = document.querySelector('.account__button--role-resume');
+  const resumeModal = document.querySelector('.modal--content-resume');
+  const openResumeModal = function () {
+    resumeModal.classList.add('modal--opened');
+  };
+  const closeResumeModal = function () {
+    resumeModal.classList.remove('modal--opened');
+  };
+
+  resumeButton.addEventListener('click', openResumeModal);
+  resumeModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-resume') ||
+      evt.target.classList.contains('modal__close-button') ||
+      evt.target.classList.contains('account__icon-button--role-close-button')
+    ) {
+      closeResumeModal();
+    }
+  });
+}
+
+// Модальное окно редактирования резюме
+if (document.querySelector('.account__icon-button--role-edit-resume')) {
+  const editResumeButtons = document.querySelectorAll(
+    '.account__icon-button--role-edit-resume'
+  );
+  const editResumeModal = document.querySelector('.modal--content-edit-resume');
+  const openEditResumeModal = function () {
+    editResumeModal.classList.add('modal--opened');
+  };
+  const closeEditResumeModal = function () {
+    editResumeModal.classList.remove('modal--opened');
+  };
+
+  editResumeButtons.forEach((button) =>
+    button.addEventListener('click', openEditResumeModal)
+  );
+  editResumeModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-edit-resume') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeEditResumeModal();
+    }
+  });
+}
+
+// Модальное окно создания публикации
+if (document.querySelector('.article__icon-button--role-add-article')) {
+  const addArticleButton = document.querySelector(
+    '.article__icon-button--role-add-article'
+  );
+  const addArticleModal = document.querySelector('.modal--content-add-article');
+  const openAddArticleModal = function () {
+    addArticleModal.classList.add('modal--opened');
+  };
+  const closeAddArticleModal = function () {
+    addArticleModal.classList.remove('modal--opened');
+  };
+
+  addArticleButton.addEventListener('click', openAddArticleModal);
+  addArticleModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-add-article') ||
+      evt.target.classList.contains('form__icon-button--role-close-button')
+    ) {
+      closeAddArticleModal();
+    }
+  });
+}
+
+// Модальное окно модерации публикации
+if (document.querySelector('.article__icon-button--role-moderation-article')) {
+  const moderationArticleButton = document.querySelector(
+    '.article__icon-button--role-moderation-article'
+  );
+  const moderationArticleModal = document.querySelector(
+    '.modal--content-moderation-article'
+  );
+  const openModerationArticleModal = function () {
+    moderationArticleModal.classList.add('modal--opened');
+  };
+  const closeModerationArticleModal = function () {
+    moderationArticleModal.classList.remove('modal--opened');
+  };
+
+  moderationArticleButton.addEventListener('click', openModerationArticleModal);
+  moderationArticleModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-moderation-article') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeModerationArticleModal();
     }
   });
 }
@@ -608,21 +732,60 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Слайдер для ЛК сертификатов
     if (document.querySelector('#theme-lk-certificate-slider')) {
-      let themeLkCertificateSlider = new Splide('#theme-lk-certificate-slider', {
+      let themeLkCertificateSlider = new Splide(
+        '#theme-lk-certificate-slider',
+        {
+          type: 'slide',
+          arrows: false,
+          pagination: false,
+          perPage: 3,
+          gap: 'clamp(.625em, 2vw, 1.25em)',
+          padding: 'var(--section-inline-start)',
+          mediaQuery: 'min',
+          breakpoints: {
+            768: {
+              arrows: true,
+            },
+          },
+        }
+      );
+      themeLkCertificateSlider.mount();
+    }
+
+    // Слайдер для резюме сертификатов
+    if (document.querySelector('#resume-certificate-slider')) {
+      let resumeCertificateSlider = new Splide('#resume-certificate-slider', {
         type: 'slide',
         arrows: false,
         pagination: false,
-        perPage: 3,
-        gap: 'clamp(.625em, 2vw, 1.25em)',
-        padding: 'var(--section-inline-start)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            arrows: true,
-          },
-        },
+        autoWidth: true,
+        gap: '.375em',
       });
-      themeLkCertificateSlider.mount();
+      resumeCertificateSlider.mount();
+    }
+
+    // Слайдер для фото при создании публикаций
+    if (document.querySelector('#add-article-image-slider')) {
+      let addArticleImageSlider = new Splide('#add-article-image-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        autoWidth: true,
+        gap: 'clamp(.625em, 2vw, 1.25em)',
+      });
+      addArticleImageSlider.mount();
+    }
+
+    // Слайдер для фото при модерации публикаций
+    if (document.querySelector('#moderation-article-image-slider')) {
+      let addArticleImageSlider = new Splide('#moderation-article-image-slider', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        autoWidth: true,
+        gap: 'clamp(.625em, 2vw, 1.25em)',
+      });
+      addArticleImageSlider.mount();
     }
   }
 });
