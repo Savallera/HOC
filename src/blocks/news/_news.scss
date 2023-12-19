@@ -21,6 +21,7 @@
   &__slider-track {
     @include media(md) {
       height: 100%;
+      overflow: unset;
     }
   }
 

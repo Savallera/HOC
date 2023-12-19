@@ -105,8 +105,11 @@
     &.is-initialized:not(.is-active) .splide__list {
       display: grid;
     }
-    @include media(md, max) {
-      margin-inline: calc(var(--section-padding) * -1);
+
+    .splide__track {
+      @include media(md) {
+        overflow: unset;
+      }
     }
 
     .splide__list {
@@ -114,6 +117,10 @@
         grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
         gap: var(--gap-grid);
       }
+    }
+
+    @include media(md, max) {
+      margin-inline: calc(var(--section-padding) * -1);
     }
   }
 

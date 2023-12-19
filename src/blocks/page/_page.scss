@@ -139,10 +139,11 @@
     border-block-end: 2px solid var(--accent-color);
     font-size: clamp(0.75em, 2.5vw, 1.5625em);
     font-variation-settings: 'wght' 600;
+    transition: opacity 0.35s;
 
-    // &:hover {
-    //   border-block-end: 2px solid;
-    // }
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &__address {

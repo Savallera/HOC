@@ -310,7 +310,16 @@
   }
 
   &--role-preview-button {
-    cursor: pointer;
+    @media (hover: hover) {
+      outline: 2px solid transparent;
+      margin: 2px;
+      block-size: calc(100% - 4px);
+      transition: outline 0.35s;
+      cursor: pointer;
+      &:hover {
+        outline-color: var(--accent-color);
+      }
+    }
   }
 
   &--size-md {

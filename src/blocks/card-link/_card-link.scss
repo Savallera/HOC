@@ -2,6 +2,7 @@
 .card-link {
   display: block;
   block-size: 100%;
+  border-radius: 10px;
   text-decoration: none;
 
   &:focus {
@@ -10,5 +11,17 @@
 
   &:focus-visible {
     outline: 2px solid;
+  }
+
+  &--hover-card {
+    @media (hover: hover) {
+      outline: 2px solid transparent;
+      margin: 2px;
+      block-size: calc(100% - 4px);
+      transition: outline 0.35s;
+      &:hover {
+        outline-color: var(--accent-color);
+      }
+    }
   }
 }

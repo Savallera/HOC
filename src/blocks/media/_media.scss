@@ -32,6 +32,7 @@
   &__podcast-slider-track {
     @include media(md) {
       height: 100%;
+      overflow: unset;
     }
   }
 
@@ -64,6 +65,7 @@
   &__video-slider-track {
     @include media(md) {
       height: 100%;
+      overflow: unset;
     }
   }
 
