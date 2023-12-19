@@ -16,7 +16,7 @@
   <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />
-  <title>База знаний</title>
+  <title>ЛК координатора проекта</title>
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/libs/splide.min.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
@@ -140,277 +140,232 @@
 </header>
 
       <main class="page__content">
-        <!-- Секция с базой знаний, карточек в сетке 2 в ряд -->
-        <section class="page__section broadcasts">
-          <h1 class="page__heading">База знаний</h1>
-          <!-- Поиск -->
+        <section class="article">
+          <div class="article__inner">
+            <div class="article__offset-end">
+              <h1 class="article__title">
+                Координатора проекта
+                <span class="article__title-span"
+                  >Каримова <br />
+                  Вероника Владимировна</span
+                >
+              </h1>
+              <a href="#" class="article__link" rel="noopener nofollow"
+                >@nastyastryuk</a
+              >
+            </div>
+            <!-- Поиск -->
 <div class="search">
-  <form class="search__form" name="knowledge-base-search" action="">
+  <form
+    class="search__form search__form--indent-sm"
+    name="people-search"
+    action=""
+  >
     <fieldset class="search__inner">
-      <label class="search__filter-label" for="search-radio-theme-1">
-        <input
-          class="search__filter-field visually-hidden"
-          type="radio"
-          name="search-radio-theme"
-          id="search-radio-theme-1"
-        />
-        <span class="search__filter-text">Интеллектуальные</span>
-      </label>
-      <label class="search__filter-label" for="search-radio-theme-2">
-        <input
-          class="search__filter-field visually-hidden"
-          type="radio"
-          name="search-radio-theme"
-          id="search-radio-theme-2"
-        />
-        <span class="search__filter-text">Развлекательные</span>
-      </label>
-      <label class="search__filter-label" for="search-radio-theme-3">
-        <input
-          class="search__filter-field visually-hidden"
-          type="radio"
-          name="search-radio-theme"
-          id="search-radio-theme-3"
-        />
-        <span class="search__filter-text">Профильные</span>
-      </label>
-      <label class="search__filter-label" for="search-radio-theme-4">
-        <input
-          class="search__filter-field visually-hidden"
-          type="radio"
-          name="search-radio-theme"
-          id="search-radio-theme-4"
-        />
-        <span class="search__filter-text">Образовательные</span>
-      </label>
-      <label class="search__filter-label" for="search-radio-theme-5">
-        <input
-          class="search__filter-field visually-hidden"
-          type="radio"
-          name="search-radio-theme"
-          id="search-radio-theme-5"
-        />
-        <span class="search__filter-text">Языковые</span>
-      </label>
-      <label class="search__filter-label" for="search-radio-theme-6">
-        <input
-          class="search__filter-field visually-hidden"
-          type="radio"
-          name="search-radio-theme"
-          id="search-radio-theme-6"
-        />
-        <span class="search__filter-text">При приеме на работу</span>
-      </label>
-      <label class="search__filter-label" for="search-radio-theme-7">
-        <input
-          class="search__filter-field visually-hidden"
-          type="radio"
-          name="search-radio-theme"
-          id="search-radio-theme-7"
-        />
-        <span class="search__filter-text">Повышение уровня знаний</span>
-      </label>
-      <label class="search__filter-label" for="search-radio-theme-8">
-        <input
-          class="search__filter-field visually-hidden"
-          type="radio"
-          name="search-radio-theme"
-          id="search-radio-theme-8"
-        />
-        <span class="search__filter-text">Популярные</span>
-      </label>
+      <button
+        class="search__region-button search__region-button--content-all"
+        type="button"
+      >
+        <span>Все регионы</span>
+      </button>
+      <button class="search__region-button" type="button">
+        <span>Москва</span>
+      </button>
     </fieldset>
-    <button class="search__reset-button" type="reset">
-      <span>Сбросить фильтры</span>
-    </button>
+    <h2 class="search__subtitle">Профиль активиста</h2>
+    <div class="field field--theme-white">
+      <label for="people-search-field" class="field__label visually-hidden"
+        >Название СМИ / ФИО
+      </label>
+      <div class="field__inner">
+        <span
+          class="field__search-icon icon icon--type-search"
+          aria-hidden="true"
+        ></span>
+        <input
+          type="search"
+          class="field__input"
+          placeholder="Название СМИ / ФИО "
+          name="search"
+          id="people-search-field"
+        />
+        <span class="field__error-text">Вывод ошибки</span>
+        <span
+          class="field__error-icon icon icon--type-error"
+          aria-hidden="true"
+        ></span>
+      </div>
+    </div>
   </form>
 </div>
 
-          <ul class="page__card-deck page__card-deck--size-lg">
-            <li>
-              <a
-                href="./knowledge-base-article.html"
-                class="card-link card-link--hover-card"
-                rel="noopener ugs"
-              >
+            <ul
+              class="page__card-deck page__card-deck--size-sm page__card-deck--mobile-size-sm"
+            >
+              <li>
                 <article class="card card--size-md">
                   <img
-                    class="card__image"
-                    src="https://med-pro-ves.ru/wp-content/uploads/2023/10/market-research-faqs157755749.jpg"
+                    class="card__image card__image--square-image"
+                    src="https://live.staticflickr.com/3917/14772608053_d0a4928650_b.jpg"
                     alt="Описание изображения"
                     loading="lazy"
                   />
                   <div class="card__main-content">
-                    <h2 class="card__title">Заголовок</h2>
-                    <p class="card__description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatem similique, ratione accusantium deleniti ea
-                      explicabo odit repellat voluptatum aperiam labore eaque
-                      dolores, iure amet hic. Voluptatibus maiores ratione in
-                      at.
-                    </p>
+                    <h3 class="card__title">Иванова Карина Викторовна</h3>
+                    <div
+                      class="card__rating"
+                      aria-label="Рейтинг автора: 4"
+                      title="Рейтинг автора: 4"
+                    >
+                      <div class="card__rating-bar">
+                        <div
+                          class="card__rating-bar-progress"
+                          style="inline-size: 80%"
+                        ></div>
+                      </div>
+                    </div>
                     <div class="card__author">
                       <img
                         class="card__author-image"
-                        src="https://avatars.mds.yandex.net/i?id=8c4b17a0dfd5c46d2828cead01639307fdea5178-8411463-images-thumbs&n=13"
+                        src="https://sun6-20.userapi.com/s/v1/if2/DRhuaSac4b19KrKfUaoAdJtuflOF_xMlFfSYrUWhHmMbxDOR8YYOXw6WjadmH-T8vpp_OJ6ZoW6GO6NIx8iz5N_2.jpg?size=2048x2048&quality=96&crop=0,0,2048,2048&ava=1"
                         alt="Описание изображения"
                         loading="lasy"
                       />
                       <p
                         class="card__author-name card__cut-text"
-                        title="Совет обучающихся..."
+                        title="Комитет по делам молодежи"
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Quam doloribus possimus debitis, cum illum omnis
-                        reprehenderit sed aspernatur libero eaque doloremque
-                        ratione dolor consequuntur reiciendis quia aperiam
-                        explicabo veritatis ut!
+                        ТОЛК | Студмедиацентр
                       </p>
                     </div>
-                    <p class="card__text text-gradient">Тема</p>
                   </div>
                 </article>
-              </a>
-            </li>
-            <li>
-              <a
-                href="./knowledge-base-article.html"
-                class="card-link card-link--hover-card"
-                rel="noopener ugs"
-              >
+              </li>
+              <li>
                 <article class="card card--size-md">
                   <img
-                    class="card__image"
-                    src="https://mgsu.ru/upload/iblock/dab/dabd0826c4d7c08e641fbf08ebaafc64.jpg"
+                    class="card__image card__image--square-image"
+                    src="https://live.staticflickr.com/3917/14772608053_d0a4928650_b.jpg"
                     alt="Описание изображения"
                     loading="lazy"
                   />
                   <div class="card__main-content">
-                    <h2 class="card__title">Заголовок</h2>
-                    <p class="card__description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatem similique, ratione accusantium deleniti ea
-                      explicabo odit repellat voluptatum aperiam labore eaque
-                      dolores, iure amet hic. Voluptatibus maiores ratione in
-                      at.
-                    </p>
+                    <h3 class="card__title">Иванова Карина Викторовна</h3>
+                    <div
+                      class="card__rating"
+                      aria-label="Рейтинг автора: 4"
+                      title="Рейтинг автора: 4"
+                    >
+                      <div class="card__rating-bar">
+                        <div
+                          class="card__rating-bar-progress"
+                          style="inline-size: 80%"
+                        ></div>
+                      </div>
+                    </div>
                     <div class="card__author">
                       <img
                         class="card__author-image"
-                        src="https://avatars.mds.yandex.net/i?id=8c4b17a0dfd5c46d2828cead01639307fdea5178-8411463-images-thumbs&n=13"
+                        src="https://sun6-20.userapi.com/s/v1/if2/DRhuaSac4b19KrKfUaoAdJtuflOF_xMlFfSYrUWhHmMbxDOR8YYOXw6WjadmH-T8vpp_OJ6ZoW6GO6NIx8iz5N_2.jpg?size=2048x2048&quality=96&crop=0,0,2048,2048&ava=1"
                         alt="Описание изображения"
                         loading="lasy"
                       />
                       <p
                         class="card__author-name card__cut-text"
-                        title="Совет обучающихся..."
+                        title="Комитет по делам молодежи"
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Quam doloribus possimus debitis, cum illum omnis
-                        reprehenderit sed aspernatur libero eaque doloremque
-                        ratione dolor consequuntur reiciendis quia aperiam
-                        explicabo veritatis ut!
+                        ТОЛК | Студмедиацентр
                       </p>
                     </div>
-                    <p class="card__text text-gradient">Тема</p>
                   </div>
                 </article>
-              </a>
-            </li>
-            <li>
-              <a
-                href="./knowledge-base-article.html"
-                class="card-link card-link--hover-card"
-                rel="noopener ugs"
-              >
+              </li>
+              <li>
                 <article class="card card--size-md">
                   <img
-                    class="card__image"
-                    src="https://marketingcartel.com/wp-content/uploads/2018/03/social-media-analysis.jpeg"
+                    class="card__image card__image--square-image"
+                    src="https://live.staticflickr.com/3917/14772608053_d0a4928650_b.jpg"
                     alt="Описание изображения"
                     loading="lazy"
                   />
                   <div class="card__main-content">
-                    <h2 class="card__title">Заголовок</h2>
-                    <p class="card__description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatem similique, ratione accusantium deleniti ea
-                      explicabo odit repellat voluptatum aperiam labore eaque
-                      dolores, iure amet hic. Voluptatibus maiores ratione in
-                      at.
-                    </p>
+                    <h3 class="card__title">Иванова Карина Викторовна</h3>
+                    <div
+                      class="card__rating"
+                      aria-label="Рейтинг автора: 4"
+                      title="Рейтинг автора: 4"
+                    >
+                      <div class="card__rating-bar">
+                        <div
+                          class="card__rating-bar-progress"
+                          style="inline-size: 80%"
+                        ></div>
+                      </div>
+                    </div>
                     <div class="card__author">
                       <img
                         class="card__author-image"
-                        src="https://avatars.mds.yandex.net/i?id=8c4b17a0dfd5c46d2828cead01639307fdea5178-8411463-images-thumbs&n=13"
+                        src="https://sun6-20.userapi.com/s/v1/if2/DRhuaSac4b19KrKfUaoAdJtuflOF_xMlFfSYrUWhHmMbxDOR8YYOXw6WjadmH-T8vpp_OJ6ZoW6GO6NIx8iz5N_2.jpg?size=2048x2048&quality=96&crop=0,0,2048,2048&ava=1"
                         alt="Описание изображения"
                         loading="lasy"
                       />
                       <p
                         class="card__author-name card__cut-text"
-                        title="Совет обучающихся..."
+                        title="Комитет по делам молодежи"
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Quam doloribus possimus debitis, cum illum omnis
-                        reprehenderit sed aspernatur libero eaque doloremque
-                        ratione dolor consequuntur reiciendis quia aperiam
-                        explicabo veritatis ut!
+                        ТОЛК | Студмедиацентр
                       </p>
                     </div>
-                    <p class="card__text text-gradient">Тема</p>
                   </div>
                 </article>
-              </a>
-            </li>
-            <li>
-              <a
-                href="./knowledge-base-article.html"
-                class="card-link card-link--hover-card"
-                rel="noopener ugs"
-              >
+              </li>
+              <li>
                 <article class="card card--size-md">
                   <img
-                    class="card__image"
-                    src="https://орц71.рф/upload/iblock/e3b/e3b145479d2516dca795e85940b3b387.jpeg"
+                    class="card__image card__image--square-image"
+                    src="https://live.staticflickr.com/3917/14772608053_d0a4928650_b.jpg"
                     alt="Описание изображения"
                     loading="lazy"
                   />
                   <div class="card__main-content">
-                    <h2 class="card__title">Заголовок</h2>
-                    <p class="card__description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatem similique, ratione accusantium deleniti ea
-                      explicabo odit repellat voluptatum aperiam labore eaque
-                      dolores, iure amet hic. Voluptatibus maiores ratione in
-                      at.
-                    </p>
+                    <h3 class="card__title">Иванова Карина Викторовна</h3>
+                    <div
+                      class="card__rating"
+                      aria-label="Рейтинг автора: 4"
+                      title="Рейтинг автора: 4"
+                    >
+                      <div class="card__rating-bar">
+                        <div
+                          class="card__rating-bar-progress"
+                          style="inline-size: 80%"
+                        ></div>
+                      </div>
+                    </div>
                     <div class="card__author">
                       <img
                         class="card__author-image"
-                        src="https://avatars.mds.yandex.net/i?id=8c4b17a0dfd5c46d2828cead01639307fdea5178-8411463-images-thumbs&n=13"
+                        src="https://sun6-20.userapi.com/s/v1/if2/DRhuaSac4b19KrKfUaoAdJtuflOF_xMlFfSYrUWhHmMbxDOR8YYOXw6WjadmH-T8vpp_OJ6ZoW6GO6NIx8iz5N_2.jpg?size=2048x2048&quality=96&crop=0,0,2048,2048&ava=1"
                         alt="Описание изображения"
                         loading="lasy"
                       />
                       <p
                         class="card__author-name card__cut-text"
-                        title="Совет обучающихся..."
+                        title="Комитет по делам молодежи"
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Quam doloribus possimus debitis, cum illum omnis
-                        reprehenderit sed aspernatur libero eaque doloremque
-                        ratione dolor consequuntur reiciendis quia aperiam
-                        explicabo veritatis ut!
+                        ТОЛК | Студмедиацентр
                       </p>
                     </div>
-                    <p class="card__text text-gradient">Тема</p>
                   </div>
                 </article>
-              </a>
-            </li>
-          </ul>
-          <button class="button page__more-button text-gradient" type="button">
-            <span class="button__text">Смотреть еще</span>
-          </button>
+              </li>
+            </ul>
+            <button
+              class="button page__more-button text-gradient"
+              type="button"
+            >
+              <span class="button__text">Смотреть еще</span>
+            </button>
+          </div>
         </section>
       </main>
       <!-- Подвал страницы -->
@@ -613,6 +568,142 @@
 </footer>
 <script src="./scripts/libs/splide.min.js"></script>
 <script src="./scripts/index.js" defer></script>
+
+      <!-- Модальное окно Выбор региона -->
+<div class="modal modal--size-small modal--content-regions">
+  <div class="modal__container">
+    <button
+      type="reset"
+      class="modal__close-button"
+      aria-label="Закрыть"
+    ></button>
+    <form class="form" name="regions-modal" action="">
+      <p class="form__title">Выбрать регион</p>
+      <div class="field field--theme-grey">
+        <label for="regions-modal-field" class="field__label visually-hidden"
+          >Выберите регион
+        </label>
+        <div class="field__inner">
+          <input
+            type="search"
+            class="field__input"
+            placeholder="Поиск региона"
+            name="search"
+            id="regions-modal-field"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <ul class="form__filters-list">
+        <li>
+          <label class="form__filter-label" for="filters-modal-radio-all">
+            <input
+              class="form__filter-field visually-hidden"
+              type="radio"
+              name="filters-modal-radio"
+              id="filters-modal-radio-all"
+            />
+            <span class="form__filter-text">Все</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-radio-1">
+            <input
+              class="form__filter-field visually-hidden"
+              type="radio"
+              name="filters-modal-radio"
+              id="filters-modal-radio-1"
+            />
+            <span class="form__filter-text">Алтайский край</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-radio-2">
+            <input
+              class="form__filter-field visually-hidden"
+              type="radio"
+              name="filters-modal-radio"
+              id="filters-modal-radio-2"
+            />
+            <span class="form__filter-text">Амурская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-radio-3">
+            <input
+              class="form__filter-field visually-hidden"
+              type="radio"
+              name="filters-modal-radio"
+              id="filters-modal-radio-3"
+            />
+            <span class="form__filter-text">Архангельская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-radio-4">
+            <input
+              class="form__filter-field visually-hidden"
+              type="radio"
+              name="filters-modal-radio"
+              id="filters-modal-radio-4"
+            />
+            <span class="form__filter-text">Астраханская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-radio-5">
+            <input
+              class="form__filter-field visually-hidden"
+              type="radio"
+              name="filters-modal-radio"
+              id="filters-modal-radio-5"
+            />
+            <span class="form__filter-text">Белгородская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-radio-6">
+            <input
+              class="form__filter-field visually-hidden"
+              type="radio"
+              name="filters-modal-radio"
+              id="filters-modal-radio-6"
+            />
+            <span class="form__filter-text">Брянская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-radio-7">
+            <input
+              class="form__filter-field visually-hidden"
+              type="radio"
+              name="filters-modal-radio"
+              id="filters-modal-radio-7"
+            />
+            <span class="form__filter-text">Владимирская область</span>
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-radio-8">
+            <input
+              class="form__filter-field visually-hidden"
+              type="radio"
+              name="filters-modal-radio"
+              id="filters-modal-radio-8"
+            />
+            <span class="form__filter-text"
+              >Самое длинное название области в нашей большой стране</span
+            >
+          </label>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
 
     </div>
   </body>

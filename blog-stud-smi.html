@@ -139,15 +139,18 @@
   </div>
 </header>
 
-      <main class="page__content">
-        <!-- Фоновый логотип размещается при помощи свойства style="background-image: url(...);" светлый -->
+      <main class="page__content page__content--bg-image">
+        <!-- Баннер с названием и лого -->
         <section
-          class="banner banner--theme-light banner--place-blog"
-          style="
-            background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1613713356_64-p-klipart-foni-dlya-prezentatsii-68.jpg);
-          "
+          class="banner banner--theme-light banner--place-blog banner--content-stud-smi"
         >
-          <div class="banner__inner">
+          <div class="banner__inner banner__columns">
+            <img
+              class="banner__logo-image"
+              src="https://www.pngplay.com/wp-content/uploads/6/Abstract-Frame-Transparent-Background.png"
+              alt="Описание изображения"
+              loading="lazy"
+            />
             <h1 class="banner__title banner__title--size-lg">
               ТОЛК
               <span class="banner__title-span">Студмедиа ПсковГУ</span>
@@ -265,7 +268,7 @@
                   <li class="splide__slide splide__slide--mobile-width-auto">
                     <a
                       href="./new-article.html"
-                      class="card-link"
+                      class="card-link card-link--hover-card"
                       rel="noopener ugs"
                     >
                       <article class="card">
@@ -304,7 +307,7 @@
                   <li class="splide__slide splide__slide--mobile-width-auto">
                     <a
                       href="./new-article.html"
-                      class="card-link"
+                      class="card-link card-link--hover-card"
                       rel="noopener ugs"
                     >
                       <article class="card">
@@ -343,7 +346,7 @@
                   <li class="splide__slide splide__slide--mobile-width-auto">
                     <a
                       href="./new-article.html"
-                      class="card-link"
+                      class="card-link card-link--hover-card"
                       rel="noopener ugs"
                     >
                       <article class="card card--size-md">
@@ -386,7 +389,7 @@
               <li>
                 <a
                   href="./new-article.html"
-                  class="card-link"
+                  class="card-link card-link--hover-card"
                   rel="noopener ugs"
                 >
                   <article class="card">
@@ -419,7 +422,7 @@
               <li>
                 <a
                   href="./new-article.html"
-                  class="card-link"
+                  class="card-link card-link--hover-card"
                   rel="noopener ugs"
                 >
                   <article class="card">
@@ -452,7 +455,7 @@
               <li>
                 <a
                   href="./new-article.html"
-                  class="card-link"
+                  class="card-link card-link--hover-card"
                   rel="noopener ugs"
                 >
                   <article class="card">
@@ -485,7 +488,7 @@
               <li>
                 <a
                   href="./new-article.html"
-                  class="card-link"
+                  class="card-link card-link--hover-card"
                   rel="noopener ugs"
                 >
                   <article class="card">
@@ -524,7 +527,7 @@
             <span class="button__text">Смотреть все новости</span>
           </button>
         </section>
-        <!-- Секция с медиа на главной -->
+        <!-- Секция с подкастами и видео -->
 <section class="media page__section">
   <div class="media__columns">
     <div class="media__column">
@@ -685,7 +688,7 @@
   </div>
 </section>
 
-        <!-- Секция с трансляциями на главной -->
+        <!-- Секция с трансляциями -->
 <section class="page__section broadcasts">
   <div class="page__title-block">
     <h2 class="page__title">Трансляции</h2>
@@ -700,100 +703,94 @@
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide splide__slide--mobile-width-auto">
-          <a href="./broadcasts.html" class="card-link" rel="noopener ugs">
-            <article class="card card--size-md">
-              <iframe
-                class="card__iframe"
-                src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Трансляция про что-то</h3>
-                <div class="card__controls">
-                  <p class="card__text text-gradient">23.11 / 19:00</p>
-                  <p class="card__views" aria-label="Количество просмотров">
-                    <span
-                      class="card__views-icon icon icon--type-eye"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="card__views-value">123</span>
-                  </p>
-                  <button
-                    type="button"
-                    class="card__like-button icon-button icon icon--type-like"
-                    aria-label="Нравится"
-                  ></button>
-                </div>
+          <article class="card card--size-md">
+            <iframe
+              class="card__iframe"
+              src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="card__main-content card__main-content--min-height">
+              <h3 class="card__title">Трансляция про что-то</h3>
+              <div class="card__controls">
+                <p class="card__text text-gradient">23.11 / 19:00</p>
+                <p class="card__views" aria-label="Количество просмотров">
+                  <span
+                    class="card__views-icon icon icon--type-eye"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="card__views-value">123</span>
+                </p>
+                <button
+                  type="button"
+                  class="card__like-button icon-button icon icon--type-like"
+                  aria-label="Нравится"
+                ></button>
               </div>
-            </article>
-          </a>
+            </div>
+          </article>
         </li>
         <li class="splide__slide splide__slide--mobile-width-auto">
-          <a href="./broadcasts.html" class="card-link" rel="noopener ugs">
-            <article class="card card--size-md">
-              <iframe
-                class="card__iframe"
-                src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Трансляция про что-то</h3>
-                <div class="card__controls">
-                  <p class="card__text text-gradient">23.11 / 19:00</p>
-                  <p class="card__views" aria-label="Количество просмотров">
-                    <span
-                      class="card__views-icon icon icon--type-eye"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="card__views-value">123</span>
-                  </p>
-                  <button
-                    type="button"
-                    class="card__like-button icon-button icon icon--type-like"
-                    aria-label="Нравится"
-                  ></button>
-                </div>
+          <article class="card card--size-md">
+            <iframe
+              class="card__iframe"
+              src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="card__main-content card__main-content--min-height">
+              <h3 class="card__title">Трансляция про что-то</h3>
+              <div class="card__controls">
+                <p class="card__text text-gradient">23.11 / 19:00</p>
+                <p class="card__views" aria-label="Количество просмотров">
+                  <span
+                    class="card__views-icon icon icon--type-eye"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="card__views-value">123</span>
+                </p>
+                <button
+                  type="button"
+                  class="card__like-button icon-button icon icon--type-like"
+                  aria-label="Нравится"
+                ></button>
               </div>
-            </article>
-          </a>
+            </div>
+          </article>
         </li>
         <li class="splide__slide splide__slide--mobile-width-auto">
-          <a href="./broadcasts.html" class="card-link" rel="noopener ugs">
-            <article class="card card--size-md">
-              <iframe
-                class="card__iframe"
-                src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Трансляция про что-то</h3>
-                <div class="card__controls">
-                  <p class="card__text text-gradient">23.11 / 19:00</p>
-                  <p class="card__views" aria-label="Количество просмотров">
-                    <span
-                      class="card__views-icon icon icon--type-eye"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="card__views-value">123</span>
-                  </p>
-                  <button
-                    type="button"
-                    class="card__like-button icon-button icon icon--type-like"
-                    aria-label="Нравится"
-                  ></button>
-                </div>
+          <article class="card card--size-md">
+            <iframe
+              class="card__iframe"
+              src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="card__main-content card__main-content--min-height">
+              <h3 class="card__title">Трансляция про что-то</h3>
+              <div class="card__controls">
+                <p class="card__text text-gradient">23.11 / 19:00</p>
+                <p class="card__views" aria-label="Количество просмотров">
+                  <span
+                    class="card__views-icon icon icon--type-eye"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="card__views-value">123</span>
+                </p>
+                <button
+                  type="button"
+                  class="card__like-button icon-button icon icon--type-like"
+                  aria-label="Нравится"
+                ></button>
               </div>
-            </article>
-          </a>
+            </div>
+          </article>
         </li>
       </ul>
     </div>
@@ -954,84 +951,74 @@
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide splide__slide--mobile-width-sm">
-                  <a href="#" class="card-link" rel="noopener ugs">
-                    <article class="card card--size-md">
-                      <img
-                        class="card__image card__image--square-image"
-                        src="https://live.staticflickr.com/3917/14772608053_d0a4928650_b.jpg"
-                        alt="Описание изображения"
-                        loading="lazy"
-                      />
-                      <div class="card__main-content">
-                        <h3 class="card__title">Иванова Карина Викторовна</h3>
-                        <p class="card__text text-gradient">Специалист</p>
-                      </div>
-                    </article>
-                  </a>
+                  <article class="card card--size-md">
+                    <img
+                      class="card__image card__image--square-image"
+                      src="https://live.staticflickr.com/3917/14772608053_d0a4928650_b.jpg"
+                      alt="Описание изображения"
+                      loading="lazy"
+                    />
+                    <div class="card__main-content">
+                      <h3 class="card__title">Иванова Карина Викторовна</h3>
+                      <p class="card__text text-gradient">Специалист</p>
+                    </div>
+                  </article>
                 </li>
                 <li class="splide__slide splide__slide--mobile-width-sm">
-                  <a href="#" class="card-link" rel="noopener ugs">
-                    <article class="card card--size-md">
-                      <img
-                        class="card__image card__image--square-image"
-                        src="https://cdn.culture.ru/images/eeed6dd1-a7ca-56c1-aa43-dfc92bbcc49a"
-                        alt="Описание изображения"
-                        loading="lazy"
-                      />
-                      <div class="card__main-content">
-                        <h3 class="card__title">Иванова Карина Викторовна</h3>
-                        <p class="card__text text-gradient">Специалист</p>
-                      </div>
-                    </article>
-                  </a>
+                  <article class="card card--size-md">
+                    <img
+                      class="card__image card__image--square-image"
+                      src="https://cdn.culture.ru/images/eeed6dd1-a7ca-56c1-aa43-dfc92bbcc49a"
+                      alt="Описание изображения"
+                      loading="lazy"
+                    />
+                    <div class="card__main-content">
+                      <h3 class="card__title">Иванова Карина Викторовна</h3>
+                      <p class="card__text text-gradient">Специалист</p>
+                    </div>
+                  </article>
                 </li>
                 <li class="splide__slide splide__slide--mobile-width-sm">
-                  <a href="#" class="card-link" rel="noopener ugs">
-                    <article class="card card--size-md">
-                      <img
-                        class="card__image card__image--square-image"
-                        src="https://thumbs.dreamstime.com/b/сту-ент-портрет-ко-ежа-усмехаться-мо-о-ого-че-овека-41813177.jpg"
-                        alt="Описание изображения"
-                        loading="lazy"
-                      />
-                      <div class="card__main-content">
-                        <h3 class="card__title">Иванова Карина Викторовна</h3>
-                        <p class="card__text text-gradient">Специалист</p>
-                      </div>
-                    </article>
-                  </a>
+                  <article class="card card--size-md">
+                    <img
+                      class="card__image card__image--square-image"
+                      src="https://thumbs.dreamstime.com/b/сту-ент-портрет-ко-ежа-усмехаться-мо-о-ого-че-овека-41813177.jpg"
+                      alt="Описание изображения"
+                      loading="lazy"
+                    />
+                    <div class="card__main-content">
+                      <h3 class="card__title">Иванова Карина Викторовна</h3>
+                      <p class="card__text text-gradient">Специалист</p>
+                    </div>
+                  </article>
                 </li>
                 <li class="splide__slide splide__slide--mobile-width-sm">
-                  <a href="#" class="card-link" rel="noopener ugs">
-                    <article class="card card--size-md">
-                      <img
-                        class="card__image card__image--square-image"
-                        src="https://rrc.obr55.ru/images/stories/768/_qAI-wEEuEM.jpg"
-                        alt="Описание изображения"
-                        loading="lazy"
-                      />
-                      <div class="card__main-content">
-                        <h3 class="card__title">Иванова Карина Викторовна</h3>
-                        <p class="card__text text-gradient">Специалист</p>
-                      </div>
-                    </article>
-                  </a>
+                  <article class="card card--size-md">
+                    <img
+                      class="card__image card__image--square-image"
+                      src="https://rrc.obr55.ru/images/stories/768/_qAI-wEEuEM.jpg"
+                      alt="Описание изображения"
+                      loading="lazy"
+                    />
+                    <div class="card__main-content">
+                      <h3 class="card__title">Иванова Карина Викторовна</h3>
+                      <p class="card__text text-gradient">Специалист</p>
+                    </div>
+                  </article>
                 </li>
                 <li class="splide__slide splide__slide--mobile-width-sm">
-                  <a href="#" class="card-link" rel="noopener ugs">
-                    <article class="card card--size-md">
-                      <img
-                        class="card__image card__image--square-image"
-                        src="http://rasfokus.ru/images/photos/medium/84172f6fcdd7257b5f51982d30571b11.jpg"
-                        alt="Описание изображения"
-                        loading="lazy"
-                      />
-                      <div class="card__main-content">
-                        <h3 class="card__title">Иванова Карина Викторовна</h3>
-                        <p class="card__text text-gradient">Специалист</p>
-                      </div>
-                    </article>
-                  </a>
+                  <article class="card card--size-md">
+                    <img
+                      class="card__image card__image--square-image"
+                      src="http://rasfokus.ru/images/photos/medium/84172f6fcdd7257b5f51982d30571b11.jpg"
+                      alt="Описание изображения"
+                      loading="lazy"
+                    />
+                    <div class="card__main-content">
+                      <h3 class="card__title">Иванова Карина Викторовна</h3>
+                      <p class="card__text text-gradient">Специалист</p>
+                    </div>
+                  </article>
                 </li>
               </ul>
             </div>
