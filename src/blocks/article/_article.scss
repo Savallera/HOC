@@ -379,8 +379,10 @@
     }
   }
 
-  // Добавить сертификат
-  &__card-button {
+  // Добавить изображения
+  &__label-button {
+    display: block;
+    cursor: pointer;
     inline-size: 100%;
     block-size: 100%;
     background-color: #fff;
