@@ -17,4 +17,8 @@
       max-inline-size: var(--section-inline-size);
     }
   }
+
+  &--no-offset-start {
+    margin-block-start: 0;
+  }
 }

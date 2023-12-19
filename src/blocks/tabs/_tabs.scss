@@ -1,0 +1,100 @@
+/* Вкладки */
+.tabs {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-grid);
+  }
+
+  // Для полей
+  &__page-indent {
+    margin-inline: auto;
+    margin-block: clamp(0.9375em, 4vw, 2.5em); // 15 - 40
+    padding-inline: var(--section-padding);
+    inline-size: 100%;
+    max-inline-size: var(--section-inline-size);
+  }
+
+  // &__item {}
+
+  &__button {
+    position: relative;
+    min-inline-size: min(22rem, 100%);
+    padding: 0.9375rem 1.875rem;
+    font-size: clamp(0.75em, 2.5vw, 1.5625em);
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: 2px solid transparent;
+    font-variation-settings: 'wght' 500;
+    transition: color 0.35s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--main-text-color);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      border-radius: inherit;
+      transition: opacity 0.35s;
+      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+    }
+
+    &--actived {
+      color: var(--accent-text-color);
+      pointer-events: none;
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--accent-text-color);
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    @include media(lg) {
+      min-inline-size: 16em;
+    }
+  }
+
+  &__button-text {
+    position: relative;
+  }
+
+  // &__container {}
+
+  &__section {
+    display: none;
+
+    &--opened {
+      animation: fade-in 0.5s;
+      display: unset;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
