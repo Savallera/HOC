@@ -1,0 +1,44 @@
+<!-- Поиск -->
+<div class="search">
+  <form
+    class="search__form search__form--indent-sm"
+    name="people-search"
+    action=""
+  >
+    <fieldset class="search__inner">
+      <button
+        class="search__region-button search__region-button--content-all"
+        type="button"
+      >
+        <span>Все регионы</span>
+      </button>
+      <button class="search__region-button" type="button">
+        <span>Москва</span>
+      </button>
+    </fieldset>
+    <h2 class="search__subtitle">Профиль активиста</h2>
+    <div class="field field--theme-white">
+      <label for="people-search-field" class="field__label visually-hidden"
+        >Название СМИ / ФИО
+      </label>
+      <div class="field__inner">
+        <span
+          class="field__search-icon icon icon--type-search"
+          aria-hidden="true"
+        ></span>
+        <input
+          type="search"
+          class="field__input"
+          placeholder="Название СМИ / ФИО "
+          name="search"
+          id="people-search-field"
+        />
+        <span class="field__error-text">Вывод ошибки</span>
+        <span
+          class="field__error-icon icon icon--type-error"
+          aria-hidden="true"
+        ></span>
+      </div>
+    </div>
+  </form>
+</div>

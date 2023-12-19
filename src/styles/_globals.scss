@@ -71,3 +71,8 @@ textarea {
   font-family: inherit;
   color: inherit;
 }
+
+img,
+iframe {
+  max-inline-size: 100%;
+}

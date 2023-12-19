@@ -274,6 +274,24 @@
     block-size: 1em;
   }
 
+  // рейтинг
+  // &__rating {}
+
+  &__rating-bar {
+    position: relative;
+    block-size: clamp(1.25em, 3vw, 1.875em);
+    inline-size: clamp(6.25em, 15.5vw, 9.6875em);
+    background-color: var(--main-text-low-color);
+    mask: url('../images/rating.svg') left center / 100% 100% no-repeat;
+  }
+
+  &__rating-bar-progress {
+    block-size: inherit;
+    background-color: var(--main-color);
+    mask: url('../images/rating.svg') left center /
+      clamp(6.25em, 15.5vw, 9.6875em) 100% no-repeat;
+  }
+
   // Для построения
   &__press-bottom {
     margin-block-start: auto;

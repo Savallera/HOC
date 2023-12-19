@@ -92,6 +92,11 @@
     max-inline-size: 15em;
   }
 
+  &__title-span {
+    display: block;
+    font-size: 66.6666667%;
+  }
+
   &__subtitle {
     margin-block: 0 0.125em;
     font-variation-settings: 'wght' 800;
@@ -395,6 +400,11 @@
     &--text-low::before {
       color: var(--main-text-low-color);
     }
+  }
+
+  // для отступа снизу
+  &__offset-end {
+    margin-block-end: var(--gap-section);
   }
 
   // Девайсы
