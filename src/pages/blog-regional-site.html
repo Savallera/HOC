@@ -5,14 +5,15 @@
     <div class="page">
       @@include("../blocks/header/header.html")
       <main class="page__content">
-        <!-- Фоновый логотип размещается при помощи свойства style="background-image: url(...);" темный -->
-        <section
-          class="banner banner--place-blog"
-          style="
-            background-image: url(https://trafaret-decor.ru/sites/default/files/2022-12/Фон%20для%20презентации%20по%20технологии%20для%20девочек%20%288%29_0.jpg);
-          "
-        >
-          <div class="banner__inner">
+        <!-- Баннер с названием и лого -->
+        <section class="banner banner--place-blog">
+          <div class="banner__inner banner__columns">
+            <img
+              class="banner__logo-image"
+              src="https://www.pngplay.com/wp-content/uploads/6/Abstract-Frame-Transparent-Background.png"
+              alt="Описание изображения"
+              loading="lazy"
+            />
             <h1 class="banner__title banner__title--size-lg">
               ТОЛК
               <span class="banner__title-span">Студмедиа ПсковГУ</span>

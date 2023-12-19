@@ -1,13 +1,16 @@
 :root {
   --main-color: #685dc3;
+  --main-dark-color: #572bb0;
   --accent-color: #d03ec3;
+  --accent-dark-color: #bb30a5;
   --main-color-gradient: linear-gradient(to left, #d03ec3, #685dc3);
+  --main-dark-color-gradient: linear-gradient(to left, #bb30a5, #572bb0);
   --grey-100: #f7f7f7;
 
   --main-text-color: #272b37;
   --main-text-low-color: #c0c0c0;
   --accent-text-color: #fff;
-  --error-color: #F14242;
+  --error-color: #f14242;
 
   --main-bg-color: #f7f7f7;
   --hover-color: #00000026;
@@ -24,13 +27,25 @@
 
 @include media(sm) {
   :root {
-    --section-inline-size: clamp(20rem, 3.0357rem + 84.8214vw, 79.375rem); // 1220 + 25 + 25
-    --section-inline-start: clamp(1.25rem, -0.3571rem + 8.0357vw, 6.875rem); // 110
+    --section-inline-size: clamp(
+      20rem,
+      3.0357rem + 84.8214vw,
+      79.375rem
+    ); // 1220 + 25 + 25
+    --section-inline-start: clamp(
+      1.25rem,
+      -0.3571rem + 8.0357vw,
+      6.875rem
+    ); // 110
   }
 }
 
 @media screen and (width > 90em) {
   :root {
-    --section-inline-start: clamp(6.875rem, -38.125rem + 50vw, 21.875rem); // 350
+    --section-inline-start: clamp(
+      6.875rem,
+      -38.125rem + 50vw,
+      21.875rem
+    ); // 350
   }
 }

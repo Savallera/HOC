@@ -4,15 +4,16 @@
   <body>
     <div class="page">
       @@include("../blocks/header/header.html")
-      <main class="page__content">
-        <!-- Фоновый логотип размещается при помощи свойства style="background-image: url(...);" светлый -->
-        <section
-          class="banner banner--theme-light banner--place-blog"
-          style="
-            background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1613713356_64-p-klipart-foni-dlya-prezentatsii-68.jpg);
-          "
-        >
-          <div class="banner__inner">
+      <main class="page__content page__content--bg-image">
+        <!-- Баннер с названием и лого -->
+        <section class="banner banner--theme-light banner--place-blog banner--content-stud-smi">
+          <div class="banner__inner banner__columns">
+            <img
+              class="banner__logo-image"
+              src="https://www.pngplay.com/wp-content/uploads/6/Abstract-Frame-Transparent-Background.png"
+              alt="Описание изображения"
+              loading="lazy"
+            />
             <h1 class="banner__title banner__title--size-lg">
               ТОЛК
               <span class="banner__title-span">Студмедиа ПсковГУ</span>
