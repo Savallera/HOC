@@ -187,9 +187,8 @@
               </div>
             </div>
           </div>
-          <!-- Слайдер с новости и событиями на странице ЛК -->
-<section class="theme">
-  <!-- Секция с поиском на странице ЛК -->
+          <section class="theme">
+  <!-- Новости -->
   <div class="search theme__title-block">
     <form class="search__form" name="lk-news-search" action="">
       <h2 class="article__subtitle">Избранное</h2>
@@ -243,7 +242,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
         >
-          <a href="./new-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./new-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -302,7 +305,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
         >
-          <a href="./new-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./new-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -360,7 +367,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
         >
-          <a href="./new-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./new-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -418,7 +429,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
         >
-          <a href="./new-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./new-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -477,6 +492,7 @@
       </ul>
     </div>
   </div>
+  <!-- События -->
   <div class="search theme__title-block">
     <form class="search__form" name="lk-events-search" action="">
       <div class="search__title-block">
@@ -529,7 +545,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
         >
-          <a href="./event-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./event-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -583,7 +603,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
         >
-          <a href="./event-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./event-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -636,7 +660,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
         >
-          <a href="./event-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./event-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -886,11 +914,17 @@
           </article>
         </li>
         <li class="splide__slide">
-          <button
-            type="button"
-            class="article__card-button icon-button icon icon--type-plus"
+          <label
+            class="article__label-button icon-button icon icon--type-plus"
+            for="add-sertificate-field"
             aria-label="Добавить сертификат"
-          ></button>
+          >
+            <input
+              type="file"
+              id="add-sertificate-field"
+              class="visually-hidden"
+            />
+          </label>
         </li>
       </ul>
     </div>

@@ -200,6 +200,50 @@ window.addEventListener('DOMContentLoaded', () => {
   checkMenuSize();
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
+    // Слайдер с подкастами
+    if (document.querySelector('#media-podcast-slider')) {
+      let mediaPodcastSlider = new Splide('#media-podcast-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        autoWidth: true,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      mediaPodcastSlider.mount();
+    }
+
+    // Слайдер с видео
+    if (document.querySelector('#media-video-slider')) {
+      let mediaVideoSlider = new Splide('#media-video-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        gap: '.9375em',
+        autoWidth: true,
+        padding: 'var(--section-padding)',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      mediaVideoSlider.mount();
+    }
+  }
+});
+
 // Модальное окно с формой присоединиться к проекту
 if (document.querySelector('.sign-up')) {
   const signUpButton = document.querySelector('.sign-up__button');
@@ -491,66 +535,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
-    // Слайдер с подкастами
-    if (document.querySelector('#media-podcast-slider')) {
-      let mediaPodcastSlider = new Splide('#media-podcast-slider', {
-        type: 'slide',
-        autoplay: false,
-        arrows: false,
-        pagination: false,
-        gap: '.9375em',
-        autoWidth: true,
-        padding: 'var(--section-padding)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            destroy: 'completely',
-          },
-        },
-      });
-      mediaPodcastSlider.mount();
-    }
-
-    // Слайдер с видео
-    if (document.querySelector('#media-video-slider')) {
-      let mediaVideoSlider = new Splide('#media-video-slider', {
-        type: 'slide',
-        autoplay: false,
-        arrows: false,
-        pagination: false,
-        gap: '.9375em',
-        autoWidth: true,
-        padding: 'var(--section-padding)',
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            destroy: 'completely',
-          },
-        },
-      });
-      mediaVideoSlider.mount();
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  // Квиз
-  if (document.querySelector('.survey__form')) {
-    const surveyLabels = document.querySelectorAll('.survey__label');
-
-    for (i = 0; i < surveyLabels.length; i++) {
-      surveyLabels[i].addEventListener('click', function () {
-        this.classList.add('survey__label--current');
-        this.closest('.survey__form').classList.add(
-          'survey__form--show-result'
-        );
-      });
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  if (Splide) {
     // Слайдер карточек на странице студСМИ
     if (document.querySelector('#stud-smi-cards-slider')) {
       let studSmiCardsSlider = new Splide('#stud-smi-cards-slider', {
@@ -581,6 +565,55 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       studSmiNewsSlider.mount();
     }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Квиз
+  if (document.querySelector('.survey__form')) {
+    const surveyLabels = document.querySelectorAll('.survey__label');
+
+    for (i = 0; i < surveyLabels.length; i++) {
+      surveyLabels[i].addEventListener('click', function () {
+        this.classList.add('survey__label--current');
+        this.closest('.survey__form').classList.add(
+          'survey__form--show-result'
+        );
+      });
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Вкладки
+  if (document.querySelector('.tabs')) {
+    const tabContainer = document.querySelector('.tabs');
+    const tabButtons = tabContainer.querySelectorAll('.tabs__button');
+    const tabSections = tabContainer.querySelectorAll('.tabs__section');
+    const openTabSection = function (element) {
+      removeActiveClass();
+      element.classList.add('tabs__button--actived');
+      element.dataset.tabIndex;
+      element
+        .closest('.tabs')
+        .querySelector(
+          `.tabs__section[data-tab-index="${element.dataset.tabIndex}"]`
+        )
+        .classList.add('tabs__section--opened');
+    };
+
+    const removeActiveClass = function () {
+      for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove('tabs__button--actived');
+        tabSections[i].classList.remove('tabs__section--opened');
+      }
+    };
+
+    tabButtons.forEach((button) =>
+      button.addEventListener('click', () => {
+        openTabSection(button);
+      })
+    );
   }
 });
 
