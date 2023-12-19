@@ -29,15 +29,34 @@
 
   &--theme {
     &-gradient {
+      position: relative;
+
       font-size: clamp(0.75em, 2.5vw, 1.5625em);
       border-radius: 10px;
       min-inline-size: min(22rem, 100%);
       outline: 2px solid transparent;
       padding: 0.9375rem 1.875rem;
-      background: var(--main-color-gradient) no-repeat center;
+      background: var(--main-color) var(--main-color-gradient) no-repeat center;
       color: var(--accent-text-color);
 
-      // &:hover {}
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        border-radius: inherit;
+        background: var(--main-dark-color) var(--main-dark-color-gradient)
+          no-repeat center;
+        transition: opacity 0.35s;
+      }
+
+      .button__text {
+        position: relative;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
 
       @include media(lg) {
         min-inline-size: 16em;

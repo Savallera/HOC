@@ -119,10 +119,11 @@
     font-variation-settings: 'wght' 600;
     text-decoration: unset;
     border-block-end: 2px solid;
+    transition: opacity 0.35s;
 
-    // &:hover {
-    //   border-block-end: 2px solid;
-    // }
+    &:hover {
+      opacity: 0.8;
+    }
 
     &:focus {
       outline: none;
