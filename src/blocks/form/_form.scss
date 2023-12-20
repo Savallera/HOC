@@ -44,6 +44,12 @@
     }
   }
 
+  &__card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: var(--gap-grid);
+  }
+
   &__inner {
     display: flex;
     gap: clamp(0.75em, 2vw, 1.25em);
@@ -118,6 +124,16 @@
 
     &--size-sm {
       font-size: clamp(0.75em, 1.6vw, 1em);
+    }
+
+    &--theme-error {
+      font-variation-settings: 'wght' 500;
+      color: var(--error-color);
+    }
+
+    &--theme-main {
+      font-variation-settings: 'wght' 500;
+      color: var(--main-color);
     }
   }
 
