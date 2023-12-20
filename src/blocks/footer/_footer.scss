@@ -95,12 +95,11 @@
     margin-inline: auto;
     inline-size: clamp(7.25em, 22.8vw, 14.25em);
     block-size: clamp(2.5em, 7.8vw, 4.875em);
-    background: url('../images/logo--place-footer.png') center / 65% no-repeat;
+    background-color: var(--main-color);
+    mask: url('../images/logo--place-footer.svg') center / contain no-repeat;
 
     &--type-ministry {
-      background: none;
-      background-color: var(--main-color);
-      mask: url('../images/ministry-logo.svg') center / contain no-repeat;
+      mask-image: url('../images/ministry-logo.svg');
     }
   }
 
