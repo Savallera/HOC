@@ -36,7 +36,7 @@
     padding-inline: var(--section-padding);
     inline-size: 100%;
     max-inline-size: var(--section-inline-size);
-    margin-block: clamp(1.5625em, 10vw, 6.25em);
+    margin-block: var(--gap-section-block);
 
     display: flex;
     gap: var(--gap-section);

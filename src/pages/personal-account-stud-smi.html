@@ -5,411 +5,403 @@
     <div class="page">
       @@include("../blocks/header/header.html")
       <main class="page__content">
-        <section class="article">
-          <div class="page__section">
-            <h1 class="article__title">
-              Личный кабинет <br />
-              студСМИ
-            </h1>
-            <!-- Реестры -->
-            <div class="article__indent article__indent--column">
-              <div class="article__controls">
-                <h2 class="article__subtitle">Реестры</h2>
-                <button class="button article__sort-button" type="button">
+        <section class="page__section">
+          <h1 class="page__heading">
+            Личный кабинет <br />
+            студСМИ
+          </h1>
+          <!-- Реестры -->
+          <div class="page__inner">
+            <div class="search">
+              <div class="search__filters-wrapper">
+                <h2 class="search__subtitle">Реестры</h2>
+                <button class="button search__sort-button" type="button">
                   <span class="button__text">По названию ▼</span>
                 </button>
               </div>
-              <div
-                class="field field--theme-white field--padding-block-sm field--with-controls"
-              >
-                <label
-                  for="registries-admin"
-                  class="field__label visually-hidden"
-                  >Администраторы СМИ Вузов</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Администраторы СМИ Вузов"
-                    name="registries-admin"
-                    id="registries-admin"
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                  <div class="field__controls">
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-edit"
-                      aria-label="Редактировать"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
-                      aria-label="Сохранить"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-close"
-                      aria-label="Удалить"
-                    ></button>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="field field--theme-white field--padding-block-sm field--with-controls"
-              >
-                <label
-                  for="registries-authors"
-                  class="field__label visually-hidden"
-                  >Авторы СМИ Вузов
-                </label>
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Авторы СМИ Вузов "
-                    name="registries-authors"
-                    id="registries-authors"
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                  <div class="field__controls">
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-edit"
-                      aria-label="Редактировать"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
-                      aria-label="Сохранить"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-close"
-                      aria-label="Удалить"
-                    ></button>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="button page__more-button text-gradient"
-                type="button"
-              >
-                <span class="button__text">Смотреть еще</span>
-              </button>
             </div>
-          </div>
-          <!-- Новости -->
-          <div class="page__section search">
-            <form
-              class="search__form search__form--indent-sm"
-              name="personal-account-stud-smi-search"
-              action="stud-smi-news"
-            >
-              <div class="article__controls">
-                <h2 class="article__subtitle">Новости</h2>
-                <div class="article__indent article__indent--size-sm">
+            <div class="field field--theme-white field--with-controls">
+              <label for="registries-admin" class="field__label visually-hidden"
+                >Администраторы СМИ Вузов</label
+              >
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="Администраторы СМИ Вузов"
+                  name="registries-admin"
+                  id="registries-admin"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+                <div class="field__controls">
                   <button
                     type="button"
-                    class="article__icon-button article__icon-button--role-add-article article__icon-button--size-sm icon-button icon icon--type-plus"
-                    aria-label="Создать публикацию"
+                    class="field__control-icon icon-button icon icon--type-edit"
+                    aria-label="Редактировать"
                   ></button>
                   <button
                     type="button"
-                    class="article__count-button article__count-button--size-sm article__icon-button--role-moderation-article button text-gradient"
-                    aria-label="Статьи на модерации"
-                    title="Статьи на модерации"
-                  >
-                    <span class="button__text article__count-button-text"
-                      >3</span
-                    >
+                    class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
+                    aria-label="Сохранить"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-close"
+                    aria-label="Удалить"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <div class="field field--theme-white field--with-controls">
+              <label
+                for="registries-authors"
+                class="field__label visually-hidden"
+                >Авторы СМИ Вузов
+              </label>
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="Авторы СМИ Вузов "
+                  name="registries-authors"
+                  id="registries-authors"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+                <div class="field__controls">
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-edit"
+                    aria-label="Редактировать"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
+                    aria-label="Сохранить"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-close"
+                    aria-label="Удалить"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <button
+              class="button page__more-button text-gradient"
+              type="button"
+            >
+              <span class="button__text">Смотреть еще</span>
+            </button>
+          </div>
+        </section>
+        <!-- Новости -->
+        <section class="page__section">
+          <div class="page__inner">
+            <div class="search">
+              <form
+                class="search__form search__form--indent-sm"
+                name="personal-account-stud-smi-search"
+                action=""
+              >
+                <div class="search__filters-wrapper">
+                  <div class="search__title-block">
+                    <h2 class="search__subtitle">Новости</h2>
+                    <div class="search__inner search__inner--indent-sm">
+                      <button
+                        type="button"
+                        class="search__icon-button search__icon-button--theme-grey search__icon-button--role-add-article icon-button icon icon--type-plus"
+                        aria-label="Создать публикацию"
+                      ></button>
+                      <button
+                        type="button"
+                        class="search__icon-button search__icon-button--role-moderation-article icon-button icon icon--type-border"
+                        aria-label="Статьи на модерации"
+                        title="Статьи на модерации"
+                      >
+                        <span class="search__icon-button-text text-gradient"
+                          >3</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <button class="button search__sort-button" type="button">
+                    <span class="button__text">По названию ▼</span>
                   </button>
                 </div>
-                <button class="button article__sort-button" type="button">
-                  <span class="button__text">По названию ▼</span>
-                </button>
-              </div>
-              <div class="search__inner">
-                <button
-                  class="search__region-button search__region-button--content-all"
-                  type="button"
-                >
-                  <span>Все регионы</span>
-                </button>
-                <button class="search__region-button" type="button">
-                  <span>Москва</span>
-                </button>
-              </div>
-              <div class="search__filters-wrapper">
                 <div class="search__inner">
-                  <button class="search__calendar-button" type="button">
-                    <span
-                      class="icon icon--type-calendar"
-                      aria-hidden="true"
-                    ></span>
-                    <span>Календарь</span>
-                  </button>
                   <button
-                    class="search__calendar-button search__calendar-button--actived"
+                    class="search__region-button search__region-button--content-all"
                     type="button"
                   >
-                    <span
-                      class="icon icon--type-calendar"
-                      aria-hidden="true"
-                    ></span>
-                    <span>10.08.2023 - 16.08.2023</span>
+                    <span>Все регионы</span>
+                  </button>
+                  <button class="search__region-button" type="button">
+                    <span>Москва</span>
                   </button>
                 </div>
-                <button class="search__reset-button" type="reset">
-                  <span>Сбросить фильтры</span>
-                </button>
-              </div>
-              <div class="page__card-deck page__card-deck--size-lg">
-                <div class="field field--theme-white field--padding-block-sm">
-                  <label
-                    for="stud-smi-news-university"
-                    class="field__label visually-hidden"
-                    >СМИ вуза
-                  </label>
-                  <div class="field__inner">
-                    <span
-                      class="field__search-icon icon icon--type-search"
-                      aria-hidden="true"
-                    ></span>
-                    <input
-                      type="search"
-                      class="field__input"
-                      placeholder="СМИ вуза "
-                      name="stud-smi-news-university"
-                      id="stud-smi-news-university"
-                    />
-                    <span class="field__error-text">Вывод ошибки</span>
-                    <span
-                      class="field__error-icon icon icon--type-error"
-                      aria-hidden="true"
-                    ></span>
+                <div class="search__filters-wrapper">
+                  <div class="search__inner">
+                    <button class="search__calendar-button" type="button">
+                      <span
+                        class="icon icon--type-calendar"
+                        aria-hidden="true"
+                      ></span>
+                      <span>Календарь</span>
+                    </button>
+                    <button
+                      class="search__calendar-button search__calendar-button--actived"
+                      type="button"
+                    >
+                      <span
+                        class="icon icon--type-calendar"
+                        aria-hidden="true"
+                      ></span>
+                      <span>10.08.2023 - 16.08.2023</span>
+                    </button>
+                  </div>
+                  <button class="search__reset-button" type="reset">
+                    <span>Сбросить фильтры</span>
+                  </button>
+                </div>
+                <div class="page__card-deck page__card-deck--size-lg">
+                  <div class="field field--theme-white">
+                    <label
+                      for="stud-smi-news-university"
+                      class="field__label visually-hidden"
+                      >СМИ вуза
+                    </label>
+                    <div class="field__inner">
+                      <span
+                        class="field__search-icon icon icon--type-search"
+                        aria-hidden="true"
+                      ></span>
+                      <input
+                        type="search"
+                        class="field__input"
+                        placeholder="СМИ вуза "
+                        name="stud-smi-news-university"
+                        id="stud-smi-news-university"
+                      />
+                      <span class="field__error-text">Вывод ошибки</span>
+                      <span
+                        class="field__error-icon icon icon--type-error"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="field field--theme-white">
+                    <label
+                      for="stud-smi-news-author"
+                      class="field__label visually-hidden"
+                      >Автор</label
+                    >
+                    <div class="field__inner">
+                      <span
+                        class="field__search-icon icon icon--type-search"
+                        aria-hidden="true"
+                      ></span>
+                      <input
+                        type="search"
+                        class="field__input"
+                        placeholder="Автор"
+                        name="stud-smi-news-author"
+                        id="stud-smi-news-author"
+                      />
+                      <span class="field__error-text">Вывод ошибки</span>
+                      <span
+                        class="field__error-icon icon icon--type-error"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
                   </div>
                 </div>
-                <div class="field field--theme-white field--padding-block-sm">
-                  <label
-                    for="stud-smi-news-author"
-                    class="field__label visually-hidden"
-                    >Автор</label
-                  >
-                  <div class="field__inner">
-                    <span
-                      class="field__search-icon icon icon--type-search"
-                      aria-hidden="true"
-                    ></span>
-                    <input
-                      type="search"
-                      class="field__input"
-                      placeholder="Автор"
-                      name="stud-smi-news-author"
-                      id="stud-smi-news-author"
-                    />
-                    <span class="field__error-text">Вывод ошибки</span>
-                    <span
-                      class="field__error-icon icon icon--type-error"
-                      aria-hidden="true"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <div class="article__indent article__indent--column">
-              <div
-                class="field field--theme-white field--padding-block-sm field--with-controls"
-              >
-                <label
-                  for="stud-smi-news-article-01"
-                  class="field__label visually-hidden"
-                  >Заголовок</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Заголовок"
-                    name="stud-smi-news-article-01"
-                    id="stud-smi-news-article-01"
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                  <div class="field__controls">
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-edit"
-                      aria-label="Редактировать"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
-                      aria-label="Сохранить"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-close"
-                      aria-label="Удалить"
-                    ></button>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="field field--theme-white field--padding-block-sm field--with-controls"
-              >
-                <label
-                  for="stud-smi-news-article-02"
-                  class="field__label visually-hidden"
-                  >Заголовок</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Заголовок"
-                    name="stud-smi-news-article-02"
-                    id="stud-smi-news-article-02"
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                  <div class="field__controls">
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-edit"
-                      aria-label="Редактировать"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
-                      aria-label="Сохранить"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-close"
-                      aria-label="Удалить"
-                    ></button>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="button page__more-button text-gradient"
-                type="button"
-              >
-                <span class="button__text">Смотреть еще</span>
-              </button>
+              </form>
             </div>
+            <div class="field field--theme-white field--with-controls">
+              <label
+                for="stud-smi-news-article-01"
+                class="field__label visually-hidden"
+                >Заголовок</label
+              >
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="Заголовок"
+                  name="stud-smi-news-article-01"
+                  id="stud-smi-news-article-01"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+                <div class="field__controls">
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-edit"
+                    aria-label="Редактировать"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
+                    aria-label="Сохранить"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-close"
+                    aria-label="Удалить"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <div class="field field--theme-white field--with-controls">
+              <label
+                for="stud-smi-news-article-02"
+                class="field__label visually-hidden"
+                >Заголовок</label
+              >
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="Заголовок"
+                  name="stud-smi-news-article-02"
+                  id="stud-smi-news-article-02"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+                <div class="field__controls">
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-edit"
+                    aria-label="Редактировать"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
+                    aria-label="Сохранить"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-close"
+                    aria-label="Удалить"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <button
+              class="button page__more-button text-gradient"
+              type="button"
+            >
+              <span class="button__text">Смотреть еще</span>
+            </button>
           </div>
-          <!-- События -->
-          <div class="page__section">
-            <div class="article__indent article__indent--column">
-              <div class="article__controls">
-                <h2 class="article__subtitle">События</h2>
-                <button class="button article__sort-button" type="button">
+        </section>
+        <!-- События -->
+        <section class="page__section">
+          <div class="page__inner">
+            <div class="search">
+              <div class="search__filters-wrapper">
+                <h2 class="search__subtitle">События</h2>
+                <button class="button search__sort-button" type="button">
                   <span class="button__text">По названию ▼</span>
                 </button>
               </div>
-              <div
-                class="field field--theme-white field--padding-block-sm field--with-controls"
-              >
-                <label
-                  for="stud-smi-events-article-01"
-                  class="field__label visually-hidden"
-                  >Заголовок</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Заголовок"
-                    name="stud-smi-events-article-01"
-                    id="stud-smi-events-article-01"
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                  <div class="field__controls">
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-edit"
-                      aria-label="Редактировать"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
-                      aria-label="Сохранить"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-close"
-                      aria-label="Удалить"
-                    ></button>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="field field--theme-white field--padding-block-sm field--with-controls"
-              >
-                <label
-                  for="stud-smi-events-article-02"
-                  class="field__label visually-hidden"
-                  >Заголовок</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Заголовок"
-                    name="stud-smi-events-article-02"
-                    id="stud-smi-events-article-02"
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                  <div class="field__controls">
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-edit"
-                      aria-label="Редактировать"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
-                      aria-label="Сохранить"
-                    ></button>
-                    <button
-                      type="button"
-                      class="field__control-icon icon-button icon icon--type-close"
-                      aria-label="Удалить"
-                    ></button>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="button page__more-button text-gradient"
-                type="button"
-              >
-                <span class="button__text">Смотреть еще</span>
-              </button>
             </div>
+            <div class="field field--theme-white field--with-controls">
+              <label
+                for="stud-smi-events-article-01"
+                class="field__label visually-hidden"
+                >Заголовок</label
+              >
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="Заголовок"
+                  name="stud-smi-events-article-01"
+                  id="stud-smi-events-article-01"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+                <div class="field__controls">
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-edit"
+                    aria-label="Редактировать"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
+                    aria-label="Сохранить"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-close"
+                    aria-label="Удалить"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <div class="field field--theme-white field--with-controls">
+              <label
+                for="stud-smi-events-article-02"
+                class="field__label visually-hidden"
+                >Заголовок</label
+              >
+              <div class="field__inner">
+                <input
+                  type="text"
+                  class="field__input"
+                  placeholder="Заголовок"
+                  name="stud-smi-events-article-02"
+                  id="stud-smi-events-article-02"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+                <div class="field__controls">
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-edit"
+                    aria-label="Редактировать"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon field__control-icon--actived icon-button icon icon--type-check"
+                    aria-label="Сохранить"
+                  ></button>
+                  <button
+                    type="button"
+                    class="field__control-icon icon-button icon icon--type-close"
+                    aria-label="Удалить"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <button
+              class="button page__more-button text-gradient"
+              type="button"
+            >
+              <span class="button__text">Смотреть еще</span>
+            </button>
           </div>
         </section>
       </main>

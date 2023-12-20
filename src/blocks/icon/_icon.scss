@@ -17,6 +17,9 @@
     &-attach::before {
       mask-image: url('../images/icons.svg#attach');
     }
+    &-border::before {
+      mask-image: url('../images/icons.svg#border');
+    }
     &-calendar::before {
       mask-image: url('../images/icons.svg#calendar');
     }

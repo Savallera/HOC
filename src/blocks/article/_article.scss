@@ -1,6 +1,6 @@
 /* Детальная страница */
 .article {
-  margin-block: clamp(1.5625em, 10vw, 6.25em);
+  margin-block: var(--gap-section-block);
 
   // Внутренние поля
   &__inner {
@@ -15,22 +15,6 @@
     flex-direction: column;
   }
 
-  // Для маленьких расстояний
-  &__indent {
-    display: flex;
-    align-items: center;
-    gap: var(--gap-grid);
-
-    &--size-sm {
-      gap: clamp(0.25em, 1vw, 0.625em);
-    }
-
-    &--column {
-      flex-direction: column;
-      align-items: unset;
-    }
-  }
-
   &__controls {
     display: flex;
     align-items: center;
@@ -42,55 +26,6 @@
         align-items: unset;
       }
     }
-  }
-
-  // Добавить публикацию
-  &__icon-button {
-    padding: 0;
-    inline-size: clamp(1.875em, 6vw, 3.75em);
-    block-size: clamp(1.875em, 6vw, 3.75em);
-    color: var(--main-text-low-color);
-
-    &:hover {
-      background-color: transparent;
-
-      &::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat;
-      }
-    }
-
-    &--size-sm {
-      inline-size: clamp(1.875em, 4vw, 2.5em);
-      block-size: clamp(1.875em, 4vw, 2.5em);
-    }
-  }
-
-  // Кол-во на модерации
-  &__count-button {
-    padding: 0;
-    border-radius: 30%;
-    inline-size: clamp(1.625em, 4.8vw, 3em);
-    block-size: clamp(1.625em, 4.8vw, 3em);
-    border: 0.2em solid currentColor;
-
-    @include media(md) {
-      border-width: 0.25em;
-    }
-
-    &--size-sm {
-      inline-size: clamp(1.5em, 3vw, 2.125em);
-      block-size: clamp(1.5em, 3vw, 2.125em);
-
-      .article__count-button-text {
-        font-size: clamp(1em, 2vw, 1.25em);
-      }
-    }
-  }
-
-  &__count-button-text {
-    font-size: clamp(1.125em, 3.5vw, 2.1875em);
-    font-variation-settings: 'wght' 700;
-    line-height: 1;
   }
 
   &__title-block {
@@ -164,17 +99,6 @@
   &__share-icon {
     inline-size: 1em;
     block-size: 1em;
-  }
-
-  &__sort-button {
-    margin-inline-start: auto;
-    color: var(--main-text-low-color);
-    font-size: clamp(0.75em, 2vw, 1.25em);
-    border-block-end: 2px solid;
-
-    &:hover {
-      color: var(--accent-color);
-    }
   }
 
   &__category {
@@ -432,11 +356,6 @@
         background-color: var(--grey-100);
       }
     }
-  }
-
-  // для отступа снизу
-  &__offset-end {
-    margin-block-end: var(--gap-section);
   }
 
   // Девайсы

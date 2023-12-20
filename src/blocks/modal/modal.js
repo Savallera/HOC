@@ -188,9 +188,9 @@ if (document.querySelector('.account__icon-button--role-edit-resume')) {
 }
 
 // Модальное окно создания публикации
-if (document.querySelector('.article__icon-button--role-add-article')) {
+if (document.querySelector('.search__icon-button--role-add-article')) {
   const addArticleButton = document.querySelector(
-    '.article__icon-button--role-add-article'
+    '.search__icon-button--role-add-article'
   );
   const addArticleModal = document.querySelector('.modal--content-add-article');
   const openAddArticleModal = function () {
@@ -212,9 +212,9 @@ if (document.querySelector('.article__icon-button--role-add-article')) {
 }
 
 // Модальное окно модерации публикации
-if (document.querySelector('.article__icon-button--role-moderation-article')) {
+if (document.querySelector('.search__icon-button--role-moderation-article')) {
   const moderationArticleButton = document.querySelector(
-    '.article__icon-button--role-moderation-article'
+    '.search__icon-button--role-moderation-article'
   );
   const moderationArticleModal = document.querySelector(
     '.modal--content-moderation-article'
@@ -258,9 +258,9 @@ if (document.querySelector('.field__control-icon--role-view-article')) {
 }
 
 // Модальное окно для просмотра уведомлений
-if (document.querySelector('.article__count-button--role-notifications')) {
+if (document.querySelector('.search__icon-button--role-notifications')) {
   const notificationsButton = document.querySelector(
-    '.article__count-button--role-notifications'
+    '.search__icon-button--role-notifications'
   );
   const notificationsModal = document.querySelector(
     '.modal--content-notifications'

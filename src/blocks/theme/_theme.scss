@@ -1,7 +1,7 @@
 /* Секция с темами */
 .theme {
   margin-inline: auto;
-  margin-block: clamp(1.5625em, 10vw, 6.25em);
+  margin-block: var(--gap-section-block);
   max-inline-size: var(--section-inline-size-wide);
 
   display: flex;
