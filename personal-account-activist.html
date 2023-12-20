@@ -140,58 +140,57 @@
 </header>
 
       <main class="page__content">
-        <section class="article">
-          <div class="article__inner">
-            <div class="account">
-              <div class="account__columns">
-                <img
-                  class="account__image"
-                  src="https://ug.ru/wp-content/uploads/2023/06/28_n2204151_big.jpg"
-                  alt="Описание изображения"
-                />
-                <div class="account__column">
-                  <div class="account__main-info">
-                    <h1 class="account__title">
-                      <span class="account__title-span">Фамилия</span>
-                      Имя Отчество
-                    </h1>
-                    <a href="#" class="account__link" rel="noopener nofollow"
-                      >@nastyastryuk</a
-                    >
-                    <div class="account__logos">
-                      <img
-                        class="account__logo"
-                        src="./images/active.svg"
-                        alt="Описание изображения"
-                        aria-label="Значок активиста"
-                      />
-                    </div>
+        <section class="page__section">
+          <div class="account">
+            <div class="account__columns">
+              <img
+                class="account__image"
+                src="https://ug.ru/wp-content/uploads/2023/06/28_n2204151_big.jpg"
+                alt="Описание изображения"
+              />
+              <div class="account__column">
+                <div class="account__main-info account__main-info--content-by-grid">
+                  <h1 class="account__title">
+                    <span class="account__title-span">Фамилия</span>
+                    Имя Отчество
+                  </h1>
+                  <a href="#" class="account__link" rel="noopener nofollow"
+                    >@nastyastryuk</a
+                  >
+                  <div class="account__logos">
+                    <img
+                      class="account__logo"
+                      src="./images/active.svg"
+                      alt="Описание изображения"
+                      aria-label="Значок активиста"
+                    />
                   </div>
-                  <button
-                    class="account__icon-button account__icon-button--role-edit-profile icon-button icon icon--type-edit"
-                    type="button"
-                    aria-label="Редактировать профиль"
-                  ></button>
                 </div>
-              </div>
-            </div>
-            <div class="article__indent article__indent--column">
-              <h2 class="article__subtitle">Обо мне</h2>
-              <div class="article__main-text">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
-                  aliquam, non nisi velit sapiente necessitatibus ipsa explicabo
-                  eveniet ducimus sequi qui eaque sit consequatur eius? Vel
-                  cumque mollitia aut quam!
-                </p>
+                <button
+                  class="account__icon-button account__icon-button--role-edit-profile icon-button icon icon--type-edit"
+                  type="button"
+                  aria-label="Редактировать профиль"
+                ></button>
               </div>
             </div>
           </div>
-          <section class="theme">
+          <div class="page__inner">
+            <h2 class="page__title">Обо мне</h2>
+            <div class="page__description">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
+                aliquam, non nisi velit sapiente necessitatibus ipsa explicabo
+                eveniet ducimus sequi qui eaque sit consequatur eius? Vel cumque
+                mollitia aut quam!
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="theme">
   <!-- Новости -->
   <div class="search theme__title-block">
-    <form class="search__form" name="lk-news-search" action="">
-      <h2 class="article__subtitle">Избранное</h2>
+    <form class="search__form search__form--indent-sm" name="lk-news-search" action="">
+      <h2 class="search__subtitle">Избранное</h2>
       <div class="search__title-block">
         <h3 class="article__subtitle">Новости</h3>
         <div class="search__inner">
@@ -494,7 +493,7 @@
   </div>
   <!-- События -->
   <div class="search theme__title-block">
-    <form class="search__form" name="lk-events-search" action="">
+    <form class="search__form search__form--indent-sm" name="lk-events-search" action="">
       <div class="search__title-block">
         <h3 class="article__subtitle">События</h3>
         <div class="search__inner">
@@ -720,17 +719,17 @@
   </div>
 </section>
 
-          <!-- Слайдер на странице ЛК с приглашениями на события -->
-<section class="theme">
-  <div class="article__controls theme__title-block">
-    <h2 class="article__subtitle">Вас пригласили</h2>
+        <!-- Слайдер на странице ЛК с приглашениями на события -->
+<section class="theme search">
+  <div class="search__title-block theme__title-block">
+    <h2 class="search__subtitle">Вас пригласили</h2>
     <button
       type="button"
-      class="article__count-button article__count-button--role-notifications button text-gradient"
+      class="search__icon-button search__icon-button--role-notifications icon-button icon icon--type-border"
       aria-label="Количество приглашений"
       title="Количество приглашений"
     >
-      <span class="button__text article__count-button-text">3</span>
+      <span class="search__icon-button-text text-gradient">3</span>
     </button>
   </div>
   <div
@@ -742,7 +741,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
         >
-          <a href="./event-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./event-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -789,7 +792,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
         >
-          <a href="./event-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./event-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -836,7 +843,11 @@
         <li
           class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-lg"
         >
-          <a href="./event-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
+          <a
+            href="./event-article.html"
+            class="card-link card-link--hover-card"
+            rel="noopener ugs"
+          >
             <article class="card card--size-md">
               <img
                 class="card__image"
@@ -884,9 +895,10 @@
     </div>
   </div>
 </section>
-          <!-- Слайдер на странице ЛК с сертификатами -->
+
+        <!-- Слайдер на странице ЛК с сертификатами -->
 <section class="theme">
-  <h2 class="article__subtitle theme__title-block">Сертификат участника</h2>
+  <h2 class="page__title theme__title-block">Сертификат участника</h2>
   <div
     class="splide splide--size-wide splide--background-gradient"
     id="theme-lk-certificate-slider"
@@ -930,8 +942,6 @@
     </div>
   </div>
 </section>
-
-        </section>
       </main>
       <!-- Подвал страницы -->
 <footer class="footer bg-gradient">
@@ -949,12 +959,18 @@
           >
         </li>
         <li>
-          <a href="./knowledge-base.html" class="footer__nav-link" rel="noopener ugc"
+          <a
+            href="./knowledge-base.html"
+            class="footer__nav-link"
+            rel="noopener ugc"
             >База студСМИ</a
           >
         </li>
         <li>
-          <a href="./application-for-membership.html" class="footer__nav-link" rel="noopener ugc"
+          <a
+            href="./application-for-membership.html"
+            class="footer__nav-link"
+            rel="noopener ugc"
             >Стать автором</a
           >
         </li>
@@ -964,17 +980,26 @@
           >
         </li>
         <li>
-          <a href="./publishing-rule.html" class="footer__nav-link" rel="noopener ugc"
+          <a
+            href="./publishing-rule.html"
+            class="footer__nav-link"
+            rel="noopener ugc"
             >Правила публикации</a
           >
         </li>
         <li>
-          <a href="./files/НОС_Политика_в_отношении_персональных_данных.pdf" class="footer__nav-link" rel="noopener ugc"
+          <a
+            href="./files/НОС_Политика_в_отношении_персональных_данных.pdf"
+            class="footer__nav-link"
+            rel="noopener ugc"
             >Политика обработки персональных данных</a
           >
         </li>
         <li>
-          <a href="./files/НОС_Согласие_на_обработку_персональных_данных.pdf" class="footer__nav-link" rel="noopener ugc"
+          <a
+            href="./files/НОС_Согласие_на_обработку_персональных_данных.pdf"
+            class="footer__nav-link"
+            rel="noopener ugc"
             >Согласие на обработку персональных данных</a
           >
         </li>
@@ -1131,6 +1156,20 @@
     </address>
   </div>
 </footer>
+
+<!-- Прелоадер на страницы -->
+<template class="preloader-template">
+  <div class="preloader preloader--place-page">
+    <div class="preloader__chasing-squares">
+      <div class="preloader__square"></div>
+      <div class="preloader__square"></div>
+      <div class="preloader__square"></div>
+      <div class="preloader__square"></div>
+    </div>
+  </div>
+</template>
+
+
 <script src="./scripts/libs/splide.min.js"></script>
 <script src="./scripts/index.js" defer></script>
 

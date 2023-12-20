@@ -244,6 +244,30 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+    if (Splide) {
+        // Слайдер новостей на главной странице
+        if (document.querySelector('#news-slider')) {
+            let newsSlider = new Splide('#news-slider', {
+                type: 'slide',
+                autoplay: false,
+                arrows: false,
+                pagination: false,
+                gap: '.9375em',
+                autoWidth: true,
+                padding: 'var(--section-padding)',
+                mediaQuery: 'min',
+                breakpoints: {
+                    768: {
+                        destroy: 'completely',
+                    },
+                },
+            });
+            newsSlider.mount();
+        }
+    }
+});
+
 // Модальное окно с формой присоединиться к проекту
 if (document.querySelector('.sign-up')) {
   const signUpButton = document.querySelector('.sign-up__button');
@@ -434,9 +458,9 @@ if (document.querySelector('.account__icon-button--role-edit-resume')) {
 }
 
 // Модальное окно создания публикации
-if (document.querySelector('.article__icon-button--role-add-article')) {
+if (document.querySelector('.search__icon-button--role-add-article')) {
   const addArticleButton = document.querySelector(
-    '.article__icon-button--role-add-article'
+    '.search__icon-button--role-add-article'
   );
   const addArticleModal = document.querySelector('.modal--content-add-article');
   const openAddArticleModal = function () {
@@ -458,9 +482,9 @@ if (document.querySelector('.article__icon-button--role-add-article')) {
 }
 
 // Модальное окно модерации публикации
-if (document.querySelector('.article__icon-button--role-moderation-article')) {
+if (document.querySelector('.search__icon-button--role-moderation-article')) {
   const moderationArticleButton = document.querySelector(
-    '.article__icon-button--role-moderation-article'
+    '.search__icon-button--role-moderation-article'
   );
   const moderationArticleModal = document.querySelector(
     '.modal--content-moderation-article'
@@ -483,10 +507,30 @@ if (document.querySelector('.article__icon-button--role-moderation-article')) {
   });
 }
 
+// Открытия просмотра публикации в окне модерации
+if (document.querySelector('.field__control-icon--role-view-article')) {
+  const viewArticleButton = document.querySelector(
+    '.field__control-icon--role-view-article'
+  );
+  const articleCard = document.querySelector('.form--view-article');
+  const closeArticleButton = articleCard.querySelector(
+    '.form__icon-button--role-close-button'
+  );
+  const openArticleCard = function () {
+    articleCard.classList.remove('visually-hidden');
+  };
+  const closeArticleCard = function () {
+    articleCard.classList.add('visually-hidden');
+  };
+
+  viewArticleButton.addEventListener('click', openArticleCard);
+  closeArticleButton.addEventListener('click', closeArticleCard);
+}
+
 // Модальное окно для просмотра уведомлений
-if (document.querySelector('.article__count-button--role-notifications')) {
+if (document.querySelector('.search__icon-button--role-notifications')) {
   const notificationsButton = document.querySelector(
-    '.article__count-button--role-notifications'
+    '.search__icon-button--role-notifications'
   );
   const notificationsModal = document.querySelector(
     '.modal--content-notifications'
@@ -509,29 +553,24 @@ if (document.querySelector('.article__count-button--role-notifications')) {
   });
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    if (Splide) {
-        // Слайдер новостей на главной странице
-        if (document.querySelector('#news-slider')) {
-            let newsSlider = new Splide('#news-slider', {
-                type: 'slide',
-                autoplay: false,
-                arrows: false,
-                pagination: false,
-                gap: '.9375em',
-                autoWidth: true,
-                padding: 'var(--section-padding)',
-                mediaQuery: 'min',
-                breakpoints: {
-                    768: {
-                        destroy: 'completely',
-                    },
-                },
-            });
-            newsSlider.mount();
-        }
-    }
-});
+/* Прелодер на страницы */
+const preloaderTmp = document.querySelector('.preloader-template');
+const page = document.querySelector('.page');
+function showPreloader(tmp, parent) {
+  const node = tmp.content.cloneNode(true);
+  parent.append(node);
+}
+function removePreloader(parent, preloaderSelector) {
+  const preloader = parent.querySelector(preloaderSelector);
+  if (preloader) {
+    preloader.remove();
+  }
+}
+
+showPreloader(preloaderTmp, page);
+setTimeout(() => {
+  removePreloader(page, '.preloader');
+}, 1200);
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
