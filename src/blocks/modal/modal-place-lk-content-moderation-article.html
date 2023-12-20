@@ -12,6 +12,7 @@
     ></button>
     <h2 class="modal__title">Новости на модерации (3)</h2>
     <form name="moderation-article" class="form" action="">
+      <!-- Публикация кратко -->
       <div class="field field--theme-white field--with-controls">
         <label
           for="moderation-article-title"
@@ -35,7 +36,7 @@
           <div class="field__controls">
             <button
               type="button"
-              class="field__control-icon icon-button icon icon--type-edit"
+              class="field__control-icon field__control-icon--role-view-article icon-button icon icon--type-edit"
               aria-label="Просмотр детально"
             ></button>
             <button
@@ -51,8 +52,9 @@
           </div>
         </div>
       </div>
+      <!-- Карточка публикации - просмотр -->
       <div
-        class="form__card form__two-columns form__two-columns--content-article"
+        class="form__card form--view-article form__two-columns form__two-columns--content-article visually-hidden"
       >
         <fieldset class="form__column form__column--indent-sm">
           <div class="field field--theme-grey field--size-lg">

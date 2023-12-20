@@ -237,6 +237,26 @@ if (document.querySelector('.article__icon-button--role-moderation-article')) {
   });
 }
 
+// Открытия просмотра публикации в окне модерации
+if (document.querySelector('.field__control-icon--role-view-article')) {
+  const viewArticleButton = document.querySelector(
+    '.field__control-icon--role-view-article'
+  );
+  const articleCard = document.querySelector('.form--view-article');
+  const closeArticleButton = articleCard.querySelector(
+    '.form__icon-button--role-close-button'
+  );
+  const openArticleCard = function () {
+    articleCard.classList.remove('visually-hidden');
+  };
+  const closeArticleCard = function () {
+    articleCard.classList.add('visually-hidden');
+  };
+
+  viewArticleButton.addEventListener('click', openArticleCard);
+  closeArticleButton.addEventListener('click', closeArticleCard);
+}
+
 // Модальное окно для просмотра уведомлений
 if (document.querySelector('.article__count-button--role-notifications')) {
   const notificationsButton = document.querySelector(
