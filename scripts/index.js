@@ -244,30 +244,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-    if (Splide) {
-        // Слайдер новостей на главной странице
-        if (document.querySelector('#news-slider')) {
-            let newsSlider = new Splide('#news-slider', {
-                type: 'slide',
-                autoplay: false,
-                arrows: false,
-                pagination: false,
-                gap: '.9375em',
-                autoWidth: true,
-                padding: 'var(--section-padding)',
-                mediaQuery: 'min',
-                breakpoints: {
-                    768: {
-                        destroy: 'completely',
-                    },
-                },
-            });
-            newsSlider.mount();
-        }
-    }
-});
-
 // Модальное окно с формой присоединиться к проекту
 if (document.querySelector('.sign-up')) {
   const signUpButton = document.querySelector('.sign-up__button');
@@ -552,6 +528,30 @@ if (document.querySelector('.search__icon-button--role-notifications')) {
     }
   });
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (Splide) {
+        // Слайдер новостей на главной странице
+        if (document.querySelector('#news-slider')) {
+            let newsSlider = new Splide('#news-slider', {
+                type: 'slide',
+                autoplay: false,
+                arrows: false,
+                pagination: false,
+                gap: '.9375em',
+                autoWidth: true,
+                padding: 'var(--section-padding)',
+                mediaQuery: 'min',
+                breakpoints: {
+                    768: {
+                        destroy: 'completely',
+                    },
+                },
+            });
+            newsSlider.mount();
+        }
+    }
+});
 
 /* Прелодер на страницы */
 const preloaderTmp = document.querySelector('.preloader-template');

@@ -1770,13 +1770,13 @@ iframe {
   margin-inline: auto;
   inline-size: clamp(7.25em, 22.8vw, 14.25em);
   block-size: clamp(2.5em, 7.8vw, 4.875em);
-  background: url("../images/logo--place-footer.png") center/65% no-repeat;
+  background-color: var(--main-color);
+  -webkit-mask: url("../images/logo--place-footer.svg") center/contain no-repeat;
+          mask: url("../images/logo--place-footer.svg") center/contain no-repeat;
 }
 .footer__address-logo-image--type-ministry {
-  background: none;
-  background-color: var(--main-color);
-  -webkit-mask: url("../images/ministry-logo.svg") center/contain no-repeat;
-          mask: url("../images/ministry-logo.svg") center/contain no-repeat;
+  -webkit-mask-image: url("../images/ministry-logo.svg");
+          mask-image: url("../images/ministry-logo.svg");
 }
 .footer__address-content {
   padding-block: clamp(0.9375em, 2.5vw, 1.5375em) clamp(0.5em, 1.5vw, 0.9375em);
