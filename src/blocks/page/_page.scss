@@ -92,6 +92,12 @@
     font-size: clamp(1.25em, 6vw, 3.75em); // 60 - 20
   }
 
+  &__title-span {
+    display: block;
+    padding-block-start: 0.5em;
+    font-size: 66.6666667%;
+  }
+
   /* Заголовок секции */
   &__title {
     margin-block: 0 0.125em;
