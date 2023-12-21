@@ -2292,43 +2292,33 @@ iframe {
 }
 .card__remove-button {
   position: absolute;
+  z-index: 1;
+  padding: 0;
   inset: -0.5em -0.5em auto auto;
-  inline-size: clamp(1.5em, 3vw, 1.875em);
-  block-size: clamp(1.5em, 3vw, 1.875em);
+  inline-size: clamp(1.875em, 3.6vw, 2em);
+  block-size: clamp(1.875em, 3.6vw, 2em);
   color: var(--error-color);
+}
+.card__remove-button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0.2em;
+  border-radius: 10px;
+  display: block;
   background-color: #fff;
-  border-radius: 30%;
-  border: 0.2em solid currentColor;
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
 }
 @media (hover: hover) {
+  .card__remove-button {
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+  }
   .card__remove-button:hover {
+    background-color: transparent;
     -webkit-transform: scale(1.05) translateY(-5%);
         -ms-transform: scale(1.05) translateY(-5%);
             transform: scale(1.05) translateY(-5%);
   }
-}
-.card__remove-button::before, .card__remove-button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  inline-size: 80%;
-  block-size: 3px;
-  border-radius: 4px;
-  background: currentColor;
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-      -ms-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
-}
-.card__remove-button::after {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-      -ms-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
 }
 .card__share-icon {
   inline-size: 1em;
