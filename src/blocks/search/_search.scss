@@ -13,10 +13,10 @@
     flex-wrap: wrap;
     gap: var(--gap-section);
 
-    @include media(sm, max) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+    // @include media(sm, max) {
+    //   flex-direction: column;
+    //   align-items: unset;
+    // }
   }
 
   &__title {

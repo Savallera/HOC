@@ -246,8 +246,10 @@
     border: 0.2em solid currentColor;
     transition: 0.35s;
 
-    &:hover {
-      transform: scale(1.05) translateY(-5%);
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.05) translateY(-5%);
+      }
     }
 
     &::before,
