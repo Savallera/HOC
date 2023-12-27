@@ -16,7 +16,7 @@
   <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />
-  <title>Регистрация</title>
+  <title>О проекте</title>
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/libs/splide.min.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
@@ -140,227 +140,53 @@
 </header>
 
       <main class="page__content">
-        <section class="page__section">
-          <h1 class="page__heading">Регистрация</h1>
-          <form class="form" name="sign-up-form" action="">
-            <div class="form__two-columns">
-              <div class="field field--theme-white">
-                <label
-                  for="sign-up-first-name"
-                  class="field__label visually-hidden"
-                  >Имя</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Имя*"
-                    autocomplete="first-name"
-                    name="first-name"
-                    id="sign-up-first-name"
-                    required
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </div>
-              <div class="field field--theme-white">
-                <label
-                  for="sign-up-family-name"
-                  class="field__label visually-hidden"
-                  >Фамилия</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="text"
-                    class="field__input"
-                    placeholder="Фамилия*"
-                    autocomplete="family-name"
-                    name="family-name"
-                    id="sign-up-family-name"
-                    required
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </div>
-            </div>
-            <div class="field field--theme-white">
-              <label for="sign-up-city" class="field__label visually-hidden"
-                >Город</label
-              >
-              <div class="field__inner">
-                <input
-                  type="text"
-                  class="field__input"
-                  placeholder="Город*"
-                  autocomplete="city"
-                  name="city"
-                  id="sign-up-city"
-                  required
-                />
-                <span class="field__error-text">Вывод ошибки</span>
-                <span
-                  class="field__error-icon icon icon--type-error"
-                  aria-hidden="true"
-                ></span>
-              </div>
-            </div>
-            <div class="field field--theme-white">
-              <label
-                for="sign-up-university"
-                class="field__label visually-hidden"
-                >Университет</label
-              >
-              <div class="field__inner">
-                <input
-                  type="text"
-                  class="field__input"
-                  placeholder="Университет*"
-                  autocomplete="university"
-                  name="university"
-                  id="sign-up-university"
-                  required
-                />
-                <span class="field__error-text">Вывод ошибки</span>
-                <span
-                  class="field__error-icon icon icon--type-error"
-                  aria-hidden="true"
-                ></span>
-              </div>
-            </div>
-            <div class="field field--theme-white">
-              <label
-                for="sign-up-university-year"
-                class="field__label visually-hidden"
-                >Курс</label
-              >
-              <div class="field__inner">
-                <input
-                  type="number"
-                  class="field__input"
-                  placeholder="Курс*"
-                  autocomplete="university-year"
-                  name="university-year"
-                  id="sign-up-university-year"
-                  required
-                />
-                <span class="field__error-text">Вывод ошибки</span>
-                <span
-                  class="field__error-icon icon icon--type-error"
-                  aria-hidden="true"
-                ></span>
-              </div>
-            </div>
-            <div class="field field--theme-white">
-              <label for="sign-up-email" class="field__label visually-hidden"
-                >Адрес электронной почты</label
-              >
-              <div class="field__inner">
-                <input
-                  type="email"
-                  class="field__input"
-                  placeholder="Адрес электронной почты*"
-                  autocomplete="email"
-                  name="email"
-                  id="sign-up-email"
-                  required
-                />
-                <span class="field__error-text">Вывод ошибки</span>
-                <span
-                  class="field__error-icon icon icon--type-error"
-                  aria-hidden="true"
-                ></span>
-              </div>
-            </div>
-            <div class="form__two-columns">
-              <div class="field field--theme-white">
-                <label
-                  for="sign-up-password"
-                  class="field__label visually-hidden"
-                  >Пароль</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="password"
-                    class="field__input"
-                    placeholder="Пароль*"
-                    autocomplete="new-password"
-                    name="password"
-                    id="sign-up-password"
-                    required
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </div>
-              <div class="field field--theme-white">
-                <label
-                  for="sign-up-resume-password"
-                  class="field__label visually-hidden"
-                  >Повторите пароль</label
-                >
-                <div class="field__inner">
-                  <input
-                    type="password"
-                    class="field__input"
-                    placeholder="Повторите пароль*"
-                    autocomplete="new-password"
-                    name="resume-password"
-                    id="sign-up-resume-password"
-                    required
-                  />
-                  <span class="field__error-text">Вывод ошибки</span>
-                  <span
-                    class="field__error-icon icon icon--type-error"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </div>
-            </div>
-            <p class="form__description">*поля обязательны для заполнения</p>
-            <div class="field field--content-checkbox">
-              <label for="feedback-field-privacy" class="field__label">
-                <input
-                  type="checkbox"
-                  class="field__checkbox"
-                  name="privacy"
-                  id="feedback-field-privacy"
-                />
-                <span>
-                  Я ознакомился с
-                  <a
-                    href="./files/НОС_Политика_в_отношении_персональных_данных.pdf"
-                    rel="noopener ugs"
-                    >Политикой</a
-                  >
-                  в отношении обработки персональных данных и даю своё
-                  <a
-                    href="./files/НОС_Согласие_на_обработку_персональных_данных.pdf"
-                    rel="noopener ugs"
-                    >Согласие</a
-                  >
-                  на обработку персональных данных
-                </span>
-              </label>
-              <span class="field__error-text">Вывод ошибки</span>
-            </div>
-            <button
-              type="submit"
-              class="button button--theme-gradient"
-            >
-              <span class="button__text">Отправить</span>
-            </button>
-          </form>
+        <section class="article page__section">
+          <h1 class="article__title">О проекте</h1>
+          <img class="article__image" src="./images/about__image.jpg" alt="" />
+          <div class="article__main-text">
+            <p>
+              «НОС» — это агрегатор, поэтому мы объединяем на своей платформе
+              главные новости из мира образования, технологий и студенческой
+              жизни. Мы собираем лучшие материалы из студенческих СМИ и создаем
+              собственные, чтобы наши читатели могли ярко и интересно провести
+              свои университетские годы, попробовать себя в науке и заложить
+              фундамент для будущей карьеры.
+            </p>
+            <p>
+              Здесь ты узнаешь, как написать и защитить курсовую, распланировать
+              свой день и наконец-то выспаться, а еще найдешь информацию про
+              стипендии, гранты и летние школы и познакомишься с жизнью
+              университетов со всей страны. Наши советы помогут тебе
+              организовать вечеринку с друзьями, составить резюме и спланировать
+              недорогое летнее путешествие.
+            </p>
+            <p>
+              Мы публикуем анонсы конференций, конкурсов, форумов и событий для
+              студентов, а главное — берем подписчиков с собой! В составе
+              Студенческого медиацентра Минобрнауки России наши читатели
+              побывали в пресс-турах в Казани и Москве, на II Конгрессе молодых
+              ученых в Сочи, а также на Петербургском международном
+              экономическом форуме и на Восточном экономическом форуме. Ты тоже
+              можешь присоединиться — следи за обновлениями на сайте и на
+              страницах в соцсетях.
+            </p>
+            <p>
+              Оставайся с нами и будь в курсе! Предлагай свои материалы, и
+              лучшие мы обязательно опубликуем — смотри подробнее в разделе
+              <a
+                target="_blank"
+                href="https://studentsmi.ru/publicationRules/"
+                rel="noopener nofollow"
+                >«Правила публикации»</a
+              >. А если хочешь стать нашим постоянным автором, вступай в проект
+              <a
+                target="_blank"
+                href="https://studentsmi.ru/mmc/"
+                rel="noopener nofollow"
+                >«Студенческий медиацентр Минобрнауки России»</a
+              >.
+            </p>
+          </div>
         </section>
       </main>
       <!-- Подвал страницы -->
