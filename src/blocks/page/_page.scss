@@ -22,6 +22,7 @@
         max-inline-size: var(--section-inline-size);
         background: var(--grey-100) url('../images/bg-stud-smi.png') no-repeat
           top center / 105%;
+        background-image: url('../images/bg-stud-smi.webp');
 
         @include media(md, max) {
           background-size: 170%;

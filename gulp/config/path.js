@@ -22,9 +22,7 @@ export default {
 
   stylesLibs: {
     src: pathSrc + '/styles/libs/*.css',
-    watch: [
-      pathSrc + '/styles/libs/*.css',
-    ],
+    watch: [pathSrc + '/styles/libs/*.css'],
     dest: pathDest + '/styles/libs',
   },
 
@@ -44,38 +42,38 @@ export default {
     dest: pathDest + '/scripts/libs',
   },
 
+  favicon: {
+    src: [pathSrc + '/images/favicon/*.*'],
+    watch: [pathSrc + '/images/favicon/*.*'],
+    dest: pathDest + '/images/favicon',
+  },
+
   images: {
     src: [
-      pathSrc + '/images/*.*',
-      pathSrc + '/images/**/*.*',
-      '!' + pathSrc + '/images/icons/*.svg',
-      '!' + pathSrc + '/images/favicon.svg',
-      '!' + pathSrc + '/images/*.ico',
-      '!' + pathSrc + '/images/apple-touch-icon.png',
+      pathSrc + '/images/*.{jpg,jpeg,png,gif}',
+      pathSrc + '/images/**/*.{jpg,jpeg,png,gif}',
+      '!' + pathSrc + '/images/favicon/*.*',
     ],
     watch: [
-      pathSrc + '/images/*.*',
-      pathSrc + '/images/**/*.*',
-      '!' + pathSrc + '/images/icons/*.svg',
-      '!' + pathSrc + '/images/favicon.svg',
-      '!' + pathSrc + '/images/*.ico',
-      '!' + pathSrc + '/images/apple-touch-icon.png',
+      pathSrc + '/images/*.{jpg,jpeg,png,gif}',
+      pathSrc + '/images/**/*.{jpg,jpeg,png,gif}',
+      '!' + pathSrc + '/images/favicon/*.*',
     ],
     dest: pathDest + '/images',
   },
 
-  favicon: {
+  svg: {
     src: [
-      '!' + pathSrc + '/images/*.ico',
-      pathSrc + '/images/favicon.svg',
-      pathSrc + '/images/apple-touch-icon.png',
+      pathSrc + '/images/*.svg',
+      pathSrc + '/images/**/*.svg',
+      '!' + pathSrc + '/images/icons/*.svg',
     ],
     watch: [
-      '!' + pathSrc + '/images/*.ico',
-      pathSrc + '/images/favicon.svg',
-      pathSrc + '/images/apple-touch-icon.png',
+      pathSrc + '/images/*.svg',
+      pathSrc + '/images/**/*.svg',
+      '!' + pathSrc + '/images/icons/*.svg',
     ],
-    dest: pathDest + '/images/favicon',
+    dest: pathDest + '/images',
   },
 
   svgSprite: {
