@@ -529,25 +529,6 @@ if (document.querySelector('.search__icon-button--role-notifications')) {
   });
 }
 
-/* Прелодер на страницы */
-const preloaderTmp = document.querySelector('.preloader-template');
-const page = document.querySelector('.page');
-function showPreloader(tmp, parent) {
-  const node = tmp.content.cloneNode(true);
-  parent.append(node);
-}
-function removePreloader(parent, preloaderSelector) {
-  const preloader = parent.querySelector(preloaderSelector);
-  if (preloader) {
-    preloader.remove();
-  }
-}
-
-showPreloader(preloaderTmp, page);
-setTimeout(() => {
-  removePreloader(page, '.preloader');
-}, 1200);
-
 window.addEventListener('DOMContentLoaded', () => {
     if (Splide) {
         // Слайдер новостей на главной странице
@@ -572,21 +553,24 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  // Квиз
-  if (document.querySelector('.survey__form')) {
-    const surveyLabels = document.querySelectorAll('.survey__label');
-
-    for (i = 0; i < surveyLabels.length; i++) {
-      surveyLabels[i].addEventListener('click', function () {
-        this.classList.add('survey__label--current');
-        this.closest('.survey__form').classList.add(
-          'survey__form--show-result'
-        );
-      });
-    }
+/* Прелодер на страницы */
+const preloaderTmp = document.querySelector('.preloader-template');
+const page = document.querySelector('.page');
+function showPreloader(tmp, parent) {
+  const node = tmp.content.cloneNode(true);
+  parent.append(node);
+}
+function removePreloader(parent, preloaderSelector) {
+  const preloader = parent.querySelector(preloaderSelector);
+  if (preloader) {
+    preloader.remove();
   }
-});
+}
+
+showPreloader(preloaderTmp, page);
+setTimeout(() => {
+  removePreloader(page, '.preloader');
+}, 1200);
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
@@ -619,6 +603,22 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
       });
       studSmiNewsSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Квиз
+  if (document.querySelector('.survey__form')) {
+    const surveyLabels = document.querySelectorAll('.survey__label');
+
+    for (i = 0; i < surveyLabels.length; i++) {
+      surveyLabels[i].addEventListener('click', function () {
+        this.classList.add('survey__label--current');
+        this.closest('.survey__form').classList.add(
+          'survey__form--show-result'
+        );
+      });
     }
   }
 });
