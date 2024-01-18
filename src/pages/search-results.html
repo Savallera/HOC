@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ru">
+  @@include("../blocks/head/head.html", {"title": "Результаты поиска"})
+  <body>
+    <div class="page">
+      @@include("../blocks/header/header.html")
+      <main class="page__content">
+        <!-- Поиск -->
+        <section class="page__section search">
+          <form class="search__form" name="meta-search" action="">
+            <div class="field field--theme-white">
+              <label
+                for="meta-search-field"
+                class="field__label visually-hidden"
+                >Поиск по сайту</label
+              >
+              <div class="field__inner">
+                <span
+                  class="field__search-icon icon icon--type-search"
+                  aria-hidden="true"
+                ></span>
+                <input
+                  type="search"
+                  class="field__input"
+                  placeholder="Поиск по сайту"
+                  name="search"
+                  id="meta-search-field"
+                />
+                <span class="field__error-text">Вывод ошибки</span>
+                <span
+                  class="field__error-icon icon icon--type-error"
+                  aria-hidden="true"
+                ></span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <!-- Секция новостей -->
+        <section class="page__section">
+          <h2 class="page__heading">Новости</h2>
+          <ul class="page__card-deck">
+            <li>
+              <a
+                href="./new-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="http://lozhka-povarezhka.ru/wp-content/uploads/2020/03/natsional-ni-blyuda-eskimosiv-3.jpg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title text-rows text-rows--two">
+                      Фестиваль национальных блюд
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      В течение мероприятия
+                    </p>
+                    <p class="card__text text-gradient">Популярное</p>
+                    <div class="card__controls">
+                      <div class="card__author">
+                        <img
+                          class="card__author-image"
+                          src="https://avatars.mds.yandex.net/i?id=8c4b17a0dfd5c46d2828cead01639307fdea5178-8411463-images-thumbs&n=13"
+                          alt="Описание изображения"
+                          loading="lasy"
+                        />
+                        <p
+                          class="card__author-name card__cut-text"
+                          title="Комитет по делам молодежи"
+                        >
+                          Комитет по делам молодежи
+                        </p>
+                      </div>
+                      <p class="card__views" aria-label="Количество просмотров">
+                        <span
+                          class="card__views-icon icon icon--type-eye"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="card__views-value">123</span>
+                      </p>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./new-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="http://lozhka-povarezhka.ru/wp-content/uploads/2020/03/natsional-ni-blyuda-eskimosiv-3.jpg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title text-rows text-rows--two">
+                      Финно-угорский народ сето
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      Язык сето близок к эстонскому диалекту, но сам народ
+                      считает его самостоятельным
+                    </p>
+                    <p class="card__text text-gradient">Популярное</p>
+                    <div class="card__controls">
+                      <div class="card__author">
+                        <img
+                          class="card__author-image"
+                          src="https://sun9-41.userapi.com/impf/c623928/v623928620/2ce2b/ynzpK2FLiJw.jpg?size=604x547&quality=96&sign=391eb5015faf4d0191ad68beca24b75b&c_uniq_tag=-xnebZPsvShQpqd-2eKCiVD6-x5t_U5Dfmkans6Fny0&type=album"
+                          alt="Описание изображения"
+                          loading="lasy"
+                        />
+                        <p
+                          class="card__author-name card__cut-text"
+                          title="ТОЛК | Студмедиацентр"
+                        >
+                          ТОЛК | Студмедиацентр
+                        </p>
+                      </div>
+                      <p class="card__views" aria-label="Количество просмотров">
+                        <span
+                          class="card__views-icon icon icon--type-eye"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="card__views-value">123</span>
+                      </p>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./new-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="http://lozhka-povarezhka.ru/wp-content/uploads/2020/03/natsional-ni-blyuda-eskimosiv-3.jpg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title text-rows text-rows--two">
+                      Регистрация на Хардатон «Инженерный вызов»!
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      Хардатон – это всероссийские командные соревнования по
+                      робототехнике для студентов Хардатон – это всероссийские
+                      командные соревнования по робототехнике для студентов
+                    </p>
+                    <p class="card__text text-gradient">Мастеркласс</p>
+                    <div class="card__controls">
+                      <div class="card__author">
+                        <img
+                          class="card__author-image"
+                          src="https://avatars.mds.yandex.net/i?id=3084ddba73ea1c96a45884743ac3be6826a950c3-9221733-images-thumbs&n=13"
+                          alt="Описание изображения"
+                          loading="lasy"
+                        />
+                        <p
+                          class="card__author-name card__cut-text"
+                          title="Медиаотдел Студенческого университета"
+                        >
+                          Медиаотдел Студенческого университета
+                        </p>
+                      </div>
+                      <p class="card__views" aria-label="Количество просмотров">
+                        <span
+                          class="card__views-icon icon icon--type-eye"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="card__views-value">123</span>
+                      </p>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./new-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="http://lozhka-povarezhka.ru/wp-content/uploads/2020/03/natsional-ni-blyuda-eskimosiv-3.jpg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title text-rows text-rows--two">
+                      Фестиваль национальных блюд
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      В течение мероприятия
+                    </p>
+                    <p class="card__text text-gradient">Популярное</p>
+                    <div class="card__controls">
+                      <div class="card__author">
+                        <img
+                          class="card__author-image"
+                          src="https://avatars.mds.yandex.net/i?id=8c4b17a0dfd5c46d2828cead01639307fdea5178-8411463-images-thumbs&n=13"
+                          alt="Описание изображения"
+                          loading="lasy"
+                        />
+                        <p
+                          class="card__author-name card__cut-text"
+                          title="Комитет по делам молодежи"
+                        >
+                          Комитет по делам молодежи
+                        </p>
+                      </div>
+                      <p class="card__views" aria-label="Количество просмотров">
+                        <span
+                          class="card__views-icon icon icon--type-eye"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="card__views-value">123</span>
+                      </p>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./new-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="http://lozhka-povarezhka.ru/wp-content/uploads/2020/03/natsional-ni-blyuda-eskimosiv-3.jpg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title text-rows text-rows--two">
+                      Финно-угорский народ сето
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      Язык сето близок к эстонскому диалекту, но сам народ
+                      считает его самостоятельным
+                    </p>
+                    <p class="card__text text-gradient">Популярное</p>
+                    <div class="card__controls">
+                      <div class="card__author">
+                        <img
+                          class="card__author-image"
+                          src="https://sun9-41.userapi.com/impf/c623928/v623928620/2ce2b/ynzpK2FLiJw.jpg?size=604x547&quality=96&sign=391eb5015faf4d0191ad68beca24b75b&c_uniq_tag=-xnebZPsvShQpqd-2eKCiVD6-x5t_U5Dfmkans6Fny0&type=album"
+                          alt="Описание изображения"
+                          loading="lasy"
+                        />
+                        <p
+                          class="card__author-name card__cut-text"
+                          title="ТОЛК | Студмедиацентр"
+                        >
+                          ТОЛК | Студмедиацентр
+                        </p>
+                      </div>
+                      <p class="card__views" aria-label="Количество просмотров">
+                        <span
+                          class="card__views-icon icon icon--type-eye"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="card__views-value">123</span>
+                      </p>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./new-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="http://lozhka-povarezhka.ru/wp-content/uploads/2020/03/natsional-ni-blyuda-eskimosiv-3.jpg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title text-rows text-rows--two">
+                      Регистрация на Хардатон «Инженерный вызов»!
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      Хардатон – это всероссийские командные соревнования по
+                      робототехнике для студентов Хардатон – это всероссийские
+                      командные соревнования по робототехнике для студентов
+                    </p>
+                    <p class="card__text text-gradient">Мастеркласс</p>
+                    <div class="card__controls">
+                      <div class="card__author">
+                        <img
+                          class="card__author-image"
+                          src="https://avatars.mds.yandex.net/i?id=3084ddba73ea1c96a45884743ac3be6826a950c3-9221733-images-thumbs&n=13"
+                          alt="Описание изображения"
+                          loading="lasy"
+                        />
+                        <p
+                          class="card__author-name card__cut-text"
+                          title="Медиаотдел Студенческого университета"
+                        >
+                          Медиаотдел Студенческого университета
+                        </p>
+                      </div>
+                      <p class="card__views" aria-label="Количество просмотров">
+                        <span
+                          class="card__views-icon icon icon--type-eye"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="card__views-value">123</span>
+                      </p>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- Секция с событиями -->
+        <section class="page__section">
+          <h2 class="page__heading">События</h2>
+          <ul class="page__card-deck page__card-deck--size-lg">
+            <li>
+              <a
+                href="./event-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    loading="lazy"
+                    src="https://sevkavportal.ru/media/k2/galleries/62166/4.png"
+                    alt="Описание изображения"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title">
+                      Конкурс «Россия — незападный мир»
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      Международный молодежный центр РУДН совместно с
+                      Минобрнауки России и платформой «Дигория» запускает
+                      конкурс-практикум
+                    </p>
+                    <div class="card__controls">
+                      <address class="card__address">
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-calendar"
+                            aria-hidden="true"
+                          ></span>
+                          29 сентября 2023
+                        </p>
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-location"
+                            aria-hidden="true"
+                          ></span>
+                          г. Сочи, ул. Просвещения, 139
+                        </p>
+                      </address>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./event-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    loading="lazy"
+                    src="https://sevkavportal.ru/media/k2/galleries/62166/4.png"
+                    alt="Описание изображения"
+                  />
+                  <div class="card__main-content">
+                    <h2 class="card__title">
+                      Конкурс «Россия — незападный мир»
+                    </h2>
+                    <p class="card__description text-rows text-rows--three">
+                      Международный молодежный центр РУДН совместно с
+                      Минобрнауки России и платформой «Дигория» запускает
+                      конкурс-практикум
+                    </p>
+                    <div class="card__controls">
+                      <address class="card__address">
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-calendar"
+                            aria-hidden="true"
+                          ></span>
+                          29 сентября 2023
+                        </p>
+                        <p class="card__address-text text-gradient">
+                          <span
+                            class="card__address-icon icon icon--type-location"
+                            aria-hidden="true"
+                          ></span>
+                          г. Сочи, ул. Просвещения, 139
+                        </p>
+                      </address>
+                      <button
+                        type="button"
+                        class="card__like-button icon-button icon icon--type-like"
+                        aria-label="Нравится"
+                      ></button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- Секция с тестами -->
+        <section class="page__section">
+          <h2 class="page__heading">Интерактивные тесты</h2>
+          <ul class="page__card-deck">
+            <li>
+              <a
+                href="./test-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="https://sun9-2.userapi.com/impf/c622128/v622128429/1d502/EeWWlc2hMJg.jpg?size=511x513&quality=96&sign=8c778f54f142f7098f63fc0b2fa270b1&type=album"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div
+                    class="card__main-content card__main-content--min-height"
+                  >
+                    <h2 class="card__title">Тест на знание математики</h2>
+                    <p class="card__text text-gradient card__press-bottom">
+                      Интеллектуальные
+                    </p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./test-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="http://cdn.lifehacker.ru/wp-content/uploads/2017/10/Cats_1509177368-1280x640.jpg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div
+                    class="card__main-content card__main-content--min-height"
+                  >
+                    <h2 class="card__title">Тест география России</h2>
+                    <p class="card__text text-gradient card__press-bottom">
+                      Интеллектуальные
+                    </p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./test-article.html"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card card--size-md">
+                  <img
+                    class="card__image"
+                    src="http://easy-math.ru/wp-content/uploads/2020/05/The-development-of-logic-and-mathematical-abilities-in-children.jpg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div
+                    class="card__main-content card__main-content--min-height"
+                  >
+                    <h2 class="card__title">Тест на знание химии</h2>
+                    <p class="card__text text-gradient card__press-bottom">
+                      Интеллектуальные
+                    </p>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      @@include("../blocks/footer/footer.html")
+      @@include("../blocks/modal/modal-sign-up.html")
+      @@include("../blocks/tooltip/tooltip.html")
+    </div>
+  </body>
+</html>
