@@ -83,6 +83,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: var(--gap-section);
+    min-block-size: clamp(1.75em, 5.4vw, 3.375em);
   }
 
   /* Заголовок страницы */
