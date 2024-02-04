@@ -95,12 +95,7 @@
     margin-inline: auto;
     inline-size: clamp(7.25em, 22.8vw, 14.25em);
     block-size: clamp(2.5em, 7.8vw, 4.875em);
-    background-color: var(--main-color);
-    mask: url('../images/logo--place-footer.svg') center / contain no-repeat;
-
-    &--type-ministry {
-      mask-image: url('../images/ministry-logo.svg');
-    }
+    object-fit: contain;
   }
 
   &__address-content {
@@ -109,6 +104,10 @@
     padding-inline: clamp(0.625em, 2vw, 1.25em);
     border-radius: 0 0 20px 20px;
     background-color: #00000026;
+
+    min-block-size: clamp(9em, 24vw, 15em);
+    display: flex;
+    flex-direction: column;
   }
 
   &__address-links {
@@ -147,7 +146,7 @@
   }
 
   &__social {
-    margin: 0;
+    margin: auto 0 0;
     padding: 0;
     list-style: none;
     display: flex;
