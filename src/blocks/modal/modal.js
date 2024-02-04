@@ -91,8 +91,8 @@ if (document.querySelector('.search__filter-button')) {
 }
 
 // Модальное окно для просмотра трансляции
-if (document.querySelector('.card--role-preview-button')) {
-  const broadcastsButton = document.querySelector('.card--role-preview-button');
+if (document.querySelector('.card--role-broadcast')) {
+  const broadcastsButton = document.querySelector('.card--role-broadcast');
   const broadcastsModal = document.querySelector('.modal--content-broadcasts');
   const openBroadcastsModal = function () {
     broadcastsModal.classList.add('modal--opened');
