@@ -26,18 +26,27 @@
     </div>
     <div class="search__filters-wrapper">
       <fieldset class="search__inner">
-        <button
-          class="search__filter-button search__filter-button--actived"
-          type="button"
-        >
-          <span>Дата: 01.01.2023 - 31.12.2023</span>
-          <span
-            class="search__filter-button-icon icon icon--type-plus"
-            aria-hidden="true"
-          ></span>
-        </button>
-        <button class="search__filter-button" type="button">
-          <span>Тип мероприятия</span>
+        <label for="date-start" class="search__calendar-fields-label">
+          <span class="icon icon--type-calendar" aria-hidden="true"></span>
+          <input
+            class="search__calendar-field"
+            type="text"
+            name="date-start"
+            id="date-start"
+            value="дд.мм.гггг"
+            readonly=""
+          />
+          -
+          <input
+            class="search__calendar-field"
+            type="text"
+            id="date-end"
+            value="дд.мм.гггг"
+            readonly=""
+          />
+        </label>
+        <button class="search__filter-button search__filter-button--actived" type="button">
+          <span>Официальные мероприятия</span>
           <span
             class="search__filter-button-icon icon icon--type-plus"
             aria-hidden="true"

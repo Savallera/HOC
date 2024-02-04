@@ -143,6 +143,7 @@
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
     transition: background 0.35s;
+    cursor: pointer;
 
     &:hover {
       color: var(--accent-color);
@@ -190,6 +191,8 @@
     .icon {
       display: inline-block;
       inline-size: 1.5em;
+      min-inline-size: 1.5em;
+      max-inline-size: 1.5em;
       block-size: 1.5em;
       vertical-align: middle;
     }
@@ -227,6 +230,54 @@
 
     &:hover {
       color: var(--accent-color);
+    }
+  }
+
+  &__calendar-fields-label {
+    display: flex;
+    gap: 0.25em;
+    align-items: center;
+
+    font-size: clamp(0.75em, 2vw, 1.25em);
+    font-variation-settings: 'wght' 500;
+    transition: background 0.35s;
+
+    color: var(--accent-color);
+    background: var(--main-color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-block-end-color: var(--accent-color);
+
+    .icon {
+      display: inline-block;
+      inline-size: 1.5em;
+      min-inline-size: 1.5em;
+      max-inline-size: 1.5em;
+      block-size: 1.5em;
+      vertical-align: middle;
+
+      &::before {
+        background: var(--main-color) var(--main-color-gradient) no-repeat
+          center;
+      }
+    }
+
+    &:has(:focus-visible) {
+      outline: 2px solid var(--main-text-color);
+    }
+  }
+
+  &__calendar-field {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    inline-size: 5.375em;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
     }
   }
 }

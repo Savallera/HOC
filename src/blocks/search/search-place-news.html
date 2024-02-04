@@ -15,17 +15,29 @@
     <div class="search__title-block">
       <h1 class="search__title">Новости</h1>
       <div class="search__inner">
-        <button class="search__calendar-button" type="button">
+        <label for="date-start" class="search__calendar-button">
           <span class="icon icon--type-calendar" aria-hidden="true"></span>
           <span>Календарь</span>
-        </button>
-        <button
-          class="search__calendar-button search__calendar-button--actived"
-          type="button"
-        >
+        </label>
+        <label for="date-start" class="search__calendar-fields-label">
           <span class="icon icon--type-calendar" aria-hidden="true"></span>
-          <span>10.08.2023 - 16.08.2023</span>
-        </button>
+          <input
+            class="search__calendar-field"
+            type="text"
+            name="date-start"
+            id="date-start"
+            value="дд.мм.гггг"
+            readonly=""
+          />
+          -
+          <input
+            class="search__calendar-field"
+            type="text"
+            id="date-end"
+            value="дд.мм.гггг"
+            readonly=""
+          />
+        </label>
       </div>
     </div>
     <div class="field field--theme-white">
