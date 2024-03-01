@@ -705,6 +705,7 @@ iframe {
   block-size: 100%;
   border-radius: 10px;
   text-decoration: none;
+  cursor: pointer;
 }
 .card-link:focus {
   outline: none;
@@ -1341,6 +1342,7 @@ iframe {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: var(--gap-section);
+  min-block-size: clamp(1.75em, 5.4vw, 3.375em);
 }
 .page__heading {
   margin-block: 0 0.125em;
@@ -1680,6 +1682,8 @@ iframe {
   color: var(--accent-text-color);
   -webkit-margin-before: -1.5em;
           margin-block-start: -1.5em;
+  -webkit-margin-after: 1.5em;
+          margin-block-end: 1.5em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -1771,19 +1775,22 @@ iframe {
   margin-inline: auto;
   inline-size: clamp(7.25em, 22.8vw, 14.25em);
   block-size: clamp(2.5em, 7.8vw, 4.875em);
-  background-color: var(--main-color);
-  -webkit-mask: url("../images/logo--place-footer.svg") center/contain no-repeat;
-          mask: url("../images/logo--place-footer.svg") center/contain no-repeat;
-}
-.footer__address-logo-image--type-ministry {
-  -webkit-mask-image: url("../images/ministry-logo.svg");
-          mask-image: url("../images/ministry-logo.svg");
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .footer__address-content {
   padding-block: clamp(0.9375em, 2.5vw, 1.5375em) clamp(0.5em, 1.5vw, 0.9375em);
   padding-inline: clamp(0.625em, 2vw, 1.25em);
   border-radius: 0 0 20px 20px;
   background-color: rgba(0, 0, 0, 0.1490196078);
+  min-block-size: clamp(9em, 24vw, 15em);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .footer__address-links {
   display: -webkit-box;
@@ -1830,7 +1837,7 @@ iframe {
   block-size: clamp(1em, 1.5vw, 1.5em);
 }
 .footer__social {
-  margin: 0;
+  margin: auto 0 0;
   padding: 0;
   list-style: none;
   display: -webkit-box;
@@ -2014,12 +2021,8 @@ iframe {
 }
 @media only screen and (width >= 1224px) {
   .card-banner--place-top-banner {
-    min-block-size: 100vh;
-  }
-  @supports (max-block-size: 100dvb) {
-    .card-banner--place-top-banner {
-      min-block-size: 100dvb;
-    }
+    aspect-ratio: 1920/1025;
+    max-block-size: 48em;
   }
 }
 .card-banner--place-top-banner .card-banner__main-content {
@@ -2112,7 +2115,7 @@ iframe {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: clamp(0.75em, 2.4vw, 1.5em);
+  gap: 0.75em;
 }
 .card__main-content--min-height {
   min-block-size: clamp(7.125em, 17vw, 10.625em);
@@ -2210,6 +2213,8 @@ iframe {
   gap: 0.5em;
 }
 .card__author-image {
+  position: relative;
+  overflow: hidden;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
@@ -2218,6 +2223,28 @@ iframe {
   max-inline-size: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
   block-size: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
   border-radius: 10px;
+}
+.card__author-image:after {
+  content: attr(alt);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.75em;
+  padding: 0.75em;
+  color: var(--main-text-color);
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), color-stop(50%, #eee), to(#ccc));
+  background-image: linear-gradient(to bottom, #ccc 0%, #eee 50%, #ccc 100%);
 }
 .card__author-name {
   margin-block: 0;
@@ -2545,6 +2572,7 @@ iframe {
   font-variation-settings: "wght" 500;
   -webkit-transition: background 0.35s;
   transition: background 0.35s;
+  cursor: pointer;
 }
 .search__region-button:hover, .search__calendar-button:hover, .search__reset-button:hover, .search__filter-button:hover {
   color: var(--accent-color);
@@ -2582,6 +2610,8 @@ iframe {
 .search__calendar-button .icon {
   display: inline-block;
   inline-size: 1.5em;
+  min-inline-size: 1.5em;
+  max-inline-size: 1.5em;
   block-size: 1.5em;
   vertical-align: middle;
 }
@@ -2618,6 +2648,50 @@ iframe {
 }
 .search__sort-button:hover {
   color: var(--accent-color);
+}
+.search__calendar-fields-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: clamp(0.75em, 2vw, 1.25em);
+  font-variation-settings: "wght" 500;
+  -webkit-transition: background 0.35s;
+  transition: background 0.35s;
+  color: var(--accent-color);
+  background: var(--main-color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-block-end-color: var(--accent-color);
+}
+.search__calendar-fields-label .icon {
+  display: inline-block;
+  inline-size: 1.5em;
+  min-inline-size: 1.5em;
+  max-inline-size: 1.5em;
+  block-size: 1.5em;
+  vertical-align: middle;
+}
+.search__calendar-fields-label .icon::before {
+  background: var(--main-color) var(--main-color-gradient) no-repeat center;
+}
+.search__calendar-fields-label:has(:focus-visible) {
+  outline: 2px solid var(--main-text-color);
+}
+.search__calendar-field {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+  color: inherit;
+  inline-size: 5.375em;
+  cursor: pointer;
+}
+.search__calendar-field:focus {
+  outline: none;
 }
 
 /* Секция с новостями на главной странице */
@@ -2709,6 +2783,7 @@ iframe {
       -ms-flex-pack: end;
           justify-content: flex-end;
   gap: var(--gap-section);
+  color: var(--accent-text-color);
 }
 .contests__inner::after {
   content: "";
@@ -2738,16 +2813,8 @@ iframe {
       -ms-grid-row-align: center;
       align-self: center;
   max-inline-size: min(13em, 100%);
-  color: var(--accent-text-color);
   text-transform: uppercase;
 }
-@media only screen and (width >= 576px) {
-  .contests__title {
-    -webkit-margin-after: 1em;
-            margin-block-end: 1em;
-  }
-}
-
 .survey__wrapper {
   padding: clamp(1.25em, 3.6vw, 2.25em);
   border-radius: 10px;
@@ -3025,6 +3092,7 @@ iframe {
           align-items: center;
   gap: clamp(1em, 4vw, 2.5em);
   font-size: clamp(1em, 2.5vw, 1.5625em);
+  cursor: pointer;
   -webkit-transition: color 0.35s;
   transition: color 0.35s;
 }
@@ -3055,6 +3123,7 @@ iframe {
   grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
 }
 .top-ten__card {
+  height: 100%;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -3407,6 +3476,8 @@ iframe {
           margin-block-end: clamp(0.75rem, 2vw, 1.25rem);
 }
 .article__author-image {
+  position: relative;
+  overflow: hidden;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
@@ -3415,6 +3486,28 @@ iframe {
   max-inline-size: clamp(1.75rem, 5.8vw, 3.4375rem);
   block-size: clamp(1.75rem, 5.8vw, 3.4375rem);
   border-radius: 10px;
+}
+.article__author-image:after {
+  content: attr(alt);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.75em;
+  padding: 0.75em;
+  color: var(--main-text-color);
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), color-stop(50%, #eee), to(#ccc));
+  background-image: linear-gradient(to bottom, #ccc 0%, #eee 50%, #ccc 100%);
 }
 .article__author-text {
   margin-block: 0;
