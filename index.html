@@ -802,159 +802,77 @@
 <section class="media page__section">
   <div class="media__columns">
     <div class="media__column">
-      <div class="page__title-block media__podsast-title-block">
+      <div class="page__title-block">
+        <h2 class="page__title">Видео</h2>
+        <a
+          href="#"
+          class="page__link page__hidden-desktop text-gradient"
+          rel="noopener ugs"
+          >Все видео</a
+        >
+      </div>
+      <article class="card card--size-md card--role-preview-button">
+        <iframe
+          class="card__iframe"
+          src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <div class="card__main-content card__main-content--min-height">
+          <h3 class="card__title">VIII Всероссийский молодежный форум</h3>
+          <div class="card__controls">
+            <p class="card__text text-gradient">Популярное</p>
+            <p class="card__views" aria-label="Количество просмотров">
+              <span
+                class="card__views-icon icon icon--type-eye"
+                aria-hidden="true"
+              ></span>
+              <span class="card__views-value">123</span>
+            </p>
+            <button
+              type="button"
+              class="card__like-button icon-button icon icon--type-like"
+              aria-label="Нравится"
+            ></button>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="media__column">
+      <div class="page__title-block">
         <h2 class="page__title">Подкасты</h2>
         <a
           href="./podcasts.html"
-          class="page__link page__hidden-desktop text-gradient"
+          class="page__link text-gradient"
           rel="noopener ugs"
           >Все подкасты</a
         >
       </div>
-      <div class="splide media__podcast-slider" id="media-podcast-slider">
-        <div class="splide__track media__podcast-slider-track">
-          <ul class="splide__list media__podcast-slider-list">
-            <li class="splide__slide splide__slide--mobile-width-auto">
-              <article class="card card--role-preview-button">
-                <iframe
-                  class="card__iframe"
-                  src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-                <div class="card__main-content">
-                  <h3 class="card__title">Фестиваль национальных блюд</h3>
-                  <div class="card__controls">
-                    <p class="card__text text-gradient">Популярное</p>
-                    <p class="card__views" aria-label="Количество просмотров">
-                      <span
-                        class="card__views-icon icon icon--type-eye"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="card__views-value">123</span>
-                    </p>
-                    <button
-                      type="button"
-                      class="card__like-button icon-button icon icon--type-like"
-                      aria-label="Нравится"
-                    ></button>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="splide__slide splide__slide--mobile-width-auto">
-              <article class="card card--role-preview-button">
-                <iframe
-                  class="card__iframe"
-                  src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-                <div class="card__main-content">
-                  <h3 class="card__title">Фестиваль национальных блюд</h3>
-                  <div class="card__controls">
-                    <p class="card__text text-gradient">Популярное</p>
-                    <p class="card__views" aria-label="Количество просмотров">
-                      <span
-                        class="card__views-icon icon icon--type-eye"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="card__views-value">123</span>
-                    </p>
-                    <button
-                      type="button"
-                      class="card__like-button icon-button icon icon--type-like"
-                      aria-label="Нравится"
-                    ></button>
-                  </div>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="media__column">
-      <div class="page__title-block media__video-title-block">
-        <!-- <h2 class="page__title">Видео</h2> -->
-        <a href="#" class="page__link text-gradient" rel="noopener ugs"
-          >Все видео</a
-        >
-      </div>
-      <div class="splide media__video-slider" id="media-video-slider">
-        <div class="splide__track media__video-slider-track">
-          <ul class="splide__list media__video-slider-list">
-            <li class="splide__slide splide__slide--mobile-width-auto">
-              <article class="card card--size-md card--role-preview-button">
-                <iframe
-                  class="card__iframe"
-                  src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-                <div class="card__main-content">
-                  <h3 class="card__title">
-                    VIII Всероссийский молодежный форум
-                  </h3>
-                  <div class="card__controls">
-                    <p class="card__text text-gradient">Популярное</p>
-                    <p class="card__views" aria-label="Количество просмотров">
-                      <span
-                        class="card__views-icon icon icon--type-eye"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="card__views-value">123</span>
-                    </p>
-                    <button
-                      type="button"
-                      class="card__like-button icon-button icon icon--type-like"
-                      aria-label="Нравится"
-                    ></button>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="splide__slide splide__slide--mobile-width-auto">
-              <article class="card card--size-md card--role-preview-button">
-                <iframe
-                  class="card__iframe"
-                  src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-                <div class="card__main-content">
-                  <h3 class="card__title">
-                    VIII Всероссийский молодежный форум
-                  </h3>
-                  <div class="card__controls">
-                    <p class="card__text text-gradient">Популярное</p>
-                    <p class="card__views" aria-label="Количество просмотров">
-                      <span
-                        class="card__views-icon icon icon--type-eye"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="card__views-value">123</span>
-                    </p>
-                    <button
-                      type="button"
-                      class="card__like-button icon-button icon icon--type-like"
-                      aria-label="Нравится"
-                    ></button>
-                  </div>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <ul class="media__podcast-list">
+        <li>
+          <article class="card card--role-preview-button">
+            <div class="card__main-content">
+              <h3 class="card__title">Фестиваль национальных блюд</h3>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card card--role-preview-button">
+            <div class="card__main-content">
+              <h3 class="card__title">Фестиваль национальных блюд</h3>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card card--role-preview-button">
+            <div class="card__main-content">
+              <h3 class="card__title">Фестиваль национальных блюд</h3>
+            </div>
+          </article>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

@@ -2979,17 +2979,15 @@ iframe {
   }
 }
 /* Секция с медиа */
-@media only screen and (width >= 768px) {
-  .media__columns {
-    display: -ms-grid;
-    display: grid;
-    gap: var(--gap-grid);
-  }
+.media__columns {
+  display: -ms-grid;
+  display: grid;
+  gap: var(--gap-grid);
 }
-@media only screen and (width >= 1024px) {
+@media only screen and (width >= 576px) {
   .media__columns {
-    -ms-grid-columns: 0.275fr 1fr;
-    grid-template-columns: 0.275fr 1fr;
+    -ms-grid-columns: 1.235fr 2fr;
+    grid-template-columns: 1.235fr 2fr;
   }
 }
 .media__column {
@@ -3002,70 +3000,19 @@ iframe {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.media__podcast-slider.is-initialized:not(.is-active) .splide__list {
+.media__podcast-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: -ms-grid;
   display: grid;
+  gap: var(--gap-grid);
 }
-@media only screen and (width < 768px) {
-  .media__podcast-slider {
-    margin-inline: calc(var(--section-padding) * -1);
-    -webkit-margin-after: var(--gap-grid);
-            margin-block-end: var(--gap-grid);
-  }
-}
-@media only screen and (width >= 768px) {
-  .media__podcast-slider {
+@media only screen and (width >= 576px) {
+  .media__podcast-list {
     height: 100%;
-  }
-}
-@media only screen and (width >= 768px) {
-  .media__podcast-slider-track {
-    height: 100%;
-    overflow: unset;
-  }
-}
-@media only screen and (width >= 768px) {
-  .media__podcast-slider-list {
-    display: -ms-grid;
-    display: grid;
-    gap: var(--gap-grid);
-    grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-  }
-}
-@media only screen and (width >= 1024px) {
-  .media__podcast-slider-list {
-    height: 100%;
-    -ms-grid-rows: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-.media__video-slider.is-initialized:not(.is-active) .splide__list {
-  display: -ms-grid;
-  display: grid;
-}
-@media only screen and (width < 768px) {
-  .media__video-slider {
-    margin-inline: calc(var(--section-padding) * -1);
-    -webkit-margin-after: var(--gap-grid);
-            margin-block-end: var(--gap-grid);
-  }
-}
-@media only screen and (width >= 768px) {
-  .media__video-slider {
-    height: 100%;
-  }
-}
-@media only screen and (width >= 768px) {
-  .media__video-slider-track {
-    height: 100%;
-    overflow: unset;
-  }
-}
-@media only screen and (width >= 768px) {
-  .media__video-slider-list {
-    gap: var(--gap-grid);
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 
