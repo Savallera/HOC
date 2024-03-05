@@ -1,12 +1,10 @@
 /* Секция с медиа */
 .media {
   &__columns {
-    @include media(md) {
-      display: grid;
-      gap: var(--gap-grid);
-    }
-    @include media(lg) {
-      grid-template-columns: 0.275fr 1fr;
+    display: grid;
+    gap: var(--gap-grid);
+    @include media(sm) {
+      grid-template-columns: 1.235fr 2fr;
     }
   }
 
@@ -16,63 +14,16 @@
     flex-direction: column;
   }
 
-  &__podcast-slider {
-    &.is-initialized:not(.is-active) .splide__list {
-      display: grid;
-    }
-    @include media(md, max) {
-      margin-inline: calc(var(--section-padding) * -1);
-      margin-block-end: var(--gap-grid);
-    }
-    @include media(md) {
+  &__podcast-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--gap-grid);
+
+    @include media(sm) {
       height: 100%;
-    }
-  }
-
-  &__podcast-slider-track {
-    @include media(md) {
-      height: 100%;
-      overflow: unset;
-    }
-  }
-
-  &__podcast-slider-list {
-    @include media(md) {
-      display: grid;
-      gap: var(--gap-grid);
-      grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-    }
-
-    @include media(lg) {
-      height: 100%;
-      grid-template-rows: 1fr 1fr;
-    }
-  }
-
-  &__video-slider {
-    &.is-initialized:not(.is-active) .splide__list {
-      display: grid;
-    }
-    @include media(md, max) {
-      margin-inline: calc(var(--section-padding) * -1);
-      margin-block-end: var(--gap-grid);
-    }
-    @include media(md) {
-      height: 100%;
-    }
-  }
-
-  &__video-slider-track {
-    @include media(md) {
-      height: 100%;
-      overflow: unset;
-    }
-  }
-
-  &__video-slider-list {
-    @include media(md) {
-      gap: var(--gap-grid);
-      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
     }
   }
 }

@@ -1,6 +1,6 @@
-window.addEventListener('DOMContentLoaded', () => {
+/*window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
-    // Слайдер с подкастами
+     Слайдер с подкастами
     if (document.querySelector('#media-podcast-slider')) {
       let mediaPodcastSlider = new Splide('#media-podcast-slider', {
         type: 'slide',
@@ -19,8 +19,10 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       mediaPodcastSlider.mount();
     }
+    */
 
-    // Слайдер с видео
+
+    /* Слайдер с видео
     if (document.querySelector('#media-video-slider')) {
       let mediaVideoSlider = new Splide('#media-video-slider', {
         type: 'slide',
@@ -39,5 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       mediaVideoSlider.mount();
     }
+
   }
-});
+});*/
