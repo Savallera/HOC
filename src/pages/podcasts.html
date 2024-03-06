@@ -9,98 +9,33 @@
         <section class="page__section podcasts">
           <h1 class="page__heading">Подкасты</h1>
           @@include("../blocks/search/search-place-podcasts.html")
-          <!-- Отображение карточек в сетке 3 в ряд -->
-          <ul class="page__card-deck">
+          <script
+            type="text/javascript"
+            src="//vk.com/js/api/openapi.js?169"
+          ></script>
+          <script type="text/javascript">
+            VK.Widgets.Podcast('vk_podcast_01', '-223901947_456239051', {});
+            VK.Widgets.Podcast('vk_podcast_02', '-213681997_456239090', {});
+            VK.Widgets.Podcast('vk_podcast_03', '-220095071_456239059', {});
+          </script>
+          <ul class="page__card-deck page__card-deck--size-xl">
             <li>
-              <!-- Добавлен класс card--preview-button для открытия превью окна для просмотра трансляции и добавлен курсор палец -->
-              <article class="card card--size-md card--role-preview-button">
-                <iframe
-                  class="card__iframe"
-                  src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-                <div class="card__main-content card__main-content--min-height">
-                  <h2 class="card__title">Подкаст про что-то</h2>
-                  <div class="card__controls">
-                    <p class="card__text text-gradient">Интеллектуальные</p>
-                    <p class="card__views" aria-label="Количество просмотров">
-                      <span
-                        class="card__views-icon icon icon--type-eye"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="card__views-value">123</span>
-                    </p>
-                    <button
-                      type="button"
-                      class="card__like-button icon-button icon icon--type-like"
-                      aria-label="Нравится"
-                    ></button>
-                  </div>
-                </div>
-              </article>
+              <div
+                class="card card--role-preview-button"
+                id="vk_podcast_01"
+              ></div>
             </li>
             <li>
-              <article class="card card--size-md card--role-preview-button">
-                <iframe
-                  class="card__iframe"
-                  src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-                <div class="card__main-content card__main-content--min-height">
-                  <h2 class="card__title">Подкаст про что-то</h2>
-                  <div class="card__controls">
-                    <p class="card__text text-gradient">Интеллектуальные</p>
-                    <p class="card__views" aria-label="Количество просмотров">
-                      <span
-                        class="card__views-icon icon icon--type-eye"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="card__views-value">123</span>
-                    </p>
-                    <button
-                      type="button"
-                      class="card__like-button icon-button icon icon--type-like"
-                      aria-label="Нравится"
-                    ></button>
-                  </div>
-                </div>
-              </article>
+              <div
+                class="card card--role-preview-button"
+                id="vk_podcast_02"
+              ></div>
             </li>
             <li>
-              <article class="card card--size-md card--role-preview-button">
-                <iframe
-                  class="card__iframe"
-                  src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-                <div class="card__main-content card__main-content--min-height">
-                  <h2 class="card__title">Подкаст про что-то</h2>
-                  <div class="card__controls">
-                    <p class="card__text text-gradient">Интеллектуальные</p>
-                    <p class="card__views" aria-label="Количество просмотров">
-                      <span
-                        class="card__views-icon icon icon--type-eye"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="card__views-value">123</span>
-                    </p>
-                    <button
-                      type="button"
-                      class="card__like-button icon-button icon icon--type-like"
-                      aria-label="Нравится"
-                    ></button>
-                  </div>
-                </div>
-              </article>
+              <div
+                class="card card--role-preview-button"
+                id="vk_podcast_03"
+              ></div>
             </li>
           </ul>
           <button class="button page__more-button text-gradient" type="button">

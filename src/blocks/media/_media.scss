@@ -3,7 +3,7 @@
   &__columns {
     display: grid;
     gap: var(--gap-grid);
-    @include media(sm) {
+    @include media(lg) {
       grid-template-columns: 1.235fr 2fr;
     }
   }
@@ -21,7 +21,7 @@
     display: grid;
     gap: var(--gap-grid);
 
-    @include media(sm) {
+    @include media(lg) {
       height: 100%;
       grid-template-rows: 1fr 1fr 1fr;
     }
