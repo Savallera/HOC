@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 autoplay: false,
                 arrows: false,
                 pagination: false,
-                gap: '.9375em',
+                gap: 'var(--gap-slider)',
                 autoWidth: true,
                 padding: 'var(--section-padding)',
                 mediaQuery: 'min',

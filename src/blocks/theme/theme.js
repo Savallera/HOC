@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'slide',
         arrows: false,
         pagination: false,
-        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        gap: 'var(--gap-slider)',
         autoWidth: true,
         padding: 'var(--section-inline-start)',
         mediaQuery: 'min',
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'slide',
         arrows: false,
         pagination: false,
-        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        gap: 'var(--gap-slider)',
         autoWidth: true,
         padding: 'var(--section-inline-start)',
         mediaQuery: 'min',
@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'slide',
         arrows: false,
         pagination: false,
-        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        gap: 'var(--gap-slider)',
         autoWidth: true,
         padding: 'var(--section-inline-start)',
         mediaQuery: 'min',
@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
           arrows: false,
           pagination: false,
           perPage: 3,
-          gap: 'clamp(.625em, 2vw, 1.25em)',
+          gap: 'var(--gap-slider)',
           padding: 'var(--section-inline-start)',
           mediaQuery: 'min',
           breakpoints: {
@@ -98,7 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         autoWidth: true,
-        gap: 'clamp(.625em, 2vw, 1.25em)',
+        gap: 'var(--gap-slider)',
       });
       addArticleImageSlider.mount();
     }
@@ -110,7 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         autoWidth: true,
-        gap: 'clamp(.625em, 2vw, 1.25em)',
+        gap: 'var(--gap-slider)',
       });
       addArticleImageSlider.mount();
     }

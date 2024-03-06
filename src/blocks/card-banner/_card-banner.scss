@@ -2,7 +2,6 @@
 .card-banner {
   display: grid;
   inline-size: 100%;
-  // aspect-ratio: 360/192;
   min-block-size: clamp(12em, 55vw, 40.625em);
   background-color: var(--main-text-color);
   background-size: cover;
@@ -136,11 +135,6 @@
     @include media(xl) {
       aspect-ratio: 1920/1025;
       max-block-size: 48em;
-      // min-block-size: 100vh;
-
-      // @supports (max-block-size: 100dvb) {
-        // min-block-size: 100dvb;
-      // }
     }
 
     .card-banner__main-content {

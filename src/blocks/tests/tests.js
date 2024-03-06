@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
         autoplay: false,
         arrows: false,
         pagination: false,
-        gap: '.9375em',
+        gap: 'var(--gap-slider)',
         autoWidth: true,
         padding: 'var(--section-padding)',
         mediaQuery: 'min',
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
       let testsImageSlider = new Splide('#tests-image-slider', {
         type: 'slide',
         arrows: false,
-        gap: 'clamp(.9375em, 2vw, 1.25em)',
+        gap: 'var(--gap-slider)',
         cover: true,
         heightRatio: 0.56,
         mediaQuery: 'min',
