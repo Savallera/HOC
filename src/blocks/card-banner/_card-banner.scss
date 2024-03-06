@@ -2,7 +2,7 @@
 .card-banner {
   display: grid;
   inline-size: 100%;
-  min-block-size: clamp(12em, 55vw, 40.625em);
+  min-block-size: clamp(9.375rem, 2.6188rem + 28.8263vw, 28.5625rem);
   background-color: var(--main-text-color);
   background-size: cover;
   background-position: center;
