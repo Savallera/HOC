@@ -627,6 +627,39 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+  // Вкладки
+  if (document.querySelector('.tabs')) {
+    const tabContainer = document.querySelector('.tabs');
+    const tabButtons = tabContainer.querySelectorAll('.tabs__button');
+    const tabSections = tabContainer.querySelectorAll('.tabs__section');
+    const openTabSection = function (element) {
+      removeActiveClass();
+      element.classList.add('tabs__button--actived');
+      element.dataset.tabIndex;
+      element
+        .closest('.tabs')
+        .querySelector(
+          `.tabs__section[data-tab-index="${element.dataset.tabIndex}"]`
+        )
+        .classList.add('tabs__section--opened');
+    };
+
+    const removeActiveClass = function () {
+      for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove('tabs__button--actived');
+        tabSections[i].classList.remove('tabs__section--opened');
+      }
+    };
+
+    tabButtons.forEach((button) =>
+      button.addEventListener('click', () => {
+        openTabSection(button);
+      })
+    );
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
     // Слайдер тестов на главной странице
     if (document.querySelector('#tests-slider')) {
@@ -664,54 +697,6 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       testsImageSlider.mount();
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  // Вкладки
-  if (document.querySelector('.tabs')) {
-    const tabContainer = document.querySelector('.tabs');
-    const tabButtons = tabContainer.querySelectorAll('.tabs__button');
-    const tabSections = tabContainer.querySelectorAll('.tabs__section');
-    const openTabSection = function (element) {
-      removeActiveClass();
-      element.classList.add('tabs__button--actived');
-      element.dataset.tabIndex;
-      element
-        .closest('.tabs')
-        .querySelector(
-          `.tabs__section[data-tab-index="${element.dataset.tabIndex}"]`
-        )
-        .classList.add('tabs__section--opened');
-    };
-
-    const removeActiveClass = function () {
-      for (let i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove('tabs__button--actived');
-        tabSections[i].classList.remove('tabs__section--opened');
-      }
-    };
-
-    tabButtons.forEach((button) =>
-      button.addEventListener('click', () => {
-        openTabSection(button);
-      })
-    );
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  if (Splide) {
-    // Главный баннер на главной странице
-    if (document.querySelector('#top-banner-slider')) {
-      let topBannerSlider = new Splide('#top-banner-slider', {
-        type: 'fade',
-        rewind: true,
-        autoplay: true,
-        arrows: false,
-      });
-      topBannerSlider.mount();
     }
   }
 });
@@ -831,6 +816,21 @@ window.addEventListener('DOMContentLoaded', () => {
         gap: 'clamp(.625em, 2vw, 1.25em)',
       });
       addArticleImageSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (Splide) {
+    // Главный баннер на главной странице
+    if (document.querySelector('#top-banner-slider')) {
+      let topBannerSlider = new Splide('#top-banner-slider', {
+        type: 'fade',
+        rewind: true,
+        autoplay: true,
+        arrows: false,
+      });
+      topBannerSlider.mount();
     }
   }
 });
