@@ -6,9 +6,11 @@
       @@include("../blocks/header/header.html")
       <main class="page__content">
         <!-- Секция с подкастами -->
-        <section class="page__section podcasts">
+        <section class="page__section">
           <h1 class="page__heading">Подкасты</h1>
           @@include("../blocks/search/search-place-podcasts.html")
+        </section>
+        <section class="page__section">
           <script
             type="text/javascript"
             src="//vk.com/js/api/openapi.js?169"
@@ -38,7 +40,10 @@
               ></div>
             </li>
           </ul>
-          <button class="button page__more-button text-gradient" type="button">
+          <button
+            class="button page__more-button text-gradient"
+            type="button"
+          >
             <span class="button__text">Смотреть еще</span>
           </button>
         </section>

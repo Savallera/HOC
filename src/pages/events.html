@@ -5,10 +5,12 @@
     <div class="page">
       @@include("../blocks/header/header.html")
       <main class="page__content">
-        <section class="events page__section">
+        <section class="page__section">
           <h1 class="page__heading">События</h1>
           @@include("../blocks/search/search-place-events.html")
-          <!-- Слайдер событий -->
+        </section>
+        <!-- Слайдер событий -->
+        <section class="page__section">
           <div class="splide" id="events-slider">
             <div class="splide__track">
               <ul class="splide__list">
@@ -113,149 +115,6 @@
           </div>
         </section>
         @@include("../blocks/theme/theme-place-events.html")
-        <!-- Отображение карточек событий в сетке 2 в ряд -->
-        <section class="page__section">
-          <ul class="page__card-deck page__card-deck--size-lg">
-            <li>
-              <a href="./event-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
-                <article class="card card--size-md">
-                  <img
-                    class="card__image"
-                    loading="lazy"
-                    src="https://sevkavportal.ru/media/k2/galleries/62166/4.png"
-                    alt="Описание изображения"
-                  />
-                  <div class="card__main-content">
-                    <h2 class="card__title">
-                      Конкурс «Россия — незападный мир»
-                    </h2>
-                    <p class="card__description text-rows text-rows--three">
-                      Международный молодежный центр РУДН совместно с
-                      Минобрнауки России и платформой «Дигория» запускает
-                      конкурс-практикум
-                    </p>
-                    <div class="card__controls">
-                      <address class="card__address">
-                        <p class="card__address-text text-gradient">
-                          <span
-                            class="card__address-icon icon icon--type-calendar"
-                            aria-hidden="true"
-                          ></span>
-                          29 сентября 2023
-                        </p>
-                        <p class="card__address-text text-gradient">
-                          <span
-                            class="card__address-icon icon icon--type-location"
-                            aria-hidden="true"
-                          ></span>
-                          г. Сочи, ул. Просвещения, 139
-                        </p>
-                      </address>
-                      <button
-                        type="button"
-                        class="card__like-button icon-button icon icon--type-like"
-                        aria-label="Нравится"
-                      ></button>
-                    </div>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li>
-              <a href="./event-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
-                <article class="card card--size-md">
-                  <img
-                    class="card__image"
-                    loading="lazy"
-                    src="https://sevkavportal.ru/media/k2/galleries/62166/4.png"
-                    alt="Описание изображения"
-                  />
-                  <div class="card__main-content">
-                    <h2 class="card__title">
-                      Конкурс «Россия — незападный мир»
-                    </h2>
-                    <p class="card__description text-rows text-rows--three">
-                      Международный молодежный центр РУДН совместно с
-                      Минобрнауки России и платформой «Дигория» запускает
-                      конкурс-практикум
-                    </p>
-                    <div class="card__controls">
-                      <address class="card__address">
-                        <p class="card__address-text text-gradient">
-                          <span
-                            class="card__address-icon icon icon--type-calendar"
-                            aria-hidden="true"
-                          ></span>
-                          29 сентября 2023
-                        </p>
-                        <p class="card__address-text text-gradient">
-                          <span
-                            class="card__address-icon icon icon--type-location"
-                            aria-hidden="true"
-                          ></span>
-                          г. Сочи, ул. Просвещения, 139
-                        </p>
-                      </address>
-                      <button
-                        type="button"
-                        class="card__like-button icon-button icon icon--type-like"
-                        aria-label="Нравится"
-                      ></button>
-                    </div>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li>
-              <a href="./event-article.html" class="card-link card-link--hover-card" rel="noopener ugs">
-                <article class="card card--size-md">
-                  <img
-                    class="card__image"
-                    loading="lazy"
-                    src="https://sevkavportal.ru/media/k2/galleries/62166/4.png"
-                    alt="Описание изображения"
-                  />
-                  <div class="card__main-content">
-                    <h2 class="card__title">
-                      Конкурс «Россия — незападный мир»
-                    </h2>
-                    <p class="card__description text-rows text-rows--three">
-                      Международный молодежный центр РУДН совместно с
-                      Минобрнауки России и платформой «Дигория» запускает
-                      конкурс-практикум
-                    </p>
-                    <div class="card__controls">
-                      <address class="card__address">
-                        <p class="card__address-text text-gradient">
-                          <span
-                            class="card__address-icon icon icon--type-calendar"
-                            aria-hidden="true"
-                          ></span>
-                          29 сентября 2023
-                        </p>
-                        <p class="card__address-text text-gradient">
-                          <span
-                            class="card__address-icon icon icon--type-location"
-                            aria-hidden="true"
-                          ></span>
-                          г. Сочи, ул. Просвещения, 139
-                        </p>
-                      </address>
-                      <button
-                        type="button"
-                        class="card__like-button icon-button icon icon--type-like"
-                        aria-label="Нравится"
-                      ></button>
-                    </div>
-                  </div>
-                </article>
-              </a>
-            </li>
-          </ul>
-          <button class="button page__more-button text-gradient" type="button">
-            <span class="button__text">Смотреть еще</span>
-          </button>
-        </section>
       </main>
       @@include("../blocks/footer/footer.html")
       @@include("../blocks/modal/modal-place-search-content-filters.html")
