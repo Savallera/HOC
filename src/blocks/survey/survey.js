@@ -12,4 +12,17 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  if (Splide) {
+    // Слайдер с квизами на главной странице
+    if (document.querySelector('#survey-slider')) {
+      let eventsSlider = new Splide('#survey-slider', {
+        rewind: true,
+        autoplay: true,
+        arrows: false,
+        gap: 'var(--gap-slider)',
+      });
+      eventsSlider.mount();
+    }
+  }
 });
