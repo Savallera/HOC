@@ -1,32 +1,5 @@
 
 window.addEventListener('DOMContentLoaded', () => {
-  // Аккордеоны
-  if (document.querySelector('.accordion')) {
-    const accordionsButtons =
-      document.getElementsByClassName('accordion__button');
-
-    for (i = 0; i < accordionsButtons.length; i++) {
-      accordionsButtons[i].addEventListener('click', function () {
-        this.closest('.accordion').classList.toggle('accordion--actived');
-        let icon = this.querySelector('.accordion__icon');
-        let container = this.nextElementSibling;
-        if (container.style.maxHeight) {
-          this.setAttribute('aria-label', 'Развернуть');
-          container.style.maxHeight = null;
-          icon.classList.add('icon--type-plus');
-          icon.classList.remove('icon--type-minus');
-        } else {
-          this.setAttribute('aria-label', 'Свернуть');
-          container.style.maxHeight = container.scrollHeight + 'px';
-          icon.classList.add('icon--type-minus');
-          icon.classList.remove('icon--type-plus');
-        }
-      });
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
     // Фотографии на странице детальной новости
     if (document.querySelector('#article-image-slider')) {
@@ -100,6 +73,33 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       authorsSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Аккордеоны
+  if (document.querySelector('.accordion')) {
+    const accordionsButtons =
+      document.getElementsByClassName('accordion__button');
+
+    for (i = 0; i < accordionsButtons.length; i++) {
+      accordionsButtons[i].addEventListener('click', function () {
+        this.closest('.accordion').classList.toggle('accordion--actived');
+        let icon = this.querySelector('.accordion__icon');
+        let container = this.nextElementSibling;
+        if (container.style.maxHeight) {
+          this.setAttribute('aria-label', 'Развернуть');
+          container.style.maxHeight = null;
+          icon.classList.add('icon--type-plus');
+          icon.classList.remove('icon--type-minus');
+        } else {
+          this.setAttribute('aria-label', 'Свернуть');
+          container.style.maxHeight = container.scrollHeight + 'px';
+          icon.classList.add('icon--type-minus');
+          icon.classList.remove('icon--type-plus');
+        }
+      });
     }
   }
 });
@@ -532,6 +532,25 @@ if (document.querySelector('.search__icon-button--role-notifications')) {
   });
 }
 
+/* Прелодер на страницы */
+const preloaderTmp = document.querySelector('.preloader-template');
+const page = document.querySelector('.page');
+function showPreloader(tmp, parent) {
+  const node = tmp.content.cloneNode(true);
+  parent.append(node);
+}
+function removePreloader(parent, preloaderSelector) {
+  const preloader = parent.querySelector(preloaderSelector);
+  if (preloader) {
+    preloader.remove();
+  }
+}
+
+showPreloader(preloaderTmp, page);
+setTimeout(() => {
+  removePreloader(page, '.preloader');
+}, 1200);
+
 window.addEventListener('DOMContentLoaded', () => {
     if (Splide) {
         // Слайдер новостей на главной странице
@@ -555,25 +574,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
-/* Прелодер на страницы */
-const preloaderTmp = document.querySelector('.preloader-template');
-const page = document.querySelector('.page');
-function showPreloader(tmp, parent) {
-  const node = tmp.content.cloneNode(true);
-  parent.append(node);
-}
-function removePreloader(parent, preloaderSelector) {
-  const preloader = parent.querySelector(preloaderSelector);
-  if (preloader) {
-    preloader.remove();
-  }
-}
-
-showPreloader(preloaderTmp, page);
-setTimeout(() => {
-  removePreloader(page, '.preloader');
-}, 1200);
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
@@ -622,6 +622,19 @@ window.addEventListener('DOMContentLoaded', () => {
           'survey__form--show-result'
         );
       });
+    }
+  }
+
+  if (Splide) {
+    // Слайдер с квизами на главной странице
+    if (document.querySelector('#survey-slider')) {
+      let eventsSlider = new Splide('#survey-slider', {
+        rewind: true,
+        autoplay: true,
+        arrows: false,
+        gap: 'var(--gap-slider)',
+      });
+      eventsSlider.mount();
     }
   }
 });
