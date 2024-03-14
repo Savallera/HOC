@@ -8,7 +8,10 @@
         <!-- Секция с трансляциями -->
         <section class="page__section broadcasts">
           <a href="#0" class="button button--type-back">
-            <span class="button__icon icon icon--type-back" aria-hidden="true"></span>
+            <span
+              class="button__icon icon icon--type-back"
+              aria-hidden="true"
+            ></span>
             <span class="button__text">Назад</span>
           </a>
           <h1 class="page__heading">Трансляции</h1>
@@ -16,8 +19,9 @@
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <!-- Добавлен класс card--preview-button для открытия превью окна для просмотра трансляции и добавлен курсор палец -->
-                  <article class="card card--size-md card--role-preview-button card--role-broadcast">
+                  <article
+                    class="card card--size-md card--role-preview-button card--role-broadcast"
+                  >
                     <iframe
                       class="card__iframe"
                       src="https://www.youtube.com/embed/GYX7DaQVgUo?si=1rpOdUD4OecCbfAA"
@@ -54,7 +58,9 @@
                   </article>
                 </li>
                 <li class="splide__slide">
-                  <article class="card card--size-md card--role-preview-button card--role-broadcast">
+                  <article
+                    class="card card--size-md card--role-preview-button card--role-broadcast"
+                  >
                     <iframe
                       class="card__iframe"
                       src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
@@ -89,7 +95,9 @@
                   </article>
                 </li>
                 <li class="splide__slide">
-                  <article class="card card--size-md card--role-preview-button card--role-broadcast">
+                  <article
+                    class="card card--size-md card--role-preview-button card--role-broadcast"
+                  >
                     <iframe
                       class="card__iframe"
                       src="https://www.youtube.com/embed/90yXQIDnw_8?si=Eg0Zk0hKMeBd9TxB"
@@ -128,91 +136,73 @@
           </div>
           <div class="broadcasts__container">
             <div class="broadcasts__calendar"></div>
-            <div class="broadcasts__results">
-              <ul class="broadcasts__results-list">
-                <li>
-                  <a
-                    class="card-link"
-                    href="./broadcasts.html"
-                    rel="noopener ugs"
-                  >
-                    <div class="broadcasts__element">
-                      <time class="broadcasts__element-time" datetime="19:00"
-                        >19:00</time
-                      >
-                      <h3 class="broadcasts__element-title">
-                        Название трансляции
-                      </h3>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="card-link"
-                    href="./broadcasts.html"
-                    rel="noopener ugs"
-                  >
-                    <div class="broadcasts__element">
-                      <time class="broadcasts__element-time" datetime="19:00"
-                        >19:00</time
-                      >
-                      <h3 class="broadcasts__element-title">
-                        Название трансляции
-                      </h3>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="card-link"
-                    href="./broadcasts.html"
-                    rel="noopener ugs"
-                  >
-                    <div class="broadcasts__element">
-                      <time class="broadcasts__element-time" datetime="19:00"
-                        >19:00</time
-                      >
-                      <h3 class="broadcasts__element-title">
-                        Название трансляции
-                      </h3>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="card-link"
-                    href="./broadcasts.html"
-                    rel="noopener ugs"
-                  >
-                    <div class="broadcasts__element">
-                      <time class="broadcasts__element-time" datetime="19:00"
-                        >19:00</time
-                      >
-                      <h3 class="broadcasts__element-title">
-                        Название трансляции
-                      </h3>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="card-link"
-                    href="./broadcasts.html"
-                    rel="noopener ugs"
-                  >
-                    <div class="broadcasts__element">
-                      <time class="broadcasts__element-time" datetime="19:00"
-                        >19:00</time
-                      >
-                      <h3 class="broadcasts__element-title">
-                        Название трансляции
-                      </h3>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
+        </section>
+        <!-- Блок Ожидаемые отображается только на мобильных -->
+        <section class="page__section page__hidden-desktop">
+          <h2 class="page__heading">Ожидаемые</h2>
+          <ul class="page__card-deck">
+            <li>
+              <a
+                href="#0"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card">
+                  <div class="card__main-content">
+                    <h3 class="card__title text-rows text-rows--two">
+                      Трансляция по что-то
+                    </h3>
+                    <div class="card__controls">
+                      <p class="card__text text-gradient">
+                        23 октября <span>19:00</span>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#0"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card">
+                  <div class="card__main-content">
+                    <h3 class="card__title text-rows text-rows--two">
+                      Трансляция по что-то
+                    </h3>
+                    <div class="card__controls">
+                      <p class="card__text text-gradient">
+                        23 октября <span>19:00</span>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#0"
+                class="card-link card-link--hover-card"
+                rel="noopener ugs"
+              >
+                <article class="card">
+                  <div class="card__main-content">
+                    <h3 class="card__title text-rows text-rows--two">
+                      Трансляция по что-то
+                    </h3>
+                    <div class="card__controls">
+                      <p class="card__text text-gradient">
+                        23 октября <span>19:00</span>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
         </section>
         @@include("../blocks/theme/theme-place-broadcasts.html")
       </main>
