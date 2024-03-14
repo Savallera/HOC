@@ -69,4 +69,27 @@
       margin-inline: auto;
     }
   }
+
+  &--type-back {
+    align-self: start;
+    font-size: clamp(0.75em, 2vw, 1.25em);
+    color: var(--main-text-low-color);
+
+    .button__icon {
+      inline-size: 1em;
+    }
+
+    &:hover {
+      color: var(--accent-color);
+      background: var(--main-color-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-block-end-color: var(--accent-color);
+
+      .icon::before {
+        background: var(--main-color) var(--main-color-gradient) no-repeat
+          center;
+      }
+    }
+  }
 }
