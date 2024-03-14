@@ -41,25 +41,29 @@
 
   &__inner {
     margin-inline: var(--section-inline-start);
+    padding-block: var(--gap-section);
+    grid-area: 1/1/2/2;
+
+    @include media(md, max) {
+      padding-block: 1.5em;
+    }
   }
 
   &__columns {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: var(--gap-grid);
+    justify-content: space-between;
 
     @include media(md, max) {
       flex-direction: column;
+      text-align: center;
     }
   }
 
   &__logo-image {
-    margin-inline: auto;
-    inline-size: clamp(15em, 46vw, 28.75em);
-    block-size: clamp(15em, 46vw, 28.75em);
-    object-fit: contain;
-    object-position: center;
+    flex: none;
+    inline-size: clamp(12.5rem, 6.7782rem + 24.4131vw, 28.75rem);
 
     @include media(md) {
       order: 2;
@@ -90,6 +94,7 @@
   }
 
   &__title {
+    flex: auto;
     margin-block: 0;
     font-variation-settings: 'wght' 800;
     font-size: clamp(0.9375em, 4vw, 2.5em);
@@ -97,17 +102,15 @@
 
     &--size-lg {
       text-transform: unset;
-      font-size: clamp(1.25em, 6vw, 3.75em);
+      font-size: clamp(1.25rem, 0.3697rem + 3.7559vw, 3.75rem);
     }
   }
 
   &__title-span {
     display: block;
+    margin-block-start: clamp(0.75em, 2.4vw, 1.5em);
     font-variation-settings: 'wght' 400;
-
-    @include media(sm) {
-      font-size: 66.6666667%;
-    }
+    font-size: 66.6666667%;
   }
 
   &__button {
@@ -117,26 +120,16 @@
   }
 
   &--place-blog {
-    padding-block: var(--gap-section);
-    align-content: center;
-    &::before,
+    &::before {
+      background-image: linear-gradient(left, #000 0%, #00000000 70%);
+    }
+
     &::after {
       content: unset;
     }
 
     .banner__title {
-      @include media(md, max) {
-        text-align: center;
-      }
+      max-inline-size: 38rem;
     }
-  }
-
-  &--content-stud-smi {
-    min-block-size: 20em;
-  }
-
-  &--theme-light {
-    background: unset;
-    color: var(--main-text-color);
   }
 }
