@@ -1,0 +1,81 @@
+.reg-centers {
+  // &__container {}
+
+  &__list {
+    padding: 0;
+    margin-block: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 0.875em;
+  }
+
+  &__card-image {
+    flex: 0 0 clamp(3em, 8vw, 5em);
+
+    position: relative;
+    overflow: hidden;
+    background-color: var(--main-text-low-color);
+    inline-size: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+
+    &:after {
+      content: attr(alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75em;
+      padding: 0.75em;
+      color: var(--main-text-color);
+
+      position: absolute;
+      inset: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      text-align: center;
+      background-image: linear-gradient(
+        to bottom,
+        #ccc 0%,
+        #eee 50%,
+        #ccc 100%
+      );
+    }
+  }
+
+  &__card-main-content {
+  }
+
+  &__card-title {
+    margin-block: 0 0.5rem;
+    font-variation-settings: 'wght' 800;
+    font-size: clamp(1em, 3vw, 1.875em);
+  }
+
+  &__link {
+    font-variation-settings: 'wght' 500;
+    font-size: clamp(0.625em, 1.6vw, 1em);
+    border-block-end: 1px solid;
+    transition: opacity 0.35s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid;
+    }
+  }
+}
