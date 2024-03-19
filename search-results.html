@@ -936,25 +936,24 @@
     ></button>
     <form class="form" name="sign-up-modal" action="">
       <p class="form__subtitle">
-        Регистрируйся здесь и развивай студСМИ с нами!
+        Как стать активистом Студенческого медиацентра <br />
+        МИНОБРНАУКИ РОССИИ
       </p>
       <p class="form__description form__description--size-xl form__order-item">
         Заполните форму участника студенческого медиацентра:
       </p>
       <div class="field">
-        <label
-          for="sign-up-modal-first-name"
-          class="field__label visually-hidden"
-          >Имя</label
+        <label for="sign-up-modal-fio" class="field__label visually-hidden"
+          >ФИО</label
         >
         <div class="field__inner">
           <input
             type="text"
             class="field__input"
-            placeholder="Введите имя"
-            autocomplete="first-name"
-            name="first-name"
-            id="sign-up-modal-first-name"
+            placeholder="Введите ФИО"
+            autocomplete=""
+            name="name"
+            id="sign-up-modal-fio"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -965,18 +964,78 @@
       </div>
       <div class="field">
         <label
-          for="sign-up-modal-family-name"
+          for="sign-up-modal-university"
           class="field__label visually-hidden"
-          >Фамилия</label
+          >Наименование вуза</label
         >
         <div class="field__inner">
           <input
             type="text"
             class="field__input"
-            placeholder="Введите фамилию"
-            autocomplete="family-name"
-            name="family-name"
-            id="sign-up-modal-family-name"
+            placeholder="Введите наименование вуза"
+            autocomplete=""
+            name="university"
+            id="sign-up-modal-university"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="sign-up-modal-stud-smi" class="field__label visually-hidden"
+          >Наименование студенческого СМИ (если состоите)</label
+        >
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите наименование студенческого СМИ (если состоите)"
+            autocomplete=""
+            name="stud-smi"
+            id="sign-up-modal-stud-smi"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="sign-up-modal-faculty" class="field__label visually-hidden"
+          >Факультет</label
+        >
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите факультет"
+            autocomplete=""
+            name="faculty"
+            id="sign-up-modal-faculty"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="sign-up-modal-burthday" class="field__label visually-hidden"
+          >Дата рождения</label
+        >
+        <div class="field__inner">
+          <input
+            type="date"
+            class="field__input"
+            placeholder="Введите дату рождения"
+            autocomplete="burthday"
+            name="burthday"
+            id="sign-up-modal-burthday"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -987,35 +1046,113 @@
       </div>
       <div class="field">
         <label
-          for="sign-up-modal-middle-name"
+          for="sign-up-modal-burthday-place"
           class="field__label visually-hidden"
-          >Отчество</label
+          >Место рождения</label
         >
         <div class="field__inner">
           <input
             type="text"
             class="field__input"
-            placeholder="Введите отчество"
-            autocomplete="middle-name"
-            name="middle-name"
-            id="sign-up-modal-middle-name"
+            placeholder="Введите место рождения"
+            autocomplete=""
+            name="burthday-place"
+            id="sign-up-modal-burthday-place"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
             class="field__error-icon icon icon--type-error"
             aria-hidden="true"
           ></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="sign-up-modal-city" class="field__label visually-hidden"
+          >Место проживания (город)</label
+        >
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Введите место проживания (город)"
+            autocomplete="city"
+            name="city"
+            id="sign-up-modal-city"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field field--with-controls">
+        <label
+          for="sign-up-modal-direction-work"
+          class="field__label visually-hidden"
+          >Направление работы в медиа</label
+        >
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Выберите направление работы в медиа"
+            name="direction-work"
+            id="sign-up-modal-direction-work"
+            disabled
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+          <div class="field__controls">
+            <button
+              type="button"
+              class="field__control-icon field__control-icon--role-direction-work icon-button icon icon--type-plus-alternate"
+              aria-label="Выбрать из списка"
+            ></button>
+          </div>
+        </div>
+      </div>
+      <div class="field field--with-controls">
+        <label
+          for="sign-up-modal-area-interest"
+          class="field__label visually-hidden"
+          >Сфера интересов</label
+        >
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            placeholder="Выберите сферу интересов"
+            name="area-interest"
+            id="sign-up-modal-area-interest"
+            disabled
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+          <div class="field__controls">
+            <button
+              type="button"
+              class="field__control-icon field__control-icon--role-area-interest icon-button icon icon--type-plus-alternate"
+              aria-label="Выбрать из списка"
+            ></button>
+          </div>
         </div>
       </div>
       <div class="field">
         <label for="sign-up-modal-tel" class="field__label visually-hidden"
-          >Телефон</label
+          >Контактный телефон</label
         >
         <div class="field__inner">
           <input
             type="tel"
             class="field__input"
-            placeholder="Введите телефон"
+            placeholder="Введите контактный телефон"
             autocomplete="tel"
             name="tel"
             id="sign-up-modal-tel"
@@ -1028,17 +1165,17 @@
         </div>
       </div>
       <div class="field">
-        <label for="sign-up-modal-email" class="field__label visually-hidden"
-          >E-mail</label
+        <label for="sign-up-modal-telegram" class="field__label visually-hidden"
+          >Ник в Телеграм</label
         >
         <div class="field__inner">
           <input
-            type="email"
+            type="text"
             class="field__input"
-            placeholder="Введите e-mail"
-            autocomplete="email"
-            name="email"
-            id="sign-up-modal-email"
+            placeholder="Введите ник в Телеграме"
+            autocomplete=""
+            name="telegram"
+            id="sign-up-modal-telegram"
           />
           <span class="field__error-text">Вывод ошибки</span>
           <span
@@ -1046,39 +1183,6 @@
             aria-hidden="true"
           ></span>
         </div>
-      </div>
-      <div class="field">
-        <label for="feedback-field-message" class="field__label visually-hidden"
-          >Ваше обращение</label
-        >
-        <div class="field__inner">
-          <textarea
-            class="field__input"
-            name="message"
-            rows="5"
-            placeholder="Введите текст обращения"
-            id="feedback-field-message"
-          ></textarea>
-          <span class="field__error-text">Вывод ошибки</span>
-          <span
-            class="field__error-icon icon icon--type-error"
-            aria-hidden="true"
-          ></span>
-        </div>
-      </div>
-      <div class="field field--content-file">
-        <label for="feedback-field-file" class="field__label"
-          ><span
-            class="icon icon--type-attach field__label-icon"
-            aria-hidden="true"
-          ></span
-          >Прикрепите или загрузите файл
-          <input
-            type="file"
-            class="visually-hidden"
-            name="file"
-            id="feedback-field-file"
-        /></label>
       </div>
       <div class="field field--content-checkbox">
         <label for="feedback-field-privacy" class="field__label">

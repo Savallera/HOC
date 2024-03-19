@@ -835,9 +835,88 @@
   </div>
 </section>
 
-        <section class="page__section">
-          <h2 class="page__title">Карта региональных центров и студенческих СМИ</h2>
-          <div>карта</div>
+        <section class="page__section reg-centers">
+          <form class="search__form" name="reg-centers-search" action="">
+            <div class="page__title-block">
+              <h2 class="page__title">Региональные центры студенческих СМИ</h2>
+              <button
+                type="button"
+                class="button page__link text-gradient reg-centers__button"
+                rel="noopener ugs"
+              >
+                <span class="button__text"> Показать списком </span>
+              </button>
+            </div>
+            <div class="field field--theme-white">
+              <label
+                for="reg-centers-search-field"
+                class="field__label visually-hidden"
+                >Поиск
+              </label>
+              <div class="field__inner">
+                <input
+                  type="search"
+                  class="field__input"
+                  placeholder="Регион, город"
+                  name="search"
+                  id="reg-centers-search-field"
+                />
+              </div>
+            </div>
+          </form>
+          <div
+            class="reg-centers__container reg-centers__container--content-map"
+          >
+            карта
+          </div>
+          <div
+            class="reg-centers__container reg-centers__container--content-list visually-hidden"
+          >
+            <ul class="reg-centers__list">
+              <li>
+                <article class="reg-centers__card">
+                  <img
+                    class="reg-centers__card-image"
+                    src="http://studentsmi.webrise.ru/local/templates/wr_studsmi/images/logo--place-footer.svg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div class="reg-centers__card-main-content">
+                    <h3 class="reg-centers__card-title">
+                      Самое длинное название региона Российской федерации
+                    </h3>
+                    <a
+                      a
+                      href="#0"
+                      rel="noopener ugs"
+                      class="reg-centers__link text-gradient"
+                      >Подробнее</a
+                    >
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="reg-centers__card">
+                  <img
+                    class="reg-centers__card-image"
+                    src="http://studentsmi.webrise.ru/local/templates/wr_studsmi/images/logo--place-footer.svg"
+                    alt="Описание изображения"
+                    loading="lazy"
+                  />
+                  <div class="reg-centers__card-main-content">
+                    <h3 class="reg-centers__card-title">Название региона</h3>
+                    <a
+                      a
+                      href="#0"
+                      rel="noopener ugs"
+                      class="reg-centers__link text-gradient"
+                      >Подробнее</a
+                    >
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
           <a
             class="button button--theme-gradient button--justify-center"
             href="./application-for-membership.html"

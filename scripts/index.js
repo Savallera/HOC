@@ -1,5 +1,32 @@
 
 window.addEventListener('DOMContentLoaded', () => {
+  // Аккордеоны
+  if (document.querySelector('.accordion')) {
+    const accordionsButtons =
+      document.getElementsByClassName('accordion__button');
+
+    for (i = 0; i < accordionsButtons.length; i++) {
+      accordionsButtons[i].addEventListener('click', function () {
+        this.closest('.accordion').classList.toggle('accordion--actived');
+        let icon = this.querySelector('.accordion__icon');
+        let container = this.nextElementSibling;
+        if (container.style.maxHeight) {
+          this.setAttribute('aria-label', 'Развернуть');
+          container.style.maxHeight = null;
+          icon.classList.add('icon--type-plus');
+          icon.classList.remove('icon--type-minus');
+        } else {
+          this.setAttribute('aria-label', 'Свернуть');
+          container.style.maxHeight = container.scrollHeight + 'px';
+          icon.classList.add('icon--type-minus');
+          icon.classList.remove('icon--type-plus');
+        }
+      });
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
     // Фотографии на странице детальной новости
     if (document.querySelector('#article-image-slider')) {
@@ -73,33 +100,6 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       authorsSlider.mount();
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  // Аккордеоны
-  if (document.querySelector('.accordion')) {
-    const accordionsButtons =
-      document.getElementsByClassName('accordion__button');
-
-    for (i = 0; i < accordionsButtons.length; i++) {
-      accordionsButtons[i].addEventListener('click', function () {
-        this.closest('.accordion').classList.toggle('accordion--actived');
-        let icon = this.querySelector('.accordion__icon');
-        let container = this.nextElementSibling;
-        if (container.style.maxHeight) {
-          this.setAttribute('aria-label', 'Развернуть');
-          container.style.maxHeight = null;
-          icon.classList.add('icon--type-plus');
-          icon.classList.remove('icon--type-minus');
-        } else {
-          this.setAttribute('aria-label', 'Свернуть');
-          container.style.maxHeight = container.scrollHeight + 'px';
-          icon.classList.add('icon--type-minus');
-          icon.classList.remove('icon--type-plus');
-        }
-      });
     }
   }
 });
@@ -265,6 +265,58 @@ if (document.querySelector('.sign-up')) {
       evt.target.classList.contains('modal__close-button')
     ) {
       closeSignUpModal();
+    }
+  });
+}
+
+// Модальное окно с формой присоединиться к проекту, открытие выбора Направления работы в медиа
+if (document.querySelector('.sign-up')) {
+  const directionWorkButton = document.querySelector(
+    '.field__control-icon--role-direction-work'
+  );
+  const directionWorkModal = document.querySelector(
+    '.modal--content-direction-work'
+  );
+  const openDirectionWorkModal = function () {
+    directionWorkModal.classList.add('modal--opened');
+  };
+  const closeDirectionWorkModal = function () {
+    directionWorkModal.classList.remove('modal--opened');
+  };
+
+  directionWorkButton.addEventListener('click', openDirectionWorkModal);
+  directionWorkModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-direction-work') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeDirectionWorkModal();
+    }
+  });
+}
+
+// Модальное окно с формой присоединиться к проекту, открытие выбора Сфера интересов
+if (document.querySelector('.sign-up')) {
+  const areaInterestButton = document.querySelector(
+    '.field__control-icon--role-area-interest'
+  );
+  const areaInterestModal = document.querySelector(
+    '.modal--content-area-interest'
+  );
+  const openAreaInterestModal = function () {
+    areaInterestModal.classList.add('modal--opened');
+  };
+  const closeAreaInterestModal = function () {
+    areaInterestModal.classList.remove('modal--opened');
+  };
+
+  areaInterestButton.addEventListener('click', openAreaInterestModal);
+  areaInterestModal.addEventListener('click', (evt) => {
+    if (
+      evt.target.classList.contains('modal--content-area-interest') ||
+      evt.target.classList.contains('modal__close-button')
+    ) {
+      closeAreaInterestModal();
     }
   });
 }
@@ -532,25 +584,6 @@ if (document.querySelector('.search__icon-button--role-notifications')) {
   });
 }
 
-/* Прелодер на страницы */
-const preloaderTmp = document.querySelector('.preloader-template');
-const page = document.querySelector('.page');
-function showPreloader(tmp, parent) {
-  const node = tmp.content.cloneNode(true);
-  parent.append(node);
-}
-function removePreloader(parent, preloaderSelector) {
-  const preloader = parent.querySelector(preloaderSelector);
-  if (preloader) {
-    preloader.remove();
-  }
-}
-
-showPreloader(preloaderTmp, page);
-setTimeout(() => {
-  removePreloader(page, '.preloader');
-}, 1200);
-
 window.addEventListener('DOMContentLoaded', () => {
     if (Splide) {
         // Слайдер новостей на главной странице
@@ -574,6 +607,57 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+/* Прелодер на страницы */
+const preloaderTmp = document.querySelector('.preloader-template');
+const page = document.querySelector('.page');
+function showPreloader(tmp, parent) {
+  const node = tmp.content.cloneNode(true);
+  parent.append(node);
+}
+function removePreloader(parent, preloaderSelector) {
+  const preloader = parent.querySelector(preloaderSelector);
+  if (preloader) {
+    preloader.remove();
+  }
+}
+
+showPreloader(preloaderTmp, page);
+setTimeout(() => {
+  removePreloader(page, '.preloader');
+}, 1200);
+
+// Переключение карты региона по клику на список регионов
+if (document.querySelector('.reg-centers')) {
+  const regCentersButton = document.querySelector('.reg-centers__button');
+  const regCentersMapContainer = document.querySelector(
+    '.reg-centers__container--content-map'
+  );
+  const regCentersListContainer = document.querySelector(
+    '.reg-centers__container--content-list'
+  );
+  const openRegCentersListContainer = function () {
+    regCentersMapContainer.classList.add('visually-hidden');
+    regCentersListContainer.classList.remove('visually-hidden');
+  };
+  const openRegCentersMapContainer = function () {
+    regCentersListContainer.classList.add('visually-hidden');
+    regCentersMapContainer.classList.remove('visually-hidden');
+  };
+  const toggleRegCenters = function () {
+    if (regCentersListContainer.classList.contains('visually-hidden')) {
+      openRegCentersListContainer();
+      regCentersButton.querySelector('.button__text').textContent =
+        'Показать на карте';
+    } else {
+      openRegCentersMapContainer();
+      regCentersButton.querySelector('.button__text').textContent =
+        'Показать списком';
+    }
+  };
+
+  regCentersButton.addEventListener('click', toggleRegCenters);
+}
 
 window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
