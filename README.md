@@ -11,41 +11,45 @@
 
 Страницы проекта:
 
-* [Главная](https://savallera.github.io/HOC/index.html)
-* [Студенческий медиацентр](https://savallera.github.io/HOC/stud-smi.html)
-* [Новости](https://savallera.github.io/HOC/news.html)
-* [Детальная новость](https://savallera.github.io/HOC/event-article.html)
-* [События](https://savallera.github.io/HOC/events.html)
-* [Детальное событие](https://savallera.github.io/HOC/event-article.html)
-* [База студСМИ](https://savallera.github.io/HOC/stud-smi-base.html)
-* [О проекте](https://savallera.github.io/HOC/about.html)
-* [Подкасты](https://savallera.github.io/HOC/podcasts.html)
-* [Трансляции](https://savallera.github.io/HOC/broadcasts.html)
-* [Тесты](https://savallera.github.io/HOC/tests.html)
-* [Тест детально с видео](https://savallera.github.io/HOC/test-article.html)
-* [Тест детально с текстом](https://savallera.github.io/HOC/test-article-text.html)
-* [Тест детально со слайдером](https://savallera.github.io/HOC/test-article-image.html)
-* [Тест детально результат теста](https://savallera.github.io/HOC/test-article-result.html)
-* [База знаний](https://savallera.github.io/HOC/knowledge-base.html)
-* [База знаний детально](https://savallera.github.io/HOC/knowledge-base-article.html)
-* [Мастерская по производству контента](https://savallera.github.io/HOC/workshops.html)
-* [Мастерская по производству контента детально](https://savallera.github.io/HOC/workshops-article.html)
-* [Правила публикации](https://savallera.github.io/HOC/publishing-rule.html)
-* [Результаты поиска](https://savallera.github.io/HOC/search-results.html)
+* [Главная](https://savallera.github.io/HOC/index.html){:target="_blank"}
+* [Студенческий медиацентр](https://savallera.github.io/HOC/stud-smi.html){:target="_blank"}
+* [Новости](https://savallera.github.io/HOC/news.html){:target="_blank"}
+* [Детальная новость](https://savallera.github.io/HOC/event-article.html){:target="_blank"}
+* [События](https://savallera.github.io/HOC/events.html){:target="_blank"}
+* [Детальное событие](https://savallera.github.io/HOC/event-article.html){:target="_blank"}
+* [База студСМИ](https://savallera.github.io/HOC/stud-smi-base.html){:target="_blank"}
+* [О проекте](https://savallera.github.io/HOC/about.html){:target="_blank"}
+* [Подкасты](https://savallera.github.io/HOC/podcasts.html){:target="_blank"}
+* [Трансляции](https://savallera.github.io/HOC/broadcasts.html){:target="_blank"}
+* [Тесты](https://savallera.github.io/HOC/tests.html){:target="_blank"}
+* [Тест детально с видео](https://savallera.github.io/HOC/test-article.html){:target="_blank"}
+* [Тест детально с текстом](https://savallera.github.io/HOC/test-article-text.html){:target="_blank"}
+* [Тест детально со слайдером](https://savallera.github.io/HOC/test-article-image.html){:target="_blank"}
+* [Тест детально результат теста](https://savallera.github.io/HOC/test-article-result.html){:target="_blank"}
+* [База знаний](https://savallera.github.io/HOC/knowledge-base.html){:target="_blank"}
+* [База знаний детально](https://savallera.github.io/HOC/knowledge-base-article.html){:target="_blank"}
+* [Мастерская по производству контента](https://savallera.github.io/HOC/workshops.html){:target="_blank"}
+* [Мастерская по производству контента детально](https://savallera.github.io/HOC/workshops-article.html){:target="_blank"}
+* [Правила публикации](https://savallera.github.io/HOC/publishing-rule.html){:target="_blank"}
+* [Результаты поиска](https://savallera.github.io/HOC/search-results.html){:target="_blank"}
 
-* [Заявка на вступление](https://savallera.github.io/HOC/application-for-membership.html)
-* [Авторизация](https://savallera.github.io/HOC/sign-in.html)
-* [Регистрация](https://savallera.github.io/HOC/sign-up.html)
-* [Восстановление пароля](https://savallera.github.io/HOC/resume.html)
+---
 
-* [Блог региональной площадки](https://savallera.github.io/HOC/blog-regional-site.html)
-* [Блог студСМИ](https://savallera.github.io/HOC/blog-stud-smi.html)
-* [ЛК студента](https://savallera.github.io/HOC/personal-account-student.html)
-* [ЛК активиста](https://savallera.github.io/HOC/personal-account-activist.html)
-* [ЛК автора](https://savallera.github.io/HOC/personal-account-author.html)
-* [ЛК координатора проекта](https://savallera.github.io/HOC/personal-account-project-coordinator.html)
-* [ЛК региональной площадки](https://savallera.github.io/HOC/personal-account-regional-site.html)
-* [ЛК студСМИ](https://savallera.github.io/HOC/personal-account-stud-smi.html)
+* [Заявка на вступление](https://savallera.github.io/HOC/application-for-membership.html){:target="_blank"}
+* [Авторизация](https://savallera.github.io/HOC/sign-in.html){:target="_blank"}
+* [Регистрация](https://savallera.github.io/HOC/sign-up.html){:target="_blank"}
+* [Восстановление пароля](https://savallera.github.io/HOC/resume.html){:target="_blank"}
+
+---
+
+* [Блог региональной площадки](https://savallera.github.io/HOC/blog-regional-site.html){:target="_blank"}
+* [Блог студСМИ](https://savallera.github.io/HOC/blog-stud-smi.html){:target="_blank"}
+* [ЛК студента](https://savallera.github.io/HOC/personal-account-student.html){:target="_blank"}
+* [ЛК активиста](https://savallera.github.io/HOC/personal-account-activist.html){:target="_blank"}
+* [ЛК автора](https://savallera.github.io/HOC/personal-account-author.html){:target="_blank"}
+* [ЛК координатора проекта](https://savallera.github.io/HOC/personal-account-project-coordinator.html){:target="_blank"}
+* [ЛК региональной площадки](https://savallera.github.io/HOC/personal-account-regional-site.html){:target="_blank"}
+* [ЛК студСМИ](https://savallera.github.io/HOC/personal-account-stud-smi.html){:target="_blank"}
 
 
 Команды
