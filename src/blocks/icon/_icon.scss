@@ -47,6 +47,9 @@
     &-eye::before {
       mask-image: url('../images/icons.svg#eye');
     }
+    &-filter::before {
+      mask-image: url('../images/icons.svg#filter');
+    }
     &-like::before {
       mask-image: url('../images/icons.svg#like');
     }

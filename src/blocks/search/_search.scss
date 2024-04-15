@@ -53,6 +53,10 @@
     }
   }
 
+  &__field {
+    flex: auto;
+  }
+
   // Кол-во на модерации
   &__icon-button {
     padding: 0;
@@ -79,6 +83,26 @@
       &:hover::before {
         background: var(--main-color) var(--main-color-gradient) no-repeat;
       }
+    }
+  }
+
+  &__filtering-button {
+    padding: 0.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    inline-size: clamp(2.5em, 5.8vw, 3.625em);
+    block-size: clamp(2.5em, 5.8vw, 3.625em);
+    background-color: var(--main-text-low-color);
+    color: rgba(black, 0.2);
+    transition: all 0.35s;
+
+    &:hover,
+    &--actived {
+      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      color: var(--accent-text-color);
     }
   }
 

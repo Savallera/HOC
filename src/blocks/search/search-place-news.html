@@ -44,29 +44,36 @@
         </label>
       </div>
     </div>
-    <div class="field field--theme-white">
-      <label for="page-search-field" class="field__label visually-hidden"
-        >Поиск
-      </label>
-      <div class="field__inner">
-        <span
-          class="field__search-icon icon icon--type-search"
-          aria-hidden="true"
-        ></span>
-        <input
-          type="search"
-          class="field__input"
-          placeholder="Поиск "
-          name="search"
-          id="page-search-field"
-        />
-        <span class="field__error-text">Вывод ошибки</span>
-        <span
-          class="field__error-icon icon icon--type-error"
-          aria-hidden="true"
-        ></span>
+    <fieldset class="search__inner">
+      <div class="field field--theme-white search__field">
+        <label for="page-search-field" class="field__label visually-hidden"
+          >Поиск
+        </label>
+        <div class="field__inner">
+          <span
+            class="field__search-icon icon icon--type-search"
+            aria-hidden="true"
+          ></span>
+          <input
+            type="search"
+            class="field__input"
+            placeholder="Поиск "
+            name="search"
+            id="page-search-field"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
       </div>
-    </div>
+      <button
+        type="button"
+        class="search__filtering-button icon icon--type-filter"
+        aria-label="Фильтр"
+      ></button>
+    </fieldset>
     <fieldset class="search__inner">
       <label class="search__filter-label" for="search-radio-theme-all">
         <input
