@@ -1,0 +1,84 @@
+<!-- Модальное окно для регистрации ВК -->
+<div class="modal modal--size-wide modal--content-contest">
+  <div class="modal__container">
+    <button
+      type="reset"
+      class="modal__close-button"
+      aria-label="Закрыть"
+    ></button>
+    <form class="form" name="sign-up-vk-modal" action="">
+      <div class="form__header">
+        <h2 class="form__title form__title--size-lg">Авторизация</h2>
+        <p class="form__description">
+          Добро пожаловать в студенческого медиацентра Минобрнауки России!
+        </p>
+        <div class="form__logo"></div>
+      </div>
+      <div class="field field--size-lg field--with-indent">
+        <div class="form__flex-group">
+          <label class="field__label"> Телефон, электронная почта</label>
+          <a
+            href="./sign-up.html"
+            class="field__link text-gradient"
+            rel="noopener ugs"
+            >Зарегистрироваться</a
+          >
+        </div>
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            autocomplete="login"
+            name="login"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field field--size-lg field--with-indent">
+        <label class="field__label">Пароль</label>
+        <div class="field__inner">
+          <input
+            type="password"
+            class="field__input"
+            autocomplete="password"
+            name="password"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+        <div class="form__flex-group">
+          <button class="button field__password-button" type="button">
+            <span class="button__icon icon icon--type-eye"></span>
+            <span class="button__text">Показать пароль</span>
+          </button>
+          <a
+            href="./resume.html"
+            class="field__link text-gradient"
+            rel="noopener ugs"
+            >Восстановить пароль</a
+          >
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="button button--theme-gradient button--size-xl button--justify-center"
+      >
+        <span class="button__text">Войти</span>
+      </button>
+      <p class="form__description form__description--indent form__item-center">
+        Войти с помощью
+      </p>
+      <button
+        type="button"
+        class="form__item-center icon-button icon-button--theme-vk icon icon--type-vkontakte"
+      ></button>
+    </form>
+  </div>
+</div>

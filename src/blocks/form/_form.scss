@@ -90,6 +90,54 @@
     }
   }
 
+  &__header {
+    display: grid;
+    gap: clamp(0.625em, 2vw, 1.25em);
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    margin-block-end: clamp(1.875rem, 0.6866rem + 5.0704vw, 5.25rem);
+
+    .form__logo {
+      grid-area: 1/1/2/2;
+      justify-self: center;
+      margin-block-end: 1em;
+      @include media(sm) {
+        grid-area: 1/2/3/3;
+        margin-block-end: 0;
+      }
+    }
+
+    .form__title {
+      margin-bottom: 0;
+      align-self: end;
+    }
+
+    .form__description {
+      align-self: start;
+
+      color: var(--main-text-color);
+    }
+
+    @include media(sm) {
+      justify-content: space-between;
+      grid-template-columns: 0.8fr auto;
+      justify-items: start;
+      text-align: left;
+    }
+  }
+
+  &__logo {
+    inline-size: clamp(11.125rem, 8rem + 13.3333vw, 20rem);
+    block-size: clamp(4.5rem, 3.2456rem + 5.3521vw, 8.0625rem);
+    mask-image: url('../images/logo--place-footer.svg');
+    background: var(--main-color) var(--main-color-gradient) no-repeat center /
+      cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
   &__title-block {
     display: flex;
     align-items: center;
@@ -105,6 +153,10 @@
       font-size: clamp(1.25em, 3vw, 1.875em);
       color: var(--main-text-low-color);
       font-variation-settings: 'wght' 700;
+    }
+
+    &--size-lg {
+      font-size: clamp(1.25rem, 0.3697rem + 3.7559vw, 3.75rem);
     }
   }
 
@@ -125,10 +177,6 @@
     font-variation-settings: 'wght' 400;
     color: var(--main-text-low-color);
 
-    &--size-sm {
-      font-size: clamp(0.75em, 1.6vw, 1em);
-    }
-
     &--theme-error {
       font-variation-settings: 'wght' 500;
       color: var(--error-color);
@@ -139,9 +187,17 @@
       color: var(--main-color);
     }
 
+    &--size-sm {
+      font-size: clamp(0.75em, 1.6vw, 1em);
+    }
+
     &--size-xl {
       font-size: clamp(0.875em, 2.5vw, 1.5625em);
       color: var(--main-text-color);
+    }
+
+    &--indent {
+      margin-block-start: clamp(1.375rem, 0.8028rem + 2.4413vw, 3rem);
     }
   }
 
@@ -346,6 +402,17 @@
       margin-inline-start: -1em;
       content: counter(number) '.';
     }
+  }
+
+  &__flex-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(0.75em, 2vw, 1.25em);
+  }
+
+  &__item-center {
+    align-self: center;
   }
 
   &--place-tests {

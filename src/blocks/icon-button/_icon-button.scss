@@ -20,4 +20,25 @@
   &:focus-visible {
     outline: 2px solid var(--main-text-color);
   }
+
+  &--theme {
+    &-vk {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(0.75em, 2.5vw, 1.5625em);
+      border-radius: 10px;
+      min-inline-size: clamp(13.75rem, 8.1602rem + 23.8498vw, 29.625rem);
+      outline: 2px solid transparent;
+      padding: 0.9375rem 1.875rem;
+      background-color: #0277ff;
+      color: var(--accent-text-color);
+      block-size: clamp(2.5rem, 1.5317rem + 4.1315vw, 5.25rem);
+
+      &::before {
+        inline-size: clamp(1.75rem, 1.1778rem + 2.4413vw, 3.375rem);
+        block-size: clamp(1.75rem, 1.1778rem + 2.4413vw, 3.375rem);
+      }
+    }
+  }
 }
