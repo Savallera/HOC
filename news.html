@@ -186,29 +186,36 @@
         </label>
       </div>
     </div>
-    <div class="field field--theme-white">
-      <label for="page-search-field" class="field__label visually-hidden"
-        >Поиск
-      </label>
-      <div class="field__inner">
-        <span
-          class="field__search-icon icon icon--type-search"
-          aria-hidden="true"
-        ></span>
-        <input
-          type="search"
-          class="field__input"
-          placeholder="Поиск "
-          name="search"
-          id="page-search-field"
-        />
-        <span class="field__error-text">Вывод ошибки</span>
-        <span
-          class="field__error-icon icon icon--type-error"
-          aria-hidden="true"
-        ></span>
+    <fieldset class="search__inner">
+      <div class="field field--theme-white search__field">
+        <label for="page-search-field" class="field__label visually-hidden"
+          >Поиск
+        </label>
+        <div class="field__inner">
+          <span
+            class="field__search-icon icon icon--type-search"
+            aria-hidden="true"
+          ></span>
+          <input
+            type="search"
+            class="field__input"
+            placeholder="Поиск "
+            name="search"
+            id="page-search-field"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
       </div>
-    </div>
+      <button
+        type="button"
+        class="search__filtering-button icon icon--type-filter"
+        aria-label="Фильтр"
+      ></button>
+    </fieldset>
     <fieldset class="search__inner">
       <label class="search__filter-label" for="search-radio-theme-all">
         <input
@@ -268,7 +275,7 @@
                       <article class="card">
                         <img
                           class="card__image"
-                          src="http://lozhka-povarezhka.ru/wp-content/uploads/2020/03/natsional-ni-blyuda-eskimosiv-3.jpg"
+                          src="../images/image-ph-type-article.svg"
                           alt="Описание изображения"
                           loading="lazy"
                         />
@@ -306,8 +313,8 @@
                     >
                       <article class="card">
                         <img
-                          class="card__image"
-                          src="http://lozhka-povarezhka.ru/wp-content/uploads/2020/03/natsional-ni-blyuda-eskimosiv-3.jpg"
+                          class="card__image bg-gradient"
+                          src="../images/image-ph-type-photo.svg"
                           alt="Описание изображения"
                           loading="lazy"
                         />
@@ -345,8 +352,8 @@
                     >
                       <article class="card card--size-md">
                         <img
-                          class="card__image"
-                          src="https://www.figma.com/file/eKBcAMx6aUx9iqctZq5ixW/image/05aeb49e1a00ef406ea6411d88faf44f42866267"
+                          class="card__image bg-gradient"
+                          src="../images/image-ph-type-card.svg"
                           alt="Описание изображения"
                           loading="lazy"
                         />
@@ -599,7 +606,7 @@
               <img
                 class="card__image"
                 loading="lazy"
-                src="http://1.chgpu.edu.ru/uploads/posts/2022-08/1660561996_forum.jpg"
+                src="../images/image-ph-type-photo.svg"
                 alt="Описание изображения"
               />
               <div class="card__main-content card__main-content--min-height">
@@ -629,7 +636,7 @@
               <img
                 class="card__image"
                 loading="lazy"
-                src="https://voginfo.ru/wp-content/uploads/2022/09/foto-11-1.jpg"
+                src="../images/image-ph-type-card.svg"
                 alt="Описание изображения"
               />
               <div class="card__main-content card__main-content--min-height">

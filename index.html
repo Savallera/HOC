@@ -276,7 +276,7 @@
                       <article class="card">
                         <img
                           class="card__image"
-                          src="http://lozhka-povarezhka.ru/wp-content/uploads/2020/03/natsional-ni-blyuda-eskimosiv-3.jpg"
+                          src="../images/image-ph-type-photo.svg"
                           alt="Описание изображения"
                           loading="lazy"
                         />
@@ -660,8 +660,8 @@
                   >
                     <article class="card card--size-md">
                       <img
-                        class="card__image"
-                        src="https://sun9-2.userapi.com/impf/c622128/v622128429/1d502/EeWWlc2hMJg.jpg?size=511x513&quality=96&sign=8c778f54f142f7098f63fc0b2fa270b1&type=album"
+                        class="card__image bg-gradient"
+                        src="../images/image-ph-type-card.svg"
                         alt="Описание изображения"
                         loading="lazy"
                       />
@@ -1080,8 +1080,8 @@
                 rel="noopener ugs"
               >
                 <img
-                  src="https://avatars.mds.yandex.net/i?id=8c4b17a0dfd5c46d2828cead01639307fdea5178-8411463-images-thumbs&n=13"
-                  class="top-ten__card-image top-ten__card-image--corner-rounded"
+                  src="../images/image-ph-type-article.svg"
+                  class="top-ten__card-image top-ten__card-image--corner-rounded bg-gradient"
                   alt="Описание картинки"
                   loading="lazy"
                 />
@@ -1769,6 +1769,91 @@
       >
         <span class="button__text">Отправить заявку</span>
       </button>
+    </form>
+  </div>
+</div>
+
+      <!-- Модальное окно для регистрации ВК -->
+<div class="modal modal--size-wide modal--content-contest">
+  <div class="modal__container">
+    <button
+      type="reset"
+      class="modal__close-button"
+      aria-label="Закрыть"
+    ></button>
+    <form class="form" name="sign-up-vk-modal" action="">
+      <div class="form__header">
+        <h2 class="form__title form__title--size-lg">Авторизация</h2>
+        <p class="form__description">
+          Добро пожаловать в студенческого медиацентра Минобрнауки России!
+        </p>
+        <div class="form__logo"></div>
+      </div>
+      <div class="field field--size-lg field--with-indent">
+        <div class="form__flex-group">
+          <label class="field__label"> Телефон, электронная почта</label>
+          <a
+            href="./sign-up.html"
+            class="field__link text-gradient"
+            rel="noopener ugs"
+            >Зарегистрироваться</a
+          >
+        </div>
+        <div class="field__inner">
+          <input
+            type="text"
+            class="field__input"
+            autocomplete="login"
+            name="login"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div class="field field--size-lg field--with-indent">
+        <label class="field__label">Пароль</label>
+        <div class="field__inner">
+          <input
+            type="password"
+            class="field__input"
+            autocomplete="password"
+            name="password"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+        <div class="form__flex-group">
+          <button class="button field__password-button" type="button">
+            <span class="button__icon icon icon--type-eye"></span>
+            <span class="button__text">Показать пароль</span>
+          </button>
+          <a
+            href="./resume.html"
+            class="field__link text-gradient"
+            rel="noopener ugs"
+            >Восстановить пароль</a
+          >
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="button button--theme-gradient button--size-xl button--justify-center"
+      >
+        <span class="button__text">Войти</span>
+      </button>
+      <p class="form__description form__description--indent form__item-center">
+        Войти с помощью
+      </p>
+      <button
+        type="button"
+        class="form__item-center icon-button icon-button--theme-vk icon icon--type-vkontakte"
+      ></button>
     </form>
   </div>
 </div>
