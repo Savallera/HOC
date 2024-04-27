@@ -28,7 +28,11 @@
   --gap-grid: clamp(0.375em, 1vi, 0.625em); // 6 - 10
   --gap-slider: clamp(0.5em, 1.5vi, 0.9375em); // 8 - 15
   --gap-section: clamp(0.5em, 1.5vi, 0.9375em); // 8 - 15
-  --gap-section-block: clamp(1.5625em, 6vw, 3.75em); // 25 - 60
+  --gap-section-block: clamp(
+    0.9375rem,
+    0.6074rem + 1.4085vw,
+    1.875rem
+  ); // 15 - 30
 }
 
 @include media(sm) {
