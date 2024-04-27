@@ -86,7 +86,11 @@ iframe {
   --gap-grid: clamp(0.375em, 1vi, 0.625em);
   --gap-slider: clamp(0.5em, 1.5vi, 0.9375em);
   --gap-section: clamp(0.5em, 1.5vi, 0.9375em);
-  --gap-section-block: clamp(1.5625em, 6vw, 3.75em);
+  --gap-section-block: clamp(
+    0.9375rem,
+    0.6074rem + 1.4085vw,
+    1.875rem
+  );
 }
 
 @media only screen and (width >= 576px) {
