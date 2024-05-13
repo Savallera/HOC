@@ -4554,6 +4554,7 @@ iframe {
   transition: visibility 0s 0.35s, opacity 0.35s;
 }
 .modal__container {
+  overflow: hidden;
   margin: auto;
   position: relative;
   background-color: #fff;
