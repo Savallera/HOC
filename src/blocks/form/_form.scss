@@ -274,6 +274,9 @@
   }
 
   &__filter-field {
+    appearance: none;
+    display: none;
+
     &:focus {
       outline: none;
     }
