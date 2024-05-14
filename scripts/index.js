@@ -247,6 +247,30 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });*/
 
+window.addEventListener('DOMContentLoaded', () => {
+    if (Splide) {
+        // Слайдер новостей на главной странице
+        if (document.querySelector('#news-slider')) {
+            let newsSlider = new Splide('#news-slider', {
+                type: 'slide',
+                autoplay: false,
+                arrows: false,
+                pagination: false,
+                gap: 'var(--gap-slider)',
+                autoWidth: true,
+                padding: 'var(--section-padding)',
+                mediaQuery: 'min',
+                breakpoints: {
+                    768: {
+                        destroy: 'completely',
+                    },
+                },
+            });
+            newsSlider.mount();
+        }
+    }
+});
+
 // Модальное окно с формой присоединиться к проекту
 if (document.querySelector('.sign-up')) {
   const signUpButton = document.querySelector('.sign-up__button');
@@ -584,30 +608,6 @@ if (document.querySelector('.search__icon-button--role-notifications')) {
   });
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    if (Splide) {
-        // Слайдер новостей на главной странице
-        if (document.querySelector('#news-slider')) {
-            let newsSlider = new Splide('#news-slider', {
-                type: 'slide',
-                autoplay: false,
-                arrows: false,
-                pagination: false,
-                gap: 'var(--gap-slider)',
-                autoWidth: true,
-                padding: 'var(--section-padding)',
-                mediaQuery: 'min',
-                breakpoints: {
-                    768: {
-                        destroy: 'completely',
-                    },
-                },
-            });
-            newsSlider.mount();
-        }
-    }
-});
-
 /* Прелодер на страницы */
 const preloaderTmp = document.querySelector('.preloader-template');
 const page = document.querySelector('.page');
@@ -695,6 +695,35 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+  // Квиз
+  if (document.querySelector('.survey__form')) {
+    const surveyLabels = document.querySelectorAll('.survey__label');
+
+    for (i = 0; i < surveyLabels.length; i++) {
+      surveyLabels[i].addEventListener('click', function () {
+        this.classList.add('survey__label--current');
+        this.closest('.survey__form').classList.add(
+          'survey__form--show-result'
+        );
+      });
+    }
+  }
+
+  if (Splide) {
+    // Слайдер с квизами на главной странице
+    if (document.querySelector('#survey-slider')) {
+      let eventsSlider = new Splide('#survey-slider', {
+        rewind: true,
+        autoplay: true,
+        arrows: false,
+        gap: 'var(--gap-slider)',
+      });
+      eventsSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
   // Вкладки
   if (document.querySelector('.tabs')) {
     const tabContainer = document.querySelector('.tabs');
@@ -724,35 +753,6 @@ window.addEventListener('DOMContentLoaded', () => {
         openTabSection(button);
       })
     );
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  // Квиз
-  if (document.querySelector('.survey__form')) {
-    const surveyLabels = document.querySelectorAll('.survey__label');
-
-    for (i = 0; i < surveyLabels.length; i++) {
-      surveyLabels[i].addEventListener('click', function () {
-        this.classList.add('survey__label--current');
-        this.closest('.survey__form').classList.add(
-          'survey__form--show-result'
-        );
-      });
-    }
-  }
-
-  if (Splide) {
-    // Слайдер с квизами на главной странице
-    if (document.querySelector('#survey-slider')) {
-      let eventsSlider = new Splide('#survey-slider', {
-        rewind: true,
-        autoplay: true,
-        arrows: false,
-        gap: 'var(--gap-slider)',
-      });
-      eventsSlider.mount();
-    }
   }
 });
 

@@ -1163,6 +1163,12 @@ iframe {
 .form__filter-label:has(:focus-visible) {
   outline: 2px solid var(--main-text-color);
 }
+.form__filter-field {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+}
 .form__filter-field:focus {
   outline: none;
 }
@@ -4554,7 +4560,6 @@ iframe {
   transition: visibility 0s 0.35s, opacity 0.35s;
 }
 .modal__container {
-  overflow: hidden;
   margin: auto;
   position: relative;
   background-color: #fff;
