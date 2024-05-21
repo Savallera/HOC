@@ -97,6 +97,10 @@
     inline-size: clamp(7.25em, 22.8vw, 14.25em);
     block-size: clamp(2.5em, 7.8vw, 4.875em);
     object-fit: contain;
+
+    &_has-filter {
+      filter: drop-shadow(0 0 2px #c0c0c0);
+    }
   }
 
   &__address-content {
