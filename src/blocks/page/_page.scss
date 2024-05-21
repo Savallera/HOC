@@ -10,13 +10,13 @@
 
   &__section {
     margin-inline: auto;
-    padding-inline: var(--section-padding);
+    padding-inline: var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem));
     inline-size: 100%;
-    max-inline-size: var(--section-inline-size);
-    margin-block: var(--gap-section-block);
+    max-inline-size: var(--section-inline-size, 100%);
+    margin-block: var(--gap-section-block, clamp(0.9375rem, 0.6074rem + 1.4085vw, 1.875rem));
 
     display: flex;
-    gap: var(--gap-section);
+    gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
     flex-direction: column;
   }
 
@@ -26,7 +26,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
 
     &--size-sm {
       grid-template-columns: repeat(auto-fill, minmax(min(17em, 100%), 1fr));
@@ -62,7 +62,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--gap-section);
+    gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
     min-block-size: clamp(1.75em, 5.4vw, 3.375em);
   }
 
@@ -124,7 +124,7 @@
 
   &__more-button {
     align-self: center;
-    border-block-end: 2px solid var(--accent-color);
+    border-block-end: 2px solid var(--accent-color, #d03ec3);
     font-size: clamp(0.75em, 2.5vw, 1.5625em);
     font-variation-settings: 'wght' 600;
     transition: opacity 0.35s;
@@ -172,7 +172,7 @@
     block-size: 1.25em;
 
     &::before {
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
     }
   }
 

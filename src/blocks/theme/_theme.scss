@@ -1,20 +1,20 @@
 /* Секция с темами */
 .theme {
   margin-inline: auto;
-  margin-block: var(--gap-section-block);
-  max-inline-size: var(--section-inline-size-wide);
+  margin-block: var(--gap-section-block, clamp(0.9375rem, 0.6074rem + 1.4085vw, 1.875rem));
+  max-inline-size: var(--section-inline-size-wide, 120em);
 
   display: flex;
-  gap: var(--gap-section);
+  gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
   flex-direction: column;
 
   &__title-block {
     inline-size: 100%;
-    padding-inline: var(--section-padding);
+    padding-inline: var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem));
 
     @include media(md) {
       margin-inline: auto;
-      max-inline-size: var(--section-inline-size);
+      max-inline-size: var(--section-inline-size, 100%);
     }
   }
 

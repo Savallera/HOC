@@ -1,7 +1,7 @@
 .account {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-section);
+  gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
   margin-block-end: clamp(1.25em, 2.4vw, 1.5em);
 
   &__columns {
@@ -20,7 +20,7 @@
   &__image {
     position: relative;
     overflow: hidden;
-    background-color: var(--main-text-low-color);
+    background-color: var(--main-text-low-color, #c0c0c0);
     inline-size: 100%;
     aspect-ratio: 370/383;
     object-fit: cover;
@@ -34,7 +34,7 @@
       justify-content: center;
       font-size: 0.75em;
       padding: 0.75em;
-      color: var(--main-text-color);
+      color: var(--main-text-color, #272b37);
 
       position: absolute;
       inset: 0;
@@ -64,7 +64,7 @@
   &__separator:not(:last-child) {
     padding-block-end: clamp(1em, 2.4vw, 1.5em);
     margin-block-end: clamp(1em, 2.4vw, 1.5em);
-    border-block-end: 1px solid var(--main-text-low-color);
+    border-block-end: 1px solid var(--main-text-low-color, #c0c0c0);
   }
 
   &__controls {
@@ -78,10 +78,10 @@
     min-inline-size: clamp(2em, 5.6vw, 3.5em);
     max-inline-size: clamp(2em, 5.6vw, 3.5em);
     block-size: clamp(2em, 5.6vw, 3.5em);
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
 
     &:hover {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
       background-color: transparent;
     }
 
@@ -160,7 +160,7 @@
     text-decoration: unset;
     font-size: clamp(1em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
 
     &--download {
       border-block-end: 1px solid;
@@ -172,7 +172,7 @@
 
   // Для визуальных отличий
   &__text-grey {
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
   }
 
   &__text-bold {
@@ -273,7 +273,7 @@
 
   &__rating-text {
     margin-block: 0 0.125em;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
     font-variation-settings: 'wght' 500;
     font-size: clamp(1em, 2vw, 1.25em);
   }
@@ -282,13 +282,13 @@
     position: relative;
     block-size: clamp(1.875em, 5.5vw, 3.4375em);
     inline-size: clamp(10.625em, 24.3vw, 15.1875em);
-    background-color: var(--main-text-low-color);
+    background-color: var(--main-text-low-color, #c0c0c0);
     mask: url('../images/rating.svg') left center / 100% 100% no-repeat;
   }
 
   &__rating-bar-progress {
     block-size: inherit;
-    background-color: var(--main-color);
+    background-color: var(--main-color, #685dc3);
     mask: url('../images/rating.svg') left center /
       clamp(10.625em, 24.3vw, 15.1875em) 100% no-repeat;
   }
@@ -322,7 +322,7 @@
       justify-content: center;
       font-size: 0.75em;
       padding: 0.75em;
-      color: var(--main-text-color);
+      color: var(--main-text-color, #272b37);
 
       position: absolute;
       inset: 0;
@@ -357,7 +357,7 @@
     inline-size: 1.125em;
     block-size: 1.125em;
     margin-block-end: 0.25em;
-    color: var(--main-text-color);
+    color: var(--main-text-color, #272b37);
   }
 
   &__achievements-card-title {
@@ -388,6 +388,6 @@
 
   &--place-resume {
     margin-block-end: 0;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
   }
 }

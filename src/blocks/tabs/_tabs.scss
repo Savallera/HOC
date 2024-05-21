@@ -8,16 +8,16 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
   }
 
   // Для полей
   &__section-indent {
     margin-inline: auto;
     margin-block: clamp(0.9375em, 4vw, 2.5em); // 15 - 40
-    padding-inline: var(--section-padding);
+    padding-inline: var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem));
     inline-size: 100%;
-    max-inline-size: var(--section-inline-size);
+    max-inline-size: var(--section-inline-size, 100%);
   }
 
   // &__item {}
@@ -39,7 +39,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
 
     &::before {
@@ -49,11 +49,11 @@
       opacity: 0;
       border-radius: inherit;
       transition: opacity 0.35s;
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
     }
 
     &--actived {
-      color: var(--accent-text-color);
+      color: var(--accent-text-color, #fff);
       pointer-events: none;
       &::before {
         opacity: 1;
@@ -62,7 +62,7 @@
 
     @media (hover: hover) {
       &:hover {
-        color: var(--accent-text-color);
+        color: var(--accent-text-color, #fff);
         &::before {
           opacity: 1;
         }

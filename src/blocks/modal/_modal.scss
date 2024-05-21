@@ -34,7 +34,7 @@
     }
 
     &--theme-grey {
-      background-color: var(--grey-100);
+      background-color: var(--grey-100, #f7f7f7);
     }
 
     &--indent-sm {
@@ -52,11 +52,11 @@
     inline-size: 1em;
     block-size: 1em;
     padding: 0;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
     transition: 0.35s;
 
     &:hover {
-      color: var(--error-color);
+      color: var(--error-color, #f14242);
       transform: rotate(45deg);
     }
 
@@ -95,7 +95,7 @@
     block-size: clamp(3.75em, 11.2vw, 7em);
 
     &::before {
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
     }
   }
 

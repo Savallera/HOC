@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
         rewind: true,
         autoplay: true,
         arrows: false,
-        gap: 'var(--gap-slider)',
+        gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
       });
       eventsSlider.mount();
     }

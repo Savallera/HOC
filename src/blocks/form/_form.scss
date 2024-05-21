@@ -9,8 +9,8 @@
     grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
 
     &--indent-lg {
-      gap: var(--gap-section);
-      margin-block-end: var(--gap-section);
+      gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
+      margin-block-end: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
     }
 
     &--content-profile {
@@ -28,7 +28,7 @@
 
   &__three-columns {
     display: grid;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
     @include media(md) {
       grid-template-columns: 0.7fr 1.1fr 0.9fr;
     }
@@ -36,7 +36,7 @@
 
   &__column {
     display: grid;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
     align-content: start;
 
     &--indent-sm {
@@ -47,7 +47,7 @@
   &__card {
     background-color: #fff;
     border-radius: 10px;
-    padding: var(--gap-grid);
+    padding: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
   }
 
   &__inner {
@@ -59,7 +59,7 @@
   &__field-group {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(24em, 100%), 1fr));
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
   }
 
   &__controls {
@@ -81,11 +81,11 @@
     padding: 0;
     inline-size: clamp(1.5em, 3vw, 1.875em);
     block-size: clamp(1.5em, 3vw, 1.875em);
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
 
     &:hover,
     &--actived {
-      color: var(--main-color);
+      color: var(--main-color, #685dc3);
       background: transparent;
     }
   }
@@ -116,7 +116,7 @@
     .form__description {
       align-self: start;
 
-      color: var(--main-text-color);
+      color: var(--main-text-color, #272b37);
     }
 
     @include media(sm) {
@@ -131,7 +131,7 @@
     inline-size: clamp(11.125rem, 8rem + 13.3333vw, 20rem);
     block-size: clamp(4.5rem, 3.2456rem + 5.3521vw, 8.0625rem);
     mask-image: url('../images/logo--place-footer.svg');
-    background: var(--main-color) var(--main-color-gradient) no-repeat center /
+    background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center /
       cover;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -151,7 +151,7 @@
 
     &--size-sm {
       font-size: clamp(1.25em, 3vw, 1.875em);
-      color: var(--main-text-low-color);
+      color: var(--main-text-low-color, #c0c0c0);
       font-variation-settings: 'wght' 700;
     }
 
@@ -175,16 +175,16 @@
     margin-block: 0;
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 400;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
 
     &--theme-error {
       font-variation-settings: 'wght' 500;
-      color: var(--error-color);
+      color: var(--error-color, #f14242);
     }
 
     &--theme-main {
       font-variation-settings: 'wght' 500;
-      color: var(--main-color);
+      color: var(--main-color, #685dc3);
     }
 
     &--size-sm {
@@ -193,7 +193,7 @@
 
     &--size-xl {
       font-size: clamp(0.875em, 2.5vw, 1.5625em);
-      color: var(--main-text-color);
+      color: var(--main-text-color, #272b37);
     }
 
     &--indent {
@@ -217,7 +217,7 @@
     font-variation-settings: 'wght' 500;
     margin-inline: auto;
     text-decoration: unset;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
     border-block-end: 2px solid transparent;
 
     &:hover {
@@ -229,7 +229,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
   }
 
@@ -249,13 +249,13 @@
       }
       // Цвет дорожки
       &::-webkit-scrollbar-track {
-        background-color: var(--grey-100);
+        background-color: var(--grey-100, #f7f7f7);
         border-radius: 10px;
       }
       // Плашка
       &::-webkit-scrollbar-thumb {
-        background-color: var(--main-text-low-color);
-        border: 4px solid var(--grey-100);
+        background-color: var(--main-text-low-color, #c0c0c0);
+        border: 4px solid var(--grey-100, #f7f7f7);
         border-radius: 10px;
       }
     }
@@ -269,7 +269,7 @@
   // Выбор фильтра / Вариант ответа
   &__filter-label {
     &:has(:focus-visible) {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
   }
 
@@ -282,7 +282,7 @@
     }
 
     &:checked + .form__filter-text {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
     }
 
     &:checked + .form__filter-text > .form__filter-pseudo-checkbox {
@@ -308,10 +308,10 @@
       color 0.35s;
 
     &:hover {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
 
       .form__filter-pseudo-checkbox {
-        color: var(--accent-color);
+        color: var(--accent-color, #d03ec3);
       }
     }
   }
@@ -323,7 +323,7 @@
     margin-inline-end: 0.5em;
     border-radius: 50%;
     border: 0.3em solid;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
 
     &--size-lg {
       inline-size: 1.875em;
@@ -355,7 +355,7 @@
       justify-content: center;
       font-size: 0.75em;
       padding: 0.75em;
-      color: var(--main-text-color);
+      color: var(--main-text-color, #272b37);
 
       position: absolute;
       inset: 0;
@@ -381,10 +381,10 @@
     padding: 0;
     inline-size: 1.875em;
     block-size: 1.875em;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
 
     &:hover {
-      color: var(--main-color);
+      color: var(--main-color, #685dc3);
       background: transparent;
     }
   }
@@ -392,7 +392,7 @@
   &__separator {
     padding-block-end: clamp(1em, 2.4vw, 1.5em);
     &:not(:last-of-type) {
-      border-block-end: 1px solid var(--main-text-low-color);
+      border-block-end: 1px solid var(--main-text-low-color, #c0c0c0);
       margin-block-end: clamp(1em, 2.4vw, 1.5em);
     }
   }

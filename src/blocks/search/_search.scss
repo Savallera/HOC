@@ -4,14 +4,14 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
   }
 
   &__title-block {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--gap-section);
+    gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
 
     // @include media(sm, max) {
     //   flex-direction: column;
@@ -35,10 +35,10 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-section);
+    gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
 
     &--indent-sm {
-      gap: var(--gap-grid);
+      gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
     }
   }
 
@@ -46,7 +46,7 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
 
     &--indent-sm {
       gap: clamp(0.25em, 1vw, 0.625em);
@@ -67,7 +67,7 @@
     transition: opacity 0.35s;
 
     &::before {
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
     }
 
     &:hover {
@@ -77,11 +77,11 @@
 
     &--theme-grey {
       &::before {
-        background: var(--main-text-low-color);
+        background: var(--main-text-low-color, #c0c0c0);
       }
 
       &:hover::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat;
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat;
       }
     }
   }
@@ -95,14 +95,14 @@
     border: none;
     inline-size: clamp(2.5em, 5.8vw, 3.625em);
     block-size: clamp(2.5em, 5.8vw, 3.625em);
-    background-color: var(--main-text-low-color);
+    background-color: var(--main-text-low-color, #c0c0c0);
     color: rgba(black, 0.2);
     transition: all 0.35s;
 
     &:hover,
     &--actived {
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
-      color: var(--accent-text-color);
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
+      color: var(--accent-text-color, #fff);
     }
   }
 
@@ -120,7 +120,7 @@
   &__filter-label {
     border-radius: 10px;
     &:has(:focus-visible) {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
   }
 
@@ -130,7 +130,7 @@
     }
 
     &:checked + .search__filter-text {
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
       color: #fff;
       pointer-events: none;
     }
@@ -140,7 +140,7 @@
     display: block;
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
     padding: clamp(0.325em, 1.2vw, 0.75rem) clamp(0.875rem, 2vw, 1.25rem);
     background-color: #fff;
     border-radius: inherit;
@@ -150,7 +150,7 @@
       color 0.35s;
 
     &:hover {
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
       color: #fff;
     }
   }
@@ -163,21 +163,21 @@
     padding: 0;
     border: none;
     border-block-end: 2px solid currentColor;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
     font-size: clamp(0.75em, 2vw, 1.25em);
     font-variation-settings: 'wght' 500;
     transition: background 0.35s;
     cursor: pointer;
 
     &:hover {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
       background: var(--main-color-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      border-block-end-color: var(--accent-color);
+      border-block-end-color: var(--accent-color, #d03ec3);
 
       .icon::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }
@@ -187,19 +187,19 @@
     }
 
     &:focus-visible {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
 
     &--actived {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
       background: var(--main-color-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      border-block-end-color: var(--accent-color);
+      border-block-end-color: var(--accent-color, #d03ec3);
       // pointer-events: none;
 
       .icon::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }
@@ -248,12 +248,12 @@
   &__sort-button {
     margin-inline-start: auto;
     align-self: center;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
     font-size: clamp(0.75em, 2vw, 1.25em);
     border-block-end: 2px solid;
 
     &:hover {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
     }
   }
 
@@ -266,11 +266,11 @@
     font-variation-settings: 'wght' 500;
     transition: background 0.35s;
 
-    color: var(--accent-color);
+    color: var(--accent-color, #d03ec3);
     background: var(--main-color-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    border-block-end-color: var(--accent-color);
+    border-block-end-color: var(--accent-color, #d03ec3);
 
     .icon {
       display: inline-block;
@@ -281,13 +281,13 @@
       vertical-align: middle;
 
       &::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }
 
     &:has(:focus-visible) {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
   }
 

@@ -27,7 +27,7 @@
       justify-content: center;
       font-size: 0.75em;
       padding: 0.75em;
-      color: var(--main-text-color);
+      color: var(--main-text-color, #272b37);
 
       position: absolute;
       inset: 0;
@@ -57,7 +57,7 @@
   }
 
   &__iframe {
-    background-color: var(--main-text-low-color);
+    background-color: var(--main-text-low-color, #c0c0c0);
     inline-size: 100%;
     aspect-ratio: 258/138;
     object-fit: cover;
@@ -146,7 +146,7 @@
     block-size: 1.25em;
 
     &::before {
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
     }
   }
 
@@ -175,7 +175,7 @@
       justify-content: center;
       font-size: 0.75em;
       padding: 0.75em;
-      color: var(--main-text-color);
+      color: var(--main-text-color, #272b37);
 
       position: absolute;
       inset: 0;
@@ -195,7 +195,7 @@
     margin-block: 0;
     font-size: clamp(0.75em, 1.6vw, 1em);
     font-variation-settings: 'wght' 500;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
   }
 
   &__views {
@@ -206,7 +206,7 @@
     display: flex;
     align-items: center;
     gap: clamp(0.25em, 0.5vw, 0.375em);
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
   }
 
   &__views-icon {
@@ -231,21 +231,21 @@
     inline-size: clamp(1.125em, 2vw, 1.25em);
     block-size: clamp(1.125em, 2vw, 1.25em);
     padding: 0;
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
 
     &:hover {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
       background-color: transparent;
       &::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }
 
     &--actived {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
       &::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }
@@ -254,12 +254,12 @@
   &__share-button {
     flex: none;
     font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
 
     &:hover {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
       &::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }
@@ -272,7 +272,7 @@
     inset: -0.5em -0.5em auto auto;
     inline-size: clamp(1.875em, 3.6vw, 2em);
     block-size: clamp(1.875em, 3.6vw, 2em);
-    color: var(--error-color);
+    color: var(--error-color, #f14242);
 
     &::after {
       content: '';
@@ -305,13 +305,13 @@
     position: relative;
     block-size: clamp(1.25em, 3vw, 1.875em);
     inline-size: clamp(6.25em, 15.5vw, 9.6875em);
-    background-color: var(--main-text-low-color);
+    background-color: var(--main-text-low-color, #c0c0c0);
     mask: url('../images/rating.svg') left center / 100% 100% no-repeat;
   }
 
   &__rating-bar-progress {
     block-size: inherit;
-    background-color: var(--main-color);
+    background-color: var(--main-color, #685dc3);
     mask: url('../images/rating.svg') left center /
       clamp(6.25em, 15.5vw, 9.6875em) 100% no-repeat;
   }
@@ -341,7 +341,7 @@
       transition: outline 0.35s;
       cursor: pointer;
       &:hover {
-        outline-color: var(--accent-color);
+        outline-color: var(--accent-color, #d03ec3);
       }
     }
   }

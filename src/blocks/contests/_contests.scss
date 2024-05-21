@@ -13,8 +13,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    gap: var(--gap-section);
-    color: var(--accent-text-color);
+    gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
+    color: var(--accent-text-color, #fff);
 
     &::after {
       content: '';
@@ -33,7 +33,7 @@
   }
 
   &__bg-image {
-    background-color: var(--main-text-color);
+    background-color: var(--main-text-color, #272b37);
     background-size: cover;
     background-position: center;
   }

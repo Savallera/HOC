@@ -14,7 +14,7 @@
   &__container {
     max-inline-size: 372px;
     padding: clamp(0.9375em, 2.4vw, 1.5em);
-    background-color: var(--main-text-low-color);
+    background-color: var(--main-text-low-color, #c0c0c0);
     border-radius: 10px;
   }
 

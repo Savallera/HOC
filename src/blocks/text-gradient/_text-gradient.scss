@@ -1,6 +1,6 @@
 /* Блок для градиента цвета */
 .text-gradient {
-  color: var(--accent-color);
+  color: var(--accent-color, #d03ec3);
   background: var(--main-color-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

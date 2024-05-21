@@ -5,10 +5,10 @@
     font-variation-settings: 'wght' 800;
 
     &:hover {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
 
       .accordion__icon::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }
@@ -17,7 +17,7 @@
   &__icon {
     inline-size: clamp(1.25em, 3vw, 1.875em);
     block-size: clamp(1.25em, 3vw, 1.875em);
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
     margin-inline-end: clamp(0.25rem, 0.8vw, 0.5rem);
   }
 
@@ -33,9 +33,9 @@
 
   &--actived {
     .accordion__icon {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
       &::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }

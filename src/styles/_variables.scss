@@ -28,34 +28,18 @@
   --gap-grid: clamp(0.375em, 1vi, 0.625em); // 6 - 10
   --gap-slider: clamp(0.5em, 1.5vi, 0.9375em); // 8 - 15
   --gap-section: clamp(0.5em, 1.5vi, 0.9375em); // 8 - 15
-  --gap-section-block: clamp(
-    0.9375rem,
-    0.6074rem + 1.4085vw,
-    1.875rem
-  ); // 15 - 30
+  --gap-section-block: clamp(0.9375rem, 0.6074rem + 1.4085vw, 1.875rem); // 15 - 30
 }
 
 @include media(sm) {
   :root {
-    --section-inline-size: clamp(
-      20rem,
-      3.0357rem + 84.8214vw,
-      79.375rem
-    ); // 1220 + 25 + 25
-    --section-inline-start: clamp(
-      1.25rem,
-      -0.3571rem + 8.0357vw,
-      6.875rem
-    ); // 110
+    --section-inline-size: clamp(20rem, 3.0357rem + 84.8214vw, 79.375rem); // 1220 + 25 + 25
+    --section-inline-start: clamp(1.25rem, -0.3571rem + 8.0357vw, 6.875rem); // 110
   }
 }
 
 @media screen and (width > 90em) {
   :root {
-    --section-inline-start: clamp(
-      6.875rem,
-      -38.125rem + 50vw,
-      21.875rem
-    ); // 350
+    --section-inline-start: clamp(6.875rem, -38.125rem + 50vw, 21.875rem); // 350
   }
 }

@@ -4,16 +4,16 @@
 
   &__wrap {
     margin-inline: auto;
-    padding-inline: var(--section-padding);
+    padding-inline: var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem));
     inline-size: 100%;
-    max-inline-size: var(--section-inline-size);
-    color: var(--accent-text-color);
+    max-inline-size: var(--section-inline-size, 100%);
+    color: var(--accent-text-color, #fff);
 
     margin-block-start: -1.5em;
     margin-block-end: 1.5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
 
     @include media(lg) {
       grid-template-columns: 1.15fr 0.5fr 0.5fr;
@@ -72,7 +72,7 @@
       outline: none;
     }
     &:focus-visible {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
   }
 
@@ -87,7 +87,7 @@
       outline: none;
     }
     &:focus-visible {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
   }
 
@@ -114,7 +114,7 @@
   &__address-links {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
     margin-block-end: min(4.5vw, 2.5em);
   }
 
@@ -128,13 +128,13 @@
     transition: color 0.35s;
 
     &:hover {
-      color: var(--main-text-color);
+      color: var(--main-text-color, #272b37);
     }
     &:focus {
       outline: none;
     }
     &:focus-visible {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
   }
 
@@ -163,7 +163,7 @@
       transition: background 0.35s;
     }
     &:hover::before {
-      background-color: var(--main-text-color);
+      background-color: var(--main-text-color, #272b37);
     }
     &:active {
       transform: translateY(1px);
@@ -172,7 +172,7 @@
       outline: none;
     }
     &:focus-visible {
-      outline: 2px solid var(--main-text-color);
+      outline: 2px solid var(--main-text-color, #272b37);
     }
   }
 }

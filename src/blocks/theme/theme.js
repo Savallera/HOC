@@ -6,9 +6,9 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'slide',
         arrows: false,
         pagination: false,
-        gap: 'var(--gap-slider)',
+        gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
         autoWidth: true,
-        padding: 'var(--section-inline-start)',
+        padding: 'var(--section-inline-start, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
         mediaQuery: 'min',
         breakpoints: {
           768: {
@@ -25,9 +25,9 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'slide',
         arrows: false,
         pagination: false,
-        gap: 'var(--gap-slider)',
+        gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
         autoWidth: true,
-        padding: 'var(--section-inline-start)',
+        padding: 'var(--section-inline-start, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
         mediaQuery: 'min',
         breakpoints: {
           768: {
@@ -44,9 +44,9 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'slide',
         arrows: false,
         pagination: false,
-        gap: 'var(--gap-slider)',
+        gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
         autoWidth: true,
-        padding: 'var(--section-inline-start)',
+        padding: 'var(--section-inline-start, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
         mediaQuery: 'min',
         breakpoints: {
           768: {
@@ -66,8 +66,8 @@ window.addEventListener('DOMContentLoaded', () => {
           arrows: false,
           pagination: false,
           perPage: 3,
-          gap: 'var(--gap-slider)',
-          padding: 'var(--section-inline-start)',
+          gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
+          padding: 'var(--section-inline-start, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
           mediaQuery: 'min',
           breakpoints: {
             768: {
@@ -98,7 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         autoWidth: true,
-        gap: 'var(--gap-slider)',
+        gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
       });
       addArticleImageSlider.mount();
     }
@@ -110,7 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         autoWidth: true,
-        gap: 'var(--gap-slider)',
+        gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
       });
       addArticleImageSlider.mount();
     }

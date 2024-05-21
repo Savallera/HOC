@@ -3,7 +3,7 @@
   display: grid;
   inline-size: 100%;
   min-block-size: clamp(9.375rem, 2.6188rem + 28.8263vw, 28.5625rem);
-  background-color: var(--main-text-color);
+  background-color: var(--main-text-color, #272b37);
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -20,14 +20,14 @@
 
   &__main-content {
     margin-inline: auto;
-    padding-inline: var(--section-padding);
+    padding-inline: var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem));
     inline-size: 100%;
-    max-inline-size: var(--section-inline-size);
+    max-inline-size: var(--section-inline-size, 100%);
 
     grid-area: 1/1/2/2;
     position: relative;
     margin-block-start: auto;
-    color: var(--accent-text-color);
+    color: var(--accent-text-color, #fff);
 
     display: grid;
     gap: clamp(0.3125em, 1.5vw, 0.9375em);
@@ -66,7 +66,7 @@
       text-underline-position: under;
 
       &:hover {
-        color: var(--accent-color);
+        color: var(--accent-color, #d03ec3);
       }
     }
   }
@@ -111,7 +111,7 @@
       background-color: transparent;
 
       &::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }
@@ -126,7 +126,7 @@
     }
 
     &--actived::before {
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
     }
   }
 

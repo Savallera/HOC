@@ -9,7 +9,7 @@
         pagination: false,
         gap: '.9375em',
         autoWidth: true,
-        padding: 'var(--section-padding)',
+        padding: 'var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
         mediaQuery: 'min',
         breakpoints: {
           768: {
@@ -31,7 +31,7 @@
         pagination: false,
         gap: '.9375em',
         autoWidth: true,
-        padding: 'var(--section-padding)',
+        padding: 'var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
         mediaQuery: 'min',
         breakpoints: {
           768: {

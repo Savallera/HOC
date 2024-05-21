@@ -11,7 +11,7 @@
   }
 
   &:focus-visible {
-    outline: 2px solid var(--main-text-color);
+    outline: 2px solid var(--main-text-color, #272b37);
   }
 
   &__icon {
@@ -32,8 +32,8 @@
       min-inline-size: min(22rem, 100%);
       outline: 2px solid transparent;
       padding: 0.9375rem 1.875rem;
-      background: var(--main-color) var(--main-color-gradient) no-repeat center;
-      color: var(--accent-text-color);
+      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
+      color: var(--accent-text-color, #fff);
 
       @media (hover: hover) {
         position: relative;
@@ -44,7 +44,7 @@
           inset: 0;
           opacity: 0;
           border-radius: inherit;
-          background: var(--main-dark-color) var(--main-dark-color-gradient)
+          background: var(--main-dark-color, #572bb0) var(--main-dark-color-gradient)
             no-repeat center;
           transition: opacity 0.35s;
         }
@@ -78,21 +78,21 @@
   &--type-back {
     align-self: start;
     font-size: clamp(0.75em, 2vw, 1.25em);
-    color: var(--main-text-low-color);
+    color: var(--main-text-low-color, #c0c0c0);
 
     .button__icon {
       inline-size: 1em;
     }
 
     &:hover {
-      color: var(--accent-color);
+      color: var(--accent-color, #d03ec3);
       background: var(--main-color-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      border-block-end-color: var(--accent-color);
+      border-block-end-color: var(--accent-color, #d03ec3);
 
       .icon::before {
-        background: var(--main-color) var(--main-color-gradient) no-repeat
+        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
           center;
       }
     }

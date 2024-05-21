@@ -21,7 +21,7 @@
       block-size: calc(100% - 4px);
       transition: outline 0.35s;
       &:hover {
-        outline-color: var(--accent-color);
+        outline-color: var(--accent-color, #d03ec3);
       }
     }
   }

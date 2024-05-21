@@ -9,7 +9,7 @@
   transition: background 0.35s;
 
   &:hover {
-    background: var(--hover-color);
+    background: var(--hover-color, #00000026);
   }
   &:active {
     transform: translateY(1px);
@@ -18,7 +18,7 @@
     outline: none;
   }
   &:focus-visible {
-    outline: 2px solid var(--main-text-color);
+    outline: 2px solid var(--main-text-color, #272b37);
   }
 
   &--theme {
@@ -32,7 +32,7 @@
       outline: 2px solid transparent;
       padding: 0.9375rem 1.875rem;
       background-color: #0277ff;
-      color: var(--accent-text-color);
+      color: var(--accent-text-color, #fff);
       block-size: clamp(2.5rem, 1.5317rem + 4.1315vw, 5.25rem);
 
       &::before {

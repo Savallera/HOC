@@ -41,7 +41,7 @@ $breakpoints: (
     }
 }
 
-@mixin scroll-bar($width: 15px, $height: 15px, $bg: #fff, $color: var(--main-color)) {
+@mixin scroll-bar($width: 15px, $height: 15px, $bg: #fff, $color: var(--main-color, #685dc3)) {
     scrollbar-width: $width;
     scrollbar-color: $color;
 

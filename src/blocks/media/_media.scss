@@ -2,7 +2,7 @@
 .media {
   &__columns {
     display: grid;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
     @include media(lg) {
       grid-template-columns: 1.235fr 2fr;
     }
@@ -10,7 +10,7 @@
 
   &__column {
     display: flex;
-    gap: var(--gap-section);
+    gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
     flex-direction: column;
   }
 
@@ -19,7 +19,7 @@
     padding: 0;
     list-style: none;
     display: grid;
-    gap: var(--gap-grid);
+    gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
 
     @include media(lg) {
       height: 100%;
