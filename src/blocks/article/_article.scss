@@ -129,6 +129,10 @@
     display: grid;
     gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
 
+    li {
+      display: flex;
+    }
+
     &--place-columns {
       grid-template-rows: 1fr 1fr 1fr 1fr;
       margin-block-end: clamp(1.8125em, 5.8vw, 3.625em);

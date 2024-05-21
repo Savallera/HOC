@@ -8,6 +8,10 @@
     gap: clamp(1.25em, 5vw, 3.125em);
     grid-template-columns: repeat(auto-fill, minmax(min(15vw, 12.5em), 1fr));
 
+    li {
+      display: flex;
+    }
+
     &--place-stud-smi {
       gap: 1.25em;
       grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
@@ -15,7 +19,7 @@
   }
 
   &__card {
-    height: 100%;
+    inline-size: 100%;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
