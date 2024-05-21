@@ -1,7 +1,7 @@
 /* Обертка для карточек, когда нужно по клику на всю область карточки переходить по ссылке */
 .card-link {
-  display: block;
-  block-size: 100%;
+  display: flex;
+  inline-size: 100%;
   border-radius: 10px;
   text-decoration: none;
   cursor: pointer;
@@ -16,12 +16,10 @@
 
   &--hover-card {
     @media (hover: hover) {
-      outline: 2px solid transparent;
-      margin: 2px;
-      block-size: calc(100% - 4px);
-      transition: outline 0.35s;
+      border: 2px solid transparent;
+      transition: border 0.35s;
       &:hover {
-        outline-color: var(--accent-color, #d03ec3);
+        border-color: var(--accent-color, #d03ec3);
       }
     }
   }
