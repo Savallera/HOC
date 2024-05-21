@@ -783,8 +783,10 @@ iframe {
 
 /* Обертка для карточек, когда нужно по клику на всю область карточки переходить по ссылке */
 .card-link {
-  display: block;
-  block-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  inline-size: 100%;
   border-radius: 10px;
   text-decoration: none;
   cursor: pointer;
@@ -797,14 +799,12 @@ iframe {
 }
 @media (hover: hover) {
   .card-link--hover-card {
-    outline: 2px solid transparent;
-    margin: 2px;
-    block-size: calc(100% - 4px);
-    -webkit-transition: outline 0.35s;
-    transition: outline 0.35s;
+    border: 2px solid transparent;
+    -webkit-transition: border 0.35s;
+    transition: border 0.35s;
   }
   .card-link--hover-card:hover {
-    outline-color: var(--accent-color, #d03ec3);
+    border-color: var(--accent-color, #d03ec3);
   }
 }
 
@@ -2216,7 +2216,6 @@ iframe {
 .card {
   position: relative;
   inline-size: 100%;
-  block-size: 100%;
   background-color: #fff;
   border-radius: 10px;
   display: -webkit-box;
@@ -2935,19 +2934,16 @@ iframe {
     grid-template-columns: 0.9fr 1fr 1fr;
     grid-auto-flow: column;
   }
-  .news__slider-list li:nth-child(9n+1) {
-    -ms-grid-row-span: 2;
-    grid-row: span 2;
+  .news__slider-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .news__slider-list li:nth-child(9n+2) {
-    -ms-grid-row-span: 2;
-    grid-row: span 2;
-  }
-  .news__slider-list li:nth-child(9n+3) {
+  .news__slider-list li:nth-child(3) {
     -ms-grid-column-span: 2;
     grid-column: span 2;
-    -ms-grid-row-span: 4;
-    grid-row: span 4;
+    -ms-grid-row-span: 2;
+    grid-row: span 2;
   }
 }
 .news__asside-list {
@@ -2958,6 +2954,11 @@ iframe {
   display: grid;
   gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
   grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+}
+.news__asside-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 @media only screen and (width >= 768px) {
   .news__asside-list {
@@ -3271,12 +3272,17 @@ iframe {
   gap: clamp(1.25em, 5vw, 3.125em);
   grid-template-columns: repeat(auto-fill, minmax(min(15vw, 12.5em), 1fr));
 }
+.top-ten__cards li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .top-ten__cards--place-stud-smi {
   gap: 1.25em;
   grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
 }
 .top-ten__card {
-  height: 100%;
+  inline-size: 100%;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -3513,6 +3519,11 @@ iframe {
   display: -ms-grid;
   display: grid;
   gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
+}
+.article__asside-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .article__asside-list--place-columns {
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
