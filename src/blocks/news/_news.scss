@@ -18,12 +18,12 @@
     }
   }
 
-  &__slider-track {
-    @include media(md) {
-      height: 100%;
-      overflow: unset;
-    }
-  }
+  // &__slider-track {
+    // @include media(md) {
+      // height: 100%;
+      // overflow: unset;
+    // }
+  // }
 
   &__slider-list {
     @include media(md) {
@@ -57,7 +57,7 @@
     grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
 
     @include media(md) {
-      height: 100%;
+      // height: 100%;
       grid-template-rows: 1fr 1fr 1fr 1fr;
     }
   }
