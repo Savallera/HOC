@@ -1,0 +1,119 @@
+.footer-banner {
+  &__wrap {
+    align-self: flex-start;
+    min-block-size: 15.125em;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 14px 18px;
+    background-image: url('../images/footer-banner-image.png');
+    background-repeat: no-repeat;
+    background-size: 8em;
+    background-position: right 90%;
+  }
+
+  &__title {
+    margin-block: 0 14px;
+    font-size: 20px;
+    font-variation-settings: 'wght' 800;
+    color: var(--main-color);
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__list-item {
+    align-self: flex-start;
+    border-radius: 12px;
+    padding: 2px;
+    background-image: var(--main-color-gradient);
+  }
+
+  &__link {
+    text-decoration: unset;
+    display: inline-flex;
+    padding: 3px 6px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    grid-template-columns: auto 1fr;
+    background-color: #fff;
+    color: var(--main-text-color);
+    transition: transform 0.35s;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 4px solid var(--main-color, #685dc3);
+    }
+  }
+
+  &__link-image {
+    grid-row: span 2;
+    block-size: clamp(1.625rem, 0.3125rem + 1.4583vw, 2.0625rem);
+    inline-size: clamp(1.625rem, 0.3125rem + 1.4583vw, 2.0625rem);
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__link-text {
+    margin-block: 0;
+    font-size: clamp(0.375rem, -0.1875rem + 0.625vw, 0.5625rem);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link-accent {
+    font-size: clamp(0.9375rem, 0rem + 1.0417vw, 1.25rem);
+    font-variation-settings: 'wght' 800;
+  }
+
+  &_place_section {
+    margin-inline: auto;
+    padding-inline: var(
+      --section-padding,
+      clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem)
+    );
+    inline-size: 100%;
+    max-inline-size: var(--section-inline-size, 100%);
+    margin-block: var(
+      --gap-section-block,
+      clamp(0.9375rem, 0.6074rem + 1.4085vw, 1.875rem)
+    );
+
+    .footer-banner__wrap {
+      max-inline-size: 25em;
+      border-radius: 10px;
+
+      background-size: 9em;
+      background-position: 105% 90%;
+    }
+
+    .footer-banner__title {
+      max-inline-size: 20rem;
+    }
+
+    @include media(lg) {
+      display: none;
+    }
+  }
+
+  &_place_footer {
+    .footer-banner__title {
+      font-size: clamp(1.125rem, 0.8173rem + 0.4808vw, 1.25rem);
+    }
+
+    @include media(lg, max) {
+      display: none;
+    }
+  }
+}
