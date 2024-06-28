@@ -247,6 +247,49 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });*/
 
+window.addEventListener('DOMContentLoaded', () => {
+    if (Splide) {
+        // Слайдер новостей на главной странице
+        if (document.querySelector('#news-slider')) {
+            let newsSlider = new Splide('#news-slider', {
+                type: 'slide',
+                autoplay: false,
+                arrows: false,
+                pagination: false,
+                gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
+                autoWidth: true,
+                padding: 'var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
+                mediaQuery: 'min',
+                breakpoints: {
+                    768: {
+                        destroy: 'completely',
+                    },
+                },
+            });
+            newsSlider.mount();
+        }
+    }
+});
+
+/* Прелодер на страницы */
+const preloaderTmp = document.querySelector('.preloader-template');
+const page = document.querySelector('.page');
+function showPreloader(tmp, parent) {
+  const node = tmp.content.cloneNode(true);
+  parent.append(node);
+}
+function removePreloader(parent, preloaderSelector) {
+  const preloader = parent.querySelector(preloaderSelector);
+  if (preloader) {
+    preloader.remove();
+  }
+}
+
+showPreloader(preloaderTmp, page);
+setTimeout(() => {
+  removePreloader(page, '.preloader');
+}, 1200);
+
 // Модальное окно с формой присоединиться к проекту
 if (document.querySelector('.sign-up')) {
   const signUpButton = document.querySelector('.sign-up__button');
@@ -584,49 +627,6 @@ if (document.querySelector('.search__icon-button--role-notifications')) {
   });
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    if (Splide) {
-        // Слайдер новостей на главной странице
-        if (document.querySelector('#news-slider')) {
-            let newsSlider = new Splide('#news-slider', {
-                type: 'slide',
-                autoplay: false,
-                arrows: false,
-                pagination: false,
-                gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
-                autoWidth: true,
-                padding: 'var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
-                mediaQuery: 'min',
-                breakpoints: {
-                    768: {
-                        destroy: 'completely',
-                    },
-                },
-            });
-            newsSlider.mount();
-        }
-    }
-});
-
-/* Прелодер на страницы */
-const preloaderTmp = document.querySelector('.preloader-template');
-const page = document.querySelector('.page');
-function showPreloader(tmp, parent) {
-  const node = tmp.content.cloneNode(true);
-  parent.append(node);
-}
-function removePreloader(parent, preloaderSelector) {
-  const preloader = parent.querySelector(preloaderSelector);
-  if (preloader) {
-    preloader.remove();
-  }
-}
-
-showPreloader(preloaderTmp, page);
-setTimeout(() => {
-  removePreloader(page, '.preloader');
-}, 1200);
-
 // Переключение карты региона по клику на список регионов
 if (document.querySelector('.reg-centers')) {
   const regCentersButton = document.querySelector('.reg-centers__button');
@@ -660,35 +660,6 @@ if (document.querySelector('.reg-centers')) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  // Квиз
-  if (document.querySelector('.survey__form')) {
-    const surveyLabels = document.querySelectorAll('.survey__label');
-
-    for (i = 0; i < surveyLabels.length; i++) {
-      surveyLabels[i].addEventListener('click', function () {
-        this.classList.add('survey__label--current');
-        this.closest('.survey__form').classList.add(
-          'survey__form--show-result'
-        );
-      });
-    }
-  }
-
-  if (Splide) {
-    // Слайдер с квизами на главной странице
-    if (document.querySelector('#survey-slider')) {
-      let eventsSlider = new Splide('#survey-slider', {
-        rewind: true,
-        autoplay: true,
-        arrows: false,
-        gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
-      });
-      eventsSlider.mount();
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
     // Слайдер карточек на странице студСМИ
     if (document.querySelector('#stud-smi-cards-slider')) {
@@ -719,6 +690,35 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
       });
       studSmiNewsSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Квиз
+  if (document.querySelector('.survey__form')) {
+    const surveyLabels = document.querySelectorAll('.survey__label');
+
+    for (i = 0; i < surveyLabels.length; i++) {
+      surveyLabels[i].addEventListener('click', function () {
+        this.classList.add('survey__label--current');
+        this.closest('.survey__form').classList.add(
+          'survey__form--show-result'
+        );
+      });
+    }
+  }
+
+  if (Splide) {
+    // Слайдер с квизами на главной странице
+    if (document.querySelector('#survey-slider')) {
+      let eventsSlider = new Splide('#survey-slider', {
+        rewind: true,
+        autoplay: true,
+        arrows: false,
+        gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
+      });
+      eventsSlider.mount();
     }
   }
 });
