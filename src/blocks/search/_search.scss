@@ -51,6 +51,10 @@
     &--indent-sm {
       gap: clamp(0.25em, 1vw, 0.625em);
     }
+
+    &--indent-lg {
+      gap: clamp(1em, 2.4vw, 1.5em);
+    }
   }
 
   &__field {
@@ -158,7 +162,8 @@
   &__region-button,
   &__calendar-button,
   &__reset-button,
-  &__filter-button {
+  &__filter-button,
+  &__tag-button {
     background-color: transparent;
     padding: 0;
     border: none;
@@ -255,6 +260,10 @@
     &:hover {
       color: var(--accent-color, #d03ec3);
     }
+  }
+
+  &__tag-button {
+    border-block-end: none;
   }
 
   &__calendar-fields-label {

@@ -21,7 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
         autoWidth: true,
         cover: true,
         heightRatio: 0.55,
-        padding: 'var(--section-inline-start, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
+        padding:
+          'var(--section-inline-start, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
         mediaQuery: 'min',
         breakpoints: {
           768: {
@@ -41,7 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
         pagination: false,
         gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
         autoWidth: true,
-        padding: 'var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
+        padding:
+          'var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
         mediaQuery: 'min',
         breakpoints: {
           768: {
@@ -60,7 +62,8 @@ window.addEventListener('DOMContentLoaded', () => {
         pagination: false,
         gap: 'var(--gap-slider,clamp(0.5em, 1.5vi, 0.9375em))',
         autoWidth: true,
-        padding: 'var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
+        padding:
+          'var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
         mediaQuery: 'min',
         breakpoints: {
           768: {
@@ -72,6 +75,27 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       authorsSlider.mount();
+    }
+
+    // Слайдер на странице Журнал НОС
+    if (document.querySelector('#journal-nos-slider')) {
+      let journalNosSlider = new Splide('#journal-nos-slider', {
+        type: 'slide',
+        autoplay: false,
+        arrows: false,
+        pagination: false,
+        autoWidth: true,
+        gap: 'var(--gap-slider, clamp(0.5em, 1.5vi, 0.9375em))',
+        padding:
+          'var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem))',
+        mediaQuery: 'min',
+        breakpoints: {
+          768: {
+            destroy: 'completely',
+          },
+        },
+      });
+      journalNosSlider.mount();
     }
   }
 });

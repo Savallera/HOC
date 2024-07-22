@@ -1,0 +1,41 @@
+<!-- Поиск -->
+<form class="search__form" name="media-search" action="">
+  <div class="field field--theme-white search__field">
+    <label for="page-search-field" class="field__label visually-hidden"
+      >Поиск
+    </label>
+    <div class="field__inner">
+      <span
+        class="field__search-icon icon icon--type-search"
+        aria-hidden="true"
+      ></span>
+      <input
+        type="search"
+        class="field__input"
+        placeholder="Поиск "
+        name="search"
+        id="page-search-field"
+      />
+      <span class="field__error-text">Вывод ошибки</span>
+      <span
+        class="field__error-icon icon icon--type-error"
+        aria-hidden="true"
+      ></span>
+    </div>
+  </div>
+  <div class="search__inner search__inner--indent-lg">
+    <label for="date-start" class="search__calendar-button">
+      <span class="icon icon--type-calendar" aria-hidden="true"></span>
+    </label>
+    <button for="" class="search__tag-button" type="button">
+      <span>2023</span>
+    </button>
+    <button
+      for=""
+      class="search__tag-button search__tag-button--actived"
+      type="button"
+    >
+      <span>2024</span>
+    </button>
+  </div>
+</form>

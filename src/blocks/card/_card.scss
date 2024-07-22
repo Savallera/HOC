@@ -144,7 +144,8 @@
     block-size: 1.25em;
 
     &::before {
-      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient)
+        no-repeat center;
     }
   }
 
@@ -235,16 +236,16 @@
       color: var(--accent-color, #d03ec3);
       background-color: transparent;
       &::before {
-        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
-          center;
+        background: var(--main-color, #685dc3) var(--main-color-gradient)
+          no-repeat center;
       }
     }
 
     &--actived {
       color: var(--accent-color, #d03ec3);
       &::before {
-        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
-          center;
+        background: var(--main-color, #685dc3) var(--main-color-gradient)
+          no-repeat center;
       }
     }
   }
@@ -257,8 +258,8 @@
     &:hover {
       color: var(--accent-color, #d03ec3);
       &::before {
-        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
-          center;
+        background: var(--main-color, #685dc3) var(--main-color-gradient)
+          no-repeat center;
       }
     }
   }
@@ -396,6 +397,45 @@
       min-inline-size: clamp(1.75rem, 1.2679rem + 2.4107vw, 3.4375rem);
       max-inline-size: clamp(1.75rem, 1.2679rem + 2.4107vw, 3.4375rem);
       block-size: clamp(1.75rem, 1.2679rem + 2.4107vw, 3.4375rem);
+    }
+  }
+
+  &--content-journal {
+    background-color: transparent;
+
+    .card__image {
+      border-radius: inherit;
+      display: block;
+      aspect-ratio: 289/409;
+      border: 2px solid transparent;
+      transition: border 0.35s;
+    }
+
+    .card__main-content {
+      gap: clamp(.25em, .8vw, .5em);
+      padding-inline: 0;
+      padding-block: clamp(.675em, 2vw, 1.25em);
+    }
+
+    .card__title {
+      font-variation-settings: 'wght' 300;
+      font-size: clamp(.7em, 2vw, 1.25em);
+    }
+
+    .card__text {
+      font-size: clamp(.5em, 1.6vw, 1em);
+      font-variation-settings: 'wght' 600;
+      border-block-end: 1px solid;
+      transition: border 0.35s;
+    }
+
+    &:hover {
+      .card__image {
+        border-color: var(--accent-color, #d03ec3);
+      }
+      .card__text {
+        border-block-end-color: transparent;
+      }
     }
   }
 }

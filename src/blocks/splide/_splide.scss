@@ -38,8 +38,8 @@
       background-color: var(--main-text-low-color, #c0c0c0);
 
       &.is-active {
-        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
-          center;
+        background: var(--main-color, #685dc3) var(--main-color-gradient)
+          no-repeat center;
         pointer-events: none;
         transform: unset;
       }
@@ -61,6 +61,12 @@
     &--mobile-width-sm {
       @include media(md, max) {
         width: min(50vw, 8.75em);
+      }
+    }
+
+    &--mobile-width-md {
+      @include media(md, max) {
+        width: min(50vw, 9.75em);
       }
     }
 
@@ -116,18 +122,33 @@
       @include media(md) {
         grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
         gap: var(--gap-grid, clamp(0.375em, 1vi, 0.625em));
+
+        // 4 в ряд
+        &--match-four {
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(min(17em, 100%), 1fr)
+          );
+          gap: var(--gap-slider, clamp(0.5em, 1.5vi, 0.9375em));
+        }
       }
     }
 
     @include media(md, max) {
-      margin-inline: calc(var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem)) * -1);
+      margin-inline: calc(
+        var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem)) *
+          -1
+      );
     }
   }
 
   // Слайдер без полей на мобильных
   &--wide-mobile {
     @include media(md, max) {
-      margin-inline: calc(var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem)) * -1);
+      margin-inline: calc(
+        var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem)) *
+          -1
+      );
     }
   }
 

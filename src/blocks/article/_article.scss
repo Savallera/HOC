@@ -1,12 +1,18 @@
 /* Детальная страница */
 .article {
-  margin-block: var(--gap-section-block, clamp(0.9375rem, 0.6074rem + 1.4085vw, 1.875rem));
+  margin-block: var(
+    --gap-section-block,
+    clamp(0.9375rem, 0.6074rem + 1.4085vw, 1.875rem)
+  );
 
   // Внутренние поля
   &__inner {
     margin-inline: auto;
     margin-block: clamp(0.9375em, 4vw, 2.5em); // 15 - 40
-    padding-inline: var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem));
+    padding-inline: var(
+      --section-padding,
+      clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem)
+    );
     inline-size: 100%;
     max-inline-size: var(--section-inline-size, 100%);
 
@@ -44,6 +50,10 @@
   &__title-span {
     display: block;
     font-size: 66.6666667%;
+
+    &--light {
+      font-variation-settings: 'wght' 300;
+    }
   }
 
   &__subtitle {
@@ -51,6 +61,10 @@
     font-variation-settings: 'wght' 800;
     font-size: clamp(1em, 4vw, 2.5em); // 40 - 16
     max-inline-size: 18em;
+
+    &--fs-sm {
+      font-size: clamp(0.75em, 3vw, 1.875em); // 30 - 12
+    }
   }
 
   &__date {
@@ -108,7 +122,8 @@
     font-variation-settings: 'wght' 500;
     color: var(--accent-text-color, #fff);
     padding: 0.75em 1.25em;
-    background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
+    background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
+      center;
     border-radius: 10px;
   }
 
@@ -141,6 +156,11 @@
 
   &__main-text {
     font-size: clamp(1em, 2vw, 1.25em);
+
+    &--fs-md {
+      font-size: clamp(0.625em, 2.4vw, 1.5em);
+      font-variation-settings: 'wght' 300;
+    }
   }
 
   &__slider-image {
@@ -155,6 +175,10 @@
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
+
+    &--portrait {
+      aspect-ratio: 289/409;
+    }
   }
 
   &__link {
@@ -218,7 +242,8 @@
     block-size: 1.25em;
 
     &::before {
-      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient)
+        no-repeat center;
     }
   }
 
@@ -323,8 +348,8 @@
       background-color: transparent;
 
       &::before {
-        background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat
-          center;
+        background: var(--main-color, #685dc3) var(--main-color-gradient)
+          no-repeat center;
       }
     }
   }
@@ -383,6 +408,40 @@
       &:hover {
         background-color: var(--grey-100, #f7f7f7);
       }
+    }
+  }
+
+  &__journal-nos {
+    display: grid;
+    gap: var(--gap-section) clamp(1em, 5vw, 4.5em);
+
+    .article__controls {
+      justify-content: center;
+      align-items: center;
+
+      @include media(md) {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    .article__image {
+      @include media(md, max) {
+        max-inline-size: min(70vw, 16em);
+        justify-self: center;
+      }
+    }
+
+    @include media(md) {
+      grid-template-columns: 0.35fr 1fr;
+      grid-template-rows: auto 1fr;
+    }
+  }
+
+  &__journal-nos-content {
+    @include media(md) {
+      grid-column: 2/3;
+      grid-row: 1/3;
     }
   }
 
