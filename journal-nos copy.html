@@ -16,7 +16,7 @@
   <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />
-  <title>Интерактивный тест - Текст</title>
+  <title>Журнал НОС</title>
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/libs/splide.min.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
@@ -148,219 +148,246 @@
 </header>
 
       <main class="page__content">
-        <section class="article">
-          <div class="article__inner">
-            <a href="#0" class="button button--type-back">
-              <span class="button__icon icon icon--type-back" aria-hidden="true"></span>
-              <span class="button__text">Назад</span>
-            </a>
-            <h1 class="article__title">Название теста</h1>
-            <div class="article__test-group">
-              <p class="article__category article__test-question">138/140</p>
-              <a
-                href="./test-article-result.html"
-                class="article__link article__test-skip-link"
-                rel="noopener ugs"
-              >
-                Пропустить вопрос
-              </a>
-              <div class="article__main-text article__test-row">
-                <p>
-                  В течение мероприятия, участники рассказывали о быте,
-                  культуре, традициях и истории блюд своих народов️. Было
-                  замечательно услышать разные истории и узнать больше о
-                  разнообразии кулинарного наследия. Это событие собрало
-                  множество гостей, включая проректора по ВиСр Гаирбекова М.М.,
-                  начальника отдела по молодёжной политике управления спорта,
-                  туризма и работы с молодежью Ахмедову Д.С. и руководителя КДМ
-                  Ахмедова А.М.Однако, главным итогом этого фестиваля стала
-                  дружба. Встречи и общение между гостями и участниками
-                  позволили нам почувствовать единство и сблизиться друг с
-                  другом.
-                </p>
-              </div>
-            </div>
-            <form class="form form--place-tests" name="tests-form" action="">
-              <fieldset class="form__two-columns form__two-columns--indent-lg">
-                <p class="form__legend">
-                  Выберите один или несколько правильных ответов
-                </p>
-                <label class="form__filter-label" for="tests-form-variant-1">
-                  <input
-                    class="form__filter-field"
-                    type="checkbox"
-                    name="tests-form-variant"
-                    id="tests-form-variant-1"
-                  />
-                  <span class="form__filter-text">
-                    <span
-                      class="form__filter-pseudo-checkbox form__filter-pseudo-checkbox--size-lg"
-                      aria-hidden="true"
-                    ></span>
-                    Вариант ответа</span
+        <section class="page__section">
+          <a href="#0" class="button button--type-back">
+            <span
+              class="button__icon icon icon--type-back"
+              aria-hidden="true"
+            ></span>
+            <span class="button__text">Назад</span>
+          </a>
+          <h1 class="page__heading">Журнал НОС</h1>
+          <!-- Поиск -->
+<form class="search__form" name="media-search" action="">
+  <div class="field field--theme-white search__field">
+    <label for="page-search-field" class="field__label visually-hidden"
+      >Поиск
+    </label>
+    <div class="field__inner">
+      <span
+        class="field__search-icon icon icon--type-search"
+        aria-hidden="true"
+      ></span>
+      <input
+        type="search"
+        class="field__input"
+        placeholder="Поиск "
+        name="search"
+        id="page-search-field"
+      />
+      <span class="field__error-text">Вывод ошибки</span>
+      <span
+        class="field__error-icon icon icon--type-error"
+        aria-hidden="true"
+      ></span>
+    </div>
+  </div>
+  <div class="search__inner search__inner--indent-lg">
+    <label for="date-start" class="search__calendar-button">
+      <span class="icon icon--type-calendar" aria-hidden="true"></span>
+    </label>
+    <button for="" class="search__tag-button" type="button">
+      <span>2023</span>
+    </button>
+    <button
+      for=""
+      class="search__tag-button search__tag-button--actived"
+      type="button"
+    >
+      <span>2024</span>
+    </button>
+  </div>
+</form>
+
+          <div class="splide splide--visible-mobile" id="journal-nos-slider">
+            <div class="splide__track">
+              <ul class="splide__list splide__list--match-four">
+                <li
+                  class="splide__slide splide__slide--mobile-width-md"
+                >
+                  <a
+                    href="./journal-nos-details.html"
+                    class="card-link"
+                    rel="noopener ugs"
                   >
-                </label>
-                <label class="form__filter-label" for="tests-form-variant-2">
-                  <input
-                    class="form__filter-field"
-                    type="checkbox"
-                    name="tests-form-variant"
-                    id="tests-form-variant-2"
-                  />
-                  <span class="form__filter-text">
-                    <span
-                      class="form__filter-pseudo-checkbox form__filter-pseudo-checkbox--size-lg"
-                      aria-hidden="true"
-                    ></span>
-                    Вариант ответа</span
+                    <article class="card card--content-journal">
+                      <img
+                        class="card__image"
+                        loading="lazy"
+                        src="./images/journals/journal-nos-01.png"
+                        alt="Описание изображения"
+                      />
+                      <div class="card__main-content">
+                        <h2 class="card__title">Дайджест НОС <br> Выпуск 1. Конкурсы</h2>
+                        <p
+                          class="card__text text-gradient"
+                        >
+                          Подробнее
+                        </p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <li
+                  class="splide__slide splide__slide--mobile-width-md"
+                >
+                  <a
+                    href="./journal-nos-details.html"
+                    class="card-link"
+                    rel="noopener ugs"
                   >
-                </label>
-                <label class="form__filter-label" for="tests-form-variant-3">
-                  <input
-                    class="form__filter-field"
-                    type="checkbox"
-                    name="tests-form-variant"
-                    id="tests-form-variant-3"
-                  />
-                  <span class="form__filter-text">
-                    <span
-                      class="form__filter-pseudo-checkbox form__filter-pseudo-checkbox--size-lg"
-                      aria-hidden="true"
-                    ></span>
-                    Вариант ответа</span
+                    <article class="card card--content-journal">
+                      <img
+                        class="card__image"
+                        loading="lazy"
+                        src="./images/journals/journal-nos-02.png"
+                        alt="Описание изображения"
+                      />
+                      <div class="card__main-content">
+                        <h2 class="card__title">Дайджест НОС <br> Выпуск 2. Творчество</h2>
+                        <p
+                          class="card__text text-gradient"
+                        >
+                          Подробнее
+                        </p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <li
+                  class="splide__slide splide__slide--mobile-width-md"
+                >
+                  <a
+                    href="./journal-nos-details.html"
+                    class="card-link"
+                    rel="noopener ugs"
                   >
-                </label>
-                <label class="form__filter-label" for="tests-form-variant-4">
-                  <input
-                    class="form__filter-field"
-                    type="checkbox"
-                    name="tests-form-variant"
-                    id="tests-form-variant-4"
-                  />
-                  <span class="form__filter-text">
-                    <span
-                      class="form__filter-pseudo-checkbox form__filter-pseudo-checkbox--size-lg"
-                      aria-hidden="true"
-                    ></span>
-                    Вариант ответа</span
+                    <article class="card card--content-journal">
+                      <img
+                        class="card__image"
+                        loading="lazy"
+                        src="./images/journals/journal-nos-03.png"
+                        alt="Описание изображения"
+                      />
+                      <div class="card__main-content">
+                        <h2 class="card__title">Дайджест НОС <br> Выпуск 3. Образование</h2>
+                        <p
+                          class="card__text text-gradient"
+                        >
+                          Подробнее
+                        </p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <li
+                  class="splide__slide splide__slide--mobile-width-md"
+                >
+                  <a
+                    href="./journal-nos-details.html"
+                    class="card-link"
+                    rel="noopener ugs"
                   >
-                </label>
-              </fieldset>
-              <a
-                href="./test-article-result.html"
-                class="button button--theme-gradient button--justify-center"
-                rel="noopener ugs"
-                ><span class="button__text">Далее</span></a
-              >
-            </form>
-            <div class="article__author">
-              <img
-                class="article__author-image"
-                src="https://avatars.mds.yandex.net/i?id=8c4b17a0dfd5c46d2828cead01639307fdea5178-8411463-images-thumbs&n=13"
-                alt="Описание изображения"
-                loading="lasy"
-              />
-              <p class="article__author-text">
-                Комитет по делам молодежи
-                <span class="article__span-text">Автор: ФИО</span>
-              </p>
+                    <article class="card card--content-journal">
+                      <img
+                        class="card__image"
+                        loading="lazy"
+                        src="./images/journals/journal-nos-04.png"
+                        alt="Описание изображения"
+                      />
+                      <div class="card__main-content">
+                        <h2 class="card__title">Дайджест НОС <br> Выпуск 4. Наука</h2>
+                        <p
+                          class="card__text text-gradient"
+                        >
+                          Подробнее
+                        </p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <li
+                  class="splide__slide splide__slide--mobile-width-md"
+                >
+                  <a
+                    href="./journal-nos-details.html"
+                    class="card-link"
+                    rel="noopener ugs"
+                  >
+                    <article class="card card--content-journal">
+                      <img
+                        class="card__image"
+                        loading="lazy"
+                        src="./images/journals/journal-nos-05.png"
+                        alt="Описание изображения"
+                      />
+                      <div class="card__main-content">
+                        <h2 class="card__title">Дайджест НОС <br> Выпуск 5. Новости</h2>
+                        <p
+                          class="card__text text-gradient"
+                        >
+                          Подробнее
+                        </p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <li
+                  class="splide__slide splide__slide--mobile-width-md"
+                >
+                  <a
+                    href="./journal-nos-details.html"
+                    class="card-link"
+                    rel="noopener ugs"
+                  >
+                    <article class="card card--content-journal">
+                      <img
+                        class="card__image"
+                        loading="lazy"
+                        src="./images/journals/journal-nos-06.png"
+                        alt="Описание изображения"
+                      />
+                      <div class="card__main-content">
+                        <h2 class="card__title">Дайджест НОС <br> Выпуск 6. Форум</h2>
+                        <p
+                          class="card__text text-gradient"
+                        >
+                          Подробнее
+                        </p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <li
+                  class="splide__slide splide__slide--mobile-width-md"
+                >
+                  <a
+                    href="./journal-nos-details.html"
+                    class="card-link"
+                    rel="noopener ugs"
+                  >
+                    <article class="card card--content-journal">
+                      <img
+                        class="card__image"
+                        loading="lazy"
+                        src="./images/journals/journal-nos-01.png"
+                        alt="Описание изображения"
+                      />
+                      <div class="card__main-content">
+                        <h2 class="card__title">Дайджест НОС <br> Выпуск 1. Конкурсы</h2>
+                        <p
+                          class="card__text text-gradient"
+                        >
+                          Подробнее
+                        </p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
-        <!-- Секция Другие тесты по теме -->
-<section class="theme">
-  <h2 class="page__title theme__title-block">Другие тесты по теме</h2>
-  <div
-    class="splide splide--size-wide splide--background-gradient"
-    id="theme-slider"
-  >
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link card-link--hover-card" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="http://easy-math.ru/wp-content/uploads/2020/05/The-development-of-logic-and-mathematical-abilities-in-children.jpg"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link card-link--hover-card" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="http://cdn.lifehacker.ru/wp-content/uploads/2017/10/Cats_1509177368-1280x640.jpg"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link card-link--hover-card" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="https://sun9-2.userapi.com/impf/c622128/v622128429/1d502/EeWWlc2hMJg.jpg?size=511x513&quality=96&sign=8c778f54f142f7098f63fc0b2fa270b1&type=album"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link card-link--hover-card" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="https://sun9-2.userapi.com/impf/c622128/v622128429/1d502/EeWWlc2hMJg.jpg?size=511x513&quality=96&sign=8c778f54f142f7098f63fc0b2fa270b1&type=album"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
       </main>
       <!-- Подвал страницы -->
 <article class="footer-banner footer-banner_place_section">

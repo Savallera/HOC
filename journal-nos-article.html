@@ -16,7 +16,7 @@
   <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />
-  <title>Интерактивный тест - Текст</title>
+  <title>Журнал НОС - Выпуск 1. Конкурсы</title>
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/libs/splide.min.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
@@ -151,20 +151,27 @@
         <section class="article">
           <div class="article__inner">
             <a href="#0" class="button button--type-back">
-              <span class="button__icon icon icon--type-back" aria-hidden="true"></span>
+              <span
+                class="button__icon icon icon--type-back"
+                aria-hidden="true"
+              ></span>
               <span class="button__text">Назад</span>
             </a>
-            <h1 class="article__title">Название теста</h1>
-            <div class="article__test-group">
-              <p class="article__category article__test-question">138/140</p>
-              <a
-                href="./test-article-result.html"
-                class="article__link article__test-skip-link"
-                rel="noopener ugs"
-              >
-                Пропустить вопрос
-              </a>
-              <div class="article__main-text article__test-row">
+            <h1 class="article__title">
+              Журнал НОС
+              <span class="article__title-span article__title-span--light">Выпуск 1. Конкурсы</span>
+            </h1>
+          </div>
+          <div class="article__inner article__journal-nos">
+            <img
+              class="article__image article__image--portrait"
+              loading="lazy"
+              src="./images/journals/journal-nos-01.png"
+              alt="Описание изображения"
+            />
+            <div class="article__journal-nos-content">
+              <p class="article__subtitle article__subtitle--fs-sm">О выпуске</p>
+              <div class="article__main-text article__main-text--fs-md">
                 <p>
                   В течение мероприятия, участники рассказывали о быте,
                   культуре, традициях и истории блюд своих народов️. Было
@@ -180,187 +187,22 @@
                 </p>
               </div>
             </div>
-            <form class="form form--place-tests" name="tests-form" action="">
-              <fieldset class="form__two-columns form__two-columns--indent-lg">
-                <p class="form__legend">
-                  Выберите один или несколько правильных ответов
-                </p>
-                <label class="form__filter-label" for="tests-form-variant-1">
-                  <input
-                    class="form__filter-field"
-                    type="checkbox"
-                    name="tests-form-variant"
-                    id="tests-form-variant-1"
-                  />
-                  <span class="form__filter-text">
-                    <span
-                      class="form__filter-pseudo-checkbox form__filter-pseudo-checkbox--size-lg"
-                      aria-hidden="true"
-                    ></span>
-                    Вариант ответа</span
-                  >
-                </label>
-                <label class="form__filter-label" for="tests-form-variant-2">
-                  <input
-                    class="form__filter-field"
-                    type="checkbox"
-                    name="tests-form-variant"
-                    id="tests-form-variant-2"
-                  />
-                  <span class="form__filter-text">
-                    <span
-                      class="form__filter-pseudo-checkbox form__filter-pseudo-checkbox--size-lg"
-                      aria-hidden="true"
-                    ></span>
-                    Вариант ответа</span
-                  >
-                </label>
-                <label class="form__filter-label" for="tests-form-variant-3">
-                  <input
-                    class="form__filter-field"
-                    type="checkbox"
-                    name="tests-form-variant"
-                    id="tests-form-variant-3"
-                  />
-                  <span class="form__filter-text">
-                    <span
-                      class="form__filter-pseudo-checkbox form__filter-pseudo-checkbox--size-lg"
-                      aria-hidden="true"
-                    ></span>
-                    Вариант ответа</span
-                  >
-                </label>
-                <label class="form__filter-label" for="tests-form-variant-4">
-                  <input
-                    class="form__filter-field"
-                    type="checkbox"
-                    name="tests-form-variant"
-                    id="tests-form-variant-4"
-                  />
-                  <span class="form__filter-text">
-                    <span
-                      class="form__filter-pseudo-checkbox form__filter-pseudo-checkbox--size-lg"
-                      aria-hidden="true"
-                    ></span>
-                    Вариант ответа</span
-                  >
-                </label>
-              </fieldset>
-              <a
-                href="./test-article-result.html"
-                class="button button--theme-gradient button--justify-center"
-                rel="noopener ugs"
-                ><span class="button__text">Далее</span></a
+            <div class="article__controls">
+              <button
+                class="button button--theme-white button--size-sm"
+                type="button"
               >
-            </form>
-            <div class="article__author">
-              <img
-                class="article__author-image"
-                src="https://avatars.mds.yandex.net/i?id=8c4b17a0dfd5c46d2828cead01639307fdea5178-8411463-images-thumbs&n=13"
-                alt="Описание изображения"
-                loading="lasy"
-              />
-              <p class="article__author-text">
-                Комитет по делам молодежи
-                <span class="article__span-text">Автор: ФИО</span>
-              </p>
+                <span class="button__text">Посмотреть</span>
+              </button>
+              <button
+                class="button button--theme-gradient button--size-sm"
+                type="button"
+              >
+                <span class="button__text">Скачать</span>
+              </button>
             </div>
           </div>
         </section>
-        <!-- Секция Другие тесты по теме -->
-<section class="theme">
-  <h2 class="page__title theme__title-block">Другие тесты по теме</h2>
-  <div
-    class="splide splide--size-wide splide--background-gradient"
-    id="theme-slider"
-  >
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link card-link--hover-card" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="http://easy-math.ru/wp-content/uploads/2020/05/The-development-of-logic-and-mathematical-abilities-in-children.jpg"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link card-link--hover-card" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="http://cdn.lifehacker.ru/wp-content/uploads/2017/10/Cats_1509177368-1280x640.jpg"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link card-link--hover-card" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="https://sun9-2.userapi.com/impf/c622128/v622128429/1d502/EeWWlc2hMJg.jpg?size=511x513&quality=96&sign=8c778f54f142f7098f63fc0b2fa270b1&type=album"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-        <li
-          class="splide__slide splide__slide--mobile-width-auto splide__slide--desktop-width-sm"
-        >
-          <a href="./tests.html" class="card-link card-link--hover-card" rel="noopener ugs">
-            <article class="card card--size-md">
-              <img
-                class="card__image"
-                src="https://sun9-2.userapi.com/impf/c622128/v622128429/1d502/EeWWlc2hMJg.jpg?size=511x513&quality=96&sign=8c778f54f142f7098f63fc0b2fa270b1&type=album"
-                alt="Описание изображения"
-                loading="lazy"
-              />
-              <div class="card__main-content card__main-content--min-height">
-                <h3 class="card__title">Тест на знание математики</h3>
-                <p class="card__text text-gradient card__press-bottom">
-                  Интеллектуальные
-                </p>
-              </div>
-            </article>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
       </main>
       <!-- Подвал страницы -->
 <article class="footer-banner footer-banner_place_section">
