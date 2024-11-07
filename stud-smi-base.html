@@ -16,7 +16,7 @@
   <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />
-  <title>База студСМИ</title>
+  <title>Студенческие СМИ</title>
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/libs/splide.min.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
@@ -55,7 +55,15 @@
             href="./stud-smi-base.html"
             class="header__menu-link"
             rel="noopener ugc"
-            >База студСМИ</a
+            >Студенческие СМИ</a
+          >
+        </li>
+        <li>
+          <a
+            href="./stud-smi-rating.html"
+            class="header__menu-link"
+            rel="noopener ugc"
+            >Рейтинг СМИ вузов</a
           >
         </li>
       </ul>
@@ -153,7 +161,7 @@
             <span class="button__icon icon icon--type-back" aria-hidden="true"></span>
             <span class="button__text">Назад</span>
           </a>
-          <h1 class="page__heading">База студСМИ</h1>
+          <h1 class="page__heading">Студенческие СМИ</h1>
           <!-- Поиск -->
 <div class="search">
   <form class="search__form" name="stud-smi-base-search" action="">
@@ -181,7 +189,7 @@
       </div>
     </div>
     <div class="search__filters-wrapper">
-      <fieldset class="search__inner">
+      <div class="search__inner search__inner--indent-xl">
         <button class="search__filter-button" type="button">
           <span>Регион</span>
           <span
@@ -189,21 +197,48 @@
             aria-hidden="true"
           ></span>
         </button>
-        <button class="search__filter-button" type="button">
-          <span>Город</span>
-          <span
-            class="search__filter-button-icon icon icon--type-plus"
-            aria-hidden="true"
-          ></span>
-        </button>
-        <button class="search__filter-button" type="button">
-          <span>Соцсети</span>
-          <span
-            class="search__filter-button-icon icon icon--type-plus"
-            aria-hidden="true"
-          ></span>
-        </button>
-      </fieldset>
+        <div class="search__inner search__rating">
+          <p class="search__rating-caption">Рейтинг</p>
+          <div class="search__inner search__inner--indent-xs">
+            <label class="search__rating-label">
+              <input
+                type="radio"
+                name="social-network"
+                value="rutube"
+                class="search__rating-field visually-hidden"
+              />
+              <span
+                class="search__rating-icon icon icon--type-rutube"
+                aria-hidden="true"
+              ></span>
+            </label>
+            <label class="search__rating-label search__rating-label--actived">
+              <input
+                type="radio"
+                name="social-network"
+                value="vkontakte"
+                class="search__rating-field visually-hidden"
+              />
+              <span
+                class="search__rating-icon icon icon--type-vkontakte"
+                aria-hidden="true"
+              ></span>
+            </label>
+            <label class="search__rating-label">
+              <input
+                type="radio"
+                name="social-network"
+                value="telegram"
+                class="search__rating-field visually-hidden"
+              />
+              <span
+                class="search__rating-icon icon icon--type-telegram"
+                aria-hidden="true"
+              ></span>
+            </label>
+          </div>
+        </div>
+      </div>
       <button class="search__reset-button" type="reset">
         <span>Сбросить фильтры</span>
       </button>
@@ -429,6 +464,140 @@
             ><span class="button__text">Присоединиться к проекту</span></a
           >
         </div>
+        <section class="page__section">
+          <h2 class="page__heading">Архив рейтингов</h2>
+          <!-- Поиск -->
+<div class="search">
+  <form class="search__form" name="rating-search" action="">
+    <div class="search__inner search__inner--indent-lg">
+      <label for="date-start" class="search__calendar-button">
+        <span class="icon icon--type-calendar" aria-hidden="true"></span>
+      </label>
+      <button for="" class="search__tag-button" type="button">
+        <span>2023</span>
+      </button>
+      <button
+        for=""
+        class="search__tag-button search__tag-button--actived"
+        type="button"
+      >
+        <span>2024</span>
+      </button>
+    </div>
+    <fieldset class="search__inner">
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-01"
+        />
+        <span class="search__filter-text">Январь</span>
+      </label>
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-02"
+        />
+        <span class="search__filter-text">Февраль</span>
+      </label>
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-03"
+        />
+        <span class="search__filter-text">Март</span>
+      </label>
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-04"
+        />
+        <span class="search__filter-text">Апрель</span>
+      </label>
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-05"
+        />
+        <span class="search__filter-text">Май</span>
+      </label>
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-06"
+        />
+        <span class="search__filter-text">Июнь</span>
+      </label>
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-07"
+        />
+        <span class="search__filter-text">Июль</span>
+      </label>
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-08"
+        />
+        <span class="search__filter-text">Август</span>
+      </label>
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-09"
+        />
+        <span class="search__filter-text">Сентябрь</span>
+      </label>
+      <label class="search__filter-label">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-10"
+        />
+        <span class="search__filter-text">Октябрь</span>
+      </label>
+      <label class="search__filter-label search__filter-label--disabled">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-11"
+        />
+        <span class="search__filter-text">Ноябрь</span>
+      </label>
+      <label class="search__filter-label search__filter-label--disabled">
+        <input
+          class="search__filter-field visually-hidden"
+          type="radio"
+          name="search-radio-rating-month"
+          id="search-radio-rating-month-12"
+        />
+        <span class="search__filter-text">Декабрь</span>
+      </label>
+    </fieldset>
+  </form>
+</div>
+
+        </section>
       </main>
       <!-- Подвал страницы -->
 <article class="footer-banner footer-banner_place_section">
@@ -687,688 +856,688 @@
     ></button>
     <form class="form" name="filters-modal" action="">
       <p class="form__title">Тип мероприятия</p>
-        <ul class="form__filters-list">
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-1">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-1"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-2">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-2"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-3">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-3"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-          <li>
-            <label class="form__filter-label" for="filters-modal-variant-4">
-              <input
-                class="form__filter-field"
-                type="radio"
-                name="filters-modal-variant"
-                id="filters-modal-variant-4"
-              />
-              <span class="form__filter-text">
-                <span
-                  class="form__filter-pseudo-checkbox"
-                  aria-hidden="true"
-                ></span>
-                Вариант</span
-              >
-            </label>
-          </li>
-        </ul>
+      <ul class="form__filters-list">
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-1">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-1"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-2">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-2"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-3">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-3"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+        <li>
+          <label class="form__filter-label" for="filters-modal-variant-4">
+            <input
+              class="form__filter-field"
+              type="radio"
+              name="filters-modal-variant"
+              id="filters-modal-variant-4"
+            />
+            <span class="form__filter-text">
+              <span
+                class="form__filter-pseudo-checkbox"
+                aria-hidden="true"
+              ></span>
+              Вариант</span
+            >
+          </label>
+        </li>
+      </ul>
     </form>
   </div>
 </div>

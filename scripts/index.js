@@ -1,32 +1,5 @@
 
 window.addEventListener('DOMContentLoaded', () => {
-  // Аккордеоны
-  if (document.querySelector('.accordion')) {
-    const accordionsButtons =
-      document.getElementsByClassName('accordion__button');
-
-    for (i = 0; i < accordionsButtons.length; i++) {
-      accordionsButtons[i].addEventListener('click', function () {
-        this.closest('.accordion').classList.toggle('accordion--actived');
-        let icon = this.querySelector('.accordion__icon');
-        let container = this.nextElementSibling;
-        if (container.style.maxHeight) {
-          this.setAttribute('aria-label', 'Развернуть');
-          container.style.maxHeight = null;
-          icon.classList.add('icon--type-plus');
-          icon.classList.remove('icon--type-minus');
-        } else {
-          this.setAttribute('aria-label', 'Свернуть');
-          container.style.maxHeight = container.scrollHeight + 'px';
-          icon.classList.add('icon--type-minus');
-          icon.classList.remove('icon--type-plus');
-        }
-      });
-    }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
   if (Splide) {
     // Фотографии на странице детальной новости
     if (document.querySelector('#article-image-slider')) {
@@ -124,6 +97,33 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       journalNosSlider.mount();
+    }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Аккордеоны
+  if (document.querySelector('.accordion')) {
+    const accordionsButtons =
+      document.getElementsByClassName('accordion__button');
+
+    for (i = 0; i < accordionsButtons.length; i++) {
+      accordionsButtons[i].addEventListener('click', function () {
+        this.closest('.accordion').classList.toggle('accordion--actived');
+        let icon = this.querySelector('.accordion__icon');
+        let container = this.nextElementSibling;
+        if (container.style.maxHeight) {
+          this.setAttribute('aria-label', 'Развернуть');
+          container.style.maxHeight = null;
+          icon.classList.add('icon--type-plus');
+          icon.classList.remove('icon--type-minus');
+        } else {
+          this.setAttribute('aria-label', 'Свернуть');
+          container.style.maxHeight = container.scrollHeight + 'px';
+          icon.classList.add('icon--type-minus');
+          icon.classList.remove('icon--type-plus');
+        }
+      });
     }
   }
 });
@@ -682,6 +682,30 @@ if (document.querySelector('.reg-centers')) {
   };
 
   regCentersButton.addEventListener('click', toggleRegCenters);
+}
+
+// Выпадающий список в поиске
+if (document.querySelector('.search__dropdown')) {
+  const searchDropdownButton = document.querySelector(
+    '.search__dropdown-button'
+  );
+  const searchDropdownContainer = document.querySelector('.search__dropdown');
+  const openDropdownList = function () {
+    searchDropdownContainer.classList.add('search__dropdown--opened');
+  };
+  const closeDropdownList = function () {
+    searchDropdownContainer.classList.remove('search__dropdown--opened');
+  };
+
+  searchDropdownButton.addEventListener('click', () => {
+    if (
+      searchDropdownContainer.classList.contains('search__dropdown--opened')
+    ) {
+      closeDropdownList();
+    } else {
+      openDropdownList();
+    }
+  });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
