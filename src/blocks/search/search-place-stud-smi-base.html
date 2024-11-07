@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="search__filters-wrapper">
-      <fieldset class="search__inner">
+      <div class="search__inner search__inner--indent-xl">
         <button class="search__filter-button" type="button">
           <span>Регион</span>
           <span
@@ -33,21 +33,48 @@
             aria-hidden="true"
           ></span>
         </button>
-        <button class="search__filter-button" type="button">
-          <span>Город</span>
-          <span
-            class="search__filter-button-icon icon icon--type-plus"
-            aria-hidden="true"
-          ></span>
-        </button>
-        <button class="search__filter-button" type="button">
-          <span>Соцсети</span>
-          <span
-            class="search__filter-button-icon icon icon--type-plus"
-            aria-hidden="true"
-          ></span>
-        </button>
-      </fieldset>
+        <div class="search__inner search__rating">
+          <p class="search__rating-caption">Рейтинг</p>
+          <div class="search__inner search__inner--indent-xs">
+            <label class="search__rating-label">
+              <input
+                type="radio"
+                name="social-network"
+                value="rutube"
+                class="search__rating-field visually-hidden"
+              />
+              <span
+                class="search__rating-icon icon icon--type-rutube"
+                aria-hidden="true"
+              ></span>
+            </label>
+            <label class="search__rating-label search__rating-label--actived">
+              <input
+                type="radio"
+                name="social-network"
+                value="vkontakte"
+                class="search__rating-field visually-hidden"
+              />
+              <span
+                class="search__rating-icon icon icon--type-vkontakte"
+                aria-hidden="true"
+              ></span>
+            </label>
+            <label class="search__rating-label">
+              <input
+                type="radio"
+                name="social-network"
+                value="telegram"
+                class="search__rating-field visually-hidden"
+              />
+              <span
+                class="search__rating-icon icon icon--type-telegram"
+                aria-hidden="true"
+              ></span>
+            </label>
+          </div>
+        </div>
+      </div>
       <button class="search__reset-button" type="reset">
         <span>Сбросить фильтры</span>
       </button>

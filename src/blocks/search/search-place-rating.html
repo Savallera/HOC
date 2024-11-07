@@ -1,0 +1,108 @@
+<!-- Поиск -->
+<section class="page__section search">
+  <a href="#0" class="button button--type-back">
+    <span class="button__icon icon icon--type-back" aria-hidden="true"></span>
+    <span class="button__text">Назад</span>
+  </a>
+  <form class="search__form" name="media-search" action="">
+    <fieldset class="search__inner">
+      <button
+        class="search__region-button search__region-button--theme-secondary search__region-button--actived search__region-button--content-all"
+        type="button"
+      >
+        <span>Все регионы</span>
+      </button>
+      <button
+        class="search__region-button search__region-button--theme-secondary"
+        type="button"
+      >
+        <span>Москва</span>
+      </button>
+    </fieldset>
+    <h1 class="search__title">Рейтинг СМИ вузов</h1>
+    <fieldset
+      class="search__inner search__inner--indent-lg search__inner--content-rating"
+    >
+      <div
+        class="field field--place-rating field--theme-white field search__field"
+      >
+        <label for="page-search-field" class="field__label visually-hidden"
+          >Поиск
+        </label>
+        <div class="field__inner">
+          <span
+            class="field__search-icon icon icon--type-search"
+            aria-hidden="true"
+          ></span>
+          <input
+            type="search"
+            class="field__input"
+            placeholder="Название ВУЗа"
+            name="search"
+            id="page-search-field"
+          />
+          <span class="field__error-text">Вывод ошибки</span>
+          <span
+            class="field__error-icon icon icon--type-error"
+            aria-hidden="true"
+          ></span>
+        </div>
+      </div>
+      <div
+        class="search__rating"
+        aria-label="Общий рейтинг: 4"
+        title="Общий рейтинг: 4"
+      >
+        <div class="search__rating-bar">
+          <div
+            class="search__rating-bar-progress"
+            style="inline-size: 80%"
+          ></div>
+        </div>
+      </div>
+      <div class="search__dropdown">
+        <button
+          class="search__dropdown-button search__dropdown-button--theme-secondary"
+          type="button"
+        >
+          <span>По общему рейтингу</span>
+        </button>
+        <ul class="search__dropdown-list">
+          <li class="search__dropdown-item">
+            <a
+              class="search__dropdown-link search__dropdown-link--theme-secondary"
+              href="#"
+              data-filter="rutube"
+              >По рейтингу Rutube</a
+            >
+          </li>
+          <li class="search__dropdown-item">
+            <a
+              class="search__dropdown-link search__dropdown-link--theme-secondary"
+              href="#"
+              data-filter="vkontakte"
+              >По рейтингу вконтакте</a
+            >
+          </li>
+          <li class="search__dropdown-item">
+            <a
+              class="search__dropdown-link search__dropdown-link--theme-secondary"
+              href="#"
+              data-filter="telegram"
+              >По рейтинге телеграм</a
+            >
+          </li>
+          <li class="search__dropdown-item">
+            <a
+              class="search__dropdown-link search__dropdown-link--theme-secondary"
+              href="#"
+              data-filter="number"
+              >По номеру позиции</a
+            >
+          </li>
+        </ul>
+      </div>
+    </fieldset>
+    <p class="search__caption text-gradient">Всего 150 СМИ вузов</p>
+  </form>
+</section>

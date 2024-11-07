@@ -136,7 +136,8 @@
     margin-inline-start: clamp(0.875em, 2vw, 1.25em);
 
     &::before {
-      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient)
+        no-repeat center;
     }
 
     & ~ .field__input {
@@ -289,6 +290,21 @@
 
   &--text-bold .field__input {
     font-variation-settings: 'wght' 700;
+  }
+
+  &--place-rating {
+    .field__input {
+      padding-block: 0.25em;
+      padding-inline-start: 2.25em;
+      border-radius: 25px;
+    }
+    .field__search-icon {
+      margin-inline-start: 0.75em;
+
+      &::before {
+        background-image: var(--secondary-color-gradient);
+      }
+    }
   }
 
   &--padding-block-sm {

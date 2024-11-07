@@ -1,5 +1,6 @@
 /* Секция топ-10 студСМИ на главной */
 .top-ten {
+
   &__cards {
     margin: 0;
     padding: 0;
@@ -8,9 +9,9 @@
     gap: clamp(1.25em, 5vw, 3.125em);
     grid-template-columns: repeat(auto-fill, minmax(min(15vw, 12.5em), 1fr));
 
-    li {
-      display: flex;
-    }
+    // li {
+    //   display: flex;
+    // }
 
     &--place-stud-smi {
       gap: 1.25em;
@@ -87,5 +88,38 @@
     font-size: clamp(0.75em, 1.5vw, 0.9375em);
     font-variation-settings: 'wght' 500;
     color: var(--main-text-low-color, #c0c0c0);
+  }
+
+  &__list {
+    margin-block: 0.75em 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-label {
+    margin: 0;
+  }
+
+  &__item-rating {
+  }
+
+  &__item-rating-bar {
+    position: relative;
+    block-size: clamp(1.25em, 2.2vw, 1.375em);
+    inline-size: clamp(6.25em, 10.8vw, 6.75em);
+    background-color: var(--main-text-low-color, #c0c0c0);
+    mask: url('../images/rating.svg') left center / 100% 100% no-repeat;
+  }
+  &__item-rating-bar-progress {
+    block-size: inherit;
+    background-color: var(--main-color, #685dc3);
+    mask: url('../images/rating.svg') left center /
+      clamp(6.25em, 10.8vw, 6.75em) 100% no-repeat;
   }
 }

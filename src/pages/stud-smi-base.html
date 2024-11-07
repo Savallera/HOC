@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru">
-  @@include("../blocks/head/head.html", {"title": "База студСМИ"})
+  @@include("../blocks/head/head.html", {"title": "Студенческие СМИ"})
   <body>
     <div class="page">
       @@include("../blocks/header/header.html")
@@ -10,7 +10,7 @@
             <span class="button__icon icon icon--type-back" aria-hidden="true"></span>
             <span class="button__text">Назад</span>
           </a>
-          <h1 class="page__heading">База студСМИ</h1>
+          <h1 class="page__heading">Студенческие СМИ</h1>
           @@include("../blocks/search/search-place-stud-smi-base.html")
         </section>
         <section class="page__section">
@@ -230,6 +230,10 @@
             ><span class="button__text">Присоединиться к проекту</span></a
           >
         </div>
+        <section class="page__section">
+          <h2 class="page__heading">Архив рейтингов</h2>
+          @@include("../blocks/search/search-place-stud-smi-rating.html")
+        </section>
       </main>
       @@include("../blocks/footer/footer.html")
       @@include("../blocks/modal/modal-place-search-content-filters.html")
