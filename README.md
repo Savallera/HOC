@@ -18,7 +18,7 @@
 * [События](https://savallera.github.io/HOC/events.html)
 * [Детальное событие](https://savallera.github.io/HOC/event-article.html)
 * [Студенческие СМИ](https://savallera.github.io/HOC/stud-smi-base.html)
-* [Рейтинг СМИ вузов](https://savallera.github.io/HOC/rating.html)
+* [Рейтинг СМИ вузов](https://savallera.github.io/HOC/stud-smi-rating.html)
 * [О проекте](https://savallera.github.io/HOC/about.html)
 * [Журнал НОС](https://savallera.github.io/HOC/journal-nos.html)
 * [Журнал НОС - детально](https://savallera.github.io/HOC/journal-nos-article.html)
