@@ -7,7 +7,10 @@
       <main class="page__content">
         <section class="page__section">
           <a href="#0" class="button button--type-back">
-            <span class="button__icon icon icon--type-back" aria-hidden="true"></span>
+            <span
+              class="button__icon icon icon--type-back"
+              aria-hidden="true"
+            ></span>
             <span class="button__text">Назад</span>
           </a>
           <h1 class="page__heading">Студенческие СМИ</h1>
@@ -233,6 +236,36 @@
         <section class="page__section">
           <h2 class="page__heading">Архив рейтингов</h2>
           @@include("../blocks/search/search-place-stud-smi-rating.html")
+          <!-- Для скрытия блока можно использовать класс visually-hidden -->
+          <ul class="page__doc-list">
+            <li>
+              <a
+                class="page__doc-link text-gradient"
+                href="#"
+                rel="noopener"
+                download
+                >Рейтинг СМИ Telegram</a
+              >
+            </li>
+            <li>
+              <a
+                class="page__doc-link text-gradient"
+                href="#"
+                rel="noopener"
+                download
+                >Рейтинг СМИ Вконтакте</a
+              >
+            </li>
+            <li>
+              <a
+                class="page__doc-link text-gradient"
+                href="#"
+                rel="noopener"
+                download
+                >Рейтинг СМИ RuTube</a
+              >
+            </li>
+          </ul>
         </section>
       </main>
       @@include("../blocks/footer/footer.html")

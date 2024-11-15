@@ -10,10 +10,16 @@
 
   &__section {
     margin-inline: auto;
-    padding-inline: var(--section-padding, clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem));
+    padding-inline: var(
+      --section-padding,
+      clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem)
+    );
     inline-size: 100%;
     max-inline-size: var(--section-inline-size, 100%);
-    margin-block: var(--gap-section-block, clamp(0.9375rem, 0.6074rem + 1.4085vw, 1.875rem));
+    margin-block: var(
+      --gap-section-block,
+      clamp(0.9375rem, 0.6074rem + 1.4085vw, 1.875rem)
+    );
 
     display: flex;
     gap: var(--gap-section, clamp(0.5em, 1.5vi, 0.9375em));
@@ -122,6 +128,36 @@
     }
   }
 
+  &__doc-list {
+    padding: 0;
+    margin: max(1.25em, 4%) 0 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625em 7%;
+  }
+
+  &__doc-link {
+    flex: none;
+    font-size: clamp(0.75em, 2vw, 1.25em);
+    font-variation-settings: 'wght' 500;
+    text-decoration: unset;
+    transition: border 0.35s;
+    border-block-end: 2px solid transparent;
+
+    &:hover {
+      border-block-end-color: currentColor;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid;
+    }
+  }
+
   &__more-button {
     align-self: center;
     border-block-end: 2px solid var(--accent-color, #d03ec3);
@@ -172,7 +208,8 @@
     block-size: 1.25em;
 
     &::before {
-      background: var(--main-color, #685dc3) var(--main-color-gradient) no-repeat center;
+      background: var(--main-color, #685dc3) var(--main-color-gradient)
+        no-repeat center;
     }
   }
 
